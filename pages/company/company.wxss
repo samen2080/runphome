@@ -118,10 +118,14 @@
   position: relative;
   float:left;
   /* text-align: left; */ 
-  border-width: 2rpx 2rpx 2rpx 2rpx ;
-  border-color: rgb(219, 219, 219);
+  /* border-width: 2rpx 2rpx 2rpx 2rpx ;
+  border-color: rgb(219, 219, 219); */
+  color: #0f0f0f;
+  border: 2rpx solid #cccac9;
+  width: 108rpx;
+  height: 38rpx;
   border-style: solid;
-  font-size:80%;
+  font-size:80%; 
 }
 
 .on-list-name2{

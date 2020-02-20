@@ -21,7 +21,7 @@
 <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab" style='height:{{sheight}}rpx'>        
   <swiper-item wx:for="{{navData}}" wx:for-item="tabItem" wx:for-index="idx">
     <view wx:for='{{proList}}' wx:key='{{proList}}'>
-        <navigator url='../../mine/product-show/product-show?pro_id={{item.old_id}}' hover-class='none'>
+        <navigator url='company-show/company-show?com_id={{item.com_id}}' hover-class='none'>
           <view class='on-list-info'>
             <image src='{{host}}{{item.com_img}}' mode='aspectFill'></image>
             <!--index.wxml-->
