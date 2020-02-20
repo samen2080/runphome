@@ -7,7 +7,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    schoolList: []
+    schoolList: [],
+// 20200213 add start
+    swiperCurrentCollege: 0,
+    swiperCurrentBachelor: 0,
+    swiperCurrentEnterprise: 0,
+    brand_intro:'网易 (NASDAQ: NTES)，1997年由丁磊先生在广州创办、2000年在美国NASDAQ股票交易所挂牌上市，是中国领先的互联网技术公司，在开发互联网应用、服务等方面始终保持中国业界领先地位。本着对中国互联网发展强烈的使命感，缔造美好生活的愿景。',
+    brand_album: ['storage/app/public/uploads/school/1.jpg', 'storage/app/public/uploads/school/2.jpg', 'storage/app/public/uploads/school/3.jpg', 'storage/app/public/uploads/school/4.jpg','storage/app/public/uploads/school/5.jpg']
+// 20200213 add end
   },
 
   /**
@@ -30,15 +37,47 @@ Page({
     })    
   },
 
-  getList:function(){
+// 20200213 add start
+  // getList:function(){
+  //   var that = this;
+  //   app.func.req('get_list', { query: 2, openid: that.data.openid, pageSize: 10, page: page }, 'GET', function (res) {
+  //     // console.log(res);
+  //     that.setData({
+  //       schoolList: that.data.schoolList.concat(res)
+  //     })
+  //   });
+  // },
+
+  getList: function () {
     var that = this;
     app.func.req('get_list', { query: 2, openid: that.data.openid, pageSize: 10, page: page }, 'GET', function (res) {
       // console.log(res);
       that.setData({
-        schoolList: that.data.schoolList.concat(res)
+        resItems: that.data.schoolList.concat(res)
+      });
+      var adSchoolList = [];
+      var index = [];
+      for (var i = 0; i < that.data.resItems.length; i++) {
+        var num = Math.ceil((i + 1) / 3);
+        if (index.indexOf(num) < 0) {
+          index.push(num);
+          adSchoolList.push({ index: num, list: [that.data.resItems[i]] });
+        } else {
+          for (var j = 0; j < adSchoolList.length; j++) {
+            if (num == adSchoolList[j].index) {
+              adSchoolList[j].list.push(that.data.resItems[i])
+            }
+          }
+        }
+      }
+      console.log("20200218teacherlist", that.data.resItems);
+      that.setData({
+        schoolList: adSchoolList
       })
     });
   },
+
+  // 20200213 add end
   
   // 搜索
   formSubmit:function(e){
@@ -58,6 +97,28 @@ Page({
       })
     });
   },
+
+
+  // 20200213 add start
+  // 轮播
+  swiperCollegeChange: function (e) {
+    this.setData({
+      swiperCurrentCollege: e.detail.current
+    })
+  },
+
+  swiperBachelorChange: function (e) {
+    this.setData({
+      swiperCurrentBachelor: e.detail.current
+    })
+  },
+
+  swiperEnterpriseChange: function (e) {
+    this.setData({
+      swiperCurrentEnterprise: e.detail.current
+    })
+  },
+  // 20200213 add end
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -97,8 +158,10 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    page++;
-    this.getList();
+    // 20200213 add start
+    // page++;
+    // this.getList();
+    // 20200213 add start
   },
 
   /**
