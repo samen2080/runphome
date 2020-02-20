@@ -50,6 +50,7 @@
     "pages/mine/coin/coin-detail/coin-detail",
     "pages/mine/coin/coin-make/coin-make",
     "pages/mine/comment/comment",
+    "pages/mine/login-role-choose/login-role-choose",
     "pages/mine/purse/purse",
     "pages/mine/purse/withdraw/withdraw",
     "pages/mine/purse/charge/charge",
