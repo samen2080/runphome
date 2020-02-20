@@ -21,29 +21,64 @@
   right: 24rpx;
 }
 .master-home-top-info-tx-wrap{
-  width: 136rpx;
-  height: 136rpx;
-  box-shadow: 0 0 2rpx #2a1a05;
-  border-radius: 50%;
+   width: 620rpx;
+  height: 328rpx;
   overflow: hidden;
   display: inline-block;
   margin: 0 76rpx;
 }
 .master-home-top-info-tx-wrap image{
-  width: 128rpx;
-  height: 128rpx;
-  border-radius: 50%;
+  width: 620rpx;
+  height: 328rpx;
+  border-radius: 0%;
   overflow: hidden;
   margin: 4rpx;
 }
 .master-home-name{
-  font-size: 32rpx;
-  font-weight: 500;
+  font-size: 42rpx;
+  font-weight: blod;
+  margin-left: 20rpx;
+  float: left;
 }
-.master-home-instru{
-  color: #999999;
+.master-home-web{
+  font-size: 32rpx;
+  float: left;
+  margin-left: 25rpx;
+  margin-top: -10rpx;
+  color: #b1afae;
+}
+.master-home-logo{
+  width: 138rpx;
+  height: 138rpx;
+  border-radius: 0%;
+  overflow: hidden;
+  margin-left: 600rpx;
+  margin-top: -80rpx;
+}
+.master-home-instru1{
+  color: #fdfdfd;
   font-size: 26rpx;
   margin: 20rpx 0 38rpx;
+  border: 2rpx solid #cccac9;
+  width: 108rpx;
+  height: 38rpx;
+  margin-left: 25rpx;
+  margin-top: 60rpx;
+  background: #69c0f3;
+  /* position: relative;
+  float:left; */
+}
+.master-home-instru2{
+  color: #fdfdfd;
+  font-size: 26rpx;
+  margin: 20rpx 0 38rpx;
+  border: 2rpx solid #cccac9;
+  width: 108rpx;
+  height: 38rpx;
+  margin-left: 165rpx;
+  margin-top:-74rpx;
+  background: #fa9511;
+
 }
 .master-home-top-social{
   display: flex;
@@ -60,7 +95,9 @@
   margin-left: 20rpx;
 }
 
-
+.on-list-name1-title{
+  
+}
 
 
 
@@ -85,10 +122,10 @@
   position: relative;
 }
 .swiper-tab-item:first-child{  
-  margin-left: 27%;
+  margin-left: 20%;
 }
 .swiper-tab-item:nth-child(2){
-  margin-right: 27%;
+  margin-right: 20%;
 }
 .active{
   color:#19c810;
@@ -108,9 +145,24 @@
 .master-home-intro{
   font-size: 32rpx;
   line-height: 60rpx;
-  color: #999999;
+  color: #353131;
   padding: 32rpx 24rpx 100rpx;
   background: #ffffff;
+  border-left: 10%;
+}
+.master-home-intro-des{
+  font-size: 42rpx;
+  color: #070707;
+  padding: 32rpx 24rpx 20rpx;
+  background: #ffffff;
+  font-weight: blod;
+}
+.master-home-intro-scale{
+  font-size: 42rpx;
+  color: #070707;
+  padding: 92rpx 24rpx 20rpx;
+  background: #ffffff;
+  font-weight: blod;
 }
 .master-home-intro image{
   margin: 48rpx 0;

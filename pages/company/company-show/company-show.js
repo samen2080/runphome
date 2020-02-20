@@ -19,7 +19,7 @@ Page({
     var host = getApp().globalData.host;
     that.setData({
       host: host,
-      master_id: options.master_id
+      com_id: options.com_id
     })
     wx.getStorage({
       key: 'openid',
@@ -31,51 +31,76 @@ Page({
       },
     })
   },
+
+  // 20200213 start
   // 大师详情
+  // getDetail: function () {
+  //   var that = this;
+  //   app.func.req('get_list', { query: 1, id: that.data.master_id, openid: that.data.openid }, 'GET', function (res) {
+  //     // console.log(res);
+  //     that.setData({
+  //       user_id: res.user_id,
+  //       user_headimg: res.user_headimg,
+  //       user_nickname: res.user_nickname,
+  //       user_topic_count: res.user_topic_count,
+  //       user_invitation_count: res.user_invitation_count,
+  //       user_followers_count: res.user_followers_count,
+  //       user_following_count: res.user_following_count,
+  //       user_intro: res.user_intro,
+  //       user_skilled: res.user_skilled,
+  //       is_follow: res.follow
+  //     })
+  //   });
+  // },
+
   getDetail: function () {
     var that = this;
-    app.func.req('get_list', { query: 1, id: that.data.master_id, openid: that.data.openid }, 'GET', function (res) {
-      // console.log(res);
+   // app.func.req('my_company_show', {id: that.data.com_id }, 'GET', function (res) {
+    app.func.req('my_company_show/' + that.data.com_id, {}, 'GET', function (res) {
+       console.log("20200213res",res);
       that.setData({
-        user_id: res.user_id,
-        user_headimg: res.user_headimg,
-        user_nickname: res.user_nickname,
-        user_topic_count: res.user_topic_count,
-        user_invitation_count: res.user_invitation_count,
-        user_followers_count: res.user_followers_count,
-        user_following_count: res.user_following_count,
-        user_intro: res.user_intro,
-        user_skilled: res.user_skilled,
-        is_follow: res.follow
+        items: res
       })
     });
   },
+  
   // 动态
+  // getIn: function () {
+  //   var that = this;
+  //   app.func.req('great_dynamic', { pageSize: 10, page: 1, in_user_id: that.data.master_id, query: 1, openid: that.data.openid }, 'GET', function (res) {
+  //     // console.log(res);
+  //     for (var i = 0; i < res.length; i++) {
+  //       if (res[i].in_append.length != 0) {
+  //         var index1 = res[i].in_append[0].lastIndexOf(".");
+  //         var index2 = res[i].in_append[0].length;
+  //         var postf = res[i].in_append[0].substring(index1 + 1, index2).toLowerCase();
+  //         var result = imgPostf.indexOf(postf);
+  //         var result2 = videoPostf.indexOf(postf);
+  //         if (result > -1) {
+  //           res[i].in_append_type = 1;
+  //         } else if (result <= -1 && result2 > -1) {
+  //           res[i].in_append_type = 2;
+  //         } else if (result <= -1 && result2 <= -1) {
+  //           res[i].in_append_type = 0;
+  //         }
+  //       }
+  //     }
+  //     that.setData({
+  //       inList: res
+  //     })
+  //   });
+  // },
   getIn: function () {
     var that = this;
-    app.func.req('great_dynamic', { pageSize: 10, page: 1, in_user_id: that.data.master_id, query: 1, openid: that.data.openid }, 'GET', function (res) {
-      // console.log(res);
-      for (var i = 0; i < res.length; i++) {
-        if (res[i].in_append.length != 0) {
-          var index1 = res[i].in_append[0].lastIndexOf(".");
-          var index2 = res[i].in_append[0].length;
-          var postf = res[i].in_append[0].substring(index1 + 1, index2).toLowerCase();
-          var result = imgPostf.indexOf(postf);
-          var result2 = videoPostf.indexOf(postf);
-          if (result > -1) {
-            res[i].in_append_type = 1;
-          } else if (result <= -1 && result2 > -1) {
-            res[i].in_append_type = 2;
-          } else if (result <= -1 && result2 <= -1) {
-            res[i].in_append_type = 0;
-          }
-        }
-      }
+    app.func.req('my_company_job/' + that.data.com_id, {}, 'GET', function (res) {
+      console.log("20200213res", res);
       that.setData({
         inList: res
       })
     });
   },
+  // 20200213 end
+
   //点击切换
   clickTab: function (e) {
     var that = this;
