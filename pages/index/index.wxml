@@ -80,13 +80,15 @@
 
 
 <!-- 热门推荐 -->
+<!-- 20200213 add start -->
 <view class='index-recommend-list-navs'>
-  <navigator url='transaction/transaction' hover-class='none'>
+  <!--<navigator url='transaction/transaction' hover-class='none'>
      <view class='index-recommend-list-nav-item'>
        <image class='index-recommend-list-nav-image' src='/images/0-3.png'></image>
        <text>热播课程</text>
      </view>
-  </navigator>
+  </navigator> -->
+  <!-- 20200213 add end -->
   
   <navigator url='../company/company' hover-class='none'>
      <view class='index-recommend-list-nav-item'>
@@ -102,6 +104,15 @@
      </view>
   </navigator>
 
+<!-- 20200213 add start -->
+    <navigator url='ad/ad' hover-class='none'>
+     <view class='index-recommend-list-nav-item'>
+       <image class='index-recommend-list-nav-image' src='/images/0-3.png'></image>
+       <text>品家产品</text>
+     </view>
+  </navigator>
+<!-- 20200213 add end -->
+
   <!-- <navigator url='ad/ad' hover-class='none'>
      <view class='index-recommend-list-nav-item'>
        <image class='index-recommend-list-nav-image' src='/images/5-.png'></image>
@@ -116,13 +127,22 @@
      </view>
   </navigator> -->
 
-  <navigator url='../activity/activity' hover-class='none'>
+<!-- 20200213 add start -->
+  <!-- <navigator url='../activity/activity' hover-class='none'>
      <view class='index-recommend-list-nav-item'>
         <image class='index-recommend-list-nav-image' src='/images/2-.png'></image>
         <text>教学交流</text>
      </view>
   </navigator>
+</view> -->
+  <navigator url='school/school' hover-class='none'>
+     <view class='index-recommend-list-nav-item'>
+        <image class='index-recommend-list-nav-image' src='/images/2-.png'></image>
+        <text>合作院校</text>
+     </view>
+  </navigator>
 </view>
+<!-- 20200213 add end -->
 <!-- END -->
 
 
@@ -180,9 +200,9 @@
 
 
 <!-- 品家产品 -->
-<view class='index-list-box'>
+<!-- 20200213 add start -->
+<!-- <view class='index-list-box'>
   <view class='index-list-title'>
-    <!-- <image src='/images/index-i2.png'></image> -->
     <text>品家产品</text>
     <view class='index-more'><navigator url='ad/ad' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>
   </view>
@@ -195,7 +215,8 @@
       </view>
     </view>
   </view> 
-</view>
+</view> -->
+<!-- 20200213 add end -->
 <!-- END -->
 
 
