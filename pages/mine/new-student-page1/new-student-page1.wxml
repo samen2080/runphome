@@ -1,0 +1,91 @@
+<!--pages/mine/new-student/new-student.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <!-- <view class='contract-show-middle-title'>
+    <text>联系人信息：</text>
+  </view> -->
+ <view class='input-wrap'>
+  <text>学生ID：</text>
+    <input placeholder-class='placeholder'  value='{{stu_user_id}}' name='stu_user_id'></input>
+  </view>
+  <view class='input-wrap'>
+    <text>生源省代码：</text>
+    <input placeholder-class='placeholder' name='stu_pro_code'></input>
+  </view>
+  <view class='input-wrap'>
+    <text>姓名：</text>
+    <input placeholder-class='placeholder' name='stu_name'></input>
+  </view>
+  <view class='input-wrap' catchtap='genderSelect' >
+        <text>性别：</text>
+        <view class='gender-select'><image src='{{id==0?"/images/male.png":"/images/circle.png"}}' data-id='0'></image>男</view>
+        <view class='gender-select'><image src='{{id==1?"/images/female.png":"/images/circle.png"}}' data-id='1'></image>女</view>
+  </view>
+  <view class='input-wrap'>
+    <text>国籍：</text>
+    <input placeholder-class='placeholder' name='stu_nationality'></input>
+  </view>
+  <view class='input-wrap-new'>
+        <view class='input-wrap-title'>出生日期：</view>
+        <view class='input-wrap-content'>  
+            <picker mode="date" value="{{stu_birthday}}" bindchange="bindDateChange" name='stu_birthday'>  
+            <view style='color:{{dateColor}}'>{{stu_birthday}}</view>  
+           </picker>  
+        </view> 
+   </view>
+
+<!-- 2020/1/21 start -->
+  <view class='input-wrap'>
+    <view>户口区域：<input placeholder="选择" value="{{stu_residence_province}}-{{stu_residence_city}}-{{stu_residence_county}}" focus="{{focus}}" bindfocus="open" /></view>
+
+    <view class="citypicker" hidden='{{condition}}'>
+      <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+        <view class="cityheader">
+              <view bindtap="open" class="city-cancel">取消</view>
+              <view bindtap="open" class="city-true">确定</view>
+        </view>
+        <picker-view-column>
+          <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+</view> 
+<!-- 2020/1/21 end -->
+
+    <view class='input-wrap'>
+      <text>户口地址：</text>
+      <input placeholder-class='placeholder' name='stu_residence'></input>
+    </view>
+    
+    <!-- <view class='input-wrap'><text>证件类型：</text>
+      <Select prop-array='{{selectArray}}' bind:myget='getData' data-id='{{id}}' data-mntStatus='{{stu_pin_type}}'></Select></view>
+     
+
+    <view class='input-wrap'>
+      <text>身份证号：</text>
+      <input placeholder-class='placeholder' name='stu_pin_code'></input>
+    </view> -->
+    <view class='input-wrap'>
+      <text>政治面貌：</text>
+      <input placeholder-class='placeholder' name='stu_political_status'></input>
+    </view>
+    
+   <view class='input-wrap'>
+      <text>民族：</text>
+      <input placeholder-class='placeholder' name='stu_nation'></input>
+    </view>
+    
+    <view class='btn-wrap' wx:if='{{condition == 1}}'>
+      <button class='next-btn' form-type='submit'>下一步</button>
+    </view>
+
+
+
+</form>
+
+

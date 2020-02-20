@@ -1,0 +1,81 @@
+/* pages/mine/new-student-page3/new-student-succeed/new-student-succeed.wxss */
+.message-show-content-container{
+margin-top: 20rpx;
+margin-left: 25rpx;
+padding: 20rpx;
+width: 670rpx;
+height: 300rpx;
+border-radius:15rpx;
+background: #ffffffff;
+font-size: 30rpx;
+}
+.message-show-content-container image{
+margin-top: 15rpx;
+width: 100rpx;
+height: 100rpx;
+float: left;
+}
+.message-show-content-title{
+/* margin-top: 20rpx; */
+font-weight: 800;
+width: 100%;
+float: left;
+}
+
+.message-show-content-msg{
+font-size: 26rpx;
+margin-top: 10rpx;
+margin-left: 20rpx;
+width: 530rpx;
+height: 100rpx;
+float: left;
+}
+
+.message-show-content-container image{
+margin-top: 15rpx;
+width: 100rpx;
+height: 100rpx;
+float: left;
+}
+
+.on-list-btn-wrap1{
+  width: 270rpx;
+  height: 90rpx;
+  overflow:visible;
+  float: right;
+  margin-left: 5rpx;
+  color: #161615;
+}
+
+.on-list-btn-wrap2{
+  width: 170rpx;
+  height: 90rpx;
+  overflow:visible;
+  float: right;
+  margin-left: 95rpx;
+}
+
+.on-list-remove-btn1{
+  width: 170rpx;
+  height: 60rpx;
+  line-height: 58rpx;
+  float: right;
+  margin-right: 144rpx;
+  font-size: 28rpx;
+  color: #181717;
+  border: 2rpx solid #111110;
+  margin-top: 46rpx;
+}
+
+.on-list-remove-btn2{
+  width: 170rpx;
+  height: 60rpx;
+  line-height: 58rpx;
+  float: right;
+  margin-right: 94rpx;
+  font-size: 28rpx;
+  color: #f81f1f;
+  border: 2rpx solid #ff721c;
+  margin-top: 49rpx;
+}
+

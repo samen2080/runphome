@@ -1,0 +1,42 @@
+<!--pages/mine/student/student-change/student-change.wxml-->
+<view class='info-edit-page'>
+  <form id='info-edit-form' bindsubmit="formSubmit" bindreset="formReset">
+    <view class='info-edit-form-modify'>
+
+      <view class='info-edit-input'><text>健康状况</text><input type='text' placeholder='请输入健康状况' placeholder-class="placeholder" value='{{userInfo.stu_health_ind}}' name='stu_health_ind'></input></view>
+      <view class='info-edit-input'><text>家庭成员</text><input type='text' placeholder='请输入家庭成员' placeholder-class="placeholder" value='{{userInfo.stu_family_member_name}}' name='stu_family_member_name'></input></view>
+      <view class='info-edit-input'><text>关系</text><input type='text' placeholder='请输入关系' placeholder-class="placeholder" value='{{userInfo.stu_family_member_rel}}' name='stu_family_member_rel'></input></view>
+      <view class='info-edit-input'><text>电话</text><input type='text' placeholder='请输入电话' placeholder-class="placeholder" value='{{userInfo.stu_familiy_member_phone}}' name='stu_familiy_member_phone'></input></view>
+      <view class='input-wrap'>
+       <view>家庭区域 <input placeholder="选择" value="{{stu_home_province}}-{{stu_home_city}}-{{stu_home_county}}" focus="{{focus}}" bindfocus="open" /></view>
+
+       <view class="citypicker" hidden='{{condition}}'>
+       <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+        <view class="cityheader">
+              <view bindtap="open" class="city-cancel">取消</view>
+              <view bindtap="open" class="city-true">确定</view>
+        </view>
+        <picker-view-column>
+          <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+        </picker-view-column>
+       </picker-view>
+      </view>
+      </view>  
+      <view class='info-edit-input'><text>家庭地址</text><input type='text' placeholder='请输入现住地址' placeholder-class="placeholder" value='{{userInfo.stu_home_address}}' name='stu_home_address'></input></view>
+      
+      
+         
+    </view>
+    <view class='info-edit-form-btn'>
+      <button formType="submit" class='info-edit-form-sub-btn'>
+        <text class='btn-text'>保存</text>
+      </button>
+    </view>
+  </form>
+</view>

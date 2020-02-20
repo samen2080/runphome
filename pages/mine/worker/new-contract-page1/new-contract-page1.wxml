@@ -1,0 +1,39 @@
+<!--pages/mine/worker/new-contract-page1/new-contract-page1.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='contract-show-middle-title'>
+    <text>联系人信息：</text>
+  </view>
+  <view class='input-wrap'>
+    <text>户主姓名：</text>
+    <input placeholder-class='placeholder' name='user_name'></input>
+  </view>
+  <view class='input-wrap'>
+    <text>用户ID：</text>
+    <input placeholder-class='placeholder' name='user_id'></input>
+  </view>
+  <view class='input-wrap'>
+    <text>性别：</text>
+    <input placeholder-class='placeholder' name='user_sex'></input>
+  </view>
+  <view class='input-wrap'>
+    <text>身份证号：</text>
+    <input placeholder-class='placeholder' name='user_city_id'></input>
+  </view>
+  <view class='input-wrap'>
+    <text>联系电话：</text>
+    <input placeholder-class='placeholder' name='user_mobile'></input>
+  </view>
+  <view class='input-wrap'>
+    <text>联系地址：</text>
+    <input placeholder-class='placeholder' name='user_address'></input>
+  </view>
+  <view class='btn-wrap'>
+    <button class='next-btn' form-type='submit'>下一步</button>
+
+  </view>
+    <view class='upload-wrap'>    
+       <image src='{{host}}{{address_img}}' mode='aspectFill'></image>
+       <image src='/images/fabu1.png' class='upload-btn' mode='aspectFill' catchtap='uploadpic' hidden='{{upHidden}}'></image>
+  </view>
+</form>
+

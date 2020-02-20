@@ -1,0 +1,90 @@
+<!--pages/message/message.wxml-->
+<import src="../../template/template.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
+
+ <view class="swiper-tab">
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">消息<view class='border-bottom' style='display:{{currentTab==0?"block":"none"}}'></view></view>
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">通知<view class='border-bottom' style='display:{{currentTab==1?"block":"none"}}'></view></view>
+</view> 
+
+ <swiper current="{{currentTab}}" duration="300"  bindchange="swiperTab" style='height:90vh'>
+
+<!-- 消息 -->
+   <swiper-item>
+    <view class='message-list'>   
+        <navigator url='wgz-info/wgz-info' hover-class='none'><view class='message-list-list'>
+          <view class='wrap'>
+            <image src='/images/wgz-tx.png'></image>
+            <view class='message-list-right'>
+              <text class='message-list-title'>未关注人消息</text><text class='message-list-time'>11:25</text>
+              <text class='message-list-content'>您好，对您的视频非常感兴趣想互相交流对您的视频非常感兴趣想互相交流</text>
+            </view>
+          </view>
+          <view class='line'></view>
+        </view></navigator>
+      
+        <navigator url='wgz-info/wgz-info' hover-class='none'><view class='message-list-list'>
+          <view class='wrap'>
+            <image src='/images/wgz-tx.png'></image>
+            <view class='message-list-right'>
+              <text class='message-list-title'>润品科技消息</text><text class='message-list-time'>11:25</text>
+              <text class='message-list-content'>您好，对您的视频非常感兴趣想互相交流对您的视频非常感兴趣想互相交流</text>
+            </view>
+          </view>
+          <view class='line'></view>
+        </view></navigator>
+      
+      <!-- 20200115 增加消息已读功能 start -->
+      <view class='message-list-list' wx:for="{{items}}" wx:key="{{items}}" wx:for-item="i">
+          <navigator url='message-show/message-show?om_id={{i.om_id}}&om_add_time={{i.om_add_time}}&om_user_id={{i.om_user_id}}&om_content={{i.om_content}}&om_read_status={{i.om_read_status}}' hover-class='none'><view class='wrap'>   
+               <image src='/images/unread-msg.png' wx:if='{{i.om_read_status == 0}}'></image>  
+               <image src='/images/read-msg.png' wx:if='{{i.om_read_status == 1}}'></image>  
+               <view class='message-list-right'>
+                  <text class='message-list-title'>{{i.om_user_id}}</text><text class='message-list-time'>{{i.om_add_time}}</text>
+                  <text class='message-list-content'>{{i.om_content}}</text>    
+               </view> 
+          </view></navigator>
+      </view>
+      <!-- <view class='message-list-list'>
+        <view class='wrap'>
+          <image src='/images/wgz-yh-tx.png'></image>
+          <view class='message-list-right'>
+            <text class='message-list-title'>名师一对一</text><text class='message-list-time'>06-08</text>
+            <text class='message-list-content'>您好，对您的视频非常感兴趣想互相交流对您的视频非常感兴趣想互相交流</text>
+          </view>
+        </view>
+        <view class='line'></view>
+      </view> -->
+      <!-- 20200115 增加消息已读功能 end -->
+    </view>
+  </swiper-item> 
+
+<!-- 通知 -->
+   <swiper-item> 
+    <view class='inform-list'>
+
+      <navigator url='system-info/system-info' hover-class='none'><view class='message-list-list'>
+        <view class='wrap'>
+          <image src='/images/xttz-tx.png'></image>
+          <view class='message-list-right'>
+            <text class='message-list-title'>系统通知</text><text class='message-list-time'>13小时前</text>
+            <text class='message-list-content'>腕力之家推送消息</text>
+          </view>
+        </view>
+        <view class='line'></view>
+      </view></navigator>
+      
+      <view class='message-list-list'>
+        <view class='wrap'>
+          <image src='/images/esjytz-tx.png'></image>
+          <view class='message-list-right'>
+            <text class='message-list-title'>腕力产品消息</text><text class='message-list-time'>06-08</text>
+            <text class='message-list-content'>买卖交易消息</text>
+          </view>
+        </view>
+        <view class='line'></view>
+      </view>        
+
+    </view>
+   </swiper-item>
+</swiper> 

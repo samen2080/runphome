@@ -1,0 +1,17 @@
+
+<!-- <form bindsubmit="formSubmitNew" bindreset="formReset">
+  <view class='btn-wrap'>
+    <button class='sure-btn' form-type='submit'>新建合约</button>
+  </view>
+</form> -->
+
+<view class="ws_menu">
+	<navigator hover-class="none" url="/pages/mine/worker/new-contract-page1/new-contract-page1"><image src="https://m.youzhu.com/images/weChatAppImages/icon_1.png" /><text>新建合约</text></navigator>
+	<navigator hover-class="none" url="/pages/mine/worker/new-contract"><image src="https://m.youzhu.com/images/weChatAppImages/icon_2.png" /><text>修改合约</text></navigator>
+	<navigator hover-class="none" url="/pages/product/product"><image src="https://m.youzhu.com/images/weChatAppImages/icon_1.png" /><text>查看保养</text></navigator>
+	<navigator hover-class="none" url="/pages/design/design"><image src="https://m.youzhu.com/images/weChatAppImages/icon_2.png" /><text>维修登记</text></navigator>
+	<navigator hover-class="none"
+   url="/pages/mine/worker/new-repair-page1/new-repair-page1"><image src="https://m.youzhu.com/images/weChatAppImages/icon_1.png" /><text>新建维修</text></navigator>
+	<navigator hover-class="none"
+   url="/pages/mine/worker"><image src="https://m.youzhu.com/images/weChatAppImages/icon_2.png" /><text>我的记录</text></navigator>
+</view>

@@ -1,0 +1,50 @@
+<!--pages/mine/worker/new-repair-page1/new-repair-page1.wxml-->
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class='contract-show-middle-title'>
+    <text>维修信息：</text>
+  </view>
+  <view class='input-wrap'>
+    <text>维修日期：</text>
+    <input placeholder-class='placeholder' name='rep_date'></input>
+  </view>
+  <view class='input-wrap'>
+    <text>维修员ID：</text>
+    <input placeholder-class='placeholder' name='rep_repairman_id'></input>
+  </view>
+  <view class='input-wrap'>
+    <text>维修公司：</text>
+    <input placeholder-class='placeholder' name='rep_repairman_com'></input>
+  </view>
+  <view class='input-wrap'>
+    <text>维修状态：</text>
+    <input placeholder='（0-未执行，1-已执行）' placeholder-class='placeholder' name='rep_status'></input>
+  </view>
+  <view class='input-wrap'>
+    <text>维修员电话：</text>
+    <input placeholder-class='placeholder' name='rep_repairman_mobile'></input>
+  </view>
+  <view class='input-wrap'>
+    <text>维修站地址：</text>
+    <input placeholder-class='placeholder' name='rep_repairman_address'></input>
+  </view>
+  <view class='input-wrap'>
+    <text>用户ID：</text>
+    <input placeholder-class='placeholder' name='rep_user_id'></input>
+  </view>
+  <view class='input-wrap'>
+    <text>用户电话：</text>
+    <input placeholder-class='placeholder' name='rep_user_mobile'></input>
+  </view>
+  <view class='input-wrap'>
+    <text>用户地址：</text>
+    <input placeholder-class='placeholder' name='rep_user_address'></input>
+  </view>
+  <view class='btn-wrap'>
+    <button class='next-btn' form-type='submit'>下一步</button>
+
+  </view>
+    <!-- <view class='upload-wrap'>    
+       <image src='{{host}}{{address_img}}' mode='aspectFill'></image>
+       <image src='/images/fabu1.png' class='upload-btn' mode='aspectFill' catchtap='uploadpic' hidden='{{upHidden}}'></image>
+  </view> -->
+</form>

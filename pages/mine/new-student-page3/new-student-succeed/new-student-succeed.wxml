@@ -1,0 +1,18 @@
+<!--pages/mine/new-student-page3/new-student-succeed/new-student-succeed.wxml-->
+<view class='message-show-content-container'>
+<view class='message-show-content-title'>学籍编号：{{userInfo.stu_id}}</view>
+<image src='/images/msg-icon-boy.png'></image>
+<view class='message-show-content-msg'>您的学生资料已经成功建立，请一直关注润品科技，感谢支持！</view>
+
+<view class='on-list-btn-wrap'><button class='on-list-remove-btn2' catchtap='chioce'>选择课程</button></view>
+<view class='on-list-btn-wrap'><button class='on-list-remove-btn1' catchtap='outline'>查看档案</button></view>
+
+
+</view>
+
+
+
+
+
+
+

@@ -1,0 +1,314 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.4",
+	"appid": "wxbb7cac615c7d818f",
+	"projectname": "runphome",
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 36,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/start/start",
+					"pathName": "pages/start/start",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/start/start",
+					"pathName": "pages/start/start",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/community/community",
+					"pathName": "pages/community/community",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/qrcode/qrcode",
+					"pathName": "pages/qrcode/qrcode",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "comment",
+					"pathName": "pages/mine/contract/contract-pj/contract-pj",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/contract/contract",
+					"pathName": "pages/mine/contract/contract",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/contract/contract-pj/contract-pj",
+					"pathName": "pages/mine/contract/contract-pj/contract-pj",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/worker/worker",
+					"pathName": "pages/mine/worker/worker",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/worker/new-contract-page2/new-contract-page2",
+					"pathName": "pages/mine/worker/new-contract-page2/new-contract-page2",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/worker/new-contract-page3/new-contract-page3",
+					"pathName": "pages/mine/worker/new-contract-page3/new-contract-page3",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/worker/new-contract-page3/new-contract-page3",
+					"pathName": "pages/mine/worker/new-contract-page3/new-contract-page3",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/worker/new-contract-page4/new-contract-page4",
+					"pathName": "pages/mine/worker/new-contract-page4/new-contract-page4",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/worker/new-contract-page3/new-contract-page3",
+					"pathName": "pages/mine/worker/new-contract-page3/new-contract-page3",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/worker/new-contract-page1/new-contract-page1",
+					"pathName": "pages/mine/worker/new-contract-page1/new-contract-page1",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/worker/new-contract-page4/new-contract-page4",
+					"pathName": "pages/mine/worker/new-contract-page4/new-contract-page4",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/worker/new-contract-page1/new-contract-page1",
+					"pathName": "pages/mine/worker/new-contract-page1/new-contract-page1",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/repair/repair",
+					"pathName": "pages/mine/repair/repair",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/repair/repair",
+					"pathName": "pages/mine/repair/repair",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/repair/repair",
+					"pathName": "pages/mine/repair/repair",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/worker/worker",
+					"pathName": "pages/mine/worker/worker",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/plan/plan",
+					"pathName": "pages/mine/plan/plan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/mine",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/contract/contract-show/contract-show",
+					"pathName": "pages/mine/contract/contract-show/contract-show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/mine",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/message/message",
+					"pathName": "pages/message/message",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/message/message-show/message-show",
+					"pathName": "pages/message/message-show/message-show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/mine",
+					"pathName": "pages/mine/mine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/student/student",
+					"pathName": "pages/mine/student/student",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/student/student-show-page1/student-show-page1",
+					"pathName": "pages/mine/student/student-show-page1/student-show-page1",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/student/student-show-page2/student-show-page2",
+					"pathName": "pages/mine/student/student-show-page2/student-show-page2",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/student/student-change-page1/student-change-page1",
+					"pathName": "pages/mine/student/student-change-page1/student-change-page1",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/new-student-page3/new-student-page3",
+					"pathName": "pages/mine/new-student-page3/new-student-page3",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/new-student-page3/new-student-succeed/new-student-succeed",
+					"pathName": "pages/mine/new-student-page3/new-student-succeed/new-student-succeed",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/employment/employment",
+					"pathName": "pages/employment/employment",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/company/company",
+					"pathName": "pages/company/company",
+					"scene": null
+				}
+			]
+		}
+	}
+}
