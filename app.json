@@ -25,6 +25,7 @@
     "pages/index/master/master-subject/master-subject",
     "pages/community/community",
     "pages/company/company",
+    "pages/company/company-show/company-show",
     "pages/community/bbs/bbs",
     "pages/community/bbs/bbs-home/bbs-home",
     "pages/community/bbs/publish/publish",
