@@ -1,0 +1,5 @@
+<!--pages/mine/login-role-choose/login-role-choose.wxml-->
+<!-- 分类 -->
+<view class='pro-cat-box'>
+  <view wx:for='{{roleArr}}' wx:key='item' data-id='{{index}}' catchtap='roleSelect'>{{item}}</view>
+</view>

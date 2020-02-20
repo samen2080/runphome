@@ -8,7 +8,11 @@ Page({
    */
   data: {
     signInShow : 'none',
-    hydl: true,
+    hydl: false,
+    // 20200213 add start
+    roleChooseShow: true,
+    loginInShow: false
+    // 20200213 add end
     // isSign: false
   },
 
@@ -31,6 +35,16 @@ Page({
     });    
   },
 
+  // 20200213 add start
+  roleSwitch: function (e) {
+    var that = this;
+    var user_id = wx.getStorageSync("user_info").user_id;
+    wx.navigateTo({
+      url: 'login-role-choose/login-role-choose?user_id=' + user_id,
+    })
+  },
+  // 20200213 add end
+
   closeSignIn: function (e) {
     var that = this;
     that.setData({
@@ -43,6 +57,9 @@ Page({
    */
   onLoad: function (options) {
     template.tabbar("tabBar", 2, this);  
+    // 20200213 add start
+    this.changeData();
+    // 20200213 add end
   },
   //20200109 系统升级为符合微信登录条件根据微信官方20190901文件 start
   // bindGetUserInfo: function (e) {
@@ -79,12 +96,18 @@ Page({
   changeData: function () {
     var n = this;
     let openid = wx.getStorageSync('openid');
+    // 20200213 add start
+    let role_type = wx.getStorageSync('login_role');
+    // 20200213 add end
     wx.getSetting({
       success: function (t) {
         console.log(t), t.authSetting["scope.userInfo"] ? wx.getUserInfo({
           success: function (t) {
             console.log(t), 
-              app.func.req('login', { openid: openid, user_headimg: t.userInfo.avatarUrl, user_nickname: t.userInfo.nickName, user_sex: t.userInfo.gender }, 'POST', function (res) {
+            // 20200213 add start
+              app.func.req('login', { openid: openid, user_headimg: t.userInfo.avatarUrl, user_nickname: t.userInfo.nickName, user_sex: t.userInfo.gender, user_identity: role_type.role_type }, 'POST', function (res) {
+            // app.func.req('login', { openid: openid, user_headimg: t.userInfo.avatarUrl, user_nickname: t.userInfo.nickName, user_sex: t.userInfo.gender }, 'POST', function (res) {
+            // 20200213 add end
                 if (res.code == 200) {
                   //20200213 start
                   wx.setStorage({
@@ -108,6 +131,15 @@ Page({
       }
     });
   },
+
+  // 20200213 add start
+  loginRoleChoose: function () {
+    console.log("20200213");
+    wx.navigateTo({
+      url: 'login-role-choose/login-role-choose',
+    })
+  },
+    // 20200213 add end
 //20200109 系统升级为符合微信登录条件根据微信官方20190901文件 end
 
   getUser: function () {
@@ -145,7 +177,18 @@ Page({
           url: '../start/start',
         })
       }
-    })   
+    });
+    //  20200213 add start
+    console.log("20200213 1.1");
+    let role_type = wx.getStorageSync('login_role');
+    if (role_type.role_type != null) {
+      console.log("20200213 1.2");
+      that.setData({
+        roleChooseShow: false,
+        loginInShow: true
+      })
+    };
+    //  20200213 add end
   },
 
   /**

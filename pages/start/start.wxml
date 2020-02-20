@@ -1,6 +1,6 @@
 <!--pages/start/start.wxml-->
 <view class="start-view">
-<image src='/images/start_icon.png' mode='widthFix' class="start-image"></image>
+<image src='/images/start_icon.jpg' mode='widthFix' class="start-image"></image>
 </view>
 
 <!--20200109 系统升级为符合微信登录条件根据微信官方文件 start -->

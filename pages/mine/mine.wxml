@@ -8,7 +8,11 @@
     <view class="sq_title1">为了提供更好的服务</view>
     <view class="sq_title1">请在稍后的提示框中点击“允许”</view>
     <image src="../../images/sqimg.png"></image>
-    <button bindgetuserinfo="bindGetUserInfo" class="btn_ok" openType="getUserInfo" style="color:#fff;background:{{color}}">我知道了</button>
+    <!-- 20200213 add start -->
+    <button class="btn_ok" catchtap='loginRoleChoose' style="color:#fff;background:{{color}}" wx:if="{{roleChooseShow}}">选择角色</button>
+    <!-- <view class='btn_ok' catchtap='loginRoleChoose'><button>我知道了</button></view> -->
+    <button bindgetuserinfo="bindGetUserInfo" class="btn_ok" openType="getUserInfo" style="color:#fff;background:{{color}}" wx:if="{{loginInShow}}">我知道了</button>
+    <!-- 20200213 add end -->
 </view>
 <!--20200109 login 升级 end-->
 
@@ -22,6 +26,9 @@
     <!-- <view class='sign-in' wx:if='{{isSign == true}}'>已签到</view> -->
     <text class='mine-info-signature'>签名：<text id='mine-info-signature'>{{userInfo.user_sign == '' ? "未填写":userInfo.user_sign}}</text></text>
     <image src='/images/arrow-r.png' class='mine-arrow'></image></navigator>
+      <!-- 20200213 add start -->
+    <view class='role-switch' catchtap='roleSwitch'>切换</view>
+    <!-- 20200213 add end -->
   </view>
   <view class='mine-attention'>
     <view class='mine-attention-list'><navigator url='focus/focus' hover-class='none'>
