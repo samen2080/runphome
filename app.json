@@ -26,6 +26,7 @@
     "pages/community/community",
     "pages/company/company",
     "pages/company/company-show/company-show",
+    "pages/company/company-show/job-show/job-show",
     "pages/community/bbs/bbs",
     "pages/community/bbs/bbs-home/bbs-home",
     "pages/community/bbs/publish/publish",

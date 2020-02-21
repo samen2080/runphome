@@ -43,23 +43,24 @@
     <view class='mine-subject-box' wx:if='{{currentTab==1}}'>
 
       <view class='mine-subject-list' wx:for="{{inList}}" wx:key="{{inList}}" wx:for-item="i">
+     
         <view class='wrap'>
+         <navigator url='job-show/job-show?job_id={{i.job_id}}' hover-class='none'>
           <view class='mine-subject-head-box'>
                  <view class='on-list-name1'>
                      <view class='master-home-name'>{{i.job_name}}{{i.job_benefit}}</view>
-                     <view class='on-list-name3'>{{i.job_salary}}元 ·</view>
-                     <view class='on-list-name4'>{{i.job_type}}</view>
+                     <view class='on-list-name3'>{{i.job_salary}}元 </view>
+                     <view class='on-list-name4'>·{{i.job_type}}</view>
                      <view class='on-list-name2'>{{i.job_county}}-{{i.job_address}} ·{{i.job_experience_ind}}</view>
                      <view class='on-list-name2'>学历要求：{{i.job_education_ind}}</view>
                      <view class='on-list-name5'><button hover-class='none' data-jobid="{{i.job_id}}" catchtap='apply'>申请</button></view>
-                 
                      <view class='on-list-name3'>{{i.job_add_time}}</view>
                      
         
                    </view>
-                  
+               
           </view>
-
+       </navigator>
         </view>
       </view>
 

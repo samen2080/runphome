@@ -1,5 +1,5 @@
 {
-	"description": "项目配置文件。",
+	"description": "项目配置文件",
 	"packOptions": {
 		"ignore": []
 	},
@@ -24,9 +24,11 @@
 	"libVersion": "2.2.4",
 	"appid": "wxbb7cac615c7d818f",
 	"projectname": "runphome",
-	"isGameTourist": false,
-	"simulatorType": "wechat",
-	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -41,15 +43,10 @@
 			"list": []
 		},
 		"game": {
-			"currentL": -1,
-			"list": []
-		},
-		"gamePlugin": {
-			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": 42,
+			"current": 43,
 			"list": [
 				{
 					"id": -1,
@@ -346,13 +343,15 @@
 				},
 				{
 					"id": -1,
-<<<<<<< HEAD
 					"name": "pages/company/company",
 					"pathName": "pages/company/company",
-=======
-					"name": "pages/index/school/school",
-					"pathName": "pages/index/school/school",
->>>>>>> 30ebdaf35075cfc4c666ebe89a0f92e738306cf0
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/company/company-show/job-show/job-show",
+					"pathName": "pages/company/company-show/job-show/job-show",
 					"scene": null
 				}
 			]

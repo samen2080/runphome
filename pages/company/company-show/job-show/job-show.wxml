@@ -1,0 +1,33 @@
+<!--pages/company/company-show/job-show/job-show.wxml-->
+<view class='product-show-top'>
+
+  <swiper class='swiper-container' current='0' indicator-dots='true' indicator-color='rgba(255,255,255,0.6)' indicator-active-color='#19c810'>
+    <swiper-item wx:for="{{imgUrls}}" wx:key="{{imgUrls}}">
+      <image src='{{host}}{{item}}' data-src="{{host}}{{item}}" mode='aspectFill' class='swiper-img' catchtap='fullSize'/>
+    </swiper-item>
+  </swiper> 
+
+  <view class='product-show-type'>{{inList.job_type}}</view>
+  <view class='product-show-name'>{{inList.job_name}}</view>
+  <view class='product-show-boss'><text>{{inList.job_boss_interview_ind==1?"boss直聘":"不是boss直聘"}}</text></view>
+  <view class='product-show-salary'>{{inList.job_salary}}元/月</view>
+
+  <view class='product-show-benefit'><text>{{inList.job_benefit}}</text></view>
+  <view class='product-show-class-time'> 职位应聘开始时间 <text>{{inList.job_publish_start_date}}</text></view>
+  <view class='product-show-class-time'> 职位应聘结束时间 <text>{{inList.job_publish_end_date}}</text></view>
+
+ 
+</view>
+
+  <view class='product-home-intro' >
+      <view class='product-home-intro-des'>职位描述</view>
+      <view class='product-home-intro-ask'>要求</view>
+       <view class='product-home-intro-ask-detail'>{{inList.job_experience_ind}}|{{inList.job_education_ind}}</view>
+      <text>{{inList.job_descript}}</text>
+  </view>
+
+<view class='product-show-nav'>
+  <button open-type='contact' class='product-show-share'><image src='/images/phone.png'></image></button>
+  <button class='product-show-remove' catchtap='removePro' hidden='{{rebtnShow}}'>申请职位</button>
+  
+</view>
