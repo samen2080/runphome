@@ -13,7 +13,8 @@ Page({
     swiperCurrentBachelor: 0,
     swiperCurrentEnterprise: 0,
     brand_intro:'网易 (NASDAQ: NTES)，1997年由丁磊先生在广州创办、2000年在美国NASDAQ股票交易所挂牌上市，是中国领先的互联网技术公司，在开发互联网应用、服务等方面始终保持中国业界领先地位。本着对中国互联网发展强烈的使命感，缔造美好生活的愿景。',
-    brand_album: ['storage/app/public/uploads/school/1.jpg', 'storage/app/public/uploads/school/2.jpg', 'storage/app/public/uploads/school/3.jpg', 'storage/app/public/uploads/school/4.jpg','storage/app/public/uploads/school/5.jpg']
+    // brand_album: [{ brand_id: "1", brand_img: 'storage/app/public/uploads/school/1.jpg'}, { brand_id: "2", brand_img: 'storage/app/public/uploads/school/2.jpg'}, { brand_id: "3", brand_img: 'storage/app/public/uploads/school/3.jpg'}, { brand_id: "4", brand_img: 'storage/app/public/uploads/school/4.jpg' }, { brand_id: "5", brand_img: 'storage/app/public/uploads/school/5.jpg'}]
+    cooperate_brand_album: []
 // 20200213 add end
   },
 
@@ -23,6 +24,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     var host = getApp().globalData.host;
+
     that.setData({
       host: host
     })
@@ -32,6 +34,9 @@ Page({
         that.setData({
           openid: res.data
         })
+        // 20200213 add start
+        that.getCooperateImg();
+        // 20200213 add end
         that.getList();
       },
     })    
@@ -47,6 +52,17 @@ Page({
   //     })
   //   });
   // },
+  getCooperateImg: function () {
+    var that = this;
+    // 品牌广告
+    app.func.req('get_list', { query: 5, openid: that.data.openid, pageSize: 15, page: page }, 'GET', function (res) {
+      // console.log(res);
+      that.setData({
+        cooperate_brand_album: that.data.cooperate_brand_album.concat(res)
+      })
+      console.log("20200213", that.data.cooperate_brand_album);
+    });
+  },
 
   getList: function () {
     var that = this;

@@ -346,8 +346,13 @@
 				},
 				{
 					"id": -1,
+<<<<<<< HEAD
 					"name": "pages/company/company",
 					"pathName": "pages/company/company",
+=======
+					"name": "pages/index/school/school",
+					"pathName": "pages/index/school/school",
+>>>>>>> 30ebdaf35075cfc4c666ebe89a0f92e738306cf0
 					"scene": null
 				}
 			]
