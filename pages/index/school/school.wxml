@@ -10,20 +10,29 @@
     </form>
   </view>
 </view> -->
-<view class='ad-show-middle'>
-  <view class='ad-show-pic-box'>
-    <scroll-view scroll-x="true" wx:if='{{brand_album.length > 1}}'> 
+<!-- <view class='ad-show-top'>
+  <view class='ad-show-pic-box'> -->
+    <!-- <scroll-view scroll-x="true" wx:if='{{cooperate_brand_album.length > 1}}'> 
       <view class="ad-show-pic-box-Wrap" scroll-x="true"> 
-        <view class="ad-show-swiper" wx:for='{{brand_album}}' wx:key='{{brand_album}}'> 
-          <image class="ad-show-pic" src="{{host}}{{item}}" mode='aspectFill'></image> 
+        <view class="ad-show-swiper" wx:for='{{cooperate_brand_album}}' wx:key='{{cooperate_brand_album}}'> 
+          <image class="ad-show-pic" src="{{host}}{{item.coo_brand_img}}" mode='aspectFill'></image> 
         </view>           
       </view> 
-    </scroll-view>
-    <view class='ad-show-pic-box-wrap-1' wx:if='{{brand_album.length == 1}}'>
-      <image src="{{host}}{{brand_album[0]}}" mode='aspectFill'></image> 
+    </scroll-view> -->
+
+    <!-- <view class='ad-show-pic-box-wrap-1' wx:if='{{cooperate_brand_album.length == 1}}'>
+      <image src="{{host}}{{cooperate_brand_album[0]}}" mode='aspectFill'></image> 
     </view>
   </view>
-</view>
+</view> -->
+
+    <view class='banner'>
+      <swiper class='banner-swiper' current='0'>
+        <swiper-item wx:for="{{cooperate_brand_album}}" wx:key='item'>
+          <image src='{{host}}{{item.coo_brand_img}}' mode='aspectFill' class='banner-img' />
+        </swiper-item>
+      </swiper>
+    </view>
 
 <view class='ad-show-bottom'>
   <view class='ad-show-title-box'>

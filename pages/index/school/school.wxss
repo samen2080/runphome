@@ -234,4 +234,29 @@
   color: #444444;
   text-align: justify;
 }
+
+
+/* banner */
+.banner{
+  background-color: #ffffff;
+}
+.banner-swiper{
+  text-align: center;
+  width: 750rpx;
+  /* margin-left: 10rpx; */
+  position: relative;
+  height: 356rpx;
+}
+.banner-img{
+  width: 730rpx;
+  height: 316rpx;
+   /* width: 100%;
+  height: 100%; */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 10rpx;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
 /* 20200213 add end */
