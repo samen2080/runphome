@@ -20,6 +20,18 @@
   top: 24rpx;
   right: 24rpx;
 }
+.mine-subject-list{
+  width: 100%;
+  background: #ffffff;
+  margin-bottom: 24rpx;
+  padding-top: 50rpx;
+}
+.mine-subject-head-box{
+  width: 100%;
+  height: 320rpx;
+  position: relative;
+  overflow: hidden;
+}
 .master-home-top-info-tx-wrap{
    width: 620rpx;
   height: 328rpx;
@@ -37,7 +49,7 @@
 .master-home-name{
   font-size: 42rpx;
   font-weight: blod;
-  margin-left: 20rpx;
+  margin-left: 10rpx;
   float: left;
 }
 .master-home-web{
@@ -95,11 +107,48 @@
   margin-left: 20rpx;
 }
 
-.on-list-name1-title{
-  
+.on-list-name2{
+  margin-top: 10rpx;
+  width: 100%;
+  position: relative;
+  float: left;
+  margin-left: 8rpx;
+  text-align: left;
+  padding: 8rpx;
+  font-size: 30rpx;
 }
-
-
+.on-list-name3{
+  margin-top: 10rpx;
+  width: 100%;
+  position: relative;
+  float: left;
+  margin-left: 10rpx;
+  text-align: left;
+  color: red;
+  font-size: 30rpx;
+}
+.on-list-name4{
+  margin-top: -36rpx;
+  width: 100%;
+  position: relative;
+  float: left;
+  margin-left: 150rpx;
+  text-align: left;
+  font-size: 30rpx;
+}
+.on-list-name5{
+  margin-top: 1rpx;
+  width: 108rpx;
+  height: 48rpx;
+  position: relative;
+  float: right;
+  text-align: left;
+  background: #fa9511;
+  font-size: 28rpx;
+  margin: 20rpx 0 38rpx;
+  border: 2rpx solid #cccac9;
+  color: white;
+}
 
 .swiper-tab{
   width: 100%;

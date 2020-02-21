@@ -29,7 +29,7 @@
       <text>{{items.com_scale}}</text>
     
       <view class='master-home-intro-scale'>公司环境</view>
-      <image src='{{items.com_img}}' mode='aspectFill'></image>
+      <image src='{{host}}{{items.com_img}}' mode='aspectFill'></image>
 
 
       <view class='master-home-intro-scale'>经营范围</view>
@@ -47,13 +47,17 @@
           <view class='mine-subject-head-box'>
                  <view class='on-list-name1'>
                      <view class='master-home-name'>{{i.job_name}}{{i.job_benefit}}</view>
-                     <view class='on-list-name1-benefit'>{{i.job_salary}}元 </view>
-                     <view class='on-list-name1-benefit'>{{i.job_type}}</view>
-                </view>
-                <view class='on-list-name2'>{{i.job_county}} {{i.job_address}}    {{i.job_experience_ind}}{{inList.job_education_ind}}</view>
-                <!-- <view class='on-list-name2'>热招职位：{{inList.com_job_type_combine}}</view>
-                <view class='on-list-name3'>共{{inList.com_job_count}}个职位</view> -->
-            
+                     <view class='on-list-name3'>{{i.job_salary}}元 ·</view>
+                     <view class='on-list-name4'>{{i.job_type}}</view>
+                     <view class='on-list-name2'>{{i.job_county}}-{{i.job_address}} ·{{i.job_experience_ind}}</view>
+                     <view class='on-list-name2'>学历要求：{{i.job_education_ind}}</view>
+                     <view class='on-list-name5'><button hover-class='none' data-jobid="{{i.job_id}}" catchtap='apply'>申请</button></view>
+                 
+                     <view class='on-list-name3'>{{i.job_add_time}}</view>
+                     
+        
+                   </view>
+                  
           </view>
 
         </view>

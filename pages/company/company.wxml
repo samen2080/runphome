@@ -28,12 +28,12 @@
             <view class='on-list-name'>
                 <view class='on-list-name1'>
                      <view class='on-list-name1-title'>{{item.com_short_name}}</view>
-                     <view class='on-list-name1-benefit'>{{item.com_scale}}</view>
-                     <view class='on-list-name1-benefit'>{{item.com_social_security}}</view>
+                     <view class='on-list-name1-benefit'><text>{{item.com_scale}}</text></view>
+                     <view class='on-list-name1-benefit'><text>{{item.com_social_security}}</text></view>
                 </view>
-                <view class='on-list-name2'>{{item.com_city}} {{item.com_county}}    {{item.com_industry}}</view>
-                <view class='on-list-name2'>热招职位：{{item.com_job_type_combine}}</view>
-                <view class='on-list-name3'>共{{item.com_job_count}}个职位</view>
+                <view class='on-list-name2'><text>{{item.com_city}}{{item.com_county}}{{item.com_industry}}</text></view>
+                <view class='on-list-name3'><text>热招职位：{{item.com_job_type_combine}}</text></view>
+                <view class='on-list-name4'><text>共{{item.com_job_count}}个职位</text></view>
             </view>
           </view>
         </navigator> 
@@ -69,11 +69,13 @@
 </view>
 
 <!-- 发布按钮 -->
-<view class='info-edit-form-btn'>
+<!-- 20200213 add start -->
+<!-- <view class='info-edit-form-btn'>
   <navigator hover-class='none' url='publish/publish'><button class='info-edit-form-sub-btn'>
     <text class='btn-text'>发布</text>
   </button></navigator>
-</view>
+</view> -->
+<!-- 20200213 add end -->
  
 
 
