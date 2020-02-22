@@ -14,9 +14,15 @@
 
   <view class='school-show-info'>
     <view class='wrap'>
-      <view class='school-show-name'>{{dr_name}}</view>
+<!-- 20200213 add start -->
+      <!-- <view class='school-show-name'>{{dr_name}}</view>
       <view class='school-show-address'>地址：<text>{{dr_address}}</text></view>
-      <navigator hover-class='none' url='../map/map?lat={{lat}}&lng={{lng}}&address={{dr_address}}'><view class='school-show-btn'>导航</view></navigator>
+      <navigator hover-class='none' url='../map/map?lat={{lat}}&lng={{lng}}&address={{dr_address}}'><view class='school-show-btn'>导航</view></navigator> -->
+      
+      <view class='school-show-name'>{{sch_name}}</view>
+      <view class='school-show-address'>地址：<text>{{sch_address}}</text></view>
+      <navigator hover-class='none' url='../map/map?lat={{lat}}&lng={{lng}}&address={{sch_address}}'><view class='school-show-btn'>导航</view></navigator> 
+ <!-- 20200213 add end -->
     </view>
   </view>
 </view>
@@ -29,6 +35,9 @@
   </view>
 
   <view class='school-show-bottom-jj'>
-    <text>{{dr_intro}}</text>
+    <!-- <text>{{dr_intro}}</text> -->
+<!-- 20200213 add start -->
+    <text>{{sch_intro}}</text>
+<!-- 20200213 add end -->
   </view>
 </view>

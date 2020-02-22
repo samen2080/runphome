@@ -32,18 +32,34 @@ Page({
       },
     })
     // 学校专区
-    app.func.req('get_list', { query: 2, id: options.dr_id, openid: that.data.openid}, 'GET', function (res) {
-      // console.log(res);
+// 20200213 add start
+  //   app.func.req('get_list', { query: 2, id: options.dr_id, openid: that.data.openid}, 'GET', function (res) {
+  //     // console.log(res);
+  //     that.setData({
+  //       dr_name: res.dr_name,
+  //       dr_address: res.dr_address,
+  //       dr_intro: res.dr_intro,
+  //       imgUrls: res.dr_img,
+  //       lat: res.lat,
+  //       lng: res.lng
+  //     })
+  //   });
+  // },
+
+    app.func.req('my_school_show', { sch_id: options.sch_id }, 'GET', function (res) {
+      console.log(res);
       that.setData({
-        dr_name: res.dr_name,
-        dr_address: res.dr_address,
-        dr_intro: res.dr_intro,
-        imgUrls: res.dr_img,
+        sch_name: res.sch_name,
+        sch_address: res.combine_address,
+        sch_intro: res.sch_intro,
+        imgUrls: res.sch_img,
         lat: res.lat,
         lng: res.lng
       })
     });
   },
+
+// 20200213 add end
 
   fullSize: function (e) {
     var src = e.currentTarget.dataset.src;

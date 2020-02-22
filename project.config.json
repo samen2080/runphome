@@ -47,6 +47,10 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 43,
 			"list": [
@@ -354,6 +358,13 @@
 					"id": -1,
 					"name": "pages/company/company-show/job-show/job-show",
 					"pathName": "pages/company/company-show/job-show/job-show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/school/school",
+					"pathName": "pages/index/school/school",
 					"scene": null
 				}
 			]

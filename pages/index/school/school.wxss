@@ -1,6 +1,18 @@
 /* pages/index/school/school.wxss */
 /* @import "../index.wxss"; */
 
+.index-list-box{
+  margin-top: 0rpx;
+  overflow: hidden;
+  /* 20200130 start */
+  width: 96%;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.2);
+  border-radius: 8rpx;
+  margin-left: 15rpx;
+  margin-bottom: 20rpx;
+  /* 20200130 end */
+}
+
 .index-list-title{
   height: 90rpx;
   line-height: 90rpx;
@@ -12,6 +24,32 @@
   font-size: 34rpx;
   font-weight: bold;
   background: #ffffff;
+}
+
+.index-list-title-com{
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 100%;
+  padding: 0 24rpx;
+  border-top: 2rpx solid #e9e9e9;
+  border-bottom: 2rpx solid #e9e9e9;
+  background: #ffffff;
+  position: absolute;
+}
+
+.index-list-title-com-1{
+  width: 30%;
+  font-size: 34rpx;
+  font-weight: bold;
+  position: relative;
+  float:left;
+}
+
+.index-list-title-com-2{
+  width: 70%;
+  font-size: 28rpx;
+  position: relative;
+  float:left;
 }
 
 .index-search button{
@@ -57,55 +95,54 @@
 }
 
 /* 20200213 add start */
-/* 大师入驻 */
-.index-master-swiper{
+.index-school-swiper{
   text-align: center;
   width: 750rpx;
   position: relative;
   height: 410rpx;
 }
-.index-master-list-box{
+.index-school-list-box{
   background: #ffffff;
   overflow: hidden;
   position: relative;
 }
-.index-master-list{
+.index-school-list{
   width: 234rpx;
   height: 100%;
   float: left;
   text-align: center;
 }
-.index-master-list-logo-box{
+.index-school-list-logo-box{
   width: 170rpx;
   height: 170rpx;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   overflow: hidden;
   margin-left: 33rpx;
-  box-shadow: 6rpx 6rpx 6rpx rgba(209, 209, 209, 0.75);
+  /* box-shadow: 6rpx 6rpx 6rpx rgba(209, 209, 209, 0.75); */
   position: relative;
   margin-top: 22rpx;
   margin-bottom: 30rpx;
 }
-.index-master-list-logo-box image{
+.index-school-list-logo-box image{
   width: 158rpx;
   height: 158rpx;
-  border-radius: 50%;
+  border-radius: 8rpx;
   overflow: hidden;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
 }
-.index-master-list-name-box{
+.index-school-list-name-box{
   font-size: 32rpx;
 }
-.index-master-list-Instruments-box{
+.index-school-list-Instruments-box{
   color: #999999;
   font-size: 26rpx;
   margin: 24rpx 0 38rpx;
 }
 
-.index-master-list-box .dots{
+.index-school-list-box .dots{
   position: absolute;
   left: 0;
   right: 0;
@@ -113,7 +150,7 @@
   display: flex;
   justify-content: center;
 }
-.index-master-list-box .dots .dot{
+.index-school-list-box .dots .dot{
   margin: 0 4rpx;
   width: 14rpx;
   height: 14rpx;
@@ -121,7 +158,7 @@
   border-radius: 50%;
   transition: all .5s;
 }
-.index-master-list-box .dots .dot.active{
+.index-school-list-box .dots .dot.active{
   width: 68rpx;
   border-radius: 8rpx;
   background: #999999;
