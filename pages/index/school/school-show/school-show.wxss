@@ -3,11 +3,16 @@
     position: relative;
 }
 .school-show-top swiper{
-  height: 482rpx;
+  width: 100%;
+  height: 382rpx;
+  background-color: white;
 }
 .school-show-top swiper image{
-  width: 100%;
-  height: 100%;
+  margin-left: 5rpx;
+  width: 740rpx;
+  height: 372rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
 }
 .imageCount{
     color: #ffffff;
@@ -37,8 +42,8 @@
   height: 56rpx;
   line-height: 56rpx;
   font-size: 26rpx;
-  color: #19c810;
-  border: 2rpx solid #19c810;
+  color: #c81010c9;
+  border: 2rpx solid #c81010c9;
   text-align: center;
   border-radius: 12rpx;
   position: absolute;
@@ -62,7 +67,7 @@
 .line{
   width: 10rpx;
   height: 38rpx;
-  background: #19c810;
+  background: #53c5f1;
   float: left;
   margin: 26rpx 24rpx 0;
 }

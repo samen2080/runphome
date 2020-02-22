@@ -7,8 +7,10 @@ Page({
    * 页面的初始数据
    */
   data: {
-    schoolList: [],
+    bachelorSchoolList: [],
+    collegeSchoolList: [],
 // 20200213 add start
+    companyList: [],
     swiperCurrentCollege: 0,
     swiperCurrentBachelor: 0,
     swiperCurrentEnterprise: 0,
@@ -37,7 +39,11 @@ Page({
         // 20200213 add start
         that.getCooperateImg();
         // 20200213 add end
-        that.getList();
+        that.getCollegeList();
+        that.getBachelorList();
+        // 20200213 add start
+        that.getCompany();
+        // 20200213 add end
       },
     })    
   },
@@ -64,31 +70,88 @@ Page({
     });
   },
 
-  getList: function () {
+  getCollegeList: function () {
     var that = this;
-    app.func.req('get_list', { query: 2, openid: that.data.openid, pageSize: 10, page: page }, 'GET', function (res) {
+    app.func.req('my_school', { category: 2, openid: that.data.openid, pageSize: 10, page: page }, 'GET', function (res) {
       // console.log(res);
       that.setData({
-        resItems: that.data.schoolList.concat(res)
+        resItems: that.data.collegeSchoolList.concat(res)
       });
-      var adSchoolList = [];
+      var adCollegeSchoolList = [];
       var index = [];
       for (var i = 0; i < that.data.resItems.length; i++) {
         var num = Math.ceil((i + 1) / 3);
         if (index.indexOf(num) < 0) {
           index.push(num);
-          adSchoolList.push({ index: num, list: [that.data.resItems[i]] });
+          adCollegeSchoolList.push({ index: num, list: [that.data.resItems[i]] });
         } else {
-          for (var j = 0; j < adSchoolList.length; j++) {
-            if (num == adSchoolList[j].index) {
-              adSchoolList[j].list.push(that.data.resItems[i])
+          for (var j = 0; j < adCollegeSchoolList.length; j++) {
+            if (num == adCollegeSchoolList[j].index) {
+              adCollegeSchoolList[j].list.push(that.data.resItems[i])
             }
           }
         }
       }
       console.log("20200218teacherlist", that.data.resItems);
       that.setData({
-        schoolList: adSchoolList
+        collegeSchoolList: adCollegeSchoolList
+      })
+    });
+  },
+
+  getBachelorList: function () {
+    var that = this;
+    app.func.req('my_school', { category: 1, openid: that.data.openid, pageSize: 10, page: page }, 'GET', function (res) {
+      // console.log(res);
+      that.setData({
+        resItems: that.data.bachelorSchoolList.concat(res)
+      });
+      var adBachelorSchoolList = [];
+      var index = [];
+      for (var i = 0; i < that.data.resItems.length; i++) {
+        var num = Math.ceil((i + 1) / 3);
+        if (index.indexOf(num) < 0) {
+          index.push(num);
+          adBachelorSchoolList.push({ index: num, list: [that.data.resItems[i]] });
+        } else {
+          for (var j = 0; j < adBachelorSchoolList.length; j++) {
+            if (num == adBachelorSchoolList[j].index) {
+              adBachelorSchoolList[j].list.push(that.data.resItems[i])
+            }
+          }
+        }
+      }
+      console.log("20200218teacherlist", that.data.resItems);
+      that.setData({
+        bachelorSchoolList: adBachelorSchoolList
+      })
+    });
+  },
+
+  getCompany: function () {
+    var that = this;
+    app.func.req('my_company', { openid: that.data.openid, pageSize: 1000, page: 1 }, 'GET', function (res) {
+      that.setData({
+        resItems: that.data.companyList.concat(res)
+      });
+      var adCompanyList = [];
+      var index = [];
+      for (var i = 0; i < that.data.resItems.length; i++) {
+        var num = Math.ceil((i + 1) / 3);
+        if (index.indexOf(num) < 0) {
+          index.push(num);
+          adCompanyList.push({ index: num, list: [that.data.resItems[i]] });
+        } else {
+          for (var j = 0; j < adCompanyList.length; j++) {
+            if (num == adCompanyList[j].index) {
+              adCompanyList[j].list.push(that.data.resItems[i])
+            }
+          }
+        }
+      }
+      console.log("20200218companylist", that.data.resItems);
+      that.setData({
+        companyList: adCompanyList
       })
     });
   },

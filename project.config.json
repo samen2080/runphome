@@ -29,6 +29,8 @@
 		"hidedInDevtools": []
 	},
 	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -43,6 +45,10 @@
 			"list": []
 		},
 		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
 			"list": []
 		},
 		"miniprogram": {
@@ -352,6 +358,13 @@
 					"id": -1,
 					"name": "pages/company/company-show/job-show/job-show",
 					"pathName": "pages/company/company-show/job-show/job-show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/school/school",
+					"pathName": "pages/index/school/school",
 					"scene": null
 				}
 			]

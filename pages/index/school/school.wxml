@@ -53,14 +53,14 @@
     <!-- <view class='index-more'><navigator url='school/school' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view> -->
   </view>
 
-  <view class='index-master-list-box'>
-      <swiper class='index-master-swiper' current="{{swiperCurrentCollege}}" bindchange="swipertCollegeChange">
-        <swiper-item wx:for='{{schoolList}}' wx:key='{{schoolList}}'>
+  <view class='index-school-list-box'>
+      <swiper class='index-school-swiper' current="{{swiperCurrentCollege}}" bindchange="swipertCollegeChange">
+        <swiper-item wx:for='{{collegeSchoolList}}' wx:key='{{collegeSchoolList}}'>
           <view class='wrap'>
-            <view class='index-master-list' wx:for='{{item.list}}' wx:key='{{item.list}}'><navigator url='master/master-home/master-home?master_id={{item.tea_user_id}}&teacher_id={{item.tea_id}}' hover-class='none'>
-              <view class='index-master-list-logo-box'><image src='{{host}}{{item.dr_img[0]}}' mode='aspectFill'></image></view>
-              <view class='index-master-list-name-box'><text>{{item.dr_name}}</text></view>
-              <view class='index-master-list-Instruments-box'><text>{{item.dr_address}}</text></view></navigator>
+            <view class='index-school-list' wx:for='{{item.list}}' wx:key='{{item.list}}'><navigator url='school-show/school-show?sch_id={{item.sch_id}}' hover-class='none'>
+              <view class='index-school-list-logo-box'><image src='{{host}}{{item.sch_badge}}' mode='aspectFill'></image></view>
+              <view class='index-school-list-name-box'><text>{{item.sch_name}}</text></view>
+              <view class='index-school-list-Instruments-box'><text>{{item.sch_main_major}}</text></view></navigator>
             </view>  
           </view>
         </swiper-item>
@@ -80,14 +80,14 @@
     <!-- <view class='index-more'><navigator url='school/school' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view> -->
   </view>
 
-  <view class='index-master-list-box'>
-      <swiper class='index-master-swiper' current="{{swiperCurrentBachelor}}" bindchange="swiperBachelorChange">
-        <swiper-item wx:for='{{schoolList}}' wx:key='{{schoolList}}'>
+  <view class='index-school-list-box'>
+      <swiper class='index-school-swiper' current="{{swiperCurrentBachelor}}" bindchange="swiperBachelorChange">
+        <swiper-item wx:for='{{bachelorSchoolList}}' wx:key='{{bachelorSchoolList}}'>
           <view class='wrap'>
-            <view class='index-master-list' wx:for='{{item.list}}' wx:key='{{item.list}}'><navigator url='master/master-home/master-home?master_id={{item.tea_user_id}}&teacher_id={{item.tea_id}}' hover-class='none'>
-              <view class='index-master-list-logo-box'><image src='{{host}}{{item.dr_img[0]}}' mode='aspectFill'></image></view>
-              <view class='index-master-list-name-box'><text>{{item.dr_name}}</text></view>
-              <view class='index-master-list-Instruments-box'><text>{{item.dr_address}}</text></view></navigator>
+            <view class='index-school-list' wx:for='{{item.list}}' wx:key='{{item.list}}'><navigator url='school-show/school-show?sch_id={{item.sch_id}}' hover-class='none'>
+              <view class='index-school-list-logo-box'><image src='{{host}}{{item.sch_badge}}' mode='aspectFill'></image></view>
+              <view class='index-school-list-name-box'><text>{{item.sch_name}}</text></view>
+              <view class='index-school-list-Instruments-box'><text>{{item.sch_main_major}}</text></view></navigator>
             </view>  
           </view>
         </swiper-item>
@@ -96,20 +96,20 @@
 </view>
 
 <view class='index-list-box'>
-  <view class='index-list-title'>
-    <!-- <image src='/images/index-i3.png'></image> -->
-    <text>相关企业</text>
-    <!-- <view class='index-more'><navigator url='school/school' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view> -->
-  </view>
+    <view class='index-list-title'>
+      <!-- <image src='/images/index-i3.png'></image> -->
+      <text>相关企业</text>
+      <!-- <view class='index-more'><navigator url='school/school' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view> -->
+    </view>
 
-  <view class='index-master-list-box'>
-      <swiper class='index-master-swiper' current="{{swiperCurrentEnterprise}}" bindchange="swiperEnterpriseChange">
-        <swiper-item wx:for='{{schoolList}}' wx:key='{{schoolList}}'>
+  <view class='index-school-list-box'>
+      <swiper class='index-school-swiper' current="{{swiperCurrentEnterprise}}" bindchange="swiperEnterpriseChange">
+        <swiper-item wx:for='{{companyList}}' wx:key='{{companyList}}'>
           <view class='wrap'>
-            <view class='index-master-list' wx:for='{{item.list}}' wx:key='{{item.list}}'><navigator url='master/master-home/master-home?master_id={{item.tea_user_id}}&teacher_id={{item.tea_id}}' hover-class='none'>
-              <view class='index-master-list-logo-box'><image src='{{host}}{{item.dr_img[0]}}' mode='aspectFill'></image></view>
-              <view class='index-master-list-name-box'><text>{{item.dr_name}}</text></view>
-              <view class='index-master-list-Instruments-box'><text>{{item.dr_address}}</text></view></navigator>
+            <view class='index-school-list' wx:for='{{item.list}}' wx:key='{{item.list}}'><navigator url='../../company/company-show/company-show?com_id={{item.com_id}}' hover-class='none'>
+              <view class='index-school-list-logo-box'><image src='{{host}}{{item.com_logo}}' mode='aspectFill'></image></view>
+              <view class='index-school-list-name-box'><text>{{item.com_short_name}}</text></view>
+              <view class='index-school-list-Instruments-box'><text>{{item.com_industry}}</text></view></navigator>
             </view>  
           </view>
         </swiper-item>
