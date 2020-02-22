@@ -52,7 +52,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 43,
+			"current": 46,
 			"list": [
 				{
 					"id": -1,
@@ -365,6 +365,20 @@
 					"id": -1,
 					"name": "pages/index/school/school",
 					"pathName": "pages/index/school/school",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/company/company-show/company-show",
+					"pathName": "pages/company/company-show/company-show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/company/company-show/job-show/job-show",
+					"pathName": "pages/company/company-show/job-show/job-show",
 					"scene": null
 				}
 			]

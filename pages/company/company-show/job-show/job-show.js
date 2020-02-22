@@ -1,4 +1,4 @@
-// pages/mine/product-show/product-show.js
+  // pages/mine/product-show/product-show.js
 const app = getApp();
 var page = 1;
 Page({
@@ -51,6 +51,13 @@ Page({
         inList: res
       })
     });
+  },
+  //拨打电话
+  bind_tal: function () {
+    var that = this;
+    wx.makePhoneCall({
+      phoneNumber: that.data.inList.job_mobile //仅为示例，并非真实的电话号码
+    })
   },
   // 课程详情
   getDetail: function (old_id) {

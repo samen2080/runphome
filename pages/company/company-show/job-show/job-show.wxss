@@ -2,39 +2,50 @@
 page{
   padding-bottom: 216rpx;
 }
-.product-show-top{
+
+.company-show-top-info-tx-wrap{
   background: #ffffff;
-  margin-bottom: 154rpx;
-  width: 750rpx;
-  height: 850rpx;
-}
-.swiper-container{
-  text-align: center;
-  width: 750rpx;
+  margin-bottom: 24rpx;
   position: relative;
-  height: 200rpx;
-  margin-bottom:1rpx;
-}
-.swiper-img{
   width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  top: 10%;
-  transform: translate(-50%,-50%);
+  height: 80rpx;
 }
-.product-show-type{
+.company-show-top-info-tx-wrap image{
+  width: 100%;
+  height: 100rpx;
+  border-radius: 8rpx;
+}
+
+.job-show-header{
+width: 100%;
+height: 80rpx;
+position:relative;
+}
+
+.job-show-header image{
+border-radius: 8rpx;
+}
+
+.job-show-top{
+  background: #ffffff;
+  /* margin-bottom: 154rpx; */
+  width: 750rpx;
+  /* height: 1150rpx; */
+  border-radius: 8rpx；
+}
+
+.job-show-type{
   font-size: 30rpx;
   font-weight: bold;
   margin:0 24rpx;
 }
-.product-show-name{
+.job-show-name{
   font-size: 38rpx;
   font-weight: bold;
   padding: 10rpx 3rpx;
   margin:0 24rpx;
 }
-.product-show-boss{
+.job-show-ind{
   font-size: 26rpx;
   color: white;
   margin-left: 10rpx;
@@ -44,14 +55,15 @@ page{
   height: 38rpx;
   border-radius: 10rpx;
 }
-.product-show-boss text{
+
+.job-show-ind text{
   margin-left: 39rpx;
   margin-right: 5rpx;
   position: relative;
   float:left;
-
 }
-.product-show-salary{
+
+.job-show-salary{
   font-size: 38rpx;
   /* margin:0 24rpx; */
   color: red;
@@ -59,7 +71,9 @@ page{
   padding: 40rpx;
   border-bottom: 2rpx solid #f0f0ee;
 }
-.product-show-benefit{
+
+
+.job-show-benefit{
   /* font-size: 22rpx; */
   height: 36rpx;
   padding: 5rpx;
@@ -71,79 +85,88 @@ page{
   border: 1rpx solid #bebebe;
   border-radius: 8rpx;
 }
-.product-show-benefit text{
+.job-show-benefit text{
   margin-left: 5rpx;
   margin-right: 5rpx;
   position: relative;
   float:left;
   font-size: 25rpx;
 }
-.product-show-class-time1 {
+.job-show-class-time1 {
  font-size: 32rpx;
- color: rgb(250, 226, 15);
+ color: rgb(250, 207, 15);
  position: relative;
- top: 70rpx;
- left:20%;
+ top: 80rpx;
+ left: -110rpx;
+ padding: 10rpx;
 }
-.product-show-class-time1 text{
+.job-show-class-time1 text{
  font-size: 32rpx;
  color: black;
  
 }
-.product-show-info{
-  line-height: 48rpx;
-  color: #999999;
-  margin:30rpx 24rpx 30rpx;
+.job-show-class-time2 {
+ font-size: 32rpx;
+ color: rgb(250, 207, 15);
+ position: relative;
+ top: 80rpx;
+ left: -110rpx;
 }
-.product-show-price{
-  color: #ff721c;
+.job-show-class-time2 text{
+ font-size: 32rpx;
+ color: black;
+}
+
+.product-home-intro-des{
+  font-size: 30rpx;
+  font-weight: bold;
   margin:0 24rpx;
-  font-size: 36rpx;
+  position: relative;
+  top: 110rpx;
 }
-.product-show-class-time{
-  color: #999999;
-  margin:20rpx 24rpx;
-  font-size: 24rpx;
+.product-home-intro-ask{
+  font-size: 22rpx;
+  color: red;
+  margin:0 24rpx;
+  position: relative;
+  top: 115rpx;
+  border: 2rpx solid #eeeeea;
+  width: 60rpx;
+  height: 35rpx;
 }
-.product-show-end-time{
-  color: #999999;
-  margin:20rpx 24rpx;
-  font-size: 24rpx;
+.product-home-intro-ask text{
+  margin-left: 8rpx;
+  position: relative;
+  float:left;
+  margin-right: 8rpx;
 }
-.product-show-owner-info{
-  width: 750rpx;
-  margin-top: 20rpx;
-  height: 120rpx;
-  border-top: 2rpx solid #e9e9e9;
+.product-home-intro-ask-detail{
+  font-size: 30rpx;
+  margin:0 24rpx;
+  top: 78rpx;
+  left:75rpx;
   position: relative;
 }
-.product-show-owner-info image{
-  width: 82rpx;
-  height: 82rpx;
-  margin: 19rpx 0 19rpx 24rpx;
-  vertical-align: middle;
-  border-radius: 50%;
-  overflow: hidden;
+.product-home-intro-des-detail{
+  font-size: 30rpx;
+  margin:0 24rpx;
+  top: 100rpx;
+  position: relative;
 }
-.product-show-owner-name{
-  width: 350rpx;
-  font-size: 36rpx;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 120rpx;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow:ellipsis;
+.product-home-intro-addr{
+  font-size: 30rpx;
+  color: #92d7ff;
+  margin:0 24rpx;
+  top: 250rpx;
+  position: relative;
 }
-.product-show-owner-address{
-  color: #19c810;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 24rpx;
+.product-home-intro-addr text{
+  font-size: 30rpx;
+  margin:0 24rpx;
+  top: 0rpx;
+  position: relative;
 }
-.product-show-nav{
+.job-show-nav{
   width: 100%;
   height: 100rpx;
   position: fixed;
@@ -152,25 +175,25 @@ page{
   z-index: 2;
   border-top: 2rpx solid #e9e9e9;
 }
-.product-show-collect{
+.job-show-collect{
   width: 80rpx;
   height: 80rpx;
   margin-left: 24rpx;
   margin-top: 10rpx;
 }
-.product-show-share{
-  width: 180rpx;
+.job-show-share{
+  width: 90rpx;
   height: 80rpx;
   margin: 10rpx 10rpx 0;
   display: inline-block;
   border-radius: 0;
   
 }
-.product-show-share image{
+.job-show-share image{
   width: 80rpx;
   height: 80rpx;
 }
-.product-show-remove{
+.job-show-remove{
   background: #fdb009;
   color: #ffffff;
   float: right;

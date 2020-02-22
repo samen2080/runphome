@@ -10,7 +10,6 @@
     <view class='master-home-web'><text>{{items.com_website}}</text></view>
     <view class='master-home-logo'><image src='{{items.com_logo}}' mode='aspectFill'></image></view>
   </view>
-
 </view>
 
 <view class='master-home-bottom'>
@@ -53,9 +52,9 @@
                      <view class='on-list-name4'>·{{i.job_type}}</view>
                      <view class='on-list-name2'>{{i.job_county}}-{{i.job_address}} ·{{i.job_experience_ind}}</view>
                      <view class='on-list-name2'>学历要求：{{i.job_education_ind}}</view>
-                     <view class='on-list-name5'><button hover-class='none' data-jobid="{{i.job_id}}" catchtap='apply'>申请</button></view>
-                     <view class='on-list-name3'>{{i.job_add_time}}</view>
-                     
+                     <view class='on-list-name5'>{{i.job_add_time}}</view>
+                     <!-- <view class='on-list-name5'><button hover-class='none' data-jobid="{{i.job_id}}" catchtap='apply'>申请</button></view> -->
+                     <button class='on-list-name6'  data-jobid="{{i.job_id}}" catchtap='apply'><text>申请</text></button>
         
                    </view>
                
