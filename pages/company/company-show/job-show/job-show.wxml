@@ -13,8 +13,8 @@
   <view class='product-show-salary'>{{inList.job_salary}}元/月</view>
 
   <view class='product-show-benefit'><text>{{inList.job_benefit}}</text></view>
-  <view class='product-show-class-time'> 职位应聘开始时间 <text>{{inList.job_publish_start_date}}</text></view>
-  <view class='product-show-class-time'> 职位应聘结束时间 <text>{{inList.job_publish_end_date}}</text></view>
+  <view class='product-show-class-time1'> 职位应聘开始时间 <text>{{inList.job_publish_start_date}}</text></view>
+  <view class='product-show-class-time2'> 职位应聘结束时间 <text>{{inList.job_publish_end_date}}</text></view>
 
  
 </view>
