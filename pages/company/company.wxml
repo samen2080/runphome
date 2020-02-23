@@ -23,7 +23,7 @@
     <view wx:for='{{proList}}' wx:key='{{proList}}'>
         <navigator url='company-show/company-show?com_id={{item.com_id}}' hover-class='none'>
           <view class='on-list-info'>
-            <image src='{{host}}{{item.com_img}}' mode='aspectFill'></image>
+            <image src='{{host}}{{item.com_logo}}' mode='aspectFill'></image>
             <!--index.wxml-->
             <view class='on-list-name'>
                 <view class='on-list-name1'>

@@ -13,64 +13,62 @@
 </view>
 
 <view class='main-show-middle'>
-  <view class="swiper-tab">
-    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">公司信息<view class='border-bottom' style='display:{{currentTab==0?"block":"none"}}'></view></view>
-    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">在招职位<view class='border-bottom' style='display:{{currentTab==1?"block":"none"}}'></view></view>
-  </view>
+    <view class="swiper-tab">
+      <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">公司信息<view class='border-bottom' style='display:{{currentTab==0?"block":"none"}}'></view></view>
+      <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">在招职位<view class='border-bottom' style='display:{{currentTab==1?"block":"none"}}'></view></view>
+    </view>
 
     <!-- 简介 -->
     <view class='main-show-intro' wx:if='{{currentTab==0}}'>
       <view class='main-show-intro-title'>公司介绍</view>
       <view class='main-show-intro-descript'>{{items.com_descript}}</view>
-
       <view class='main-show-intro-scale'>公司类别</view>
-       <view class='main-show-intro-descript'>{{items.com_scale}}</view>
-      
-    
+      <view class='main-show-intro-descript'>{{items.com_scale}}</view>
       <view class='main-show-intro-scale'>公司环境</view>
-      <!-- <image src='{{host}}{{items.com_img}}' mode='aspectFill'></image> -->
-            <view class='banner'>
-        <swiper class='banner-swiper' current='0'>
-          <swiper-item wx:for="{{com_img}}" wx:key='com_img'>
-            <image src='{{host}}{{item}}' mode='aspectFill' class='banner-img' />
-          </swiper-item>
-        </swiper>
+      <view class='banner'>
+          <swiper class='banner-swiper' current='0'>
+            <swiper-item wx:for="{{com_img}}" wx:key='com_img'>
+              <image src='{{host}}{{item}}' mode='aspectFill' class='banner-img' />
+            </swiper-item>
+          </swiper>
       </view>
-
-
       <view class='main-show-intro-scale'>经营范围</view>
-       <view class='main-show-intro-descript'>{{items.com_business_scope}}</view>
-     
-
-
-    </view>
-    <!-- END -->
+      <view class='main-show-intro-descript'>{{items.com_business_scope}}</view>
+   </view>
 
     <!-- 动态 -->
     <view class='mine-subject-box' wx:if='{{currentTab==1}}'>
-
       <view class='mine-subject-list' wx:for="{{inList}}" wx:key="{{inList}}" wx:for-item="i">
-     
-        <view class='wrap'>
-         <navigator url='job-show/job-show?job_id={{i.job_id}}' hover-class='none'>
-          <view class='mine-subject-head-box'>
-                 <view class='on-list-name1'>
-                     <view class='main-show-name'>{{i.job_name}}{{i.job_benefit}}</view>
-                     <view class='on-list-name3'>{{i.job_salary}}元 </view>
-                     <view class='on-list-name4'>·{{i.job_type}}</view>
-                     <view class='on-list-name2'>{{i.job_county}}-{{i.job_address}} ·{{i.job_experience_ind}}</view>
-                     <view class='on-list-name2'>学历要求：{{i.job_education_ind}}</view>
-                     <view class='on-list-name5'>{{i.job_add_time}}</view>
-                     <!-- <view class='on-list-name5'><button hover-class='none' data-jobid="{{i.job_id}}" catchtap='apply'>申请</button></view> -->
-                     <button class='on-list-name6'  data-jobid="{{i.job_id}}" catchtap='apply'>申请</button>
-        
-                   </view>
-               
-          </view>
-       </navigator>
-        </view>
-      </view>
-
+        <navigator url='job-show/job-show?job_id={{i.job_id}}' hover-class='none'>
+          <view class='wrap-left'>  
+                <view class='on-list-name'>{{i.job_name}}{{i.job_benefit}}</view>
+                <view class = 'on-list-salary-type'>
+                    <view class='on-list-salary'>{{i.job_salary}}元 </view>
+                    <view class='on-list-type'>·{{i.job_type}}</view>
+                </view>
+                <view class='on-list-address'>{{i.job_county}}-{{i.job_address}} ·{{i.job_experience_ind}}</view>
+                <view class='on-list-edu'>学历要求：{{i.job_education_ind}}</view>
+              <!-- <view class='mine-subject-head-box'>
+                    <view class='on-list-name1'>
+                        <view class='main-show-name'>{{i.job_name}}{{i.job_benefit}}</view>
+                        <view class='on-list-name3'>{{i.job_salary}}元 </view>
+                        <view class='on-list-name4'>·{{i.job_type}}</view>
+                        <view class='on-list-name2'>{{i.job_county}}-{{i.job_address}} ·{{i.job_experience_ind}}</view>
+                        <view class='on-list-name2'>学历要求：{{i.job_education_ind}}</view>
+                    </view>  
+                </view> -->
+           </view>
+           <view class='wrap-right'>  
+              <view class='on-list-time'>{{i.job_add_time}}</view>
+              <button class='on-list-btn' data-jobid="{{i.job_id}}" catchtap='apply'>申请</button>
+              <!-- <view class='mine-subject-head-box'>
+                    <view class='on-list-name1'>  
+                        <view class='on-list-name5'>{{i.job_add_time}}</view>
+                        <button class='on-list-name6'  data-jobid="{{i.job_id}}" catchtap='apply'>申请</button>
+                    </view>  
+                </view> -->
+           </view>
+          </navigator>
+       </view>
     </view>
-    <!-- END -->
 </view>
