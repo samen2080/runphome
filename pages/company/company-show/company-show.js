@@ -59,7 +59,8 @@ Page({
     app.func.req('my_company_show/' + that.data.com_id, {}, 'GET', function (res) {
        console.log("20200213res",res);
       that.setData({
-        items: res
+        items: res,
+        com_img: res.com_img
       })
     });
   },
