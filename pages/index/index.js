@@ -15,8 +15,10 @@ Page({
     template.tabbar("tabBar", 0, this)//0表示第一个tabbar
     var that = this;
     var host = getApp().globalData.host;
+    var user_id = wx.getStorageSync("user_info").user_id;
     that.setData({
-      host: host
+      host: host,
+      user_id: user_id
     });
 
     wx.getStorage({
@@ -85,7 +87,17 @@ Page({
           })
         });
        //20200218 end
-
+      
+        // 20200213 start 
+       //在线视频
+        // app.func.req('get_videos/0/' + that.data.forum_id, { openid: that.data.openid }, 'GET', function (res) {
+        app.func.req('get_videos_main', { user_id: that.data.user_id }, 'GET', function (res) {
+          console.log("20200213 res", res);
+          that.setData({
+            videosMainList: res
+          })
+        });
+       // 20200213 end
 
         // 学校专区
         app.func.req('get_list', { query: 2, pageSize: 4, page: 1, openid: that.data.openid }, 'GET', function (res) {

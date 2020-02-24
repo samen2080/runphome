@@ -92,7 +92,8 @@
     "pages/community/bbs/bbs-out/bbs-out",
     "pages/activity/publish/publish",
     "pages/livebroadcast/livebroadcast",
-    "component/select/select"
+    "component/select/select",
+    "component/videos/videos"
   ],
   "window": {
     "backgroundTextStyle": "light",

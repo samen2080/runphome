@@ -222,35 +222,42 @@
 
 
 <!-- 名师推荐 -->
-<view class='index-list-box'>
+ <!-- <view class='index-list-box'>
   <view class='index-list-title'>
-    <!-- <image src='/images/index-i3.png'></image> -->
-    <text>名师推荐</text>
+     <image src='/images/index-i3.png'></image> 
+    <text>在线视频</text>
     <view class='index-more'><navigator url='master/master' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>
-  </view>
-
-  <view class='index-master-list-box'>
-      <swiper class='index-master-swiper' current="{{swiperCurrent}}" bindchange="swiperChange">
-        <swiper-item wx:for='{{teacherlist}}' wx:key='{{teacherlist}}'>
-          <view class='wrap'>
-            <view class='index-master-list' wx:for='{{item.list}}' wx:key='{{item.list}}'><navigator url='master/master-home/master-home?master_id={{item.tea_user_id}}&teacher_id={{item.tea_id}}' hover-class='none'>
-              <view class='index-master-list-logo-box'><image src='{{item.tea_teacher_photo}}' mode='aspectFill'></image></view>
-              <view class='index-master-list-name-box'><text>{{item.tea_teacher_name}}</text></view>
-              <view class='index-master-list-Instruments-box'><text>{{item.tea_skilled}}</text></view></navigator>
-            </view>  
-          </view>
-        </swiper-item>
-    </swiper>    
-
-    <!-- 小圆点 -->
-    <view class="dots">
-      <view class="dot{{swiperCurrent == (item.index - 1) ? ' active' : ''}}" wx:for='{{teacherlist}}' wx:key='{{teacherlist}}'></view>
-    </view>
-  </view> 
-
-</view>
+  </view>    
+</view>  -->
 <!-- END -->
 
+<!-- 20200213 start -->
+<view class='index-list-box'>
+    <view class='index-list-title'>
+     <text>视频课程</text>
+    </view>
+
+    <view class='index-course-video-list-box'>
+     <view class='index-course-video-list' wx:for="{{videosMainList}}" wx:key="{{videosMainList}}" wx:for-item="i">
+        <navigator url='videos-record/videos-record?lsm_id={{i.lsm_id}}' hover-class='none'>
+          <view class='wrap-left'>  
+             <image src='{{host}}{{i.lsm_images}}' mode='aspectFill'></image>
+           </view>
+           <view class='wrap-right'>  
+              <view class='on-list-course-name'>{{i.lsm_lesson_main_name}}</view>
+              <view class='on-list-teacher-name'>主讲老师：{{i.lsm_teacher_name}}</view>
+              <view class='on-list-teacher-title'>
+                 <view class='on-list-teacher-company'>润品控股集团</view>
+                 <!-- <view class='on-list-teacher-company'>{{i.lsm_teacher_company_code}}</view>                  -->
+                 <view class='on-list-teacher-level'>{{i.lsm_teacher_class_level}}</view>
+              </view>
+              <view class='on-list-course-descript'>课程简介：{{i.lsm_lesson_desc}}</view>
+           </view>
+          </navigator>
+       </view>
+     </view>
+ </view>
+<!-- 20200213 end -->
 
 <!-- 20191012 test start -->
 <!--培训学校 -->
