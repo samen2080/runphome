@@ -97,6 +97,24 @@
     <image src='/images/contract.jpg'></image>
     <text>新建档案</text></navigator>
   </view>
+
+  <!-- 20200213 start -->
+  <view class='mine-active-list'><navigator url='partner-schools/partner-schools'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>合作学校</text></navigator>
+  </view>
+
+  <view class='mine-active-list'><navigator url='partner-teacher/partner-teacher'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>合作教师</text></navigator>
+  </view>
+
+  <view class='mine-active-list'><navigator url='current-student/current-student'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>在校学生</text></navigator>
+  </view>
+
+  <!-- 20200213 end -->
   <!--<view class='mine-active-list'><navigator url='plan/plan'hover-class='none'>
     <image src='/images/contract.jpg'></image>
     <text>我的计划</text></navigator>

@@ -1,0 +1,71 @@
+<!--pages/mine/partner-schools/partner-schools-show/partner-schools-show.wxml-->
+<!-- <view class='contract-show-top'>
+  <view class='contract-show-top-title'>
+    <image src='/images/shouhuo_icon.png'></image>
+    <text>{{items.con_status == 0 ? "待上课" : items.con_status == 1 ? "等待当面取货":items.con_status == 2 ? "已完成":"订单已取消"}}</text>
+  </view>
+  
+  <view class='contract-show-top-code'>
+    <text>合约日期：{{items.con_start_date}}</text>
+    <text class='contract-show-top2'>签约日期：{{items.con_sign_date}}</text>
+    
+  </view>
+</view> -->
+
+<view class='contract-show-middle'>
+  <view class='contract-show-middle-title'>学校信息</view>
+
+  <view class='contract-show-middle-info-box'>
+
+  
+    
+    <view class='contract-show-middle-info-list'>学校名称：<text>{{items.sch_name}}</text></view>
+      <view class='contract-show-top-code'>
+    <text>主要专业：{{items.sch_main_major}}</text>
+    <text class='contract-show-top2'>学校排名：{{items.sch_rank}}</text>
+    </view>
+    <view class='contract-show-middle-info-list'>学校类型：<text>{{item.sch_category==1 ? "本科学校":"中高职学校"}}</text></view>
+    <view class='contract-show-middle-info-list3'>学校简介：<text>{{items.sch_intro}}</text></view>
+    <view class='contract-show-middle-info-list2'>学校地址：<text>{{items.sch_province}}{{items.sch_city}}{{items.sch_county}}{{items.sch_address}}</text></view>
+  </view>
+</view>
+
+<!-- <view class='contract-show-bottom'>
+ 
+ <view class='contract-show-middle-title'>合约相关</view>
+<view class='contract-show-middle-info-box2'>
+  
+    <view class='contract-show-top-code'>
+    <text>合约周期：{{items.con_period}}</text>
+    <text class='contract-show-top2'>电梯型号：{{items.con_lift_module}}</text>
+    </view>
+
+    <view class='contract-show-bottom-list'>安装日期：<text>{{items.con_install_date}}</text></view>
+   
+    <view class='contract-show-top-code'>
+    <text>开始日期：{{items.con_start_date}}</text>
+    <text class='contract-show-top2'>结束日期：{{items.con_end_date}}</text>
+    </view>
+
+    <view class='contract-show-top-code'>
+    <text>合约金额: {{items.con_total_amt}}</text>
+    <text class='contract-show-top2'>签约负责人：{{items.con_sign_name}}</text>
+    </view>
+
+    <view class='contract-show-bottom-list'>保养负责人：<text>{{items.con_maint_name}}</text></view>
+    <view class='contract-show-bottom-list'>签约公司：<text>{{items.con_maint_com}}</text></view>
+  
+    <view class='contract-show-top-code'>
+    <text>合约状态: {{items.con_status}}</text>
+    <text class='contract-show-top2'>评价星级：{{items.con_rating_grade}}</text>
+    </view>
+
+    <view class='contract-show-bottom-list'>评价描述：<text>{{items.con_rating_comment}}</text></view>
+   
+   <view bindtap="addPlan" ><button class="add-plan">生成计划</button></view>
+
+
+  </view>
+  
+
+</view> -->
