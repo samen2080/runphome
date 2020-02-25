@@ -379,6 +379,20 @@
 					"id": -1,
 					"name": "pages/company/company-show/job-show/job-show",
 					"pathName": "pages/company/company-show/job-show/job-show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/record-broadcast/record-broadcast",
+					"pathName": "pages/index/record-broadcast/record-broadcast",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/record-broadcast/record-broadcast",
+					"pathName": "pages/index/record-broadcast/record-broadcast",
 					"scene": null
 				}
 			]
