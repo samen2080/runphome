@@ -239,7 +239,7 @@
 
     <view class='index-course-video-list-box'>
      <view class='index-course-video-list' wx:for="{{videosMainList}}" wx:key="{{videosMainList}}" wx:for-item="i">
-        <navigator url='videos-record/videos-record?lsm_id={{i.lsm_id}}' hover-class='none'>
+        <navigator url='record-broadcast/record-broadcast?lsm_id={{i.lsm_id}}' hover-class='none'>
           <view class='wrap-left'>  
              <image src='{{host}}{{i.lsm_images}}' mode='aspectFill'></image>
            </view>

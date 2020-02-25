@@ -27,6 +27,7 @@
     "pages/company/company",
     "pages/company/company-show/company-show",
     "pages/company/company-show/job-show/job-show",
+    "pages/index/record-broadcast/record-broadcast",
     "pages/community/bbs/bbs",
     "pages/community/bbs/bbs-home/bbs-home",
     "pages/community/bbs/publish/publish",

@@ -19,7 +19,7 @@ button{
   color: #444;
 }
 .start-view{
-    width:100%;
+  width:100%;
   height: 100%;
 }
 .start-image{

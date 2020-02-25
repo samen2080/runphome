@@ -1,0 +1,77 @@
+
+<view class='main-show-top'>
+  <view class='main-show-top-info'>
+    <view class='main-show-top-info-tx'>
+      <!-- <view class='main-show-top-info-tx-wrap'><image src='{{host}}{{items.lsm_images}}' mode='aspectFill'></image></view> -->
+        <!-- <image src='{{host}}{{items.lsm_images}}' mode='aspectFill' catchtap='fullSize'></image> -->
+        <video class='main-show-top-video'src='{{host}}{{items.lsm_attribute1}}' objectFit='cover'></video>
+    </view>     
+    <view class='main-show-name'><text>{{items.lsm_lesson_main_name}}</text></view>
+    <view class='main-show-instru1'><text>高级讲师：{{items.lsm_teacher_name}}</text></view>
+    <view class='main-show-instru2'><text>共{{items.lsm_total_chapter}}节课程</text></view>
+    <view class='main-show-web'><text>{{items.lsm_total_hour}}</text></view>
+    <!-- <view class='main-show-logo'><image src='{{items.com_logo}}' mode='aspectFill'></image></view> -->
+  </view>
+</view>
+
+<view class='main-show-middle'>
+    <view class="swiper-tab">
+      <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">简介<view class='border-bottom' style='display:{{currentTab==0?"block":"none"}}'></view></view>
+      <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">视频列表<view class='border-bottom' style='display:{{currentTab==1?"block":"none"}}'></view></view>
+      <view class="swiper-tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="clickTab">评论<view class='border-bottom' style='display:{{currentTab==1?"block":"none"}}'></view></view>   
+    </view>
+
+    <!-- 简介 -->
+    <view class='main-show-intro' wx:if='{{currentTab==0}}'>
+      <view class='main-show-intro-title'>课程介绍</view>
+      <view class='main-show-intro-descript'>{{items.lsm_lesson_desc}}</view>
+      <view class='main-show-intro-scale'>讲师介绍</view>
+      <view class='main-show-intro-descript'>{{items.lsm_lesson_class_level}}</view>
+      <!-- <view class='main-show-intro-scale'>公司环境</view>
+      <view class='banner'>
+          <swiper class='banner-swiper' current='0'>
+            <swiper-item wx:for="{{com_img}}" wx:key='com_img'>
+              <image src='{{host}}{{item}}' mode='aspectFill' class='banner-img' />
+            </swiper-item>
+          </swiper>
+      </view>
+      <view class='main-show-intro-scale'>经营范围</view>
+      <view class='main-show-intro-descript'>{{items.com_business_scope}}</view> -->
+   </view>
+
+    <!-- 动态 -->
+    <view class='mine-subject-box' wx:if='{{currentTab==1}}'>
+      <view class='mine-subject-list' wx:for="{{inList}}" wx:key="{{inList}}" wx:for-item="i">
+        <navigator url='job-show/job-show?job_id={{i.job_id}}' hover-class='none'>
+          <view class='wrap-left'>  
+                <view class='on-list-name'>{{i.job_name}}{{i.job_benefit}}</view>
+                <view class = 'on-list-salary-type'>
+                    <view class='on-list-salary'>{{i.job_salary}}元 </view>
+                    <view class='on-list-type'>·{{i.job_type}}</view>
+                </view>
+                <view class='on-list-address'>{{i.job_county}}-{{i.job_address}} ·{{i.job_experience_ind}}</view>
+                <view class='on-list-edu'>学历要求：{{i.job_education_ind}}</view>
+              <!-- <view class='mine-subject-head-box'>
+                    <view class='on-list-name1'>
+                        <view class='main-show-name'>{{i.job_name}}{{i.job_benefit}}</view>
+                        <view class='on-list-name3'>{{i.job_salary}}元 </view>
+                        <view class='on-list-name4'>·{{i.job_type}}</view>
+                        <view class='on-list-name2'>{{i.job_county}}-{{i.job_address}} ·{{i.job_experience_ind}}</view>
+                        <view class='on-list-name2'>学历要求：{{i.job_education_ind}}</view>
+                    </view>  
+                </view> -->
+           </view>
+           <view class='wrap-right'>  
+              <view class='on-list-time'>{{i.job_add_time}}</view>
+              <button class='on-list-btn' data-jobid="{{i.job_id}}" catchtap='apply'>申请</button>
+              <!-- <view class='mine-subject-head-box'>
+                    <view class='on-list-name1'>  
+                        <view class='on-list-name5'>{{i.job_add_time}}</view>
+                        <button class='on-list-name6'  data-jobid="{{i.job_id}}" catchtap='apply'>申请</button>
+                    </view>  
+                </view> -->
+           </view>
+          </navigator>
+       </view>
+    </view>
+</view>
