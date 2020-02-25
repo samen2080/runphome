@@ -661,6 +661,7 @@ page{
 }
 
 .on-list-course-descript{
+  width:100%;
   color: #999999;
   height: 30rpx;
   line-height: 30rpx;
@@ -668,6 +669,10 @@ page{
   margin-left: 30rpx;
   position: relative; 
   float: left; 
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .course-video-name{
