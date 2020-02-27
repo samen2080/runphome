@@ -1,4 +1,3 @@
-// pages/mine/partner-schools/partner-schools-show/partner-schools-show.js
 const app = getApp()
 Page({
 
@@ -25,7 +24,7 @@ Page({
     var host = app.globalData.host;
     that.setData({
       host: host,
-      sch_id: options.sch_id
+      scc_id: options.scc_id
     })
     wx.getStorage({
       key: 'openid',
@@ -39,9 +38,9 @@ Page({
   },
   getDetail: function () {
     var that = this;
-    app.func.req('partner_schools_show/' + that.data.sch_id, {}, 'GET', function (res) {
+    app.func.req('school_contract_show/' + that.data.scc_id, {}, 'GET', function (res) {
       console.log("20191101======");
-      console.log(that.data.sch_id);
+      console.log(that.data.scc_id);
       console.log(res);
       that.setData({
         items: res
@@ -49,7 +48,7 @@ Page({
     });
   },
 
- 
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

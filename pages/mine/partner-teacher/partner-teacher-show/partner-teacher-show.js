@@ -7,10 +7,26 @@ Page({
    */
   data: {
     hidden: true,
+   // < !--20200213  start -->
+    ellipsis: true,
+    //< !--20200213  end-- >
     cancel: false
 
   },
-
+ // < !--20200213  start-- >
+  ellipsis: function () {
+    var value = !this.data.ellipsis;
+    this.setData({
+      ellipsis: value
+    })
+  },
+  ellipsis2: function () {
+    var value = !this.data.ellipsis2;
+    this.setData({
+      ellipsis2: value
+    })
+  },
+  // < !--20200213  end-- >
   /**
    * 生命周期函数--监听页面加载
    */

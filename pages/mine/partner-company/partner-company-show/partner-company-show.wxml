@@ -1,4 +1,4 @@
-<!--pages/mine/partner-teacher/partner-teacher-show/partner-teacher-show.wxml-->
+<!--pages/mine/partner-company/partner-company-show/partner-company-show.wxml-->
 <!-- <view class='contract-show-top'>
   <view class='contract-show-top-title'>
     <image src='/images/shouhuo_icon.png'></image>
@@ -13,61 +13,53 @@
 </view> -->
 
 <view class='contract-show-middle'>
-  <view class='contract-show-middle-title'>教师信息</view>
+  <view class='contract-show-middle-title'>公司信息</view>
 
   <view class='contract-show-middle-info-box'>
-     <view class='contract-show-top-code'>
-    <text>教师名称：{{items.tea_teacher_name}}</text>
-    <text class='contract-show-top2'>教师性别：{{items.tea_sex}}</text>
-    </view>
 
-     <view class='contract-show-top-code'>
-    <text>登录账户：{{items.tea_account}}</text>
-    <text class='contract-show-top2'>登录密码：{{items.tea_password}}</text>
-    </view>
-
+  
+    
+    <view class='contract-show-middle-info-list'>企业名称：<text>{{items.com_name}}</text></view>
+    <view class='contract-show-middle-info-list'>简称：<text>{{items.com_short_name}}</text></view>
+    
     <view class='contract-show-top-code'>
-    <text>QQ：{{items.tea_qq }}</text>
-    <text class='contract-show-top2'>QQ群：{{items.tea_qq_group}}</text>
+    <text>企业性质：{{items.com_type}}</text>
+    <text class='contract-show-top2'>企业规模：{{items.com_scale}}</text>
     </view>
+    <view class='contract-show-top-code'>
+    <text>联系人：{{items.com_contact}}</text>
+    <text class='contract-show-top2'>电话：{{items.com_mobile}}</text>
+    </view>
+    <view class='contract-show-top-code'>
+    <text>协会会员：{{items.com_membership_ind==1 ? "是":"否"}}</text>
+    <text class='contract-show-top2'>合作企业：{{items.com_cooperate_ind==1 ? "是":"否"}}</text>
+    </view>
+    <view class='contract-show-top-code'>
+    <text>职位总计：{{items.com_job_count}}</text>
+    <text class='contract-show-top2'>员工社保：{{items.com_social_security}}</text>
+    </view>
+    <view class='contract-show-middle-info-list'>所属行业：<text>{{item.com_industry}}</text></view>
+    <view class='contract-show-middle-info-list'>企业网址：<text>{{item.com_website}}</text></view>
+    <view class='contract-show-middle-info-list'>企业划分：<text>{{item.com_sector}}</text></view>
 
-    <view class='contract-show-middle-info-list'>QQ群链接：<text>{{items.tea_qq_group_Link}}</text></view>
-    <view class='contract-show-middle-info-list'>电话：<text>{{items.tea_mobile}}</text></view>
-
-   <!-- 20200213  start -->
-
-    <!-- <view class='contract-show-middle-info-list2'>专长：<text>{{items.tea_skilled}}</text></view> -->
-    <view class='contract-show-middle-info-list2'>
-     <text class="contract-show-middle-info-list2-skill {{ellipsis?'ellipsis':'unellipsis'}}" >专长：{{items.tea_skilled}}</text>
+    <!-- <view class='contract-show-middle-info-list3'>经营范围：<text>{{items.com_business_scope}}</text></view> -->
+   <view class='contract-show-middle-info-list3'>
+     <text class="contract-show-middle-info-list3-skill {{ellipsis?'ellipsis':'unellipsis'}}" >经营范围：{{items.com_business_scope}}</text>
       <view class='bg-white-ellipsis' bindtap='ellipsis'>
         <image class='img-ellipsis' src="{{ellipsis?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
       </view>
     </view>
-    
-   <!-- 20200213  end -->
-    
-    <view class='contract-show-top-code'>
-    <text>教师职称：{{item.tea_level==1 ? "初级讲师":item.tea_level==2 ?"中级讲师":"高级讲师"}}</text>
-    <text class='contract-show-top2'>讲师分成：{{items.tea_income}}</text>
-    </view>
-    <view class='contract-show-top-code'>
-    <text>排名：{{item.tea_display_order}}</text>
-    <text class='contract-show-top2'>所属机构：{{items.tea_company_ui}}</text>
-    </view>
-    <view class='contract-show-middle-info-list'>微信号：<text>{{items.tea_weixin_id}}</text></view>
-   <view class='contract-show-middle-info-list'>微信码：<text>{{items.tea_weixin_qrcode}}</text></view>
 
-    <!-- <view class='contract-show-middle-info-list3'>简介：<text>{{items.tea_teacher_desc}}</text></view> -->
-   
+    <!-- <view class='contract-show-middle-info-list3'>企业简介：<text>{{items.com_descript}}</text></view> -->
+
+
     <view class='contract-show-middle-info-list3'>
-     <text class="contract-show-middle-info-list3-desc: {{ellipsis?'ellipsis':'unellipsis'}}" >简介：{{items.tea_teacher_desc}}</text>
+     <text class="contract-show-middle-info-list3-desc: {{ellipsis?'ellipsis':'unellipsis'}}" >企业简介：{{items.com_descript}}</text>
       <view class='bg-white-ellipsis' bindtap='ellipsis2'>
         <image class='img-ellipsis' src="{{ellipsis2?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
       </view>
     </view>
-
-
-    <view class='contract-show-middle-info-list2'>地址：<text>{{items.tea_address}}</text></view>
+    <view class='contract-show-middle-info-list2'>企业地址：<text>{{items.com_province}}{{items.com_city}}{{items.com_county}}{{items.com_address}}</text></view>
   </view>
 </view>
 

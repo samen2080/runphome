@@ -1,4 +1,4 @@
-// pages/mine/partner-schools/partner-schools-show/partner-schools-show.js
+// pages/mine/current-student/current-student-show/current-student-show.js
 const app = getApp()
 Page({
 
@@ -7,16 +7,12 @@ Page({
    */
   data: {
     hidden: true,
-    ellipsis: true,
-    cancel: false
+    cancel: false,
+    dates: '请选择',
+    dateColor: '#999999'
 
   },
-  ellipsis: function () {
-    var value = !this.data.ellipsis;
-    this.setData({
-      ellipsis: value
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -25,7 +21,7 @@ Page({
     var host = app.globalData.host;
     that.setData({
       host: host,
-      sch_id: options.sch_id
+      stu_id: options.stu_id
     })
     wx.getStorage({
       key: 'openid',
@@ -39,17 +35,23 @@ Page({
   },
   getDetail: function () {
     var that = this;
-    app.func.req('partner_schools_show/' + that.data.sch_id, {}, 'GET', function (res) {
-      console.log("20191101======");
-      console.log(that.data.sch_id);
-      console.log(res);
+    //app.func.req('get_student', { user_id: that.data.user_id }, 'GET', function (res) {
+    app.func.req('current_student_show/' + that.data.stu_id, {}, 'GET', function (res) {
+       console.log("20200213res",res);
       that.setData({
-        items: res
+        userInfo: res
+        // user_headimg: res.user_headimg
       })
     });
   },
 
- 
+  submit: function (e) {
+    var that = this;
+    console.log("20200213res===", e.currentTarget.dataset.stuid);
+    wx.navigateTo({
+      url: '../current-student-show-page2/current-student-show-page2?stu_id=' + e.currentTarget.dataset.stuid,
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -1,0 +1,29 @@
+<!--pages/mine/partner-company/partner-company.wxml-->
+<view class='on-list'>   
+      <view class='on-list-list' wx:for="{{items}}" wx:key="{{items}}">
+        <view class='on-list-number-wrap'>
+           <text class='on-list-number'>企业性质：{{item.com_type}}</text>
+          <!-- <text class='on-list-status orange-txt' wx:if='{item.con_status==0}}'>已生效</text> -->
+         
+        </view>
+        <navigator url='partner-company-show/partner-company-show?com_id={{item.com_id}}' hover-class='none'><view class='on-list-info'>
+          <image src='{{host}}{{item.com_logo}}' mode='aspectFill'></image>
+           <view class='on-list-name1'>{{item.com_province}}{{item.com_city}}{{item.com_county}}{{item.com_address}}</view>
+          <!-- <view class='mine-contract-date-wrap'>
+              <text class='mine-contract-date-title'>企业名称:</text>
+              <text class='mine-contract-date-value'>{{item.com_name}}</text>
+          </view> -->
+           <view class='on-list-name2'>企业名称:{{item.com_name}}</view>
+        </view></navigator>
+
+        <view class='on-list-btn-wrap'><button class='on-list-remove-btn' hover-class='none' data-comid="{{item.com_id}}" catchtap='showComPage'>查看详情</button></view>
+    </view>
+
+   </view>
+
+<!-- 空白页 -->
+
+<view class='kb-page' wx:if='{{item.length <= 0}}'>
+  <image src='/images/kb.png'></image>
+  <view>暂无记录~</view>
+</view>

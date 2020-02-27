@@ -1,0 +1,33 @@
+<!--pages/mine/partner-hunter/partner-hunter-show/partner-hunter-show.wxml-->
+<!-- <view class='contract-show-top'>
+  <view class='contract-show-top-title'>
+    <image src='/images/shouhuo_icon.png'></image>
+    <text>{{items.con_status == 0 ? "待上课" : items.con_status == 1 ? "等待当面取货":items.con_status == 2 ? "已完成":"订单已取消"}}</text>
+  </view>
+  
+  <view class='contract-show-top-code'>
+    <text>合约日期：{{items.con_start_date}}</text>
+    <text class='contract-show-top2'>签约日期：{{items.con_sign_date}}</text>
+    
+  </view>
+</view> -->
+
+<view class='contract-show-middle'>
+  <view class='contract-show-middle-title'>猎头信息</view>
+
+  <view class='contract-show-middle-info-box'>
+
+    <view class='contract-show-top-code'>
+    <text>姓名：{{items.hun_name}}</text>
+    <text class='contract-show-top2'>性别：{{item.hun_sex==1 ? "男":"女"}}</text>
+    </view>
+    
+    <view class='contract-show-middle-info-list'>所属公司：<text>{{items.hun_company}}</text></view>
+    <view class='contract-show-middle-info-list'>猎头电话：<text>{{items.hun_mobile}}</text></view>
+    <view class='contract-show-middle-info-list'>猎头类别：<text>{{items.hun_type}}</text></view>
+    <view class='contract-show-middle-info-list'>猎头简介：<text>{{items.hun_desc}}</text></view>
+    
+  </view>
+</view>
+
+

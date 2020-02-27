@@ -21,7 +21,10 @@
   <view class='zhezhao'></view>
   <view class='wrap'><navigator url='info/info' hover-class='none'>
     <view class='mine-tx'><image src='{{userInfo.user_headimg}}' mode='aspectFill'></image></view>
-    <text class='mine-info-name'>{{userInfo.user_nickname}}</text>
+    <!-- 20200213 start -->
+    <!-- <text class='mine-info-name'>{{userInfo.user_nickname}}</text> -->
+    <text class='mine-info-name'>{{userInfo.user_nickname}}(id: {{userInfo.user_id}}){{userInfo.user_identity==1?"超级管理员":userInfo.user_identity==2?"润品管理员":userInfo.user_identity==3?"学校":userInfo.user_identity==4?"招生老师":userInfo.user_identity==5?"上课老师":userInfo.user_identity==6?"班主任":userInfo.user_identity==7?"学生":userInfo.user_identity==8?"企业":userInfo.user_identity==9?"猎头":"游客"}} </text>
+    <!-- 20200213 end -->
     <view class='sign-in' catchtap='signIn'>签到</view>
     <!-- <view class='sign-in' wx:if='{{isSign == true}}'>已签到</view> -->
     <text class='mine-info-signature'>签名：<text id='mine-info-signature'>{{userInfo.user_sign == '' ? "未填写":userInfo.user_sign}}</text></text>
@@ -91,17 +94,27 @@
   
   <view class='mine-active-list'><navigator url='student/student'hover-class='none'>
     <image src='/images/contract.jpg'></image>
-    <text>个人资料</text></navigator>
+    <text>学生个人资料</text></navigator>
   </view>
   <view class='mine-active-list'><navigator url='new-student-page1/new-student-page1'hover-class='none'>
     <image src='/images/contract.jpg'></image>
-    <text>新建档案</text></navigator>
+    <text>新建学籍档案</text></navigator>
   </view>
 
   <!-- 20200213 start -->
-  <view class='mine-active-list'><navigator url='partner-schools/partner-schools'hover-class='none'>
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 1 || userInfo.user_identity == 2}}'><navigator url='partner-schools/partner-schools'hover-class='none'>
     <image src='/images/contract.jpg'></image>
     <text>合作学校</text></navigator>
+  </view>
+
+  <view class='mine-active-list'><navigator url='partner-company/partner-company'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>合作企业</text></navigator>
+  </view>
+  
+  <view class='mine-active-list'><navigator url='partner-hunter/partner-hunter'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>合作猎头</text></navigator>
   </view>
 
   <view class='mine-active-list'><navigator url='partner-teacher/partner-teacher'hover-class='none'>
@@ -114,6 +127,10 @@
     <text>在校学生</text></navigator>
   </view>
 
+  <view class='mine-active-list'><navigator url='school-contract/school-contract'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>查看校企合约</text></navigator>
+  </view>
   <!-- 20200213 end -->
   <!--<view class='mine-active-list'><navigator url='plan/plan'hover-class='none'>
     <image src='/images/contract.jpg'></image>

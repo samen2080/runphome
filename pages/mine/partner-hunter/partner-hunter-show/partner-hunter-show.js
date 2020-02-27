@@ -1,4 +1,4 @@
-// pages/mine/partner-schools/partner-schools-show/partner-schools-show.js
+// pages/mine/partner-hunter/partner-hunter-show/partner-hunter-show.js
 const app = getApp()
 Page({
 
@@ -7,16 +7,10 @@ Page({
    */
   data: {
     hidden: true,
-    ellipsis: true,
     cancel: false
 
   },
-  ellipsis: function () {
-    var value = !this.data.ellipsis;
-    this.setData({
-      ellipsis: value
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -25,7 +19,7 @@ Page({
     var host = app.globalData.host;
     that.setData({
       host: host,
-      sch_id: options.sch_id
+      hun_id: options.hun_id
     })
     wx.getStorage({
       key: 'openid',
@@ -39,9 +33,9 @@ Page({
   },
   getDetail: function () {
     var that = this;
-    app.func.req('partner_schools_show/' + that.data.sch_id, {}, 'GET', function (res) {
+    app.func.req('partner_hunter_show/' + that.data.hun_id, {}, 'GET', function (res) {
       console.log("20191101======");
-      console.log(that.data.sch_id);
+      console.log(that.data.hun_id);
       console.log(res);
       that.setData({
         items: res
@@ -49,7 +43,7 @@ Page({
     });
   },
 
- 
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

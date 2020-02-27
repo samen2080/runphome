@@ -25,7 +25,14 @@
     <text class='contract-show-top2'>学校排名：{{items.sch_rank}}</text>
     </view>
     <view class='contract-show-middle-info-list'>学校类型：<text>{{item.sch_category==1 ? "本科学校":"中高职学校"}}</text></view>
-    <view class='contract-show-middle-info-list3'>学校简介：<text>{{items.sch_intro}}</text></view>
+    <!-- <view class='contract-show-middle-info-list3'>学校简介：<text>{{items.sch_intro}}</text></view> -->
+
+     <view class='contract-show-middle-info-list3'>
+     <text class="contract-show-middle-info-list3-skill {{ellipsis?'ellipsis':'unellipsis'}}" >学校简介：{{items.sch_intro}}</text>
+      <view class='bg-white-ellipsis' bindtap='ellipsis'>
+        <image class='img-ellipsis' src="{{ellipsis?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
+      </view>
+    </view>
     <view class='contract-show-middle-info-list2'>学校地址：<text>{{items.sch_province}}{{items.sch_city}}{{items.sch_county}}{{items.sch_address}}</text></view>
   </view>
 </view>

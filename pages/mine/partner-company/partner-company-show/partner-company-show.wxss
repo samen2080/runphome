@@ -1,4 +1,4 @@
-/* pages/mine/partner-teacher/partner-teacher-show/partner-teacher-show.wxss */
+/* pages/mine/partner-company/partner-company-show/partner-company-show.wxss */
 page{
   padding-bottom: 100rpx;
 }
@@ -171,7 +171,7 @@ color: #fff;
 top: 100rpx;
 }
 .contract-show-middle-info-list2{
-  /* height: 200rpx; */
+  height: 150rpx;
   line-height: 70rpx;
   border-top: 2rpx solid #e9e9e9;
   padding: 0 24rpx;
@@ -182,8 +182,8 @@ top: 100rpx;
   border-top: 2rpx solid #e9e9e9;
   padding: 0 24rpx;
 }
-/* 20200213 start */
-.contract-show-middle-info-list2-skill{
+
+.contract-show-middle-info-list3-skill{
   margin-top: 10px;
   font-size: 13px;
   color: black;
@@ -220,5 +220,3 @@ top: 100rpx;
   height: 40rpx;
   margin-left: 47%;
 }
-
-/* 20200213 end */

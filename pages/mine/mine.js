@@ -11,7 +11,8 @@ Page({
     hydl: false,
     // 20200213 add start
     roleChooseShow: true,
-    loginInShow: false
+    loginInShow: false,
+    user_identity: 0
     // 20200213 add end
     // isSign: false
   },
@@ -60,6 +61,23 @@ Page({
     // 20200213 add start
     this.changeData();
     // 20200213 add end
+    var user_identity = wx.getStorageSync("user_info").user_identity;
+    console.log("20200213user_identity", user_identity);
+    this.setData({
+      user_identity: user_identity
+    })
+  },
+
+   getUser: function () {
+    var that = this;
+    var user_identity = wx.getStorageSync("user_info").user_identity;
+    app.func.req('get_user', { openid: that.data.openid }, 'GET', function (res) {
+      console.log("20200213user_identity",user_identity);
+      that.setData({
+        userInfo: res,
+        user_identity: user_identity
+      })
+    });
   },
   //20200109 系统升级为符合微信登录条件根据微信官方20190901文件 start
   // bindGetUserInfo: function (e) {
@@ -142,15 +160,15 @@ Page({
     // 20200213 add end
 //20200109 系统升级为符合微信登录条件根据微信官方20190901文件 end
 
-  getUser: function () {
-    var that = this;
-    app.func.req('get_user', { openid: that.data.openid }, 'GET', function (res) {
-      // console.log(res);
-      that.setData({
-        userInfo: res
-      })
-    });
-  },
+  // getUser: function () {
+  //   var that = this;
+  //   app.func.req('get_user', { openid: that.data.openid }, 'GET', function (res) {
+  //     // console.log(res);
+  //     that.setData({
+  //       userInfo: res
+  //     })
+  //   });
+  // },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -188,6 +206,8 @@ Page({
         loginInShow: true
       })
     };
+  
+    that.getUser();
     //  20200213 add end
   },
 

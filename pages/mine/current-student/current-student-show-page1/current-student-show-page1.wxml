@@ -1,0 +1,39 @@
+<!--pages/mine/current-student/current-student-show/current-student-show.wxml-->
+<view class='contract-show-top'>
+  <view class='contract-show-top-code'>
+    <text>姓名：{{userInfo.stu_name}}</text>
+    <text class='contract-show-sex'>性别：{{userInfo.stu_sex==1?"男":"女"}}</text>
+  </view>
+</view>
+<view class='contract-show-top'>
+  <view class='contract-show-top-code'>
+    <text>国籍：{{userInfo.stu_nationality}}</text>
+    <text class='contract-show-sex'>籍贯：{{userInfo.stu_native_place}}</text>
+  </view>
+</view>
+
+  
+  <view class='contract-show-middle-info-box'>
+    
+    <view class='contract-show-middle-info-list'>生源省市代码：<text>{{userInfo.stu_pro_code}}</text></view>
+    <view class='contract-show-middle-info-list'>出生日期：<text>{{userInfo.stu_birthday}}</text></view>
+    <view class='contract-show-middle-info-list'>证件类型：<text>{{userInfo.stu_pin_type==1?"身份证":"其他"}}</text></view>
+    <view class='contract-show-middle-info-list'>证件号码：<text>{{userInfo.stu_pin_code}}</text></view>
+    <view class='contract-show-middle-info-list'>政治面貌：<text>{{userInfo.stu_political_status}}</text></view>
+    <view class='contract-show-middle-info-list'>健康状况：<text>{{userInfo.stu_health_ind}}</text></view>
+    <view class='contract-show-middle-info-list'>民族：<text>{{userInfo.stu_nation}}</text></view>
+    <view class='contract-show-middle-info-list'>特长：<text>{{userInfo.stu_speciality}}</text></view>
+    <view class='contract-show-middle-info-list2'>户口所在地：<text>{{userInfo.stu_residence_province}}{{userInfo.stu_residence_city}}{{userInfo.stu_residence_county}}{{userInfo.stu_residence}}</text></view>、
+
+  </view>
+  
+
+
+         
+    
+    <view class='info-edit-form-btn'>
+      <button bindtap="submit" data-stuid="{{userInfo.stu_id}}" class='info-edit-form-sub-btn'>
+        <text class='btn-text'>下一页</text>
+      </button>
+    </view>
+ 

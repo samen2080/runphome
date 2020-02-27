@@ -10,7 +10,7 @@ Page({
     num: 0,
     hidden: true
   },
-
+ 
   // 查看详情
   showschPage: function (e) {
     //  var index = e.currentTarget.dataset.id;

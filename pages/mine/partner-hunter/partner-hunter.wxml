@@ -1,0 +1,29 @@
+<!--pages/mine/partner-hunter/partner-hunter.wxml-->
+<view class='on-list'>   
+      <view class='on-list-list' wx:for="{{items}}" wx:key="{{items}}">
+        <view class='on-list-number-wrap'>
+           <text class='on-list-number'>所属公司：{{item.hun_company}}</text>
+          <!-- <text class='on-list-status orange-txt' wx:if='{item.con_status==0}}'>已生效</text> -->
+           <text class='on-list-status'> {{item.hun_sex==1 ? "男":"女"}}</text>
+        </view>
+        <navigator url='partner-hunter-show/partner-hunter-show?hun_id={{item.hun_id}}' hover-class='none'><view class='on-list-info'>
+          <image src='{{host}}{{item.hum_img}}' mode='aspectFill'></image>
+           <view class='on-list-name1'>姓名:{{item.hun_name}}</view>
+          <!-- <view class='mine-contract-date-wrap'>
+              <text class='mine-contract-date-title'>企业名称:</text>
+              <text class='mine-contract-date-value'>{{item.com_name}}</text>
+          </view> -->
+           <view class='on-list-name2'>电话:{{item.hun_mobile}}</view>
+        </view></navigator>
+
+        <view class='on-list-btn-wrap'><button class='on-list-remove-btn' hover-class='none' data-hunid="{{item.hun_id}}" catchtap='showHunPage'>查看详情</button></view>
+    </view>
+
+   </view>
+
+<!-- 空白页 -->
+
+<view class='kb-page' wx:if='{{item.length <= 0}}'>
+  <image src='/images/kb.png'></image>
+  <view>暂无记录~</view>
+</view>

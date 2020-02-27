@@ -12,10 +12,10 @@ Page({
   },
 
   // 查看详情
-  showTeaPage: function (e) {
+  showStuPage: function (e) {
     //  var index = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: 'partner-teacher-show/partner-teacher-show?tea_id=' + e.currentTarget.dataset.teaid,
+      url: 'current-student-show-page1/current-student-show-page1?stu_id=' + e.currentTarget.dataset.stuid,
     })
   },
 

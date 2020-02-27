@@ -1,4 +1,4 @@
-// pages/mine/partner-schools/partner-schools-show/partner-schools-show.js
+// pages/mine/partner-company/partner-company-show/partner-company-show.js
 const app = getApp()
 Page({
 
@@ -17,6 +17,12 @@ Page({
       ellipsis: value
     })
   },
+  ellipsis2: function () {
+    var value = !this.data.ellipsis2;
+    this.setData({
+      ellipsis2: value
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -25,7 +31,7 @@ Page({
     var host = app.globalData.host;
     that.setData({
       host: host,
-      sch_id: options.sch_id
+      com_id: options.com_id
     })
     wx.getStorage({
       key: 'openid',
@@ -39,9 +45,9 @@ Page({
   },
   getDetail: function () {
     var that = this;
-    app.func.req('partner_schools_show/' + that.data.sch_id, {}, 'GET', function (res) {
+    app.func.req('partner_company_show/' + that.data.com_id, {}, 'GET', function (res) {
       console.log("20191101======");
-      console.log(that.data.sch_id);
+      console.log(that.data.com_id);
       console.log(res);
       that.setData({
         items: res
@@ -49,7 +55,7 @@ Page({
     });
   },
 
- 
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

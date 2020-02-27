@@ -1,4 +1,4 @@
-// pages/mine/partner-schools/partner-schools-show/partner-schools-show.js
+// pages/mine/partner-company/partner-company.js
 const app = getApp()
 Page({
 
@@ -6,50 +6,40 @@ Page({
    * 页面的初始数据
    */
   data: {
-    hidden: true,
-    ellipsis: true,
-    cancel: false
-
+    comList: [],
+    num: 0,
+    hidden: true
   },
-  ellipsis: function () {
-    var value = !this.data.ellipsis;
-    this.setData({
-      ellipsis: value
+
+  // 查看详情
+  showComPage: function (e) {
+    //  var index = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: 'partner-company-show/partner-company-show?com_id=' + e.currentTarget.dataset.comid,
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
+
   onLoad: function (options) {
     var that = this;
     var host = app.globalData.host;
+
     that.setData({
-      host: host,
-      sch_id: options.sch_id
+      host: host
     })
+
     wx.getStorage({
       key: 'openid',
       success: function (res) {
-        that.setData({
-          openid: res.data
-        })
+        app.func.req('my_partner_company', { openid: res.data, pageSize: 1000, page: 1 }, 'GET', function (res) {
+          console.log("20200213res", res);
+          that.setData({
+            items: res
+          })
+        });
       },
     })
-    that.getDetail();
-  },
-  getDetail: function () {
-    var that = this;
-    app.func.req('partner_schools_show/' + that.data.sch_id, {}, 'GET', function (res) {
-      console.log("20191101======");
-      console.log(that.data.sch_id);
-      console.log(res);
-      that.setData({
-        items: res
-      })
-    });
   },
 
- 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -60,6 +50,7 @@ Page({
   /**
    * 生命周期函数--监听页面显示
    */
+
   onShow: function () {
 
   },

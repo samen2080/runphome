@@ -2,19 +2,19 @@
 <view class='on-list'>   
       <view class='on-list-list' wx:for="{{items}}" wx:key="{{items}}">
         <view class='on-list-number-wrap'>
-          <text class='on-list-number'>教师职称:<text>{{item.tea_level==1 ? "初级讲师":item.tea_level==2 ?"中级讲师":"高级讲师"}}</text></text>
-     
+          <text class='on-list-number'>学生ID:<text>{{item.stu_id}}</text></text>
+           <text class='on-list-status'>性别：{{item.stu_sex==1 ? "男":"女"}}</text>
         </view>
-        <navigator url='partner-teacher-show/partner-teacher-show?tea_id={{item.tea_id}}' hover-class='none'><view class='on-list-info'>
-          <image src='{{host}}{{item.tea_teacher_photo}}' mode='aspectFill'></image>
+        <navigator url='current-student-show-page1/current-student-show-page1?stu_id={{item.stu_id}}' hover-class='none'><view class='on-list-info'>
+          <image src='{{host}}{{item.stu_img}}' mode='aspectFill'></image>
           <view class='mine-contract-date-wrap'>
               <text class='mine-contract-date-title'>姓名:</text>
-              <text class='mine-contract-date-value'>{{item.tea_teacher_name}}</text>
+              <text class='mine-contract-date-value'>{{item.stu_name}}</text>
           </view>
-          <text class='on-list-name'>所属院校：</text>
+          <text class='on-list-name'>电话：{{item.stu_phone}}</text>
         </view></navigator>
 
-        <view class='on-list-btn-wrap'><button class='on-list-remove-btn' hover-class='none' data-teaid="{{item.tea_id}}" catchtap='showTeaPage'>查看详情</button></view>
+        <view class='on-list-btn-wrap'><button class='on-list-remove-btn' hover-class='none' data-stuid="{{item.stu_id}}" catchtap='showStuPage'>查看详情</button></view>
     </view>
 
    </view>
