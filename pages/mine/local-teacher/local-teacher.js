@@ -1,4 +1,4 @@
-// pages/mine/partner-teacher/partner-teacher.js
+// pages/mine/local-teacher/local-teacher.js
 const app = getApp()
 Page({
 
@@ -15,30 +15,31 @@ Page({
   showTeaPage: function (e) {
     //  var index = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: 'partner-teacher-show/partner-teacher-show?tea_id=' + e.currentTarget.dataset.teaid,
+      url: '../partner-teacher/partner-teacher-show/partner-teacher-show?tea_id=' + e.currentTarget.dataset.teaid,
     })
   },
 
   onLoad: function (options) {
     var that = this;
     var host = app.globalData.host;
-
+    var user_id = wx.getStorageSync("user_info").user_id;
+    var sch_id = wx.getStorageSync("school_data").sch_id;
     that.setData({
       host: host
     })
 
-    wx.getStorage({
-      key: 'openid',
-      success: function (res) {
-        app.func.req('my_partner_teacher', { openid: res.data, pageSize: 1000, page: 1 }, 'GET', function (res) {
+    // wx.getStorage({
+    //   key: 'school_data',
+    //   success: function (res) {
+        // app.func.req('local_teacher', { openid: res.data, pageSize: 1000, page: 1 }, 'GET', function (res) {
+        app.func.req('local_teacher', { sch_id: sch_id }, 'GET', function (res) {
           console.log("20200213res", res);
           that.setData({
             items: res
           })
-
         });
-      },
-    })
+    //   },
+    // })
   },
 
   /**

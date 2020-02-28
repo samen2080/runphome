@@ -71,6 +71,8 @@ Page({
    getUser: function () {
     var that = this;
     var user_identity = wx.getStorageSync("user_info").user_identity;
+    var user_id = wx.getStorageSync("user_info").user_id;
+     console.log("20200213user_id", user_id);
     app.func.req('get_user', { openid: that.data.openid }, 'GET', function (res) {
       console.log("20200213user_identity",user_identity);
       that.setData({
@@ -78,6 +80,34 @@ Page({
         user_identity: user_identity
       })
     });
+
+     app.func.req('get_school', { user_id: user_id }, 'GET', function (res) {
+       console.log("20200213res", res);
+       that.setData({
+         items: res
+       })
+       wx.setStorage({
+         key: 'school_data',
+         data: {
+           sch_id: res.sch_id
+         },
+       })
+     });
+     
+     app.func.req('get_teacher2', { user_id: user_id }, 'GET', function (res) {
+       console.log("20200213res", res);
+       that.setData({
+         items: res
+       })
+       wx.setStorage({
+         key: 'teacher_data',
+         data: {
+           tea_id: res.tea_id
+         },
+       })
+     });
+     
+    
   },
   //20200109 系统升级为符合微信登录条件根据微信官方20190901文件 start
   // bindGetUserInfo: function (e) {

@@ -1,4 +1,4 @@
-// pages/mine/partner-teacher/partner-teacher.js
+// pages/mine/teacher-course/teacher-course.js
 const app = getApp()
 Page({
 
@@ -11,34 +11,24 @@ Page({
     hidden: true
   },
 
-  // 查看详情
-  showTeaPage: function (e) {
-    //  var index = e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: 'partner-teacher-show/partner-teacher-show?tea_id=' + e.currentTarget.dataset.teaid,
-    })
-  },
-
   onLoad: function (options) {
     var that = this;
     var host = app.globalData.host;
-
+    var user_id = wx.getStorageSync("user_info").user_id;
+    var tea_id = wx.getStorageSync("teacher_data").tea_id;
     that.setData({
       host: host
     })
 
-    wx.getStorage({
-      key: 'openid',
-      success: function (res) {
-        app.func.req('my_partner_teacher', { openid: res.data, pageSize: 1000, page: 1 }, 'GET', function (res) {
-          console.log("20200213res", res);
-          that.setData({
-            items: res
-          })
 
-        });
-      },
-    })
+    app.func.req('teacher_course', { tea_id: tea_id }, 'GET', function (res) {
+      console.log("20200213res", res);
+      that.setData({
+        items: res
+      })
+    });
+
+
   },
 
   /**

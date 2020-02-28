@@ -1,0 +1,27 @@
+<!--pages/mine/local-teacher/local-teacher.wxml-->
+<view class='on-list'>   
+      <view class='on-list-list' wx:for="{{items}}" wx:key="{{items}}">
+        <view class='on-list-number-wrap'>
+          <text class='on-list-number'>教师职称:<text>{{item.tea_level==1 ? "初级讲师":item.tea_level==2 ?"中级讲师":"高级讲师"}}</text></text>
+     
+        </view>
+        <navigator url='partner-teacher-show/partner-teacher-show?tea_id={{item.tea_id}}' hover-class='none'><view class='on-list-info'>
+          <image src='{{host}}{{item.tea_teacher_photo}}' mode='aspectFill'></image>
+          <view class='mine-contract-date-wrap'>
+              <text class='mine-contract-date-title'>姓名:</text>
+              <text class='mine-contract-date-value'>{{item.tea_teacher_name}}</text>
+          </view>
+          <text class='on-list-name'>所属院校：</text>
+        </view></navigator>
+
+        <view class='on-list-btn-wrap'><button class='on-list-remove-btn' hover-class='none' data-teaid="{{item.tea_id}}" catchtap='showTeaPage'>查看详情</button></view>
+    </view>
+
+   </view>
+
+<!-- 空白页 -->
+
+<view class='kb-page' wx:if='{{item.length <= 0}}'>
+  <image src='/images/kb.png'></image>
+  <view>暂无记录~</view>
+</view>

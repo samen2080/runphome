@@ -1,4 +1,4 @@
-// pages/mine/partner-teacher/partner-teacher.js
+// pages/mine/local-student/local-student.js
 const app = getApp()
 Page({
 
@@ -12,33 +12,35 @@ Page({
   },
 
   // 查看详情
-  showTeaPage: function (e) {
+  showStuPage: function (e) {
     //  var index = e.currentTarget.dataset.id;
+    console.log("20200213stu", e.currentTarget.dataset.stuid);
     wx.navigateTo({
-      url: 'partner-teacher-show/partner-teacher-show?tea_id=' + e.currentTarget.dataset.teaid,
+      url: '../student/student-show-page1/student-show-page1?stu_id=' + e.currentTarget.dataset.stuid,
     })
   },
 
   onLoad: function (options) {
     var that = this;
     var host = app.globalData.host;
-
+    var user_id = wx.getStorageSync("user_info").user_id;
+    var sch_id = wx.getStorageSync("school_data").sch_id;
     that.setData({
       host: host
     })
 
-    wx.getStorage({
-      key: 'openid',
-      success: function (res) {
-        app.func.req('my_partner_teacher', { openid: res.data, pageSize: 1000, page: 1 }, 'GET', function (res) {
-          console.log("20200213res", res);
-          that.setData({
-            items: res
-          })
-
-        });
-      },
-    })
+    // wx.getStorage({
+    //   key: 'school_data',
+    //   success: function (res) {
+    // app.func.req('local_teacher', { openid: res.data, pageSize: 1000, page: 1 }, 'GET', function (res) {
+    app.func.req('local_student', { sch_id: sch_id }, 'GET', function (res) {
+      console.log("20200213res", res);
+      that.setData({
+        items: res
+      })
+    });
+    //   },
+    // })
   },
 
   /**

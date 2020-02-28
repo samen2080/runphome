@@ -27,7 +27,8 @@
     <!-- 20200213 end -->
     <view class='sign-in' catchtap='signIn'>签到</view>
     <!-- <view class='sign-in' wx:if='{{isSign == true}}'>已签到</view> -->
-    <text class='mine-info-signature'>签名：<text id='mine-info-signature'>{{userInfo.user_sign == '' ? "未填写":userInfo.user_sign}}</text></text>
+    <!-- <text class='mine-info-signature'>签名：<text id='mine-info-signature'>{{userInfo.user_sign == '' ? "未填写":userInfo.user_sign}}</text></text> -->
+    <text class='mine-info-signature' wx:if='{{userInfo.user_identity == 3}}'>{{items.sch_name}}</text>
     <image src='/images/arrow-r.png' class='mine-arrow'></image></navigator>
       <!-- 20200213 add start -->
     <view class='role-switch' catchtap='roleSwitch'>切换</view>
@@ -102,50 +103,73 @@
   </view>
 
   <!-- 20200213 start -->
-  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 1 || userInfo.user_identity == 2}}'><navigator url='partner-schools/partner-schools'hover-class='none'>
+  <!-- 所有学校表 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 1 || userInfo.user_identity == 2 || userInfo.user_identity == 3}}'><navigator url='partner-schools/partner-schools'hover-class='none'>
     <image src='/images/contract.jpg'></image>
     <text>合作学校</text></navigator>
   </view>
 
-  <view class='mine-active-list'><navigator url='partner-company/partner-company'hover-class='none'>
+ <!-- 所有企业表 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 1 || userInfo.user_identity == 2 || userInfo.user_identity == 8}}'><navigator url='partner-company/partner-company'hover-class='none'>
     <image src='/images/contract.jpg'></image>
     <text>合作企业</text></navigator>
   </view>
   
-  <view class='mine-active-list'><navigator url='partner-hunter/partner-hunter'hover-class='none'>
+  <!-- 所有猎头表 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 1 || userInfo.user_identity == 2 || userInfo.user_identity == 9}}'><navigator url='partner-hunter/partner-hunter'hover-class='none'>
     <image src='/images/contract.jpg'></image>
     <text>合作猎头</text></navigator>
   </view>
 
-  <view class='mine-active-list'><navigator url='partner-teacher/partner-teacher'hover-class='none'>
+<!-- 所有教师表 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 1 || userInfo.user_identity == 2 || userInfo.user_identity == 4 || userInfo.user_identity == 5 || userInfo.user_identity == 6 || userInfo.user_identity == 3 }}'><navigator url='partner-teacher/partner-teacher'hover-class='none'>
     <image src='/images/contract.jpg'></image>
     <text>合作教师</text></navigator>
   </view>
 
-  <view class='mine-active-list'><navigator url='current-student/current-student'hover-class='none'>
+<!-- 所有学生表 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 1 || userInfo.user_identity == 2 || userInfo.user_identity == 4 || userInfo.user_identity == 5 || userInfo.user_identity == 6 || userInfo.user_identity == 3 }}'><navigator url='current-student/current-student'hover-class='none'>
     <image src='/images/contract.jpg'></image>
     <text>在校学生</text></navigator>
   </view>
 
-  <view class='mine-active-list'><navigator url='school-contract/school-contract'hover-class='none'>
+<!-- 所有合约表 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 1 || userInfo.user_identity == 2 || userInfo.user_identity == 3 || userInfo.user_identity == 8 }}'><navigator url='school-contract/school-contract'hover-class='none'>
     <image src='/images/contract.jpg'></image>
     <text>查看校企合约</text></navigator>
   </view>
-  <!-- 20200213 end -->
-  <!--<view class='mine-active-list'><navigator url='plan/plan'hover-class='none'>
+
+<!-- 指定学校下的在校老师 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 3}}'><navigator url='local-teacher/local-teacher'hover-class='none'>
     <image src='/images/contract.jpg'></image>
-    <text>我的计划</text></navigator>
+    <text>我校教师</text></navigator>
   </view>
 
-  <view class='mine-active-list'><navigator url='worker/worker'hover-class='none'>
+<!-- 指定学校下的在校学生 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 3}}'><navigator url='local-student/local-student'hover-class='none'>
     <image src='/images/contract.jpg'></image>
-    <text>我的</text></navigator>
-  </view> -->
+    <text>我校学生</text></navigator>
+  </view>
 
-  <!-- <view class='mine-active-list' wx:if='{{userInfo.user_identity == 1}}'><navigator url='master/master' hover-class='none'>
-    <image src='/images/a3.png'></image>
-    <text>艺术家通道</text></navigator>
-  </view> -->
+<!-- 指定学校下的合作企业 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 3}}'><navigator url='local-company/local-company'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>我校合作企业</text></navigator>
+  </view>
+
+<!-- 指定老师下的学生表 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 4 || userInfo.user_identity == 5 || userInfo.user_identity == 6}}'><navigator url='teacher-student/teacher-student'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>我的学生</text></navigator>
+  </view>
+
+<!-- 指定老师下的课程表 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 4 || userInfo.user_identity == 5 || userInfo.user_identity == 6}}'><navigator url='teacher-course/teacher-course'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>我的课程</text></navigator>
+  </view>
+
+  <!-- 20200213 end -->
 
 </view>
 
