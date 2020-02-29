@@ -1,4 +1,4 @@
-// pages/mine/local-student/local-student.js
+// pages/mine/head-teacher-course/head-teacher-course.js
 const app = getApp()
 Page({
 
@@ -11,36 +11,24 @@ Page({
     hidden: true
   },
 
-  // 查看详情
-  showStuPage: function (e) {
-    //  var index = e.currentTarget.dataset.id;
-    console.log("20200213stu", e.currentTarget.dataset.stuid);
-    wx.navigateTo({
-      url: 'local-student-page1/local-student-page1?stu_id=' + e.currentTarget.dataset.stuid,
-    })
-  },
-
   onLoad: function (options) {
     var that = this;
     var host = app.globalData.host;
     var user_id = wx.getStorageSync("user_info").user_id;
-    var sch_id = wx.getStorageSync("school_data").sch_id;
+    var tea_id = wx.getStorageSync("teacher_data").tea_id;
     that.setData({
       host: host
     })
 
-    // wx.getStorage({
-    //   key: 'school_data',
-    //   success: function (res) {
-    // app.func.req('local_teacher', { openid: res.data, pageSize: 1000, page: 1 }, 'GET', function (res) {
-    app.func.req('local_student', { sch_id: sch_id }, 'GET', function (res) {
+
+    app.func.req('head_teacher_course', { tea_id: tea_id }, 'GET', function (res) {
       console.log("20200213res", res);
       that.setData({
         items: res
       })
     });
-    //   },
-    // })
+
+
   },
 
   /**

@@ -29,6 +29,7 @@
     <!-- <view class='sign-in' wx:if='{{isSign == true}}'>已签到</view> -->
     <!-- <text class='mine-info-signature'>签名：<text id='mine-info-signature'>{{userInfo.user_sign == '' ? "未填写":userInfo.user_sign}}</text></text> -->
     <text class='mine-info-signature' wx:if='{{userInfo.user_identity == 3}}'>{{items.sch_name}}</text>
+     <text class='mine-info-signature' wx:if='{{userInfo.user_identity == 8}}'>{{companyInfo.com_name}}</text>
     <image src='/images/arrow-r.png' class='mine-arrow'></image></navigator>
       <!-- 20200213 add start -->
     <view class='role-switch' catchtap='roleSwitch'>切换</view>
@@ -157,16 +158,52 @@
     <text>我校合作企业</text></navigator>
   </view>
 
-<!-- 指定老师下的学生表 -->
-  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 4 || userInfo.user_identity == 5 || userInfo.user_identity == 6}}'><navigator url='teacher-student/teacher-student'hover-class='none'>
+<!-- 指定招生老师下的学生表 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 4 }}'><navigator url='teacher-student/teacher-student'hover-class='none'>
     <image src='/images/contract.jpg'></image>
     <text>我的学生</text></navigator>
   </view>
 
-<!-- 指定老师下的课程表 -->
-  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 4 || userInfo.user_identity == 5 || userInfo.user_identity == 6}}'><navigator url='teacher-course/teacher-course'hover-class='none'>
+<!-- 指定招生老师下的课程表 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 4 }}'><navigator url='teacher-course/teacher-course'hover-class='none'>
     <image src='/images/contract.jpg'></image>
     <text>我的课程</text></navigator>
+  </view>
+
+<!-- 指定上课老师下的学生表 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 5}}'><navigator url='class-teacher-student/class-teacher-student'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>我的学生</text></navigator>
+  </view>
+
+<!-- 指定上课老师下的课程表 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 5}}'><navigator url='class-teacher-course/class-teacher-course'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>我的课程</text></navigator>
+  </view>
+
+  <!-- 指定班主任下的学生表 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 6}}'><navigator url='head-teacher-student/head-teacher-student'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>我的学生</text></navigator>
+  </view>
+
+  <!-- 指定班主任下的课程表 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 6}}'><navigator url='head-teacher-course/head-teacher-course'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>我的课程</text></navigator>
+  </view>
+
+  <!-- 企业登录查看发布的职位 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 8}}'><navigator url='company-position/company-position'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>查看职位发布</text></navigator>
+  </view>
+
+  <!-- 猎头登录查看发布的职位 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 9}}'><navigator url='all-position/all-position'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>查看职位发布</text></navigator>
   </view>
 
   <!-- 20200213 end -->

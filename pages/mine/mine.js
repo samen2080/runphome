@@ -107,6 +107,18 @@ Page({
        })
      });
      
+     app.func.req('get_company', { user_id: user_id }, 'GET', function (res) {
+       console.log("20200213companyInfo", res);
+       that.setData({
+         companyInfo: res,
+       })
+       wx.setStorage({
+         key: 'company_data',
+         data: {
+           com_id: res.com_id
+         },
+       })
+     });
     
   },
   //20200109 系统升级为符合微信登录条件根据微信官方20190901文件 start

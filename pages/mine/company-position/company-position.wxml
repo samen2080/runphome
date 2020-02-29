@@ -1,0 +1,51 @@
+<!--pages/mine/company-position/company-position.wxml-->
+
+<!-- <view class='index-search-box'>
+  <view class='wrap'>
+    <form  bindsubmit="formSubmit">
+      <view class='index-search'>
+        <button formType="submit" hover-class='none'><image src='/images/search.png'></image></button>
+        <input type='search' confirm-type='search' placeholder='搜索关键词' placeholder-class='search-placeholder' name='search'  bindconfirm='bindconfirm' value='{{searchInput}}'></input>
+      </view>
+    </form>
+  </view>
+</view>
+
+<scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+  <block wx:for="{{navData}}" wx:for-index="idx" wx:for-items="navitems">
+      <view class="nav-items {{currentTab == idx ?'active':''}}"  data-current="{{idx}}" bindtap="switchNav">{{navitems.text}}<view class='border-bottom' style='display:{{currentTab == idx?"block":"none"}}'></view></view>
+  </block>        
+</scroll-view> -->
+
+
+<!-- 页面内容 -->
+<!-- <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab" style='height:{{sheight}}rpx'>        
+  <swiper-items wx:for="{{navData}}" wx:for-items="tabitems" wx:for-index="idx"> -->
+    <!-- <view wx:for='{{proList}}' wx:key='{{proList}}'> -->
+        <navigator url='../../company/company-show/company-show?com_id={{items.com_id}}' hover-class='none'>
+          <view class='on-list-info'>
+            <image src='{{host}}{{items.com_logo}}' mode='aspectFill'></image>
+            <!--index.wxml-->
+            <view class='on-list-name'>
+                <view class='on-list-name1'>
+                     <view class='on-list-name1-title'>{{items.com_short_name}}</view>
+                     <view class='on-list-name1-benefit'><text>{{items.com_scale}}</text></view>
+                     <view class='on-list-name1-benefit'><text>{{items.com_social_security}}</text></view>
+                </view>
+                <view class='on-list-name2'><text>{{items.com_city}}{{items.com_county}}{{items.com_address}}</text></view>
+                <!-- <view class='on-list-name3'><text>热招职位：{{items.com_job_type_combine}}</text></view> -->
+                <!-- <view class='on-list-name4'><text>共{{items.com_job_count}}个职位</text></view> -->
+            </view>
+          </view>
+        </navigator> 
+
+   
+    <!-- </view> -->
+  <!-- </swiper-items>
+</swiper> -->
+
+<!-- 空白页 -->
+<view class='kb-page' wx:if='{{proList.length <= 0}}'>
+  <image src='/images/kb.png'></image>
+  <view>暂无相关内容~</view>
+</view>

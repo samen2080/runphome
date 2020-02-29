@@ -1,0 +1,27 @@
+<!--pages/mine/class-teacher-student/class-teacher-student.wxml-->
+<view class='on-list'>   
+      <view class='on-list-list' wx:for="{{items}}" wx:key="{{items}}">
+        <view class='on-list-number-wrap'>
+          <text class='on-list-number'>学生ID:<text>{{item.stc_stu_id}}</text></text>
+           <!-- <text class='on-list-status'>性别：{{item.stu_sex==1 ? "男":"女"}}</text> -->
+        </view>
+        <navigator url='current-student-show-page1/current-student-show-page1?stu_id={{item.stu_id}}' hover-class='none'><view class='on-list-info'>
+          <image src='{{host}}{{item.stu_img}}' mode='aspectFill'></image>
+          <view class='mine-contract-date-wrap'>
+              <!-- <text class='mine-contract-date-title'>姓名:</text> -->
+              <text class='mine-contract-date-value'>{{item.stu_name}}</text>
+          </view>
+          <!-- <text class='on-list-name'>电话：{{item.stu_phone}}</text> -->
+        </view></navigator>
+
+        <!-- <view class='on-list-btn-wrap'><button class='on-list-remove-btn' hover-class='none' data-stuid="{{item.stu_id}}" catchtap='showStuPage'>查看详情</button></view> -->
+    </view>
+
+   </view>
+
+<!-- 空白页 -->
+
+<view class='kb-page' wx:if='{{item.length <= 0}}'>
+  <image src='/images/kb.png'></image>
+  <view>暂无记录~</view>
+</view>
