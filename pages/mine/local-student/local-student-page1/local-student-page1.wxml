@@ -32,7 +32,7 @@
          
     
     <view class='info-edit-form-btn'>
-      <button bindtap="submit" class='info-edit-form-sub-btn'>
+      <button bindtap="submit" class='info-edit-form-sub-btn' data-stuid="{{userInfo.stu_id}}">
         <text class='btn-text'>下一页</text>
       </button>
     </view>

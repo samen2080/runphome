@@ -30,7 +30,7 @@ page{
   
 }
 .contract-show-top2{
-margin-left: 200rpx;
+margin-left: 150rpx;
 }
 .contract-show-top-code text{
   font-size: 32rpx;

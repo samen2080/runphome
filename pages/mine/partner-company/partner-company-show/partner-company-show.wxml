@@ -24,19 +24,19 @@
     
     <view class='contract-show-top-code'>
     <text>企业性质：{{items.com_type}}</text>
-    <text class='contract-show-top2'>企业规模：{{items.com_scale}}</text>
+    <text class='contract-show-top2' space="emsp">企业规模：{{items.com_scale}}</text>
     </view>
     <view class='contract-show-top-code'>
     <text>联系人：{{items.com_contact}}</text>
-    <text class='contract-show-top2'>电话：{{items.com_mobile}}</text>
+    <text class='contract-show-top2' space="emsp">电话：{{items.com_mobile}}</text>
     </view>
     <view class='contract-show-top-code'>
     <text>协会会员：{{items.com_membership_ind==1 ? "是":"否"}}</text>
-    <text class='contract-show-top2'>合作企业：{{items.com_cooperate_ind==1 ? "是":"否"}}</text>
+    <text class='contract-show-top2' space="emsp">合作企业：{{items.com_cooperate_ind==1 ? "是":"否"}}</text>
     </view>
     <view class='contract-show-top-code'>
     <text>职位总计：{{items.com_job_count}}</text>
-    <text class='contract-show-top2'>员工社保：{{items.com_social_security}}</text>
+    <text class='contract-show-top2' space="emsp">员工社保：{{items.com_social_security}}</text>
     </view>
     <view class='contract-show-middle-info-list'>所属行业：<text>{{item.com_industry}}</text></view>
     <view class='contract-show-middle-info-list'>企业网址：<text>{{item.com_website}}</text></view>

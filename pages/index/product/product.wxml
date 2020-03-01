@@ -1,0 +1,74 @@
+<!--pages/index/product/product.wxml-->
+<view class='main-show-top'>
+  <view class='main-show-top-info'>
+    <view class='main-show-top-info-tx'>
+      <view class='main-show-top-info-tx-wrap'><image src='{{host}}{{com_img[0]}}' mode='aspectFill'></image></view>
+    </view>      
+  </view>
+</view>
+
+<view class='index-list-box'>
+    <!-- <view class='index-list-title'>
+     <text>{{productList.pdd_title}}</text>
+    </view> -->
+
+    <view class='index-course-video-list-box'>
+     <view class='index-course-video-list' wx:for="{{productList}}" wx:key="{{productList}}" wx:for-item="i">  
+     <view class='index-list-title'><text>{{i.pdd_title}}</text></view>    
+          <view class='wrap-left'>  
+             <image src='{{host}}{{i.pdd_img}}' mode='aspectFill'></image>
+           </view>
+           <!-- <view class='wrap-right'>  
+              <view class='on-list-course-name'>{{i.pdd_desc}}</view>
+           </view>          -->
+          <view class='wrap-right'>
+            <text class="on-list-course-name {{ellipsis?'ellipsis':'unellipsis'}}" >{{i.pdd_desc}}</text>
+             <view class='bg-white-ellipsis' bindtap='ellipsis'>
+             <image class='img-ellipsis' src="{{ellipsis?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
+             </view>
+          </view>
+
+
+       </view>
+     </view>
+ </view>
+
+ <!-- <view class='index-list-box'>
+    <view class='index-list-title'>
+     <text>模具制造整体教学解决方案</text>
+    </view>
+
+    <view class='index-course-video-list-box'>
+     <view class='index-course-video-list' wx:for="{{productList}}" wx:key="{{productList}}" wx:for-item="i">      
+          <view class='wrap-left'>  
+             <image src='{{host}}{{i.pdd_img}}' mode='aspectFill'></image>
+           </view>
+           <view class='wrap-right'>  
+              <view class='on-list-course-name'>{{i.pdd_desc}}</view>
+           </view>         
+       </view>
+     </view>
+ </view> -->
+
+
+<view class="container">  
+  <view class="weui-grids">  
+    <view class="weui-grid" wx:for="{{routers}}" wx:key="name">  
+      <navigator url="{{item.url}}">  
+        <view class="weui-grid__icon">  
+          <image src=" {{item.icon}}" mode="scaleToFill" />  
+        </view>  
+        <text class="weui-grid__label">{{item.name}}</text>  
+      </navigator>  
+    </view>  
+  </view>  
+</view>
+
+
+<view clss-job-bottom>
+    <view class='job-show-nav'>
+      <button bindtap='bind_tal' class='job-show-share'><image src='/images/phone.png'></image></button>
+      <button open-type='contact' class='job-show-share'><image src='/images/ims.png'></image></button> 
+      <button class='job-show-apply'  hidden='{{rebtnShow}}'>联系润品</button>
+    </view>
+ </view>

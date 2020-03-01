@@ -5,6 +5,8 @@
     "pages/index/search/search",
     "pages/index/ad/ad",
     "pages/index/ad/ad-show/ad-show",
+    "pages/index/product/product",
+    "pages/index/product/sample/sample",
     "pages/index/school/school",
     "pages/index/school/school-show/school-show",
     "pages/index/school/map/map",

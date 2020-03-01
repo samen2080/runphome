@@ -24,7 +24,7 @@
     </view>
    <view class='contract-show-top-code'>
     <text>签约日期：{{items.scc_sign_time}}</text>
-    <text class='contract-show-sex'>合约状态：{{item.scc_status==1?"已生效":item.scc_status==2?"已过期":"已取消"}}</text>
+    <text class='contract-show-sex'>合约状态：{{items.scc_status==1?"已生效":items.scc_status==2?"已过期":"已取消"}}</text>
     </view>
     <!-- <view class='contract-show-top-code'>
     <text>开始日期：{{items.scc_start_date}}</text>

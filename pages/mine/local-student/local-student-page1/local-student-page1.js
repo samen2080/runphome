@@ -30,12 +30,12 @@ Page({
     var host = app.globalData.host;
     var user_id = wx.getStorageSync("user_info").user_id;
     var user_identity = wx.getStorageSync("user_info").user_identity;
-    var sch_id = wx.getStorageSync("school_data").sch_id;
+    var stu_id = wx.getStorageSync("school_data").stu_id;
     that.setData({
       host: host,
       user_id: user_id,
       user_identity: user_identity,
-      sch_id: options.sch_id
+      stu_id: options.stu_id
 
     })
     // wx.getStorage({
@@ -46,8 +46,10 @@ Page({
         //   openid: res.data
         // })
         // app.func.req('get_student', { user_id: that.data.user_id }, 'GET', function (res) {
-        app.func.req('local_student', { sch_id: sch_id }, 'GET', function (res) {
-          // console.log(res);
+    // app.func.req('local_student-show', { stu_id: that.data.stu_id }, 'GET', function (res) {
+    app.func.req('local_student_show/' + that.data.stu_id, {}, 'GET', function (res) {
+      console.log(that.data.stu_id);
+           console.log(res);
           that.setData({
             userInfo: res
             // user_headimg: res.user_headimg
@@ -65,7 +67,7 @@ Page({
             that.setData({
               // 20200213 start
               //dates: res.user_birthday,
-              dates: res.stu_birthday,
+              // dates: res.stu_birthday,
               // 20200213 end
               dateColor: '#000000'
             })
