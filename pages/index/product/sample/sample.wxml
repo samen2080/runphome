@@ -26,12 +26,12 @@
       <view class='main-show-intro-scale'>案例相关图片</view>
       <view class='banner'>
           <swiper class='banner-swiper' current='0'>
-            <swiper-item wx:for="{{smd_img}}" wx:key='smd_img'>
-              <image src='{{host}}{{item}}' mode='aspectFill' class='banner-img' />
-            </swiper-item>
+              <swiper-item wx:for="{{smd_img}}" wx:key='smd_img'>
+                <image src='{{host}}{{item}}' mode='aspectFill' class='banner-img' />
+              </swiper-item>
           </swiper>
       </view>
-   </view>
+    </view>
 
     <!-- tab2 -->
     <!-- <view class='mine-subject-box' wx:if='{{currentTab==1}}'>
@@ -55,7 +55,7 @@
     </view> -->
 </view>
 
-<view clss-job-bottom>
+<view class="job-bottom">
     <view class='job-show-nav'>
       <button bindtap='bind_tal' class='job-show-share'><image src='/images/phone.png'></image></button>
       <button open-type='contact' class='job-show-share'><image src='/images/ims.png'></image></button> 

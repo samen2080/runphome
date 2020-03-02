@@ -11,9 +11,16 @@
     <view class='index-sample-display-list-box'>
      <view class='index-sample-display-list' wx:for="{{productList}}" wx:key="{{productList}}" wx:for-item="i">  
      <view class='index-list-title'><text>{{i.pdd_title}}</text></view>    
-          <view class='wrap-left'>  
-             <image src='{{host}}{{i.pdd_img}}' mode='aspectFill'></image>
-           </view>
+          <!-- <view class='wrap-left'>   -->
+             <!-- <image src='{{host}}{{i.pdd_img}}' mode='aspectFill'></image> -->
+                <view class='banner'>
+                    <swiper class='banner-swiper' current='0'>
+                      <swiper-item wx:for="{{i.pdd_img}}" wx:key="{{i.pdd_img}}" wx:for-item="j">
+                        <image src='{{host}}{{j}}' mode='aspectFill' class='banner-img' />
+                      </swiper-item>
+                    </swiper>
+                </view>
+           <!-- </view> -->
           <view class='wrap-right'>
              <text class="on-list-course-name" >{{i.pdd_desc}}</text>
              <!-- <view class='bg-white-ellipsis' bindtap='ellipsis'>
@@ -39,7 +46,7 @@
   </scroll-view> 
 </view> 
 
-<view clss-job-bottom>
+<view class="job-bottom">
     <view class='job-show-nav'>
       <button bindtap='bind_tal' class='job-show-share'><image src='/images/phone.png'></image></button>
       <button open-type='contact' class='job-show-share'><image src='/images/ims.png'></image></button> 

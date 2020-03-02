@@ -3,6 +3,7 @@
 /* @import "../../../mine/mine-subject/mine-subject.wxss"; */
 
 .main-show-top{
+  height: 470rpx; 
   background: #ffffff;
   margin-bottom: 24rpx;
 }
@@ -158,7 +159,7 @@
 
 .main-show-name{
   font-size: 42rpx;
-  font-weight: 800;
+  font-weight: 600;
   margin-left: 10rpx;
   float: left;
 }
@@ -297,9 +298,8 @@
 }
 
 .main-show-middle{
+ height: 1200rpx;
  width: 100%; 
- /* display: flex;  */
- margin-bottom:100rpx;
 }
 .swiper-tab{
   width: 100%;
@@ -355,7 +355,7 @@
   color: #070707;
   /* padding: 32rpx 24rpx 20rpx; */
   background: #ffffff;
-  font-weight: 800;
+  font-weight: 600;
   position: relative;
   margin-left: 20rpx;
 }
@@ -368,7 +368,7 @@
 .main-show-intro-scale{
   font-size: 42rpx;
   color: #070707;
-  font-weight: 800;
+  font-weight: 600;
   position: relative;
   margin-left: 20rpx;
   margin-top: 40rpx;
@@ -380,26 +380,33 @@
   height: 418rpx;
 }
 .banner{
+  width: 700rpx;
   background-color: #ffffff;
 }
 .banner-swiper{
   text-align: center;
-  width: 750rpx;
+  width: 700rpx;
   position: relative;
   height: 356rpx;
 }
 .banner-img{
-  width: 730rpx;
+  width: 690rpx;
   height: 300rpx;
   position: absolute;
-  padding: 15rpx;
+  /* padding: 15rpx; */
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
-  border-radius: 10rpx;
+  border-radius: 8rpx;
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
 /* 联系电话 */
+
+.job-bottom{
+
+}
+
 .job-show-nav{
   width: 100%;
   height: 100rpx;
