@@ -72,28 +72,30 @@
   </view>
 </view>
 
-<view class='mine-active-box'>
 
-  <view class='mine-active-list'><navigator url='publish/publish' hover-class='none'>
+
+<!-- 20200213 change start -->
+<view class='mine-have-box-n'>
+  <view class='mine-have-list-n'><navigator url='publish/publish' hover-class='none'>
     <image src='/images/a1.png'></image>
-    <text>我发布的</text></navigator>
+    <view>我发布的</view></navigator>
   </view>
-  
-  <view class='mine-active-list'><navigator url='send/send' hover-class='none'>
+  <view class='mine-have-list-n'><navigator url='send/send' hover-class='none'>
     <image src='/images/a2.png'></image>
-    <text>我送出的</text></navigator>
+    <view>我送出的</view></navigator>
   </view>
-  
-  <view class='mine-active-list'><navigator url='buy/buy' hover-class='none'>
+  <view class='mine-have-list-n'><navigator url='buy/buy' hover-class='none'>
     <image src='/images/a3.png'></image>
-    <text>我报名的</text></navigator>
+    <view>我报名的</view></navigator>
   </view>
-  
-  <view class='mine-active-list'><navigator url='collect/collect' hover-class='none'>
+  <view class='mine-have-list-n'><navigator url='collect/collect' hover-class='none'>
     <image src='/images/a4.png'></image>
-    <text>我收藏的</text></navigator>
+    <view>我收藏的</view></navigator>
   </view>
-  
+</view>
+<!-- 20200213 change end -->
+
+<view class='mine-active-box'>
   <view class='mine-active-list' wx:if='{{userInfo.user_identity == 7 }}'><navigator url='student/student'hover-class='none'>
     <image src='/images/contract.jpg'></image>
     <text>学生个人资料</text></navigator>
