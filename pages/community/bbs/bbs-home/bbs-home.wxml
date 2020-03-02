@@ -1,6 +1,6 @@
 <!--pages/community/bbs/bbs-home/bbs-home.wxml-->
 <view class='topic-home-top'>
-  <image src='/images/mine-back.png' class='topic-home-top-back' mode='aspectFill'></image>
+  <image src='/images/mine.jpg' class='topic-home-top-back' mode='aspectFill'></image>
   <button open-type='share' class='topic-home-top-share' hover-class='none'><image src='/images/share1.png'></image></button>
   <image src='{{host}}{{forum.forum_img}}' class='topic-home-top-cover' mode='aspectFill'></image>
 

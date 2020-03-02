@@ -115,6 +115,7 @@
     "pages/mine/head-teacher-student/head-teacher-student",
     "pages/mine/company-position/company-position",
     "pages/mine/all-position/all-position",
+    "pages/mine/student-course/student-course",
     "pages/testqr/testqr",
     "pages/qrcode/qrcode",
     "pages/activity/activity",
