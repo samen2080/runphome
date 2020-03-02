@@ -21,78 +21,47 @@
   width: 730rpx;
   height: 308rpx;
   border-radius: 8rpx;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
 .index-list-box{
   margin-top: 0rpx;
   overflow: hidden;
-  /* 20200130 start */
   width: 96%;
-  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
   border-radius: 8rpx;
   margin-left: 15rpx;
   margin-bottom: 20rpx;
-  /* 20200130 end */
-
+/* border: rgb(0, 0, 0) solid 1px; */
 }
 .index-list-title{
   height: 90rpx;
   line-height: 90rpx;
-  padding: 0 24rpx;
-  /* border-bottom: 2rpx solid #e9e9e9; */
-  /* border-bottom: 2rpx solid #6d63ff; */
-  /* font-size: 36rpx; */
+  width: 100%;
+  margin-left: 0rpx;
+  /* padding: 0 24rpx; */
   font-size: 34rpx;
   font-weight: bold;
   background: #ffffff;
   color: rgb(255, 196, 0);
-  
+/* border: rgb(0, 0, 0) solid 1px; */
+
 }
 .index-list-title image{
   width: 42rpx;
   height: 42rpx;
   vertical-align: text-bottom;
+  margin-left: 30rpx;
   margin-right: 14rpx;
   float:left;
   margin-top:24rpx;
 }
-/* .index-list-box:nth-child(7) .index-list-title image{
-  width: 46rpx;
-  height: 34rpx;
-}
-.index-list-box:nth-child(7) .index-list-title .index-more image{
-  width: 28rpx;
-  height: 28rpx;
-}
-.index-list-box:nth-child(9) .index-list-title image{
-  width: 38rpx;
-  height: 42rpx;
-}
-.index-list-box:nth-child(9) .index-list-title .index-more image{
-  width: 28rpx;
-  height: 28rpx;
-} */
-.index-course-video-list-box{
+
+.index-sample-display-list-box{
   width: 100%;
-  height:500rpx;
-  
-  
+  /* height:1000rpx; */
 }
-.index-course-video-list{
-  height: 270rpx;
-  width: 100%;
-  background: #ffffff;
-  /* margin-top: 10rpx;    */
-  padding: 0rpx 50rpx 0rpx 20rpx;     
-  font-size: 32rpx; 
-  position: relative;
-  float: left; 
-  /* border-width: 1rpx 10rpx 1rpx 1rpx ;
-  border-color: #b1afae;
-  border-style: solid;  */
-  border-bottom: 2rpx solid #e0e0e0;
-}
+
 .wrap-left{
   background: #ffffff;
   height: 180rpx;
@@ -100,9 +69,6 @@
   font-size: 32rpx;
   position: relative; 
   float: left;
-  /* border-width: 1rpx 1rpx 1rpx 1rpx ;
-  border-color: #f80324e1;
-  border-style: solid;  */
 }
 
 .wrap-left image{
@@ -111,36 +77,43 @@
   border-radius: 8rpx;
 }
 .wrap-right{
-  height: 180rpx;
-  width: 465rpx;
+  /* height: 180rpx; */
+  height: 500rpx;
+  /* width: 100%; */
   background: #ffffff;
   font-size: 32rpx;
   position: relative; 
   float: left;
-
-  /* border-width: 1rpx 1rpx 1rpx 1rpx ;
-  border-color: #ce1c1c;
-  border-style: solid;  */
 }
-.on-list-course-name{
+
+
+
+.index-sample-display-list{
+  height: 550rpx;
   width: 100%;
-  height: 170rpx;
-  line-height: 30rpx; 
+  background: #ffffff;
+  padding: 0rpx 50rpx 0rpx 20rpx;     
+  font-size: 32rpx; 
+  position: relative;
+  float: left; 
+  border-bottom: 2rpx solid #e0e0e0;
+}
+
+.on-list-course-name{
+  width: 720;
+  height: 350rpx;
+  line-height: 40rpx; 
   font-weight: 500;
   font-size: 28rpx;
-  margin-left: 30rpx;
+  margin-right: 30rpx;
   margin-bottom: 15rpx;
   position: relative; 
   float: left;
-
   display: -webkit-box;
   -webkit-box-orient:vertical;
-  text-overflow: ellipsis;
+  /* text-overflow: ellipsis; */
   overflow:hidden; 
-
-  /* border-width: 1rpx 1rpx 1rpx 1rpx ;
-  border-color: #1f2acc;
-  border-style: solid;  */
+/* border: rgb(0, 0, 0) solid 1px; */
 }
 
 /* 联系电话 */
@@ -292,3 +265,71 @@
   text-overflow: ellipsis;  
   overflow: hidden;  
 }  
+
+
+
+
+
+
+
+/**index.wxss**/
+.pages-container { 
+ height: 100%; 
+ display: flex; 
+ flex-direction: column; 
+ box-sizing: border-box; 
+ margin-bottom:100rpx;
+ padding-top: 10rpx; 
+ padding-bottom: 5rpx; 
+} 
+.pages-title-bg { 
+ width: 100%; 
+} 
+.pages-wrapper { 
+} 
+.pages-row { 
+ width: 100%; 
+ display: flex; 
+ flex-direction: row; 
+ justify-content: space-around; 
+} 
+.pages-item { 
+ position: relative; 
+ padding: 10rpx; 
+ width: 33%; 
+ background-color: #fff; 
+ /* border: #ddd solid 1px;  */
+} 
+.pages-icon-wrapper { 
+ display: flex; 
+ justify-content: space-around; 
+ align-items: center; 
+ margin: 10rpx; 
+ border-radius: 10rpx; 
+ height: 75%; 
+ background:rgb(131, 148, 241); 
+} 
+.pages-icon-wrapper-no-bg { 
+ display: flex; 
+ justify-content: space-around; 
+ align-items: center; 
+ margin: 10rpx; 
+ height: 75%; 
+/* border: #ddd solid 1px;  */
+
+} 
+.pages-icon { 
+ width: 100rpx; 
+ height: 100rpx; 
+ border-radius: 8rpx;
+  /* border: #ddd solid 1px;  */
+} 
+
+
+
+.pages-text-wrapper { 
+ text-align: center; 
+} 
+.pages-text { 
+ font-weight: bolder; 
+}

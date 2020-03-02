@@ -19,7 +19,7 @@
   height: 410rpx;
   margin-left: 5rpx;
   border-radius: 8rpx;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.5);
   position: relative;
   float: left;
 

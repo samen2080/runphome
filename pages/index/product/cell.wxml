@@ -1,0 +1,13 @@
+<template name="cell"> 
+ <navigator url="{{route}}" class="pages-item" style="height:{{cellHeight}}"> 
+  <!-- <view class="{{text==null||text.length==0?'pages-icon-wrapper-no-bg':'pages-icon-wrapper'}}" >  -->
+  <view class="pages-icon-wrapper-no-bg"> 
+   <image src="{{icon}}" class="pages-icon"></image> 
+   <!-- <image src="{{smd_img[0]}}" class="pages-icon"></image>  -->
+
+  </view> 
+  <view class="pages-text-wrapper"> 
+   <text class="pages-text">{{text}}</text> 
+  </view> 
+ </navigator> 
+</template> 

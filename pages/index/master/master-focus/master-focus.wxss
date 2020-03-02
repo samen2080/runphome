@@ -15,7 +15,8 @@
   margin-left: 24rpx;
   border-radius: 50%;
   overflow: hidden;
-  box-shadow: 0 0 16rpx rgba(42, 26, 5, 0.2);
+  /* box-shadow: 0 0 16rpx rgba(42, 26, 5, 0.2); */
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.5);
 }
 .master-tx-wrap image{
   position: absolute;

@@ -1,2 +1,65 @@
 <!--pages/index/product/sample/sample.wxml-->
-<text>pages/index/product/sample/sample.wxml</text>
+
+<view class='main-show-top'>
+  <view class='main-show-top-info'>
+    <view class='main-show-top-info-tx'>
+      <view class='main-show-top-info-tx-wrap'><image src='{{host}}{{smd_img[0]}}' mode='aspectFill'></image></view>
+    </view>     
+    <view class='main-show-name'><text>{{items.smd_title}}</text></view>
+    <!-- <view class='main-show-instru1'><text>{{items.com_membership_ind==1?"协会会员":"不是协会会员"}}</text></view>
+    <view class='main-show-instru2'><text>{{items.com_cooperate_ind==1?"合作企业":"不是合作企业"}}</text></view>
+    <view class='main-show-web'><text>{{items.com_website}}</text></view> -->
+    <!-- <view class='main-show-logo'><image src='{{items.com_logo}}' mode='aspectFill'></image></view> -->
+  </view>
+</view>
+
+<view class='main-show-middle'>
+    <view class="swiper-tab">
+      <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">主要信息<view class='border-bottom' style='display:{{currentTab==0?"block":"none"}}'></view></view>
+      <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">相关链接<view class='border-bottom' style='display:{{currentTab==1?"block":"none"}}'></view></view>
+    </view>
+
+    <!-- tab1 -->
+    <view class='main-show-intro' wx:if='{{currentTab==0}}'>
+      <view class='main-show-intro-title'>案例介绍</view>
+      <view class='main-show-intro-descript'>{{items.smd_desc}}</view>
+      <view class='main-show-intro-scale'>案例相关图片</view>
+      <view class='banner'>
+          <swiper class='banner-swiper' current='0'>
+            <swiper-item wx:for="{{smd_img}}" wx:key='smd_img'>
+              <image src='{{host}}{{item}}' mode='aspectFill' class='banner-img' />
+            </swiper-item>
+          </swiper>
+      </view>
+   </view>
+
+    <!-- tab2 -->
+    <!-- <view class='mine-subject-box' wx:if='{{currentTab==1}}'>
+      <view class='mine-subject-list' wx:for="{{inList}}" wx:key="{{inList}}" wx:for-item="i">
+        <navigator url='job-show/job-show?job_id={{i.job_id}}' hover-class='none'>
+          <view class='wrap-left'>  
+                <view class='on-list-name'>{{i.job_name}}{{i.job_benefit}}</view>
+                <view class = 'on-list-salary-type'>
+                    <view class='on-list-salary'>{{i.job_salary}}元 </view>
+                    <view class='on-list-type'>·{{i.job_type}}</view>
+                </view>
+                <view class='on-list-address'>{{i.job_county}}-{{i.job_address}} ·{{i.job_experience_ind}}</view>
+                <view class='on-list-edu'>学历要求：{{i.job_education_ind}}</view>
+           </view>
+           <view class='wrap-right'>  
+              <view class='on-list-time'>{{i.job_add_time}}</view>
+              <button class='on-list-btn' data-jobid="{{i.job_id}}" catchtap='apply'>申请</button>
+           </view>
+          </navigator>
+       </view>
+    </view> -->
+</view>
+
+<view clss-job-bottom>
+    <view class='job-show-nav'>
+      <button bindtap='bind_tal' class='job-show-share'><image src='/images/phone.png'></image></button>
+      <button open-type='contact' class='job-show-share'><image src='/images/ims.png'></image></button> 
+      <button class='job-show-apply'  hidden='{{rebtnShow}}'>联系润品</button>
+    </view>
+ </view>
+
