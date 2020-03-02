@@ -289,9 +289,8 @@
 
 <!-- 20191012 test start -->
 <!-- 热播课程 -->
-<view class='index-list-box'>
+<!-- <view class='index-list-box'>
   <view class='index-list-title'>
-    <!-- <image src='/images/i5.png'></image> -->
     <text>热播课程</text>
     <view class='index-more'><navigator url='transaction/transaction' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>
   </view>
@@ -386,11 +385,7 @@
           </view>
         </view></navigator>
       </view>
-
-
-     <!-- </view> -->
    </view> 
-
-</view>
+</view> -->
 <!-- END -->
 <!-- 20191012 test end -->

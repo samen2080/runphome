@@ -12,7 +12,7 @@
   width: 740rpx;
   height: 372rpx;
   border-radius: 10rpx;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 }
 .imageCount{
     color: #ffffff;

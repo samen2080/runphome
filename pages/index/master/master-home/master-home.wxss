@@ -24,7 +24,7 @@
   width: 136rpx;
   height: 136rpx;
   /* box-shadow: 0 0 2rpx #2a1a05; */
-  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   overflow: hidden;
   display: inline-block;
