@@ -4,9 +4,16 @@
 <view class='wrap'>
   <view class='master-list' wx:for='{{masterLis}}' wx:key='{{masterLis}}'>
     <view class='master-list-top'><navigator url='master-home/master-home?master_id={{item.user_id}}' hover-class='none'>
-      <image src='{{item.user_headimg}}' mode='aspectFill'></image>
+      <!-- 20200213 add start -->
+      <!-- <image src='{{item.user_headimg}}' mode='aspectFill'></image> -->
+      <image src='{{host}}{{item.user_class_photo}}' mode='aspectFill'></image>
+      <!-- 20200213 add end -->
+
       <text class='master-list-name'>{{item.user_nickname}}</text>
-      <view class='master-list-jj'>{{item.user_intro}}</view></navigator>
+      <!-- 20200213 add start -->
+      <!-- <view class='master-list-jj'>{{item.user_intro}}</view></navigator> -->
+      <view class='master-list-jj'>{{item.user_class_intro}}</view></navigator>
+      <!-- 20200213 add end -->
     </view>
 
     <view class='master-list-bottom'>

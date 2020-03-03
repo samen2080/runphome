@@ -3,10 +3,15 @@
 <view class='master-home-top'>
   <view class='master-home-top-info'>
     <view class='master-home-top-info-tx'>
-      <view class='master-home-top-info-tx-wrap'><image src='{{user_headimg}}' mode='aspectFill'></image></view>
+    <!-- 20200213 add start -->
+      <!-- <view class='master-home-top-info-tx-wrap'><image src='{{user_headimg}}' mode='aspectFill'></image></view> -->
+      <view class='master-home-top-info-tx-wrap'><image src='{{host}}{{user_class_photo}}' mode='aspectFill'></image></view>
+    <!-- 20200213 add end -->
     </view>     
     <view class='master-home-name'><text>{{user_nickname}}</text></view>
-    <view class='master-home-instru'>{{user_skilled}}</view>
+    <!-- 20200213 add start -->
+    <!-- <view class='master-home-instru'>{{user_skilled}}</view> -->
+    <!-- 20200213 add start -->
     <image class='master-home-focus' src='/images/focus.png' wx:if='{{is_follow == 0}}' catchtap='focus'></image>
     <image class='master-home-focus' src='/images/focus2.png' wx:if='{{is_follow == 1}}' catchtap='focus'></image>
   </view>

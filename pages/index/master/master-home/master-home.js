@@ -38,7 +38,10 @@ Page({
       // console.log(res);
       that.setData({
         user_id: res.user_id,
-        user_headimg: res.user_headimg,
+        // 20200213 add start
+        // user_headimg: res.user_headimg,
+        user_class_photo: res.user_class_photo,
+        // 20200213 add end
         user_nickname: res.user_nickname,
         user_topic_count: res.user_topic_count,
         user_invitation_count: res.user_invitation_count,

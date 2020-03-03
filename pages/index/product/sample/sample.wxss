@@ -298,7 +298,7 @@
 }
 
 .main-show-middle{
- height: 1200rpx;
+ height: 1300rpx;
  width: 100%; 
 }
 .swiper-tab{
@@ -387,11 +387,11 @@
   text-align: center;
   width: 700rpx;
   position: relative;
-  height: 356rpx;
+  height: 500rpx;
 }
 .banner-img{
   width: 690rpx;
-  height: 300rpx;
+  height: 500rpx;
   position: absolute;
   /* padding: 15rpx; */
   left: 50%;

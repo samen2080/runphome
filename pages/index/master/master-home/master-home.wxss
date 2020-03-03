@@ -40,6 +40,9 @@
 .master-home-name{
   font-size: 32rpx;
   font-weight: 500;
+  /* 20200213 add start */
+  margin-bottom: 10rpx;
+  /* 20200213 add end */
 }
 .master-home-instru{
   color: #999999;
