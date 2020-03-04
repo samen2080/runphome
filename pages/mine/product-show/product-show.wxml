@@ -17,8 +17,8 @@
   <view class='product-show-end-time'> 报名截止时间: <text>{{old_end_time}}</text></view>
   <view class='product-show-owner-info'>
     <navigator url='../../index/transaction/owner/owner?owner_id={{old_user_id}}' hover-class='none'><image src='{{user_headimg}}' mode='aspectFill'></image></navigator>
-    <text class='product-show-owner-name'>{{user_nickname}}</text>
-    <text class='product-show-owner-address'><text>{{user_address}}</text></text>
+    <text class='product-show-owner-name'>{{user_nickname}}讲师课程</text>
+    <!-- <text class='product-show-owner-address'><text>{{user_address}}</text></text> -->
   </view>
 </view>
 
