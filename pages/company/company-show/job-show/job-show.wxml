@@ -26,6 +26,6 @@
     <view class='job-show-nav'>
       <button bindtap='bind_tal' class='job-show-share'><image src='/images/phone.png'></image></button>
       <button open-type='contact' class='job-show-share'><image src='/images/ims.png'></image></button> 
-      <button class='job-show-apply' catchtap='removePro' hidden='{{rebtnShow}}'>申请职位</button>
+      <button class='job-show-apply' catchtap='applyJob' data-jobid="{{inList.job_id}}" hidden='{{rebtnShow}}'>申请职位</button>
     </view>
  </view>

@@ -1,0 +1,34 @@
+<!--pages/company/company-show/app-job/app-job.wxml-->
+ <view class='index-resum-top-box'>
+     <view class='index-resum-top' >
+          <view class='wrap-left'>  
+             <image src='{{user_headimg}}' mode='aspectFill'></image>
+           </view>
+           <view class='wrap-right'>  
+            <view class='input-wrap'>
+             <input  placeholder='输入姓名' placeholder-class='placeholder' name='res_user_name'></input>
+            </view>
+            <view class='sex-edit-input' catchtap='genderSelect'>
+              <view class='gender-select'><image src='{{id==0?"/images/male.png":"/images/circle.png"}}' data-id='0'></image>男</view>
+              <view class='gender-select'><image src='{{id==1?"/images/female.png":"/images/circle.png"}}' data-id='1'></image>女</view>
+            </view>
+           </view>
+       </view>
+  </view>
+
+   <view class='index-resum-middle-box'>
+     <view class='index-resum-middle' >
+        <view class='resum-left'>
+         <view class='year-edit-input'><text>出生年份</text>
+          <Select prop-array='{{selectArray1}}' bind:myget='getData1'></Select></view>
+        </view>
+        <view class='resum-centre'>
+         <view class='resume-edit-input'><text>最高学历</text>
+          <Select prop-array='{{selectArray2}}' bind:myget='getData2'></Select></view>
+        </view>
+        <view class='resum-right'>
+         <view class='data-edit-input'><text>工作时间</text>
+          <Select prop-array='{{selectArray3}}' bind:myget='getData3'></Select></view>
+        </view>
+       </view>
+  </view>

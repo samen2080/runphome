@@ -328,7 +328,7 @@
 
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[1].old_name}}</text>
-          <view class='mine-collect-time'>{{proList[0].old_add_time}}</view>
+          <view class='mine-collect-time'>{{proList[1].old_add_time}}</view>
         </view>
 
         <view class='mine-collect-owner-wrap'>
@@ -350,7 +350,7 @@
 
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[2].old_name}}</text>
-          <view class='mine-collect-time'>{{proList[0].old_add_time}}</view>
+          <view class='mine-collect-time'>{{proList[2].old_add_time}}</view>
         </view>
 
         <view class='mine-collect-owner-wrap'>
@@ -372,7 +372,7 @@
 
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[3].old_name}}</text>
-          <view class='mine-collect-time'>{{proList[0].old_add_time}}</view>
+          <view class='mine-collect-time'>{{proList[3].old_add_time}}</view>
         </view>
 
         <view class='mine-collect-owner-wrap'>

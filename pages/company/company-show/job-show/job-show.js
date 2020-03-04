@@ -16,7 +16,12 @@ Page({
     hasMore: true,
     messageList: []
   },
-
+  // 申请职位
+  applyJob: function (e) {
+    wx.navigateTo({
+      url: '../app-job/app-job?job_id=' + e.currentTarget.dataset.jobid,
+    })
+  },
   // 购买
   buyPro: function (e) {
     var that = this;

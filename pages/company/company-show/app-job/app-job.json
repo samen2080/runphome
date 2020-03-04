@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "发布简历",
+  "usingComponents": {
+    "Select": "/component/select/select"
+  }
+}

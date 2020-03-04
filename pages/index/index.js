@@ -255,7 +255,7 @@ Page({
   getProduct: function () {
     var that = this;
     app.func.req('get_list', { query: 3, pageSize: 4, page: 1, openid: that.data.openid }, 'GET', function (res) {
-      // console.log(res);
+      console.log('getListCourse:',res);
       that.setData({
         proList: res
       })
