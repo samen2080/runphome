@@ -10,7 +10,12 @@ Page({
   data: {
     currentTab: 0
   },
-
+  // 申请职位
+  apply: function (e) {
+    wx.navigateTo({
+      url: 'app-job/app-job?job_id=' + e.currentTarget.dataset.jobid,
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -94,7 +99,7 @@ Page({
   getIn: function () {
     var that = this;
     app.func.req('my_company_job/' + that.data.com_id, {}, 'GET', function (res) {
-      console.log("20200213res", res);
+      console.log("20200214res", res);
       that.setData({
         inList: res
       })

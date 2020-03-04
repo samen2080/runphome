@@ -52,7 +52,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 53,
+			"current": 56,
 			"list": [
 				{
 					"id": -1,
@@ -435,6 +435,20 @@
 					"id": -1,
 					"name": "pages/index/product/product",
 					"pathName": "pages/index/product/product",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/company/company-show/job-show/job-show",
+					"pathName": "pages/company/company-show/job-show/job-show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/company/company-show/app-job/app-job",
+					"pathName": "pages/company/company-show/app-job/app-job",
 					"scene": null
 				}
 			]
