@@ -191,6 +191,15 @@ Page({
       "text": "4年以上"
     }]
   },
+  // 创建并投递
+  applyDetail: function (e) {
+    var that = this;
+    var num = e.currentTarget.dataset.num;
+    // console.log("20200215res", e.currentTarget.dataset.i['job_name']);
+    wx.navigateTo({
+      url: '../job-app-resume/job-app-resume?job_id=' + e.currentTarget.dataset.jobid
+    })
+  },
   getData1: function (e) {
     this.setData({
       //rep_status: e.detail.id
@@ -221,6 +230,11 @@ Page({
     var user_id = wx.getStorageSync("user_info").user_id;
     that.setData({
       host: host,
+      job_name: options.job_name,
+      job_salary: options.job_salary,
+      job_county: options.job_county,
+      job_address: options.job_address,
+      job_id: options.job_id,
       user_id: user_id
     });
 

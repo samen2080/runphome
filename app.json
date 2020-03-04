@@ -29,6 +29,7 @@
     "pages/company/company",
     "pages/company/company-show/company-show",
     "pages/company/company-show/job-show/job-show",
+    "pages/company/company-show/job-app-resume/job-app-resume",
     "pages/company/company-show/app-job/app-job",
     "pages/index/record-broadcast/record-broadcast",
     "pages/community/bbs/bbs",

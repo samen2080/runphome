@@ -1,5 +1,4 @@
 <!--pages/company/company-show/app-job/app-job.wxml-->
- <view class='index-resum-top-box'>
      <view class='index-resum-top' >
           <view class='wrap-left'>  
              <image src='{{user_headimg}}' mode='aspectFill'></image>
@@ -14,9 +13,7 @@
             </view>
            </view>
        </view>
-  </view>
-
-   <view class='index-resum-middle-box'>
+ 
      <view class='index-resum-middle' >
         <view class='resum-left'>
          <view class='year-edit-input'><text>出生年份</text>
@@ -30,5 +27,19 @@
          <view class='data-edit-input'><text>工作时间</text>
           <Select prop-array='{{selectArray3}}' bind:myget='getData3'></Select></view>
         </view>
-       </view>
-  </view>
+      </view>
+
+      <view class='index-resum-bottom' >
+        <view class='chioce-top'><text>选择求职意向</text>
+        </view>
+        <view class='chioce-bottom'>{{job_name}}·{{job_salary}}·{{job_county}}-{{job_address}}</view>
+      </view>
+       <view class='index-resum-bottom-white' >
+      </view>
+
+     <view class='apply-bottom'>
+      <button class='apply-show' catchtap='applyDetail' data-jobid="{{job_id}}"  hidden='{{rebtnShow}}'>创建并投递</button>
+     </view>
+    
+ 
+  

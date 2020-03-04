@@ -1,0 +1,17 @@
+<!--pages/company/company-show/job-app-resume/job-app-resume.wxml-->
+<view class='index-resum-top' >
+          <view class='wrap-left'>  
+             <image src='/images/success2.png' mode='aspectFill'></image>
+          </view>
+
+           <view class='wrap-right'><text>简历好了,投递成功啦!</text></view>
+           <view class='wrap-right-next'><text>请继续完善更多信息,为工作机会加分!</text></view>
+</view>
+
+<view class='index-resum-experience' >
+          <view class='wrap-add'><text>工作经历</text></view>
+          <view class='wrap-experience'>
+          <textarea maxlength='110' placeholder='+ 添加工作经历' placeholder-class='placeholder' value='{{res_work_exp}}' name='res_work_exp'></textarea>
+          </view>
+          
+</view>
