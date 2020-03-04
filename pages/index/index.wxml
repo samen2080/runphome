@@ -289,8 +289,8 @@
 
 <!-- 20191012 test start -->
 <!-- 热播课程 -->
-<view class='index-list-box'>
-  <view class='index-list-title'>
+<view class='index-list-course-box'>
+  <view class='index-list-course-title'>
     <text>热播课程</text>
     <view class='index-more'><navigator url='transaction/transaction' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>
   </view>

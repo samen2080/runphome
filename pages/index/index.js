@@ -31,13 +31,13 @@ Page({
         that.getIn();
         
         // 课程区
-        app.func.req('get_course', { openid: res.data, pageSize: 1000, page: 1 }, 'GET', function (res) {
-              console.log("20200213res", res);
-              that.setData({
-                proList: res
-              })
+        // app.func.req('get_course', { openid: res.data, pageSize: 1000, page: 1 }, 'GET', function (res) {
+        //       console.log("20200213res", res);
+        //       that.setData({
+        //         proList: res
+        //       })
 
-            });
+        //     });
         
         // 品牌广告
         app.func.req('get_list', { query: 4, pageSize: 4, page: 1, openid: that.data.openid }, 'GET', function (res) {
@@ -251,16 +251,16 @@ Page({
     })
   },
 
-  // 二手交易
-  // getProduct: function () {
-  //   var that = this;
-  //   app.func.req('get_list', { query: 3, pageSize: 4, page: 1, openid: that.data.openid }, 'GET', function (res) {
-  //     // console.log(res);
-  //     that.setData({
-  //       proList: res
-  //     })
-  //   });
-  // },
+  // 课程列表
+  getProduct: function () {
+    var that = this;
+    app.func.req('get_list', { query: 3, pageSize: 4, page: 1, openid: that.data.openid }, 'GET', function (res) {
+      // console.log(res);
+      that.setData({
+        proList: res
+      })
+    });
+  },
 
  
   // 收藏
