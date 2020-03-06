@@ -20,6 +20,8 @@ page{
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
+  border-radius: 8rpx;
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
 .product-show-name{

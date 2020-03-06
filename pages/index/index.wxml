@@ -261,9 +261,8 @@
 
 <!-- 20191012 test start -->
 <!--培训学校 -->
-<view class='index-list-box'>
+<!-- <view class='index-list-box'>
   <view class='index-list-title'>
-    <!-- <image src='/images/index-i4.png'></image> -->
     <text>培训学校</text>
     <view class='index-more'><navigator url='school/school' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>
   </view>
@@ -275,13 +274,11 @@
         <view class='index-school-list-name-box'>{{item.dr_name}}</view>
         <view class='index-school-list-location-box'>
           <text class='index-school-list-location'><text>地址：</text><text>{{item.dr_address}}</text></text>
-           <!-- <text class='index-school-list-location-nav'>导航</text><image src='/images/location.png'></image> -->
         </view></navigator>
       </view> 
     </view>
   </view> 
-
-</view>
+</view> -->
 <!-- END -->
 <!-- 20191012 test end -->
 
@@ -302,13 +299,10 @@
           <image src='{{host}}{{proList[0].old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
           <view class='mine-collect-price'>￥<text>{{proList[0].old_money}}</text></view>
         </view>
-
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[0].old_name}}</text>
           <view class='mine-collect-time'>开班时间:<view>{{proList[0].old_add_time}}</view></view>
-         
         </view>
-
         <view class='mine-collect-owner-wrap'>
           <image src='{{proList[0].user_headimg}}' mode='aspectFill' class='mine-collect-owner-tx'></image>
           <text class='mine-collect-owner-name'>{{proList[0].user_nickname}}</text>
@@ -325,12 +319,10 @@
           <image src='{{host}}{{proList[1].old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
           <view class='mine-collect-price'>￥<text>{{proList[1].old_money}}</text></view>
         </view>
-
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[1].old_name}}</text>
-          <view class='mine-collect-time'>{{proList[1].old_add_time}}</view>
+          <view class='mine-collect-time'>开班时间:<view>{{proList[1].old_add_time}}</view></view>
         </view>
-
         <view class='mine-collect-owner-wrap'>
           <image src='{{proList[1].user_headimg}}' mode='aspectFill' class='mine-collect-owner-tx'></image>
           <text class='mine-collect-owner-name'>{{proList[1].user_nickname}}</text>
@@ -350,7 +342,7 @@
 
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[2].old_name}}</text>
-          <view class='mine-collect-time'>{{proList[2].old_add_time}}</view>
+          <view class='mine-collect-time'>开班时间:<view>{{proList[2].old_add_time}}</view></view>
         </view>
 
         <view class='mine-collect-owner-wrap'>
@@ -369,12 +361,10 @@
           <image src='{{host}}{{proList[3].old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
           <view class='mine-collect-price'>￥<text>{{proList[3].old_money}}</text></view>
         </view>
-
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[3].old_name}}</text>
-          <view class='mine-collect-time'>{{proList[3].old_add_time}}</view>
+          <view class='mine-collect-time'>开班时间:<view>{{proList[3].old_add_time}}</view></view>
         </view>
-
         <view class='mine-collect-owner-wrap'>
           <image src='{{proList[3].user_headimg}}' mode='aspectFill' class='mine-collect-owner-tx'></image>
           <text class='mine-collect-owner-name'>{{proList[3].user_nickname}}</text>
