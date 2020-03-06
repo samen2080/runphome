@@ -14,7 +14,7 @@ Page({
     swiperCurrentCollege: 0,
     swiperCurrentBachelor: 0,
     swiperCurrentEnterprise: 0,
-    brand_intro:'网易 (NASDAQ: NTES)，1997年由丁磊先生在广州创办、2000年在美国NASDAQ股票交易所挂牌上市，是中国领先的互联网技术公司，在开发互联网应用、服务等方面始终保持中国业界领先地位。本着对中国互联网发展强烈的使命感，缔造美好生活的愿景。',
+    brand_intro: '润品以专业发展产业，以产业发展促进专业建设，形成“产教结合、产教并举、以教促产、以产养教”的良性循环，创造良好的产学结合的氛围，与院校共建秉承“理念上超前于企业、设施上同步于企业、标准上接轨于企业”的原则，整合国际一流的产业技术与教育资源，融合国际先进的教育理念，与院校共建共管润品学院和实训基地，培养具有国际视野的高素质、高技能智能制造应用型人才。',
     // brand_album: [{ brand_id: "1", brand_img: 'storage/app/public/uploads/school/1.jpg'}, { brand_id: "2", brand_img: 'storage/app/public/uploads/school/2.jpg'}, { brand_id: "3", brand_img: 'storage/app/public/uploads/school/3.jpg'}, { brand_id: "4", brand_img: 'storage/app/public/uploads/school/4.jpg' }, { brand_id: "5", brand_img: 'storage/app/public/uploads/school/5.jpg'}]
     cooperate_brand_album: []
 // 20200213 add end

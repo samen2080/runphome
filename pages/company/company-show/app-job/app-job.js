@@ -6,7 +6,13 @@ Page({
    * 页面的初始数据
    */
   data: {
+    hidden: true,
+    onhidden: true,
+    onbtnShow: true,
+    rebtnShow: false,
     swiperCurrent: 0,
+    img_arr: [],
+    condition: true,
     selectArray1: [{
       "id": "1",
       "text": "1970"
@@ -191,32 +197,24 @@ Page({
       "text": "4年以上"
     }]
   },
-  // 创建并投递
-  applyDetail: function (e) {
-    var that = this;
-    var num = e.currentTarget.dataset.num;
-    // console.log("20200215res", e.currentTarget.dataset.i['job_name']);
-    wx.navigateTo({
-      url: '../job-app-resume/job-app-resume?job_id=' + e.currentTarget.dataset.jobid
-    })
-  },
+ 
+
   getData1: function (e) {
     this.setData({
-      //rep_status: e.detail.id
+      res_birth_year: e.detail.id
     })
   },
   getData2: function (e) {
     this.setData({
-     //rep_status: e.detail.id
+     res_qualification: e.detail.id
      })
   },
   getData3: function (e) {
     this.setData({
-     // rep_status: e.detail.id
+      res_work_years: e.detail.id
     })
   },
   genderSelect: function (e) {
-    // console.log(e);
     this.setData({
       id: e.target.dataset.id
     })
@@ -228,6 +226,8 @@ Page({
     var that = this;
     var host = getApp().globalData.host;
     var user_id = wx.getStorageSync("user_info").user_id;
+     console.log("20200215res",  options.job_id);
+    // console.log("20200216res", e.detail.value.apj_user_mobile);
     that.setData({
       host: host,
       job_name: options.job_name,
@@ -262,6 +262,47 @@ Page({
       },
     })
 
+  },
+
+  // 创建并投递
+  formSubmit: function (e) {
+    var that = this;
+    // var num = e.currentTarget.dataset.num;
+     console.log("20200215res",  e.detail.value.apj_user_mobile);
+    app.func.req('add_resume', {
+      apj_user_id: that.data.user_id,
+      apj_job_id: that.data.job_id,
+      apj_user_mobile: e.detail.value.apj_user_mobile,
+      // apj_user_mobile: e.detail.value.apj_user_mobile,
+
+      res_user_name: e.detail.value.res_user_name,
+      res_sex: that.data.id,
+      res_birth_year: that.data.res_birth_year,
+      res_qualification: that.data.res_qualification,
+      res_work_years: that.data.res_work_years,
+      res_position: that.data.job_name,
+      res_salary_range: that.data.job_salary,
+      res_work_location: that.data.job_address,
+
+      openid: that.data.openid,
+    }, 'POST', function (res) {
+      // console.log("20200126", that.data.mnt_user_province);
+      if (res.code == 200) {
+        // wx.showToast({
+        //   title: '新建成功',
+        //   icon: 'none',
+        //   duration: 2000,
+        // success: function () {
+        // setTimeout(function () {
+        wx.navigateTo({
+          url: '../job-app-resume/job-app-resume?job_id=' + e.currentTarget.dataset.jobid
+        })
+        // }, 2000);
+        // }
+
+        // })
+      }
+    })
   },
 
   /**

@@ -1,0 +1,95 @@
+/* pages/company/company-show/edu-exp/edu-exp.wxss */
+.index-edu-top{
+  height:90rpx;
+  background: white;
+  border-bottom: 2rpx solid #e9e9e9; 
+  border-top: 15rpx;
+}
+.edu-add{
+  font-size: 36rpx;
+  text-align: center;
+  position: relative;
+  top:15rpx;
+}
+.edu-add text{
+  position: relative;
+  margin-top: 30rpx;
+}
+.complete{
+  position: relative;
+  float: right;
+  margin-right: 15rpx;
+  margin-top:-50rpx; 
+}
+.complete-show{
+  position: relative;
+  /* margin-top: 30rpx;
+  margin-right: 15rpx; */
+  color:  #a3a2a2;
+  font-size: 34rpx;
+}
+.index-edu-university{
+  width: 100%;
+  height: 150rpx;
+  background: white;
+}
+.univer-add{
+  font-size: 32rpx;
+  color: rgb(170, 169, 169);
+  /* text-align: center; */
+  position: relative;
+  margin-left: 42%;
+  top:15rpx;
+}
+.univer-name{
+  font-size: 38rpx;
+  font-weight:400; 
+  text-align: center;
+  position: relative;
+  top:15rpx;
+  color: black;
+}
+.index-sub-university{
+  width: 100%;
+  height: 150rpx;
+  background: white;
+  border-top: 2rpx solid #e9e9e9;
+}
+.sub-add{
+  font-size: 32rpx;
+  color: rgb(170, 169, 169);
+  /* text-align: center; */
+  position: relative;
+  margin-left: 42%;
+  top:15rpx;
+}
+.sub-name{
+  font-size: 38rpx;
+  font-weight:400; 
+  text-align: center;
+  position: relative;
+  top:15rpx;
+  color: black;
+}
+.index-data-university{
+  width: 100%;
+  height: 150rpx;
+  background: white;
+  border-top: 2rpx solid #e9e9e9;
+}
+.data-add{
+  font-size: 32rpx;
+  color: rgb(170, 169, 169);
+  /* text-align: center; */
+  position: relative;
+  margin-left: 42%;
+  top:15rpx;
+}
+.data-detail{
+  font-size: 38rpx;
+  font-weight:400; 
+  text-align: center;
+  position: relative;
+  top:15rpx;
+  color: black;
+}

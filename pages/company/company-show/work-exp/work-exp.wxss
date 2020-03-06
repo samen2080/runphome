@@ -1,0 +1,135 @@
+/* pages/company/company-show/work-exp/work-exp.wxss */
+.index-work-top{
+  height:90rpx;
+  background: white;
+  border-bottom: 2rpx solid #e9e9e9; 
+  border-top: 15rpx;
+}
+.work-add{
+  font-size: 36rpx;
+  text-align: center;
+  position: relative;
+  top:15rpx;
+}
+.work-add text{
+  position: relative;
+  margin-top: 30rpx;
+}
+.complete{
+  position: relative;
+  float: right;
+  margin-right: 15rpx;
+  margin-top:-50rpx; 
+  
+}
+.complete-show{
+  position: relative;
+  /* margin-top: 30rpx;
+  margin-right: 15rpx; */
+  color:  #a3a2a2;
+  font-size: 34rpx;
+}
+.index-company-name{
+  width: 100%;
+  height: 150rpx;
+  background: white;
+}
+.company-name{
+  font-size: 40rpx;
+  font-weight:400; 
+  text-align: center;
+  position: relative;
+  top:35rpx;
+  color: black;
+}
+.index-company-detail{
+  width: 100%;
+  height: 300rpx;
+  background: white;
+  border-top: 2rpx solid #e9e9e9; 
+}
+.company-work-add{
+  font-size: 32rpx;
+  color: rgb(170, 169, 169);
+  /* text-align: center; */
+  position: relative;
+  margin-left: 42%;
+  top:15rpx;
+}
+.company-work-detail{
+  font-size: 38rpx;
+  font-weight:400; 
+  text-align: center;
+  position: relative;
+  top:25rpx;
+  color: black;
+}
+.index-work-time{
+  width: 100%;
+  height: 200rpx;
+  background: white;
+  border-top: 2rpx solid  #e9e9e9; 
+}
+.wrap-left {
+  width: 48%;
+  height: 180rpx;
+  float: left;
+
+  /* border-width: 2rpx 2rpx 2rpx 2rpx ;
+  border-color: rgb(63, 221, 70);
+  border-style: solid; */
+}
+.wrap-left text{
+  position: relative;
+  top: 30rpx;
+  margin-left: 90rpx;
+  font-size: 36rpx;
+}
+.wrap-right {
+  width: 48%;
+  height: 180rpx;
+  float: left;
+
+  /* border-width: 2rpx 2rpx 2rpx 2rpx ;
+  border-color: rgb(63, 221, 70);
+  border-style: solid; */
+}
+.wrap-right text{
+  position: relative;
+  top: 30rpx;
+  margin-left: 140rpx;
+  margin-bottom: 15rpx;
+  font-size: 36rpx;
+}
+.wrap-left-start{
+  position: relative;
+  margin-left: 60rpx;
+  font-size: 38rpx;
+  margin-top:35rpx;
+}
+.wrap-right-end{
+  position: relative;
+  margin-left: 110rpx;
+  margin-top:35rpx;
+  font-size: 38rpx;
+}
+.index-company-hiredate{
+   width: 100%;
+  height: 160rpx;
+  background: white;
+  border-top: 2rpx solid  #e9e9e9; 
+}
+.company-hiredate-add{
+  font-size: 32rpx;
+  color: rgb(170, 169, 169);
+  /* text-align: center; */
+  position: relative;
+  margin-left: 23%;
+  top:15rpx;
+}
+.company-hiredate{
+  text-align: center;
+  position: relative;
+  margin-top:35rpx;
+  font-size: 38rpx;
+}

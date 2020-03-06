@@ -11,7 +11,7 @@
 </view>
 
 <scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
-  <block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem">
+  <block wx:for="{{navData}}" wx:key="key" wx:for-index="idx" wx:for-item="navItem">
       <view class="nav-item {{currentTab == idx ?'active':''}}"  data-current="{{idx}}" bindtap="switchNav">{{navItem.text}}<view class='border-bottom' style='display:{{currentTab == idx?"block":"none"}}'></view></view>
   </block>        
 </scroll-view>
@@ -19,7 +19,7 @@
 
 <!-- 页面内容 -->
 <swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab" style='height:{{sheight}}rpx'>        
-  <swiper-item wx:for="{{navData}}" wx:for-item="tabItem" wx:for-index="idx">
+  <swiper-item wx:for="{{navData}}" wx:key="key" wx:for-item="tabItem" wx:for-index="idx">
     <view wx:for='{{proList}}' wx:key='{{proList}}'>
         <navigator url='company-show/company-show?com_id={{item.com_id}}' hover-class='none'>
           <view class='on-list-info'>
