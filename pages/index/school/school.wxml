@@ -60,7 +60,8 @@
             <view class='index-school-list' wx:for='{{item.list}}' wx:key='{{item.list}}'><navigator url='school-show/school-show?sch_id={{item.sch_id}}' hover-class='none'>
               <view class='index-school-list-logo-box'><image src='{{host}}{{item.sch_badge}}' mode='aspectFill'></image></view>
               <view class='index-school-list-name-box'><text>{{item.sch_name}}</text></view>
-              <view class='index-school-list-Instruments-box'><text>{{item.sch_main_major}}</text></view></navigator>
+              <view class='index-school-list-Instruments-box'><text>{{item.sch_main_major}}</text></view>
+              </navigator>
             </view>  
           </view>
         </swiper-item>
@@ -87,7 +88,8 @@
             <view class='index-school-list' wx:for='{{item.list}}' wx:key='{{item.list}}'><navigator url='school-show/school-show?sch_id={{item.sch_id}}' hover-class='none'>
               <view class='index-school-list-logo-box'><image src='{{host}}{{item.sch_badge}}' mode='aspectFill'></image></view>
               <view class='index-school-list-name-box'><text>{{item.sch_name}}</text></view>
-              <view class='index-school-list-Instruments-box'><text>{{item.sch_main_major}}</text></view></navigator>
+              <view class='index-school-list-Instruments-box'><text>{{item.sch_main_major}}</text></view>
+              </navigator>
             </view>  
           </view>
         </swiper-item>

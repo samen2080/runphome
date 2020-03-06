@@ -1,27 +1,23 @@
 /* component/select/select.wxss */
 .com-selectBox{
-    width: 100px;
+    width: 90px;
     float: right;
-    margin-right: 300rpx;
+    /* margin-right: 300rpx; */
     margin-top: 15rpx;
+
+    /* border: rgb(30, 38, 153) solid 1px; */
 }
 .com-sContent{
-    border: 1px solid #e2e2e2;
+    /* border: 1px solid #be154d; */
     background: white;
     font-size: 16px;
     position: relative;
     height: 30px;
     line-height: 30px;
-    margin-left: 50rpx;
+    margin-left: 20rpx;
+
 }
-.com-sImg{
-    position: absolute;
-    right: 10px;
-    top: 11px;
-    width: 16px;
-    height: 9px;
-    transition: all .3s ease;
-}
+
 .com-sTxt{
     overflow: hidden;
     text-overflow: ellipsis;
@@ -29,10 +25,25 @@
     padding:0 20px 0 6px;
     font-size: 14px;
    
+   /* border: rgb(26, 58, 201) solid 1px; */
 }
+
+.com-sImg{
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    width: 10px;
+    height: 10px;
+    transition: all .3s ease;
+
+
+    /* border: rgba(39, 39, 39, 0.342) solid 1px; */
+}
+
 .com-sList{
     background: white;
-    width: inherit;
+    /* width: inherit; */
+    width: 150rpx;
     position: absolute;
     border: 1px solid #e2e2e2;
     border-top: none;
@@ -40,11 +51,14 @@
     z-index: 3;
     max-height: 120px;
     overflow: auto;
+    margin-left: 20rpx;
+
+    
 }
 .com-sItem{
     height: 30px;
     line-height: 30px;
-    border-top: 1px solid #e2e2e2;
+    border-top: 1px solid #c02323;
     padding: 0 6px;
     text-align: left;
     overflow: hidden;
@@ -52,6 +66,7 @@
     white-space: nowrap;
     font-size: 14px;
 }
+
 .com-sItem:first-child{
     border-top: none;
 }

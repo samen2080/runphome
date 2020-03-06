@@ -12,8 +12,11 @@ Page({
   },
   // 申请职位
   apply: function (e) {
+    var that = this;
+    var num = e.currentTarget.dataset.num;
+    console.log("20200215res", e.currentTarget.dataset.jobid);
     wx.navigateTo({
-      url: 'app-job/app-job?job_id=' + e.currentTarget.dataset.jobid,
+      url: 'app-job/app-job?job_id=' + e.currentTarget.dataset.jobid + '&job_name=' + e.currentTarget.dataset.i['job_name'] + '&job_salary=' + e.currentTarget.dataset.i['job_salary'] + '&job_county=' + e.currentTarget.dataset.i['job_county'] + '&job_address=' + e.currentTarget.dataset.i['job_address'],
     })
   },
   /**

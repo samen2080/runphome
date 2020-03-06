@@ -52,7 +52,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 56,
+			"current": 62,
 			"list": [
 				{
 					"id": -1,
@@ -449,6 +449,48 @@
 					"id": -1,
 					"name": "pages/company/company-show/app-job/app-job",
 					"pathName": "pages/company/company-show/app-job/app-job",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/company/company-show/app-job/app-job",
+					"pathName": "pages/company/company-show/app-job/app-job",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/company/company-show/job-app-resume/job-app-resume",
+					"pathName": "pages/company/company-show/job-app-resume/job-app-resume",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/company/company-show/job-app-resume/job-app-resume",
+					"pathName": "pages/company/company-show/job-app-resume/job-app-resume",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/company/company-show/edu-exp/edu-exp",
+					"pathName": "pages/company/company-show/edu-exp/edu-exp",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/company/company-show/work-exp/work-exp",
+					"pathName": "pages/company/company-show/work-exp/work-exp",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/company/company-show/work-exp/work-exp",
+					"pathName": "pages/company/company-show/work-exp/work-exp",
 					"scene": null
 				}
 			]

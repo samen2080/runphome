@@ -1,94 +1,66 @@
 /* pages/company/company-show/app-job/app-job.wxss */
-.index-resum-top-box{
-  width: 100%;
-  border-width: 1rpx 10rpx 1rpx 1rpx ;
-  border-color: #e9e9e9;
-  border-style: solid; 
-}
-
 .index-resum-top{
   height: 300rpx;
-  width: 100%;
+  width: 747rpx;
   background: #ffffff;
-  /* margin-top: 10rpx;    */
-  padding: 0rpx 50rpx 0rpx 20rpx;     
   font-size: 32rpx; 
   position: relative;
   float: left; 
-  border-width: 1rpx 10rpx 1rpx 1rpx ;
-  border-color: #fc5908;
-  border-style: solid; 
-}
-
-.index-resum-middle-box{
-  width: 100%;
-  
-}
-
-.index-resum-middle{
-  height: 300rpx;
-  width: 100%;
-  background: #ffffff;
-  /* margin-top: 10rpx;    */
-  padding: 0rpx 50rpx 0rpx 20rpx;     
-  font-size: 32rpx; 
-  position: relative;
-  float: left; 
-  border-width: 1rpx 10rpx 1rpx 1rpx ;
-  border-color: #2613d3;
-  border-style: solid; 
-  
  
+  /* border: rgb(57, 40, 207) solid 1px; */
+
 }
 
 .wrap-left{
   background: #ffffff;
-  height: 180rpx;
-  width: 200rpx;
+  height: 297rpx;
+  width: 225rpx;
   font-size: 32rpx;
   position: relative; 
   float: left;
 
-  /* border-width: 1rpx 1rpx 1rpx 1rpx ;
-  border-color: #f80324e1;
-  border-style: solid;  */
+/* border: rgb(175, 47, 47) solid 1px; */
+
 }
 
 .wrap-left image{
-  /* height: 150rpx;
-  width: 195rpx;
-  border-radius: 8rpx; */
-
-  width: 168rpx;
-  height: 168rpx;
+  width: 130rpx;
+  height: 130rpx;
   border-radius: 50%;
   overflow: hidden;
   vertical-align: middle;
-  margin: 50rpx 0 30rpx 100rpx;
-  
+  margin: 70rpx 0 30rpx 80rpx;
 }
 
 .wrap-right{
-  height: 180rpx;
-  width: 465rpx;
+  height: 297rpx;
+  width: 510rpx;
   background: #ffffff;
   font-size: 32rpx;
   position: relative; 
-  float: right;
-  margin-top: 50rpx;
+  float: left;
+
+
+/* border: rgb(0, 0, 0) solid 1px; */
+
 
 }
 
-.input-wrap input{
+
+
+
+
+.input-wrap{
   font-size: 36rpx;
   margin-top:50rpx;
-  margin-left: 30rpx;
+  margin-left: 60rpx;
 
 }
 
 .sex-edit-input{
   font-size: 36rpx;
   margin-top:40rpx;
+    margin-left: 40rpx;
   
 }
 .gender-select{
@@ -106,44 +78,150 @@
   vertical-align: text-bottom;
   margin-right: 24rpx;
 }
-.resum-left{
+
+
+
+
+.index-resume-middle{
+  height: 300rpx;
+  width: 747rpx;
   background: #ffffff;
-  height: 180rpx;
-  width: 200rpx;
-  font-size: 37rpx;
+  font-size: 32rpx; 
+  position: relative;
+  float: left; 
+
+  /* border: rgb(0, 0, 0) solid 1px; */
+
+
+}
+
+.resume-left{
+  background: #ffffff;
+  height: 297rpx;
+  width: 225rpx;
+  font-size: 32rpx;
   position: relative; 
   float: left;
-  margin-top: 50rpx;
-  margin-left: 40rpx;
 
-   border-width: 1rpx 1rpx 1rpx 1rpx ;
-  border-color: #f80324e1;
-  border-style: solid; 
+/* border: rgb(175, 47, 47) solid 1px; */
+
 }
-.resum-centre{
-  height: 180rpx;
-  width: 465rpx;
+
+.year-edit-input text{
+  margin-top: 10rpx;
+  margin-left:50rpx; 
+}
+
+.resume-center{
+  height: 297rpx;
+  width: 280rpx;
   background: #ffffff;
-  font-size: 37rpx;
+  font-size: 32rpx;
   position: relative; 
-  /* float: left; */
-  top:50rpx;
-  margin-left: 290rpx;
+  float: left;
 
-   /* border-width: 1rpx 1rpx 1rpx 1rpx ;
-  border-color: #f80324e1;
-  border-style: solid;  */
+/* border: rgb(47, 29, 207) solid 1px; */
+
 }
-.resum-right{
-  height: 180rpx;
-  width: 465rpx;
+
+.qualification-edit-input text{
+  margin-top: 10rpx;
+  margin-left:80rpx; 
+}
+
+.resume-right{
+  height: 297rpx;
+  width: 225rpx;
   background: #ffffff;
-  font-size: 36rpx;
-  position: relative;
-  top:-125rpx;
-  margin-left: 530rpx;
-   /* border-width: 1rpx 1rpx 1rpx 1rpx ;
-  border-color: #f80324e1;
-  border-style: solid;  */
+  font-size: 32rpx;
+  position: relative; 
+  float: left;
+
+/* border: rgb(47, 29, 207) solid 1px; */
 }
 
+.date-edit-input text{
+  margin-top: 10rpx;
+  margin-left: 50rpx; 
+}
+
+
+
+
+.index-resum-bottom{
+  height: 200rpx;
+  width: 100%;
+  background: #ffffff;
+  /* margin-top: 10rpx;    */
+  padding: 0rpx 50rpx 0rpx 20rpx;     
+  font-size: 32rpx; 
+  position: relative;
+  float: left; 
+  border-bottom: 2rpx solid #e9e9e9;
+  border-top: 2rpx solid #f7f5f5;
+}
+.index-resum-bottom-white{
+  height: 160rpx;
+  width: 100%;
+  background: #ffffff;
+  padding: 0rpx 50rpx 0rpx 20rpx;     
+  font-size: 32rpx; 
+  position: relative;
+  float: left; 
+}
+
+
+
+
+
+.chioce-top{
+  margin-top: 20rpx;
+  font-size: 36rpx;
+  text-align: center;
+  color: rgb(175, 172, 174);
+}
+.chioce-bottom{
+  margin-top: 30rpx;
+  font-size: 37rpx;
+  text-align: center;
+}
+.apply-bottom{
+  text-align: center;
+  position: relative;
+  top: 30rpx;
+  margin-bottom: 10rpx;
+}
+.apply-show{
+  background: #fd7709;
+  color: #ffffff;
+  position: relative;
+  width: 90%;
+  height: 100rpx;
+  font-size: 38rpx;
+}
+.mine-attention{
+  width: 100%;
+  height: 300rpx;
+  background: #fdfdfc;
+  /* margin-left: 24rpx; */
+  /* border-radius: 12rpx; */
+  /* top: -46rpx; */
+  position: relative;
+  box-shadow:0 14rpx 48rpx rgba(237, 236, 236, 0.75);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+.mine-attention-list{
+  margin-top: 30rpx;
+  text-align: center;
+}
+.mine-attention-number{
+  font-size: 42rpx;
+  font-weight: bold;
+  margin-bottom: 12rpx;
+}
+.mine-attention-title{
+  font-size: 32rpx;
+  color: #999;
+}
