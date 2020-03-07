@@ -49,7 +49,7 @@
     border-top: none;
     box-sizing: border-box;
     z-index: 3;
-    max-height: 120px;
+    max-height: 60px;
     overflow: auto;
     margin-left: 20rpx;
 
@@ -58,13 +58,13 @@
 .com-sItem{
     height: 30px;
     line-height: 30px;
-    border-top: 1px solid #c02323;
+    border-top: 1px solid #b1acac;
     padding: 0 6px;
     text-align: left;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 14px;
+    font-size: 32rpx;
 }
 
 .com-sItem:first-child{

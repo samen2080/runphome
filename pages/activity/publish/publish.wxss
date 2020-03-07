@@ -33,7 +33,7 @@ page{
 }
 textarea{
   width: 100%;
-  height: 500rpx;  
+  height: 100rpx;  
 }
 
 .pay-select{

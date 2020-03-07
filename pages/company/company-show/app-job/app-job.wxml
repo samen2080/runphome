@@ -36,16 +36,16 @@
      </view>
 
 
-     <!-- <view class='index-resum-bottom' >
+     <view class='index-resume-bottom' >
         <view class='chioce-top'><text>选择求职意向</text></view>
         <view class='chioce-bottom'>{{job_name}}·{{job_salary}}·{{job_county}}-{{job_address}}</view>
      </view>
     
-     <view class='index-resum-bottom-white'> </view>
+     <view class='index-resume-bottom-white'> </view>
 
      <view class='apply-bottom'>
         <button class='apply-show' formType="submit"  data-jobid="{{job_id}}"  hover-class='none'>创建并投递</button>
-     </view> -->
+     </view>
 </form>
     
  
