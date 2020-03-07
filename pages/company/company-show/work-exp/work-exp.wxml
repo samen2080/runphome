@@ -1,57 +1,49 @@
 <!--pages/company/company-show/work-exp/work-exp.wxml-->
 <form bindsubmit="submitform" bindsubmit="formSubmit" bindreset="formReset">
-<view class='index-work-top' >
-     <view class='work-add'>  
-             <text>添加工作经历</text>
-      </view>
-      <view class='complete'>
-        <button class='complete-show' formType="submit"  >完成</button>
-      </view>
-</view>
+    <view class='index-work-top' >
+        <view class='work-add'>  
+            <text>添加工作经历</text>
+        </view>
+        <view class='complete'>
+            <button class='complete-show' formType="submit"  >完成</button>
+        </view>
+    </view>
 
-<view class='index-company-name' >
-      <view class='company-name'>
-        <input  placeholder='请输入公司名称' placeholder-class='placeholder' name='wke_com_name'></input>
-      </view>
-</view>
+    <view class='index-company-name' >
+        <view class='company-name'>
+            <input  placeholder='请输入公司名称' placeholder-class='placeholder' name='wke_com_name'></input>
+        </view>
+    </view>
 
-<view class='index-company-detail' >
-     <view class='company-work-add'>  
-        <text>工作内容</text>
-      </view>
-      <view class='company-work-detail'>
-         <textarea maxlength='90' placeholder='请输入大致工作内容' placeholder-class='placeholder' name='wke_wrk_content'></textarea>
-      </view>
-</view>
+    <view class='index-company-detail' >
+        <view class='work-content-add'>  
+            <text>工作内容</text>
+        </view>
+        <!-- <view class='company-work-detail'>
+            <textarea maxlength='90' placeholder='请输入大致工作内容' placeholder-class='placeholder' name='wke_wrk_content'></textarea>
+        </view> -->
+        <view class='textarea-wrap'>
+            <textarea maxlength='200' placeholder='【例子】本人已从事该行业3年，熟练各种技能，性格好，真诚，上进，谦虚。' placeholder-class='placeholder' name='res_intro'></textarea>
+        </view>
+    </view> 
 
-<view class='index-work-time' >
-     <view class='wrap-left'>  
-        <text>开始时间</text>
-      <view class='wrap-left-start'> 
-        <picker mode="date" value="{{res_work_company_startData}}" bindchange="bindDateChange1" name='res_work_company_startData'>  
-            <view style='color:{{dateColor}}'>{{res_work_company_startData}}</view>  
-        </picker>
-      </view>
-      </view>
-      <view class='wrap-right'>  
-        <text>结束时间</text>
-      <view class='wrap-right-end'>
-        <picker mode="date" value="{{res_work_company_endData}}" bindchange="bindDateChange2" name='res_work_company_endData'>  
-            <view style='color:{{dateColor}}'>{{res_work_company_endData}}</view>  
-        </picker>
-      </view>
-      </view>
-</view>
+    <view class='index-work-time' >
+        <view class='wrap-left'>  
+            <text>开始时间</text>
+            <view class='wrap-left-start'> 
+                <picker mode="date" value="{{res_work_company_startData}}" bindchange="bindDateChange1" name='res_work_company_startData'>  
+                    <view style='color:{{dateColor}}'>{{res_work_company_startData}}</view>  
+                </picker>
+            </view>
+        </view>
+        <view class='wrap-right'>  
+            <text>结束时间</text>
+            <view class='wrap-right-end'>
+                <picker mode="date" value="{{res_work_company_endData}}" bindchange="bindDateChange2" name='res_work_company_endData'>  
+                    <view style='color:{{dateColor}}'>{{res_work_company_endData}}</view>  
+                </picker>
+            </view>
+        </view>
+    </view>
 
-<!-- <view class='index-company-hiredate' >
-     <view class='company-hiredate-add'>  
-        <text>请选择您在此公司的入职时间</text>
-      </view>
-      <view class='company-hiredate'>
-        <picker mode="date" value="{{res_work_company_hiredate}}" bindchange="bindDateChange3" name='res_work_company_hiredate'>  
-            <view style='color:{{dateColor}}'>{{res_work_company_hiredate}}</view>  
-        </picker>
-      </view>
- </view> -->
-
- </form>
+</form>
