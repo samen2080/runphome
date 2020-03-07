@@ -591,11 +591,6 @@ page{
   font-size: 32rpx; 
   position: relative;
   float: left; 
-  /* border-width: 1rpx 10rpx 1rpx 1rpx ;
-  border-color: #b1afae;
-  border-style: solid;  */
-  border: rgb(57, 40, 207) solid 1px;
-
 }
 
 .wrap-left{
@@ -605,12 +600,6 @@ page{
   font-size: 32rpx;
   position: relative; 
   float: left;
-
-border: rgb(175, 47, 47) solid 1px;
-
-  /* border-width: 1rpx 1rpx 1rpx 1rpx ;
-  border-color: #f80324e1;
-  border-style: solid;  */
 }
 
 .wrap-left image{
@@ -626,12 +615,6 @@ border: rgb(175, 47, 47) solid 1px;
   font-size: 32rpx;
   position: relative; 
   float: left;
-
-border: rgb(0, 0, 0) solid 1px;
-
-  /* border-width: 1rpx 1rpx 1rpx 1rpx ;
-  border-color: #ce1c1c;
-  border-style: solid;  */
 }
 
 .on-list-course-name{

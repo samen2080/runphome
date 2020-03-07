@@ -288,7 +288,7 @@
 <!-- 热播课程 -->
 <view class='index-list-course-box'>
   <view class='index-list-course-title'>
-    <text>热播课程</text>
+    <text>短期培训班</text>
     <view class='index-more'><navigator url='transaction/transaction' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>
   </view>
 

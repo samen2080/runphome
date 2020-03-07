@@ -368,28 +368,31 @@
   margin-left: 20rpx;
   margin-top: 40rpx;
 }
-.main-show-intro image{
-  margin: 48rpx 0;
-  vertical-align: middle;
-  width: 100%;
-  height: 418rpx;
-}
 .banner{
   background-color: #ffffff;
 }
 .banner-swiper{
   text-align: center;
   width: 750rpx;
-  /* margin-left: 10rpx; */
   position: relative;
   height: 356rpx;
+  padding: 10rpx 10rpx 10rpx 10rpx;
+
 }
+
 .banner-img{
-  width: 730rpx;
+  /* width: 730rpx;
   height: 316rpx;
-  position: absolute;
+  position: relative;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
-  border-radius: 10rpx;
+  border-radius: 10rpx; */
+  width: 715rpx;
+  height: 336rpx;
+  position:relative;
+  float: left;
+  border-radius: 8rpx;
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
 }
+

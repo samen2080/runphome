@@ -29,6 +29,7 @@ Page({
       host: host,
       com_id: options.com_id
     })
+    console.log("20200213options.com_id", options.com_id);
     wx.getStorage({
       key: 'openid',
       success: function (res) {
@@ -64,8 +65,8 @@ Page({
   getDetail: function () {
     var that = this;
    // app.func.req('my_company_show', {id: that.data.com_id }, 'GET', function (res) {
+    console.log("20200213 that.data.com_id", that.data.com_id);
     app.func.req('my_company_show/' + that.data.com_id, {}, 'GET', function (res) {
-       console.log("20200213res",res);
       that.setData({
         items: res,
         com_img: res.com_img

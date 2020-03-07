@@ -491,6 +491,13 @@
 					"id": -1,
 					"name": "pages/company/company-show/work-exp/work-exp",
 					"pathName": "pages/company/company-show/work-exp/work-exp",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/company/company-show/company-show",
+					"pathName": "pages/company/company-show/company-show",
 					"scene": null
 				}
 			]
