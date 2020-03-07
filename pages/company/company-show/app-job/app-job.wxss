@@ -172,7 +172,7 @@
   float: left;
   top: 30rpx;
   margin-bottom: 10rpx;
-  border: rgb(0, 0, 0) solid 1px;
+  /* border: rgb(0, 0, 0) solid 1px; */
 }
 
 .apply-show{

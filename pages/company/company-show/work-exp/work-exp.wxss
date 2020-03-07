@@ -1,7 +1,7 @@
 /* pages/company/company-show/work-exp/work-exp.wxss */
 .index-work-top{
   height:90rpx;
-  width: 99%;
+  width: 100%;
   float: left;
   position: relative;
   background: white;
@@ -33,7 +33,7 @@
 
 
 .index-company-name{
-  width: 99%;
+  width: 100%;
   height: 150rpx;
   position: relative;
   float: left;
@@ -65,13 +65,14 @@
 
 .work-content-add{
   margin-top: 30rpx;
-  margin-left: 20rpx;
+  margin-left: 30rpx;
   color: rgb(148, 144, 144);
 }
 
 .textarea-wrap textarea{
   height: 200rpx;
   width: 100%;
+  margin-left: 20rpx;
   background: #ffffff;
   margin-top: 24rpx;
   font-size: 32rpx;

@@ -1,41 +1,40 @@
 <!--pages/company/company-show/edu-exp/edu-exp.wxml-->
 <form bindsubmit="submitform" bindsubmit="formSubmit" bindreset="formReset">
 <view class='index-edu-top' >
-     <view class='edu-add'>  
-             <text>添加教育经历</text>
-      </view>
-      <view class='complete'>
+    <view class='edu-add'>  
+        <text>添加教育经历</text>
+    </view>
+    <view class='complete'>
         <button class='complete-show' formType="submit" >完成</button>
-      </view>
+    </view>
 </view>
 
 <view class='index-edu-university' >
-     <view class='univer-add'>  
+    <view class='university-title'>  
         <text>学校名称</text>
-      </view>
-      <view class='univer-name'>
+    </view>
+    <view class='university-name'>
         <input  placeholder='请输入学校名称' placeholder-class='placeholder' name='edu_school_name'></input>
-      </view>
+    </view>
 </view>
 
-<view class='index-sub-university' >
-     <view class='sub-add'>  
+<view class='index-edu-major' >
+    <view class='major-title'>  
         <text>专业名称</text>
-      </view>
-      <view class='sub-name'>
+    </view>
+    <view class='major-name'>
         <input  placeholder='请输入专业名称' placeholder-class='placeholder' name='edu_major'></input>
-      </view>
+    </view>
 </view>
 
-<view class='index-data-university' >
-     <view class='data-add'>  
+<view class='index-graduate-time' >
+    <view class='time-title'>  
         <text>毕业时间</text>
-      </view>
-      <view class='data-detail'>
+    </view>
+    <view class='time-value'>
         <picker mode="date" value="{{edu_graduate_year}}" bindchange="bindDateChange" name='edu_graduate_year'>  
             <view style='color:{{dateColor}}'>{{edu_graduate_year}}</view>  
         </picker>
-      </view>
+    </view>
 </view>
-
  </form>
