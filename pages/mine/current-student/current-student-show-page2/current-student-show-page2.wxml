@@ -7,14 +7,14 @@
     <view class='contract-show-middle-info-list'>家庭成员：<text>{{userInfo.stu_family_member_name}}</text></view>
   <view class='contract-show-top'>
     <view class='contract-show-top-code'>
-    <text>关系：{{userInfo.stu_family_member_rel}}</text>
-    <text class='contract-show-sex'>电话：{{userInfo.stu_familiy_member_phone}}</text>
+    <text class='contract-show-top1'>关系：{{userInfo.stu_family_member_rel}}</text>
+    <text class='contract-show-top2'>电话：{{userInfo.stu_familiy_member_phone}}</text>
     </view>
   </view>
   <view class='contract-show-top'>
     <view class='contract-show-top-code'>
-    <text>紧急联系人：{{userInfo.stu_emergency_contact_name}}</text>
-    <text class='contract-show-sex'>电话：{{userInfo.stu_emergency_contact_num}}</text>
+    <text class='contract-show-top1'>紧急联系人：{{userInfo.stu_emergency_contact_name}}</text>
+    <text class='contract-show-top2'>电话：{{userInfo.stu_emergency_contact_num}}</text>
     </view>
   </view> 
   <view class='contract-show-middle-info-list2'>家庭地址：<text>{{userInfo.stu_home_province}}{{userInfo.stu_home_city}}{{userInfo.stu_home_county}}{{userInfo.stu_home_address}}</text></view>

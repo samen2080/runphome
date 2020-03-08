@@ -71,11 +71,13 @@
 
 .textarea-wrap textarea{
   height: 200rpx;
-  width: 100%;
+  width: 90%;
   margin-left: 20rpx;
   background: #ffffff;
   margin-top: 24rpx;
   font-size: 32rpx;
+   /* border: rgb(45, 18, 201) solid 1px; */
+
 }
 
 

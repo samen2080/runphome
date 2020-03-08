@@ -32,9 +32,14 @@
       <view class='bg-white-ellipsis' bindtap='ellipsis'>
         <image class='img-ellipsis' src="{{ellipsis?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
       </view>
-    </view>   
-    <view class='contract-show-middle-info-list2'>学校地址：<text>{{items.sch_province}}{{items.sch_city}}{{items.sch_county}}{{items.sch_address}}</text></view>
     </view>
+<<<<<<< HEAD
+    
+    <view class='contract-show-middle-info-list2'>学校地址：<text>{{items.sch_province}}{{items.sch_city}}{{items.sch_county}}{{items.sch_address}}</text></view>
+=======
+    <view class='contract-show-middle-info-list2'>学校地址：<text>{{items.sch_address}}</text></view>
+>>>>>>> 7d6b4a86fe9b47d002c8042fe8a1857e9317fb1b
+  </view>
 </view>
 
 <!-- <view class='contract-show-bottom'>

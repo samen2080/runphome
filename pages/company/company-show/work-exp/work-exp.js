@@ -6,36 +6,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-    res_work_company_startData: '请选择',
-    res_work_company_startData: '2018-07-01',
-    res_work_company_endData: '请选择',
-    res_work_company_endData: '2018-07-01',
-    res_work_company_hiredate: '请选择您在此公司的入职时间',
-    res_work_company_hiredate: '2018-07-01',
+    wke_start_year: '请选择',
+    wke_start_year: '2018-07-01',
+    wke_end_year: '请选择',
+    wke_end_year: '2018-07-01',
+    // res_work_company_hiredate: '请选择您在此公司的入职时间',
+    // res_work_company_hiredate: '2018-07-01',
     dateColor: '#fa9017'
 
   },
   bindDateChange1: function (e) {
-    // console.log(e.detail.value)
+    console.log(e.detail.value)
     this.setData({
-      res_work_company_startData: e.detail.value,
+      wke_start_year: e.detail.value,
       dateColor: '#000000'
     })
   },
   bindDateChange2: function (e) {
-    // console.log(e.detail.value)
+     console.log(e.detail.value)
     this.setData({
-      res_work_company_endData: e.detail.value,
+      wke_end_year: e.detail.value,
       dateColor: '#000000'
     })
   },
-  bindDateChange3: function (e) {
-    // console.log(e.detail.value)
-    this.setData({
-      res_work_company_hiredate: e.detail.value,
-      dateColor: '#000000'
-    })
-  },
+  // bindDateChange3: function (e) {
+  //    console.log(e.detail.value)
+  //   this.setData({
+  //     res_work_company_hiredate: e.detail.value,
+  //     dateColor: '#000000'
+  //   })
+  // },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,6 +1,6 @@
 <!--pages/mine/current-student/current-student.wxml-->
 <view class='on-list'>   
-      <view class='on-list-list' wx:for="{{items}}" wx:key="{{items}}">
+      <view class='on-list-list' wx:for="{{items}}" wx:key="key">
         <view class='on-list-number-wrap'>
           <text class='on-list-number'>学生ID:<text>{{item.stu_id}}</text></text>
            <text class='on-list-status'>性别：{{item.stu_sex==1 ? "男":"女"}}</text>

@@ -214,13 +214,13 @@
 
 .index-resume-intro{
   height: 350rpx;
-  width: 100%;
+  width: 95%;
   position: relative;
   float: left;
   background: #ffffff;
   padding: 0rpx 50rpx 0rpx 20rpx;     
   font-size: 32rpx; 
-  border: rgb(0, 0, 0) solid 1px;
+  /* border: rgb(0, 0, 0) solid 1px; */
 }
 
 
@@ -228,7 +228,7 @@
   margin-top: 30rpx;
   margin-left: 20rpx;
   color: rgb(148, 144, 144);
-  border: rgb(0, 0, 0) solid 1px;
+  /* border: rgb(0, 0, 0) solid 1px; */
 }
 
 .textarea-wrap textarea{
@@ -237,7 +237,7 @@
   background: #ffffff;
   margin-top: 24rpx;
   font-size: 32rpx;
-  border: rgb(0, 0, 0) solid 1px;
+  /* border: rgb(0, 0, 0) solid 1px; */
 }
 
 .placeholder{

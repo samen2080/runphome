@@ -17,17 +17,17 @@
 
   <view class='contract-show-middle-info-box'>
      <view class='contract-show-top-code'>
-    <text>教师名称：{{items.tea_teacher_name}}</text>
+    <text class='contract-show-top1'>教师名称：{{items.tea_teacher_name}}</text>
     <text class='contract-show-top2'>教师性别：{{items.tea_sex}}</text>
     </view>
 
      <view class='contract-show-top-code'>
-    <text>登录账户：{{items.tea_account}}</text>
+    <text class='contract-show-top1'>登录账户：{{items.tea_account}}</text>
     <text class='contract-show-top2'>登录密码：{{items.tea_password}}</text>
     </view>
 
     <view class='contract-show-top-code'>
-    <text>QQ：{{items.tea_qq }}</text>
+    <text class='contract-show-top1'>QQ：{{items.tea_qq }}</text>
     <text class='contract-show-top2'>QQ群：{{items.tea_qq_group}}</text>
     </view>
 
@@ -47,11 +47,11 @@
    <!-- 20200213  end -->
     
     <view class='contract-show-top-code'>
-    <text>教师职称：{{item.tea_level==1 ? "初级讲师":item.tea_level==2 ?"中级讲师":"高级讲师"}}</text>
+    <text class='contract-show-top1'>教师职称：{{item.tea_level==1 ? "初级讲师":item.tea_level==2 ?"中级讲师":"高级讲师"}}</text>
     <text class='contract-show-top2'>讲师分成：{{items.tea_income}}</text>
     </view>
     <view class='contract-show-top-code'>
-    <text>排名：{{item.tea_display_order}}</text>
+    <text class='contract-show-top1'>排名：{{item.tea_display_order}}</text>
     <text class='contract-show-top2'>所属机构：{{items.tea_company_ui}}</text>
     </view>
     <view class='contract-show-middle-info-list'>微信号：<text>{{items.tea_weixin_id}}</text></view>

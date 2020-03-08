@@ -201,23 +201,33 @@ Page({
 
   getData1: function (e) {
     this.setData({
-      res_birth_year: e.detail.id
+      res_birth_year: e.detail.text
     })
   },
   getData2: function (e) {
     this.setData({
-     res_qualification: e.detail.id
+      res_qualification: e.detail.text
      })
   },
   getData3: function (e) {
     this.setData({
-      res_work_years: e.detail.id
+      res_work_years: e.detail.text
     })
   },
   genderSelect: function (e) {
     this.setData({
-      id: e.target.dataset.id
+      id: e.target.dataset.id 
     })
+    // if (e.target.dataset.id == 0) {
+    //   this.setData({
+    //     id: '男'
+    //   })
+    // } else if (e.target.dataset.id == 1) {
+    //   this.setData({
+    //     id: '女'
+    //   })
+    // }
+
   },
   /**
    * 生命周期函数--监听页面加载
@@ -270,11 +280,6 @@ Page({
     // var num = e.currentTarget.dataset.num;
      console.log("20200215res",  e.detail.value.apj_user_mobile);
     app.func.req('add_resume', {
-      apj_user_id: that.data.user_id,
-      apj_job_id: that.data.job_id,
-      apj_user_mobile: e.detail.value.apj_user_mobile,
-      // apj_user_mobile: e.detail.value.apj_user_mobile,
-
       res_user_name: e.detail.value.res_user_name,
       res_sex: that.data.id,
       res_birth_year: that.data.res_birth_year,
@@ -283,26 +288,30 @@ Page({
       res_position: that.data.job_name,
       res_salary_range: that.data.job_salary,
       res_work_location: that.data.job_address,
+      res_user_id: that.data.user_id,
 
       openid: that.data.openid,
     }, 'POST', function (res) {
-      // console.log("20200126", that.data.mnt_user_province);
       if (res.code == 200) {
-        // wx.showToast({
-        //   title: '新建成功',
-        //   icon: 'none',
-        //   duration: 2000,
-        // success: function () {
-        // setTimeout(function () {
+         console.log("20200213 add resume");
+      }
+    });
+
+    app.func.req('apl_job', {
+      apj_user_id: that.data.user_id,
+      apj_job_id: that.data.job_id,
+      apj_user_mobile: e.detail.value.apj_user_mobile,
+      apj_user_id: that.data.user_id,
+
+      openid: that.data.openid,
+    }, 'POST', function (res) {
+      if (res.code == 200) {
         wx.navigateTo({
           url: '../job-app-resume/job-app-resume?job_id=' + e.currentTarget.dataset.jobid
         })
-        // }, 2000);
-        // }
-
-        // })
+      
       }
-    })
+    });
   },
 
   /**

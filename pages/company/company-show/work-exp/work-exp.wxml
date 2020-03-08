@@ -23,7 +23,7 @@
             <textarea maxlength='90' placeholder='请输入大致工作内容' placeholder-class='placeholder' name='wke_wrk_content'></textarea>
         </view> -->
         <view class='textarea-wrap'>
-            <textarea maxlength='200' placeholder='【例子】本人已从事该行业3年，熟练各种技能，性格好，真诚，上进，谦虚。' placeholder-class='placeholder' name='res_intro'></textarea>
+            <textarea maxlength='200' placeholder='【例子】本人已从事该行业3年，熟练各种技能，性格好，真诚，上进，谦虚。' placeholder-class='placeholder' name='wke_wrk_content'></textarea>
         </view>
     </view> 
 
@@ -31,16 +31,16 @@
         <view class='wrap-left'>  
             <text>开始时间</text>
             <view class='wrap-left-start'> 
-                <picker mode="date" value="{{res_work_company_startData}}" bindchange="bindDateChange1" name='res_work_company_startData'>  
-                    <view style='color:{{dateColor}}'>{{res_work_company_startData}}</view>  
+                <picker mode="date" value="{{wke_start_year}}" bindchange="bindDateChange1" name='wke_start_year'>  
+                    <view style='color:{{dateColor}}'>{{wke_start_year}}</view>  
                 </picker>
             </view>
         </view>
         <view class='wrap-right'>  
             <text>结束时间</text>
             <view class='wrap-right-end'>
-                <picker mode="date" value="{{res_work_company_endData}}" bindchange="bindDateChange2" name='res_work_company_endData'>  
-                    <view style='color:{{dateColor}}'>{{res_work_company_endData}}</view>  
+                <picker mode="date" value="{{wke_end_year}}" bindchange="bindDateChange2" name='wke_end_year'>  
+                    <view style='color:{{dateColor}}'>{{wke_end_year}}</view>  
                 </picker>
             </view>
         </view>

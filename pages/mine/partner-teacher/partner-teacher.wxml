@@ -1,6 +1,6 @@
 <!--pages/mine/partner-teacher/partner-teacher.wxml-->
 <view class='on-list'>   
-      <view class='on-list-list' wx:for="{{items}}" wx:key="{{items}}">
+      <view class='on-list-list' wx:for="{{items}}" wx:key="key">
         <view class='on-list-number-wrap'>
           <text class='on-list-number'>教师职称:<text>{{item.tea_level==1 ? "初级讲师":item.tea_level==2 ?"中级讲师":"高级讲师"}}</text></text>
      

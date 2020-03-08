@@ -77,6 +77,17 @@ Page({
     ]
     
   },
+  addWorkExp: function (e) {
+    wx.navigateTo({
+      url:'../work-exp/work-exp?job_id=' + e.currentTarget.dataset.jobid,
+    })
+  },
+
+  addEduExp: function (e) {
+    wx.navigateTo({
+      url:'../edu-exp/edu-exp?job_id=' + e.currentTarget.dataset.jobid,
+    })
+  },
  
   //同步输入框内容
   bindKeyInput(e) {
@@ -94,7 +105,8 @@ Page({
     })
     let detailValue = this.data.obtnArry.filter(it => it.selected).map(it => it.name)
     this.setData({
-      label: detailValue
+       label: detailValue,
+
     })
     console.log(this.data.label)
   },
@@ -144,6 +156,7 @@ Page({
     that.setData({
       host: host,
       job_id: options.job_id,
+      user_id: user_id
     })
 
     wx.getStorage({
@@ -159,10 +172,13 @@ Page({
   //保存
   formSubmit: function (e) {
     var that = this;
+    var a = this.data.label;
+    var b = a.join(",");
     // var num = e.currentTarget.dataset.num;
     // console.log("20200215res", e.currentTarget.dataset.i['job_name']);
-    app.func.req('add_resume2', {
-      res_personal_label: that.data.inputValue,
+    app.func.req('update_resume', {
+      res_user_id: that.data.user_id,
+      res_personal_label: b,
       res_intro: e.detail.value.res_intro,
       
       openid: that.data.openid,
