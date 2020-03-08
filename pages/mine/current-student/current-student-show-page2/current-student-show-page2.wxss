@@ -23,11 +23,21 @@ page{
 .contract-show-top-code{
   height: 100rpx;
   line-height: 100rpx;
-  border-top: 1rpx solid #e9e9e9;
-  border-bottom: 0rpx solid #e9e9e9;
-  padding: 0 24rpx;
-  background: #ffffff;
-  
+  border-top: 2rpx solid #e9e9e9;
+  /* padding: 0 24rpx; */
+}
+.contract-show-top1{
+width: 48%;
+position: relative;
+float: left;
+left:2.5%;
+/* padding: 0 24rpx; */
+}
+.contract-show-top2{
+width: 48%;
+position: relative;
+float: left;
+/* margin-left: 150rpx; */
 }
 .contract-show-date{
 margin-left: 20rpx;

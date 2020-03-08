@@ -21,7 +21,7 @@
     
     <view class='contract-show-middle-info-list'>学校名称：<text>{{items.sch_name}}</text></view>
       <view class='contract-show-top-code'>
-    <text>主要专业：{{items.sch_main_major}}</text>
+    <text class='contract-show-top1' >主要专业：{{items.sch_main_major}}</text>
     <text class='contract-show-top2'>学校排名：{{items.sch_rank}}</text>
     </view>
     <view class='contract-show-middle-info-list'>学校类型：<text>{{item.sch_category==1 ? "本科学校":"中高职学校"}}</text></view>
@@ -33,7 +33,7 @@
         <image class='img-ellipsis' src="{{ellipsis?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
       </view>
     </view>
-    <view class='contract-show-middle-info-list2'>学校地址：<text>{{items.sch_province}}{{items.sch_city}}{{items.sch_county}}{{items.sch_address}}</text></view>
+    <view class='contract-show-middle-info-list2'>学校地址：<text>{{items.sch_address}}</text></view>
   </view>
 </view>
 

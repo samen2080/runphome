@@ -19,12 +19,12 @@
   <view class='contract-show-middle-info-box'>
 
     <view class='contract-show-top-code'>
-    <text>合约编号：{{items.scc_id}}</text>
-    <text class='contract-show-sex'>合约周期：{{items.scc_period==1?"1年":items.scc_period==2?"2年":"3年"}}</text>
+    <text class='contract-show-top1'>合约编号：{{items.scc_id}}</text>
+    <text class='contract-show-top2'>合约周期：{{items.scc_period==1?"1年":items.scc_period==2?"2年":"3年"}}</text>
     </view>
    <view class='contract-show-top-code'>
-    <text>签约日期：{{items.scc_sign_time}}</text>
-    <text class='contract-show-sex'>合约状态：{{items.scc_status==1?"已生效":items.scc_status==2?"已过期":"已取消"}}</text>
+    <text class='contract-show-top1'>签约日期：{{items.scc_sign_time}}</text>
+    <text class='contract-show-top2'>合约状态：{{items.scc_status==1?"已生效":items.scc_status==2?"已过期":"已取消"}}</text>
     </view>
     <!-- <view class='contract-show-top-code'>
     <text>开始日期：{{items.scc_start_date}}</text>

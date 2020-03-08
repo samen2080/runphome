@@ -8,7 +8,7 @@
         </view>
         <navigator url='partner-schools-show/partner-schools-show?sch_id={{item.sch_id}}' hover-class='none'><view class='on-list-info'>
           <image src='{{host}}{{item.sch_img}}' mode='aspectFill'></image>
-          <text class='on-list-name'>{{item.sch_province}}{{item.sch_city}}{{item.sch_county}}{{item.sch_address}}</text>
+          <text class='on-list-name'>{{item.sch_address}}</text>
           <view class='mine-contract-date-wrap'>
               <text class='mine-contract-date-title'>主要专业:</text>
               <text class='mine-contract-date-value'>{{item.sch_main_major}}</text>

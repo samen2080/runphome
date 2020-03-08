@@ -18,7 +18,7 @@
   <view class='contract-show-middle-info-box'>
 
     <view class='contract-show-top-code'>
-    <text>姓名：{{items.hun_name}}</text>
+    <text class='contract-show-top1'>姓名：{{items.hun_name}}</text>
     <text class='contract-show-top2'>性别：{{item.hun_sex==1 ? "男":"女"}}</text>
     </view>
     
