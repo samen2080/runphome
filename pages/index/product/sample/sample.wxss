@@ -380,20 +380,20 @@
   height: 418rpx;
 }
 .banner{
-  width: 700rpx;
+  width: 98%;
+  height: 400rpx;
   background-color: #ffffff;
 }
+
 .banner-swiper{
   text-align: center;
-  width: 700rpx;
   position: relative;
-  height: 500rpx;
 }
+
 .banner-img{
-  width: 690rpx;
-  height: 500rpx;
+  width: 735rpx;
+  height: 390rpx;
   position: absolute;
-  /* padding: 15rpx; */
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);

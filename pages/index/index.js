@@ -108,6 +108,13 @@ Page({
         });
        // 20200213 end
 
+        app.func.req('get_act_main', { user_id: that.data.user_id }, 'GET', function (res) {
+          console.log("20200213 res", res);
+          that.setData({
+            actMainList: res
+          })
+        });
+
         // 学校专区
         app.func.req('get_list', { query: 2, pageSize: 4, page: 1, openid: that.data.openid }, 'GET', function (res) {
           // console.log(res);

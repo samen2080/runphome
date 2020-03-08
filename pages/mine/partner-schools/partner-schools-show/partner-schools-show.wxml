@@ -33,6 +33,7 @@
         <image class='img-ellipsis' src="{{ellipsis?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
       </view>
     </view>
+    
     <view class='contract-show-middle-info-list2'>学校地址：<text>{{items.sch_province}}{{items.sch_city}}{{items.sch_county}}{{items.sch_address}}</text></view>
   </view>
 </view>

@@ -34,6 +34,7 @@
     "pages/company/company-show/edu-exp/edu-exp",
     "pages/company/company-show/work-exp/work-exp",
     "pages/index/record-broadcast/record-broadcast",
+    "pages/index/activity-broadcast/activity-broadcast",
     "pages/community/bbs/bbs",
     "pages/community/bbs/bbs-home/bbs-home",
     "pages/community/bbs/publish/publish",

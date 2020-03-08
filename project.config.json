@@ -493,6 +493,26 @@
 					"pathName": "pages/company/company-show/company-show",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/product/sample/sample",
+					"pathName": "pages/index/product/sample/sample",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/product/product",
+					"pathName": "pages/index/product/product",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/company/company-show/work-exp/work-exp",
+					"pathName": "pages/company/company-show/work-exp/work-exp",
+					"scene": null
 				}
 			]
 		}

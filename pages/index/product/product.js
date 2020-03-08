@@ -59,12 +59,22 @@ Page({
         icon: ''
       }
     ],
-
-
     userInfo: {},
     cellHeight: '120px',
     pageItems: [] ,
+// 20200308 add start
+    ellipsis: true,
+// 20200308 add end
   },
+
+// 20200308 add start
+  ellipsis: function () {
+    var value = !this.data.ellipsis;
+    this.setData({
+      ellipsis: value
+    })
+  },
+// 20200308 add end
 
   ellipsis: function () {
     var value = !this.data.ellipsis;

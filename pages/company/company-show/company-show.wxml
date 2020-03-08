@@ -2,7 +2,7 @@
 <view class='main-show-top'>
   <view class='main-show-top-info'>
     <view class='main-show-top-info-tx'>
-      <view class='main-show-top-info-tx-wrap'><image src='{{host}}{{com_img[5]}}' mode='aspectFill'></image></view>
+      <view class='main-show-top-info-tx-wrap'><image src='{{host}}{{com_img[5]}}' mode='widthFix'></image></view>
     </view>     
     <view class='main-show-name'><text>{{items.com_name}}</text></view>
     <view class='main-show-instru1'><text>{{items.com_membership_ind==1?"协会会员":"不是协会会员"}}</text></view>
@@ -27,8 +27,8 @@
       <view class='main-show-intro-scale'>公司环境</view>
       <view class='banner'>
           <swiper class='banner-swiper' current='0'>
-            <swiper-item wx:for="{{com_img}}" wx:key='com_img'>
-              <image src='{{host}}{{item}}' mode='aspectFill' class='banner-img' />
+            <swiper-item class='banner-img' wx:for="{{com_img}}" wx:key='com_img'>
+              <image src='{{host}}{{item}}' mode='widthFix'></image>
             </swiper-item>
           </swiper>
       </view>

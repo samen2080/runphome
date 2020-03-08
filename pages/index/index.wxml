@@ -379,3 +379,23 @@
 </view>
 <!-- END -->
 <!-- 20191012 test end -->
+
+<view class='index-act-box'>
+    <view class='index-act-box-title'>
+     <text>最新活动•咨询</text>
+    </view>
+
+    <view class='index-act-list-box'>
+     <view class='index-act-list' wx:for="{{actMainList}}" wx:key="{{actMainList}}" wx:for-item="i">
+        <navigator url='activity-broadcast/activity-broadcast?act_id={{i.act_id}}' hover-class='none'>
+           <view class='on-list-act-item'>{{i.act_name}}</view>
+           <view class='on-list-act-item'>{{i.act_publish_date}}</view>
+           <view class='on-list-wrap-img'>  
+             <image src='{{host}}{{i.act_img[0]}}' mode='widthFix'></image>
+           </view>
+          </navigator>
+       </view>
+     </view>
+
+ </view>
+<!-- 20200213 end -->

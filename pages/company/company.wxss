@@ -86,6 +86,7 @@
   float: left;
   /* vertical-align: middle; */
   border-radius: 10rpx;
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
 .on-list-name{

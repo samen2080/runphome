@@ -2,7 +2,7 @@
 <view class='main-show-top'>
   <view class='main-show-top-info'>
     <view class='main-show-top-info-tx'>
-      <view class='main-show-top-info-tx-wrap'><image src='https://www.xqtechinfo.com/runphome/storage/app/public/uploads/banner/ad-banner01.png' mode='aspectFill'></image></view>
+      <view class='main-show-top-info-tx-wrap'><image src='https://www.xqtechinfo.com/runphome/storage/app/public/uploads/banner/ad-banner01.jpg' mode='aspectFill'></image></view>
     </view>      
   </view>
 </view>
@@ -21,11 +21,18 @@
                     </swiper>
                 </view>
            <!-- </view> -->
-          <view class='wrap-right'>
+          <!-- <view class='wrap-right'>
              <text class="on-list-course-name" >{{i.pdd_desc}}</text>
-             <!-- <view class='bg-white-ellipsis' bindtap='ellipsis'>
+             <view class='bg-white-ellipsis' bindtap='ellipsis'>
                  <image class='img-ellipsis' src="{{ellipsis?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
-             </view> -->
+             </view>
+          </view> -->
+
+          <view class='contract-show-middle-info-list3'>
+              <text class="contract-show-middle-info-list3-skill {{ellipsis?'ellipsis':'unellipsis'}}" >{{i.pdd_desc}}</text>
+              <view class='bg-white-ellipsis' bindtap='ellipsis'>
+                  <image class='img-ellipsis' src="{{ellipsis?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
+              </view>
           </view>
        </view>
      </view>
