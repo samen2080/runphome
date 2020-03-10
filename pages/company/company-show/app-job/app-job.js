@@ -245,6 +245,7 @@ Page({
       job_county: options.job_county,
       job_address: options.job_address,
       job_id: options.job_id,
+      res_id: options.res_id,
       user_id: user_id
     });
 
@@ -279,6 +280,7 @@ Page({
     var that = this;
     // var num = e.currentTarget.dataset.num;
      console.log("20200215res",  e.detail.value.apj_user_mobile);
+    if (that.data.res_id == "") {
     app.func.req('add_resume', {
       res_user_name: e.detail.value.res_user_name,
       res_sex: that.data.id,
@@ -296,7 +298,7 @@ Page({
          console.log("20200213 add resume");
       }
     });
-
+  }
     app.func.req('apl_job', {
       apj_user_id: that.data.user_id,
       apj_job_id: that.data.job_id,
@@ -305,9 +307,10 @@ Page({
 
       openid: that.data.openid,
     }, 'POST', function (res) {
+      console.log("20200310res", that.data.res_id);
       if (res.code == 200) {
         wx.navigateTo({
-          url: '../job-app-resume/job-app-resume?job_id=' + e.currentTarget.dataset.jobid
+          url: '../job-app-resume/job-app-resume?job_id=' + e.currentTarget.dataset.jobid + '&res_id=' + that.data.res_id,
         })
       
       }

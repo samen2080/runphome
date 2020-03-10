@@ -1,0 +1,71 @@
+<!--pages/mine/my-resume/my-resume.wxml-->
+<view class='contract-show-top'>
+  <view class='contract-show-top-code'>
+    <text class='contract-show-top1'>姓名：{{userInfo.res_user_name}}</text>
+    <text class='contract-show-top2'>性别：{{userInfo.res_sex==0?"男":"女"}}</text>
+  </view>
+</view>
+
+
+  
+  <view class='contract-show-middle-info-box'>
+    <view class='contract-show-top-code'>
+    <text class='contract-show-top1'>出生年份：{{userInfo.res_birth_year}}</text>
+    <text class='contract-show-top2'>工作年限：{{userInfo.res_work_years}}</text>
+    </view>
+    <view class='contract-show-middle-info-list'>手机号码：<text>{{applyInfo.apj_user_mobile}}</text></view>
+    <view class='contract-show-middle-info-list'>大学名称：<text>{{eduInfo.edu_school_name}}</text></view>
+    <view class='contract-show-top-code'>
+    <text class='contract-show-top1'>毕业时间：{{eduInfo.edu_graduate_year}}</text>
+    <text class='contract-show-top2'>专业：{{eduInfo.edu_major}}</text>
+    </view>
+    <view class='contract-show-middle-info-list'>学历：<text>{{userInfo.res_qualification}}</text></view>
+    <!-- <view class='contract-show-middle-info-list2'>简介：<text>{{userInfo.res_intro}}</text></view> -->
+    <view class='contract-show-middle-info-list3'>
+     <text class="contract-show-middle-info-list3-skill {{ellipsis?'ellipsis':'unellipsis'}}" >简介：{{userInfo.res_intro}}</text>
+      <view class='bg-white-ellipsis' bindtap='ellipsis'>
+        <image class='img-ellipsis' src="{{ellipsis?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
+      </view>
+    </view>
+    <!-- <view class='contract-show-middle-info-list2'>专长：<text>{{userInfo.res_skills}}</text></view> -->
+    <view class='contract-show-middle-info-list3'>
+     <text class="contract-show-middle-info-list3-desc: {{ellipsis2?'ellipsis':'unellipsis'}}" >专长：{{userInfo.res_skills}}</text>
+      <view class='bg-white-ellipsis' bindtap='ellipsis2'>
+        <image class='img-ellipsis' src="{{ellipsis2?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
+      </view>
+    </view>
+
+
+    <view class='contract-show-middle-info-list2'>标签：<text>{{userInfo.res_personal_label}}</text></view>
+    
+  </view>
+  <view class='contract-show-middle'>
+  <view class='contract-show-middle-title'>工作经验</view>
+    <view class='contract-show-top-code'>
+    <text class='contract-show-top1'>公司名称：{{workInfo.wke_com_name}}</text>
+    <text class='contract-show-top2'>岗位名称：{{workInfo.wke_position_name}}</text>
+    </view>
+
+    <view class='contract-show-top-code'>
+    <text class='contract-show-top1'>开始时间：{{workInfo.wke_start_year}}</text>
+    <text class='contract-show-top2'>结束时间：{{workInfo.wke_end_year}}</text>
+    </view>
+  
+   <view class='contract-show-middle-info-list3'>
+     <text class="contract-show-middle-info-list3-desc: {{ellipsis3?'ellipsis':'unellipsis'}}" >工作内容：{{workInfo.wke_wrk_content}}</text>
+      <view class='bg-white-ellipsis' bindtap='ellipsis3'>
+        <image class='img-ellipsis' src="{{ellipsis3?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
+      </view>
+    </view>
+
+  </view>
+
+ <view class="flex-row bar-bottom">
+    <view class="flex-grow-1 flex-row">
+      <!-- <view bindtap="detail" class="flex-grow-1 flex-y-center flex-x-center add-cart"><button>查看详情</button></view> -->
+      <view bindtap="change" class="flex-grow-1 flex-y-center flex-x-center buy-now"><button>修改简历</button></view>
+    </view>
+  </view>
+
+
+

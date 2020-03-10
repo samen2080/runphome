@@ -11,7 +11,7 @@
 
     <view class='contract-show-middle-info-list'>微信号：<text>{{userInfo.stu_wetchat_id}}</text></view>
     <view class='contract-show-middle-info-list'>联系电话：<text>{{userInfo.stu_phone}}</text></view>
-    <view class='contract-show-middle-info-list1'>电子邮件：<text>{{userInfo.stu_email_address}}</text></view>、
+    <view class='contract-show-middle-info-list1'>电子邮件：<text>{{userInfo.stu_email_address}}</text></view>
     <view class='contract-show-middle-info-list2'>现住地址：<text>{{userInfo.stu_current_province}}{{userInfo.stu_current_city}}{{userInfo.stu_current_county}}{{userInfo.stu_current_address}}</text></view>
   </view>
   <view class='contract-show-middle'>
@@ -31,49 +31,3 @@
 
 
 
-<!-- <view class='info-edit-page'>
-  <form id='info-edit-form' bindsubmit="formSubmit" bindreset="formReset">
-    <view class='info-edit-form-modify'>
-      <text class='info-edit-input'>代码:{{userInfo.stu_pro_code}}</text>
-
-      <view class='info-edit-input'><text>姓名</text><input type='text' placeholder='请输入姓名' placeholder-class="placeholder" value='{{userInfo.stu_name}}' name='stu_name'></input></view>
-
-      <view class='info-edit-input' catchtap='genderSelect'>
-        <text>性别</text>
-        <view class='gender-select'><image src='{{id==0?"/images/male.png":"/images/circle.png"}}' data-id='0'></image>男</view>
-        <view class='gender-select'><image src='{{id==1?"/images/female.png":"/images/circle.png"}}' data-id='1'></image>女</view>
-      </view>
-
-      <view class='info-edit-input'><text>国籍</text><input type='text' placeholder='请输入国籍' placeholder-class="placeholder" value='{{userInfo.stu_nationality}}' name='stu_nationality'></input></view>
-
-      <view class='info-edit-input'><text>籍贯</text><input type='text' placeholder='请输入籍贯' placeholder-class="placeholder" value='{{userInfo.stu_native_place}}' name='stu_native_place'></input></view>
-   
-     <view class='info-edit-input'>
-        <text>生日</text>
-        <view class="section">  
-          <picker mode="date" value="{{stu_birthday}}" bindchange="bindDateChange">  
-            <view class="picker" style='color:{{dateColor}}'>{{dates}}</view>  
-          </picker>  
-        </view> 
-      </view>
-
-      <view class='info-edit-input'><text>户口地</text><input type='text' placeholder='请输入户口地址' placeholder-class="placeholder" value='{{userInfo.stu_residence}}' name='stu_residence'></input></view>
-
-      <view class='info-edit-input'><text>证件类型</text><input type='text' placeholder='1=身份证 2=其它' placeholder-class="placeholder" value='{{userInfo.stu_pin_type}}' name='stu_pin_type'></input></view>
-
-      <view class='info-edit-input'><text>身份证号</text><input type='text' placeholder='请输入身份证号' placeholder-class="placeholder" value='{{userInfo.stu_pin_code}}' name='stu_pin_code'></input></view>
-
-      <view class='info-edit-input'><text>政治面貌</text><input type='text' placeholder='请输入政治面貌' placeholder-class="placeholder" value='{{userInfo.stu_political_status}}' name='stu_political_status'></input></view>
-     
-      <view class='info-edit-input'><text>民族</text><input type='text' placeholder='请输入民族' placeholder-class="placeholder" value='{{userInfo.stu_nation}}' name='stu_nation'></input></view>
-
-      
-         
-    </view>
-    <view class='info-edit-form-btn'>
-      <button formType="submit" class='info-edit-form-sub-btn'>
-        <text class='btn-text'>下一页</text>
-      </button>
-    </view>
-  </form>
-</view> -->

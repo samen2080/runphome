@@ -58,7 +58,7 @@
            </view>
            <view class='wrap-right'>  
               <view class='on-list-time'>{{i.job_add_time}}</view>
-              <button class='on-list-btn' hover-class='none' data-jobid="{{i.job_id}}"  data-i="{{i}}" catchtap='apply'>申请</button>
+              <button class='on-list-btn' hover-class='none' data-job_id="{{i.job_id}}"  data-i="{{i}}" catchtap='apply'>申请</button>
               <!-- <view class='mine-subject-head-box'>
                     <view class='on-list-name1'>  
                         <view class='on-list-name5'>{{i.job_add_time}}</view>

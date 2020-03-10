@@ -214,6 +214,18 @@
     <text>查看职位发布</text></navigator>
   </view>
 
+  <!-- 学生查看我应聘的职位 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 7}}'><navigator url='apply-position/apply-position'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>我的应聘职位</text></navigator>
+  </view>
+
+  <!-- 学生查看我应聘的职位 -->
+  <view class='mine-active-list' wx:if='{{userInfo.user_identity == 7}}'><navigator url='my-resume/my-resume'hover-class='none'>
+    <image src='/images/contract.jpg'></image>
+    <text>我的简历</text></navigator>
+  </view>
+
   <!-- 20200213 end -->
 
 </view>
