@@ -1,4 +1,4 @@
-
+<!--pages/company-show/company-show.wxml-->
 <view class='main-show-top'>
   <view class='main-show-top-info'>
     <view class='main-show-top-info-tx'>
@@ -25,13 +25,11 @@
       <view class='main-show-intro-scale'>公司类别</view>
       <view class='main-show-intro-descript'>{{items.com_scale}}</view>
       <view class='main-show-intro-scale'>公司环境</view>
-      <view class='banner'>
-          <swiper class='banner-swiper' current='0'>
-            <swiper-item class='banner-img' wx:for="{{com_img}}" wx:key='com_img'>
-              <image src='{{host}}{{item}}' mode='widthFix'></image>
-            </swiper-item>
-          </swiper>
-      </view>
+      <swiper class='swiper-banner' current='0'>
+        <swiper-item class='banner-img' wx:for="{{com_img}}" wx:key='com_img'>
+          <image src='{{host}}{{item}}' mode='widthFix'></image>
+        </swiper-item>
+      </swiper>
       <view class='main-show-intro-scale'>经营范围</view>
       <view class='main-show-intro-descript'>{{items.com_business_scope}}</view>
    </view>

@@ -1,5 +1,4 @@
 /* pages/index/product/sample/sample.wxss */
-/* pages/index/master/main-show/main-show.wxss */
 /* @import "../../../mine/mine-subject/mine-subject.wxss"; */
 
 .main-show-top{
@@ -7,11 +6,11 @@
   background: #ffffff;
   margin-bottom: 24rpx;
 }
+
 .main-show-top-info{
-  border-bottom: 2rpx solid #e9e9e9;
+  /* border-bottom: 2rpx solid #e9e9e9; */
   position: relative;
 }
-
 
 .main-show-top-info-tx-wrap{
   width: 100%;
@@ -53,10 +52,6 @@
   font-size: 32rpx;
   position: relative; 
   float: left;
-
-  /* border-width: 1rpx 1rpx 1rpx 1rpx ;
-  border-color: #dd7846;
-  border-style: solid;  */
 }
 
 .on-list-name{
@@ -118,10 +113,6 @@
   font-size: 32rpx;
   position: relative; 
   float: left;
-
-    /* border-width: 1rpx 1rpx 1rpx 1rpx ;
-  border-color: #b1afae;
-  border-style: solid;  */
 }
 
 .on-list-time{
@@ -163,6 +154,7 @@
   margin-left: 10rpx;
   float: left;
 }
+
 .main-show-web{
   font-size: 32rpx;
   float: left;
@@ -170,6 +162,7 @@
   margin-top: -40rpx;
   color: #b1afae;
 }
+
 .main-show-logo{
   width: 138rpx;
   height: 138rpx;
@@ -178,6 +171,7 @@
   margin-left: 600rpx;
   margin-top: -80rpx;
 }
+
 .main-show-instru1{
   color: #fdfdfd;
   font-size: 26rpx;
@@ -190,6 +184,7 @@
   background: #69c0f3;
   border-radius: 5rpx;
 }
+
 .main-show-instru1 text{
   margin-left: 5rpx;
   margin-right: 5rpx;
@@ -197,6 +192,7 @@
   float:left;
   font-size: 25rpx;
 }
+
 .main-show-instru2{
   color: #fdfdfd;
   font-size: 26rpx;
@@ -209,6 +205,7 @@
   background: #fa9511;
   border-radius: 5rpx;
 }
+
 .main-show-instru2 text{
   margin-left: 5rpx;
   margin-right: 5rpx;
@@ -216,16 +213,19 @@
   float:left;
   font-size: 25rpx;
 }
+
 .main-show-top-social{
   display: flex;
   height: 90rpx;
   line-height: 90rpx;
 }
+
 .main-show-top-social view{
   flex: 1;
   text-align: center;
   font-weight: 500;
 }
+
 .main-show-top-social view text{
   color: #19c810;
   margin-left: 20rpx;
@@ -241,6 +241,7 @@
   padding: 8rpx;
   font-size: 30rpx;
 }
+
 .on-list-name3{
   margin-top: 10rpx;
   width: 100%;
@@ -251,6 +252,7 @@
   color: red;
   font-size: 30rpx;
 }
+
 .on-list-name4{
   margin-top: -36rpx;
   width: 100%;
@@ -260,6 +262,7 @@
   text-align: left;
   font-size: 30rpx;
 }
+
 .on-list-name5{
   margin-top: -156rpx;
   width: 100%;
@@ -297,10 +300,13 @@
   top: 0;
 }
 
+
+
 .main-show-middle{
- height: 1300rpx;
+ /* height: 1300rpx; */
  width: 100%; 
 }
+
 .swiper-tab{
   width: 100%;
   text-align: center;
@@ -316,21 +322,26 @@
   z-index: 1; */
   border-bottom: 1px solid #e9e9e9;
 }
+
 .swiper-tab-item{
   width: 25%; 
   font-size: 32rpx;
   font-weight: bold;
   position: relative;
 }
+
 .swiper-tab-item:first-child{  
   margin-left: 20%;
 }
+
 .swiper-tab-item:nth-child(2){
   margin-right: 20%;
 }
+
 .active{
   color:#000000;
 }
+
 .border-bottom{
   width: 80rpx;
   height: 6rpx;
@@ -344,12 +355,14 @@
 }
 
 .main-show-intro {
-  line-height: 60rpx;
+  /* line-height: 60rpx; */
+  margin-bottom: 130rpx;
   color: #353131;
   padding:10rpx;
   position: relative;
   background: #ffffff;
 }
+
 .main-show-intro-title{
   font-size: 42rpx;
   color: #070707;
@@ -359,12 +372,14 @@
   position: relative;
   margin-left: 20rpx;
 }
+
 .main-show-intro-descript{
   font-size: 30rpx;
   margin-left: 20rpx;
   /* position: relative; */
   /* float:left; */
 }
+
 .main-show-intro-scale{
   font-size: 42rpx;
   color: #070707;
@@ -373,38 +388,33 @@
   margin-left: 20rpx;
   margin-top: 40rpx;
 }
+
 .main-show-intro image{
   margin: 48rpx 0;
   vertical-align: middle;
   width: 100%;
   height: 418rpx;
 }
-.banner{
-  width: 98%;
-  height: 400rpx;
-  background-color: #ffffff;
-}
 
-.banner-swiper{
-  text-align: center;
-  position: relative;
+.swiper-banner{
+  height: 430rpx;
+  width: 730rpx;
 }
 
 .banner-img{
-  width: 735rpx;
-  height: 390rpx;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  border-radius: 8rpx;
-  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
-/* 联系电话 */
+.banner-img image{
+  position: relative;
+  margin-left: 10rpx;
+  width: 710rpx;
+  border-radius: 8rpx;
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
 
 .job-bottom{
-
+  width: 100%;
 }
 
 .job-show-nav{
@@ -416,6 +426,7 @@
   z-index: 2;
   border-top: 2rpx solid #e9e9e9;
 }
+
 .job-show-share{
   width: 70rpx;
   height: 70rpx;
@@ -423,10 +434,12 @@
   display: inline-block;
   border-radius: 0;
 }
+
 .job-show-share image{
   width:70rpx;
   height: 70rpx;
 }
+
 .job-show-apply{
   background: #fdb009;
   color: #ffffff;

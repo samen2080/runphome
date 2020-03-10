@@ -24,13 +24,18 @@
       <view class='main-show-intro-title'>案例介绍</view>
       <view class='main-show-intro-descript'>{{items.smd_desc}}</view>
       <view class='main-show-intro-scale'>案例相关图片</view>
-      <view class='banner'>
+      <!-- <view class='banner'>
           <swiper class='banner-swiper' current='0'>
               <swiper-item wx:for="{{smd_img}}" wx:key='smd_img'>
                 <image src='{{host}}{{item}}' mode='aspectFill' class='banner-img' />
               </swiper-item>
           </swiper>
-      </view>
+      </view> -->
+      <swiper class='swiper-banner' current='0'>
+        <swiper-item class='banner-img' wx:for="{{smd_img}}" wx:key='smd_img'>
+          <image src='{{host}}{{item}}' mode='widthFix'></image>
+        </swiper-item>
+      </swiper>
     </view>
 
     <!-- tab2 -->

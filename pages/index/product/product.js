@@ -128,7 +128,7 @@ Page({
 
       var pageItems = [];
       for (var i = 0; i < that.data.sampleList.length; i++) {
-        routes.PageItems[i].icon = that.data.host + that.data.sampleList[i].smd_img[0];
+        routes.PageItems[i].icon = that.data.host + that.data.sampleList[i].smd_index_img;
         routes.PageItems[i].text = "案例" + that.data.sampleList[i].smd_id;
         routes.PageItems[i].route = "sample/sample?smd_id=" + that.data.sampleList[i].smd_id;
         console.log("20200302 pageitems:", routes.PageItems[i].icon);

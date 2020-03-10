@@ -335,6 +335,7 @@
  width: 100rpx; 
  height: 100rpx; 
  border-radius: 8rpx;
+ box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2); 
   /* border: #ddd solid 1px;  */
 } 
 
