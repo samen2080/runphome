@@ -43,9 +43,13 @@
     
      <view class='index-resume-bottom-white'> </view>
 
-     <view class='apply-bottom'>
+     <!-- <view class='apply-bottom'>
         <button class='apply-show' formType="submit"  data-jobid="{{job_id}}"  hover-class='none'>创建并投递</button>
-     </view>
+        <button class='apply-show' formType="submit"  data-jobid="{{job_id}}"  hover-class='none'>创建并投递</button>
+     </view> -->
+     <view class='apply-bottom' wx:if='{{res_id !=""}}' ><button class='apply-show' formType="submit"  data-jobid="{{job_id}}"  hover-class='none'>投递</button></view>
+     <view class='apply-bottom' wx:if='{{res_id ==""}}' ><button class='apply-show' formType="submit"  data-jobid="{{job_id}}"  hover-class='none'>创建并投递</button></view>
+     
 </form>
     
  

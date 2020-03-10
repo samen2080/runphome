@@ -12,7 +12,8 @@ Page({
     wke_end_year: '2018-07-01',
     // res_work_company_hiredate: '请选择您在此公司的入职时间',
     // res_work_company_hiredate: '2018-07-01',
-    dateColor: '#fa9017'
+    dateColor: '#fa9017',
+    
 
   },
   bindDateChange1: function (e) {
@@ -36,15 +37,21 @@ Page({
   //     dateColor: '#000000'
   //   })
   // },
+
+  
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var that = this;
     var host = getApp().globalData.host;
+    var user_id = wx.getStorageSync("user_info").user_id;
     that.setData({
       host: host,
       job_id: options.job_id,
+      res_id: options.res_id,
+      user_id: user_id,
+
     })
     wx.getStorage({
       key: 'openid',
@@ -65,11 +72,25 @@ Page({
     var that = this;
     // var num = e.currentTarget.dataset.num;
     // console.log("20200215res", e.currentTarget.dataset.i['job_name']);
+    // //获取页面栈
+    // let pages = getCurrentPages();
+    // //获取所需页面
+    // let prevPage = pages[pages.length - 2];//上一页
+    // prevPage.setData({
+    //   // yourData: yourData,//你需要传过去的数据
+    //   wke_com_name: e.detail.value.wke_com_name,
+    //   wke_wrk_content: e.detail.value.wke_wrk_content,
+    //   wke_start_year: that.data.wke_start_year,
+    //   wke_end_year: that.data.wke_end_year,
+    // });
     app.func.req('add_work', {
       wke_com_name: e.detail.value.wke_com_name,
       wke_wrk_content: e.detail.value.wke_wrk_content,
       wke_start_year: that.data.wke_start_year,
       wke_end_year: that.data.wke_end_year,
+      wke_user_id: that.data.user_id,
+      wke_res_id: that.data.res_id,
+
  
       openid: that.data.openid,
     }, 'POST', function (res) {

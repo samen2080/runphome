@@ -14,6 +14,19 @@
 
     <view class='index-resume-exp' >
         <view class='wrap-add'><text>工作经历</text></view>
+        <view wx:for='{{workItems}}' wx:key='key' wx:for-item="i">
+            <view class='work-exp-back'>
+                <view class='work-exp-left'>
+                    <image class='circle-label' src='/images/circle-2.png' mode='aspectFill'></image>
+                    <text class='back-content-time'>{{i.wke_start_year}}至{{i.wke_end_year}}</text>
+                    <text class='back-content-name'>{{i.wke_com_name}}</text>
+                    <text class='back-content-content'>{{i.wke_wrk_content}}</text>
+                </view>
+                <view class='work-exp-right'>
+                    <button hover-class='none' catchtap='cancelWork' data-wkeid="{{i.wke_id}}"><image class='delete-label' src='/images/delete-2.png' mode='aspectFill'></image></button>
+                </view> 
+           </view>  
+        </view> 
         <view class='wrap-experience'>
             <button class='button-add' hover-class='none' data-jobid="{{job_id}}" catchtap='addWorkExp'>+ 添加工作经历</button>
         </view>  
@@ -21,6 +34,19 @@
 
     <view class='index-resume-education' >
         <view class='wrap-add'><text>教育经历</text></view>
+        <view wx:for='{{eduItems}}' wx:key='key' wx:for-item="i">
+            <view class='work-exp-back'>
+                <view class='work-exp-left'>
+                    <image class='circle-label' src='/images/circle-2.png' mode='aspectFill'></image>
+                    <text class='back-content-time'>{{i.edu_graduate_year}}</text>
+                    <text class='back-content-name'>{{i.edu_school_name}}</text>
+                    <text class='back-content-content'>{{i.edu_major}}</text>
+                </view>
+                <view class='work-exp-right'>
+                    <button hover-class='none' catchtap='cancelEdu' data-eduid="{{i.edu_id}}"><image class='delete-label' src='/images/delete-2.png' mode='aspectFill'></image></button>
+                </view> 
+           </view>  
+        </view> 
         <view class='wrap-education'>
             <button class='button-add' hover-class='none' data-jobid="{{job_id}}" catchtap='addEduExp'>+ 添加教育经历</button>
         </view>  

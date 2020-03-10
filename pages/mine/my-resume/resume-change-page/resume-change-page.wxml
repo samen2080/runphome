@@ -1,0 +1,27 @@
+<!--pages/mine/my-resume/resume-change-page/resume-change-page.wxml-->
+<view class='info-edit-page'>
+  <form id='info-edit-form' bindsubmit="formSubmit" bindreset="formReset">
+    <view class='info-edit-form-modify'>
+      <view class='info-edit-input'><text>姓名</text><input type='text' placeholder='请输入姓名' placeholder-class="placeholder" value='{{userInfo.res_user_name}}' name='res_user_name'></input></view>
+      <view class='info-edit-input'><text>手机号码</text><input type='text' placeholder='请输入联系电话' placeholder-class="placeholder" value='{{applyInfo.apj_user_mobile}}' name='apj_user_mobile'></input></view>
+      <view class='info-edit-input'><text>工作年限</text><input type='text' placeholder='请输入工作年限' placeholder-class="placeholder" value='{{userInfo.res_work_years}}' name='res_work_years'></input></view>
+      <view class='info-edit-input2'>
+      <view class='info-edit-intro'>简介</view>
+      <textarea maxlength='200' placeholder='请输入简介' placeholder-class="placeholder" value='{{userInfo.res_intro}}' name='res_intro'></textarea></view>
+      <view class='info-edit-input2'>
+      <view class='info-edit-intro'>专长</view>
+      <textarea maxlength='200' placeholder='请输入专长' placeholder-class="placeholder" value='{{userInfo.res_skills}}' name='res_skills'></textarea></view>
+         
+      <!-- <view class='info-edit-input'><text>工作单位</text><input type='text' placeholder='请输入工作单位' placeholder-class="placeholder" value='{{userInfo.res_user_name}}' name='res_user_name'></input></view>
+      <view class='info-edit-input'><text>岗位名称</text><input type='text' placeholder='请输入岗位名称' placeholder-class="placeholder" value='{{applyInfo.apj_user_mobile}}' name='apj_user_mobile'></input></view>
+      <view class='info-edit-input'><text>开始时间</text><input type='text' placeholder='请输入开始时间' placeholder-class="placeholder" value='{{userInfo.res_user_name}}' name='res_user_name'></input></view>
+      <view class='info-edit-input'><text>结束时间</text><input type='text' placeholder='请输入结束时间' placeholder-class="placeholder" value='{{applyInfo.apj_user_mobile}}' name='apj_user_mobile'></input></view> -->
+      
+    </view>
+    <view class='info-edit-form-btn'>
+      <button formType="submit" class='info-edit-form-sub-btn'>
+        <text class='btn-text'>保存</text>
+      </button>
+    </view>
+  </form>
+</view>

@@ -14,10 +14,16 @@ Page({
   apply: function (e) {
     var that = this;
     var num = e.currentTarget.dataset.num;
-    console.log("20200215res", e.currentTarget.dataset.jobid);
-    wx.navigateTo({
-      url: 'app-job/app-job?job_id=' + e.currentTarget.dataset.jobid + '&job_name=' + e.currentTarget.dataset.i['job_name'] + '&job_salary=' + e.currentTarget.dataset.i['job_salary'] + '&job_county=' + e.currentTarget.dataset.i['job_county'] + '&job_address=' + e.currentTarget.dataset.i['job_address'],
-    })
+
+    that.setData({
+      job_name: e.currentTarget.dataset.i.job_name,
+      job_salary: e.currentTarget.dataset.i.job_salary,
+      job_county: e.currentTarget.dataset.i.job_county,
+      job_address: e.currentTarget.dataset.i.job_address,
+      job_id: e.currentTarget.dataset.job_id
+    });
+
+    that.getResume();
   },
   /**
    * 生命周期函数--监听页面加载
@@ -25,9 +31,11 @@ Page({
   onLoad: function (options) {
     var that = this;
     var host = getApp().globalData.host;
+    var user_id = wx.getStorageSync("user_info").user_id;
     that.setData({
       host: host,
-      com_id: options.com_id
+      com_id: options.com_id,
+      user_id: user_id
     })
     console.log("20200213options.com_id", options.com_id);
     wx.getStorage({
@@ -39,28 +47,11 @@ Page({
         that.getDetail();
       },
     })
+
+   
   },
 
-  // 20200213 start
-  // 大师详情
-  // getDetail: function () {
-  //   var that = this;
-  //   app.func.req('get_list', { query: 1, id: that.data.master_id, openid: that.data.openid }, 'GET', function (res) {
-  //     // console.log(res);
-  //     that.setData({
-  //       user_id: res.user_id,
-  //       user_headimg: res.user_headimg,
-  //       user_nickname: res.user_nickname,
-  //       user_topic_count: res.user_topic_count,
-  //       user_invitation_count: res.user_invitation_count,
-  //       user_followers_count: res.user_followers_count,
-  //       user_following_count: res.user_following_count,
-  //       user_intro: res.user_intro,
-  //       user_skilled: res.user_skilled,
-  //       is_follow: res.follow
-  //     })
-  //   });
-  // },
+
 
   getDetail: function () {
     var that = this;
@@ -73,40 +64,36 @@ Page({
       })
     });
   },
+
+  getResume: function () {
+    var that = this;
+    app.func.req('get_resume', { user_id:that.data.user_id }, 'GET', function (res) {
+      console.log("20200213resumeInfos", that.data.jobid);
+      console.log("20200213res_id", res.res_id);
+      wx.navigateTo({
+        url: 'app-job/app-job?job_id=' + that.data.job_id + '&job_name=' + that.data.job_name + '&job_salary=' + that.data.job_salary + '&job_county=' + that.data.job_county + '&job_address=' + that.data.job_address + '&res_id=' + res.res_id,
+      })
+    });
+  },
   
-  // 动态
-  // getIn: function () {
-  //   var that = this;
-  //   app.func.req('great_dynamic', { pageSize: 10, page: 1, in_user_id: that.data.master_id, query: 1, openid: that.data.openid }, 'GET', function (res) {
-  //     // console.log(res);
-  //     for (var i = 0; i < res.length; i++) {
-  //       if (res[i].in_append.length != 0) {
-  //         var index1 = res[i].in_append[0].lastIndexOf(".");
-  //         var index2 = res[i].in_append[0].length;
-  //         var postf = res[i].in_append[0].substring(index1 + 1, index2).toLowerCase();
-  //         var result = imgPostf.indexOf(postf);
-  //         var result2 = videoPostf.indexOf(postf);
-  //         if (result > -1) {
-  //           res[i].in_append_type = 1;
-  //         } else if (result <= -1 && result2 > -1) {
-  //           res[i].in_append_type = 2;
-  //         } else if (result <= -1 && result2 <= -1) {
-  //           res[i].in_append_type = 0;
-  //         }
-  //       }
-  //     }
-  //     that.setData({
-  //       inList: res
-  //     })
-  //   });
-  // },
+
   getIn: function () {
     var that = this;
     app.func.req('my_company_job/' + that.data.com_id, {}, 'GET', function (res) {
-      console.log("20200214res", res);
+      console.log("20200214res", res.job_address);
       that.setData({
-        inList: res
+        inList: res,
       })
+      // wx.setStorage({
+      //   key: 'companyJob_data',
+      //   data: {
+      //     job_id: res.job_id,
+      //     job_name: res.job_name,
+      //     job_salary: res.job_salary,
+      //     job_county: res.job_county,
+      //     job_address: res.data.job_address,
+      //   },
+      // })
     });
   },
   // 20200213 end

@@ -27,11 +27,13 @@ Page({
   formSubmit: function (e) {
     var that = this;
     // var num = e.currentTarget.dataset.num;
-    // console.log("20200215res", e.currentTarget.dataset.i['job_name']);
+    console.log("20200215res", that.data.res_id);
     app.func.req('add_education', {
       edu_school_name: e.detail.value.edu_school_name,
       edu_major: e.detail.value.edu_major,
       edu_graduate_year: that.data.edu_graduate_year,
+      edu_user_id: that.data.user_id,
+      edu_res_id:that.data.res_id,
     
       openid: that.data.openid,
     }, 'POST', function (res) {
@@ -50,8 +52,11 @@ Page({
   onLoad: function (options) {
     var that = this;
     var host = getApp().globalData.host;
+    var user_id = wx.getStorageSync("user_info").user_id;
     that.setData({
       host: host,
+      user_id: user_id,
+      res_id: options.res_id,
       // job_id: options.job_id,
     })
     wx.getStorage({

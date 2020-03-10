@@ -48,7 +48,7 @@
 
 
 .index-resume-exp{
-  height: 200rpx;
+  /* height: 200rpx; */
   width: 100%;
   background: #ffffff;
   padding: 0rpx 50rpx 0rpx 20rpx;     
@@ -67,6 +67,72 @@
   margin-left: 60rpx;
 }
 
+.work-exp-back{
+  height: 150rpx;
+  width: 100%;
+  position: relative;
+}
+
+.work-exp-left{
+  height: 130rpx;
+  width: 400rpx;
+  position: relative;
+  float: left;
+
+    /* border-width: 2rpx 2rpx 2rpx 2rpx ;
+  border-color: rgb(63, 221, 70);
+  border-style: solid; */
+}
+
+.circle-label{
+  width: 28rpx;
+  height: 28rpx;
+  padding: 0rpx 10rpx 0rpx 0rpx;
+}
+
+.back-content-time{
+  font-size: 28rpx;
+  position: absolute;
+  text-align: left;
+  color: #8f8d8d;
+  /* margin-top: 10rpx; */
+}
+
+.back-content-name{
+  font-size: 30rpx;
+  position: absolute;
+  top: 35rpx;
+  text-align: left;
+  /* margin-top: 10rpx; */
+}
+
+.back-content-content{
+  font-size: 30rpx;
+  text-align: left;
+  position: absolute;
+  top: 70rpx;
+  /* margin-top: 10rpx; */
+}
+
+.work-exp-right{
+  height: 130rpx;
+  width: 300rpx;
+  position: relative;
+  float: left;
+  
+
+  /* border-width: 2rpx 2rpx 2rpx 2rpx ;
+  border-color: rgb(68, 39, 235);
+  border-style: solid; */
+}
+
+.delete-label{
+  width: 35rpx;
+  height: 35rpx;
+  position: relative;
+  margin-left: 250rpx;
+}
+
 .wrap-experience{
   position: relative;
   font-size: 38rpx;
@@ -82,13 +148,13 @@
   font-size: 32rpx;
   color: #ff721c;
   border: 2rpx solid #ff721c;
-  margin-top: 16rpx;
+  margin-bottom: 25rpx;
 }
 
 
 
 .index-resume-education{
-  height: 200rpx;
+  /* height: 200rpx; */
   width: 100%;
   background: #ffffff;
   padding: 0rpx 50rpx 0rpx 20rpx;     

@@ -1,4 +1,4 @@
-/* pages/mine/partner-company/partner-company-show/partner-company-show.wxss */
+/* pages/mine/my-resume/my-resume.wxss */
 page{
   padding-bottom: 100rpx;
 }
@@ -24,6 +24,7 @@ page{
 .contract-show-top-code{
   height: 100rpx;
   line-height: 100rpx;
+  background: white;
   border-top: 2rpx solid #e9e9e9;
   /* padding: 0 24rpx; */
 }
@@ -39,6 +40,25 @@ width: 48%;
 position: relative;
 float: left;
 /* margin-left: 150rpx; */
+}
+.contract-show-date{
+margin-left: 20rpx;
+}
+
+.contract-show-sex{
+margin-left: 100rpx;
+}
+
+.contract-show-module{
+margin-left: 180rpx;
+}
+
+.contract-show-responser{
+margin-left: 130rpx;
+}
+
+.contract-show-rating{
+margin-left: 180rpx;
 }
 .contract-show-top-code text{
   font-size: 32rpx;
@@ -76,6 +96,18 @@ float: left;
 .contract-show-middle-info-list{
   height: 100rpx;
   line-height: 100rpx;
+  border-top: 2rpx solid #e9e9e9;
+  padding: 0 24rpx;
+}
+.contract-show-middle-info-list1{
+  height: 60rpx;
+  line-height: 60rpx;
+  border-top: 2rpx solid #e9e9e9;
+  padding: 0 24rpx;
+}
+.contract-show-middle-info-list2{
+  height: 150rpx;
+  line-height: 70rpx;
   border-top: 2rpx solid #e9e9e9;
   padding: 0 24rpx;
 }
@@ -120,8 +152,19 @@ float: left;
   height: 100rpx;
   line-height: 100rpx;
   background: #ffffff;
+  border-bottom: 2rpx solid #e6e1e1; 
+  padding: 0 24rpx;
+  
+  
+}
+.contract-show-bottom-list3{
+  font-size: 32rpx;
+  height: 680rpx;
+  line-height: 70rpx;
+  background: #ffffff;
   border-bottom: 2rpx solid #e9e9e9; 
   padding: 0 24rpx;
+  overflow-wrap: break-word;
   
   
 }
@@ -129,7 +172,7 @@ float: left;
   border-bottom: none;
 }
 .contract-show-bottom-list text{
-  color: #999999;
+  color: #0a0a0a;
 }
 
 
@@ -173,21 +216,69 @@ float: left;
   color: #FFFFFF;
 }
 
-.add-plan {
-background: #f39800;
-color: #fff;
-top: 100rpx;
+.flex-row {
+display: -webkit-box;
+display: -webkit-flex;
+display: flex;
+-webkit-box-orient: horizontal;
+flex-direction: row;
+
 }
-.contract-show-middle-info-list2{
-  height: 150rpx;
-  line-height: 70rpx;
-  border-top: 2rpx solid #e9e9e9;
-  padding: 0 24rpx;
+
+.bar-bottom {
+position: fixed;
+bottom: 0;
+left: 0;
+z-index: 999;
+width: 100%;
+box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
+height: 110rpx;
 }
+
+.flex-grow-1 {
+min-width: 0;
+-webkit-box-flex: 1;
+-ms-flex-positive: 1;
+flex-grow: 1;
+-ms-flex-negative: 1;
+flex-shrink: 1;
+}
+.flex-y-center {
+display: -webkit-box;
+display: -webkit-flex;
+display: flex;
+-webkit-box-align: center;
+-ms-flex-align: center;
+-ms-grid-row-align: center;
+align-items: center;
+
+}
+
+.flex-x-center {
+display: -webkit-box;
+display: -webkit-flex;
+display: flex;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+}
+.add-cart {
+    background: #f39800;
+    color: #fff;
+}
+
+.buy-now {
+    background: #ff4544;
+    color: rgb(26, 0, 0);
+    font-size: 40rpx;
+
+}
+
 .contract-show-middle-info-list3{
   /* height: 300rpx; */
   line-height: 50rpx;
   border-top: 2rpx solid #e9e9e9;
+  background: white;
   padding: 0 24rpx;
 }
 
@@ -212,12 +303,11 @@ top: 100rpx;
   /* // 通过以上四行实现收缩功能 */
 }
 .ellipsis{
-  -webkit-line-clamp:2;
+  -webkit-line-clamp:1;
    /* // 最多显示3行 */
   opacity: 0.75 
   /* // 透明度75% */
 }
-
 .unellipsis{
   -webkit-line-clamp:0;
    /* // 全部显示 */

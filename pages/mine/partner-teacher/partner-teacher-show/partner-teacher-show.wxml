@@ -60,7 +60,7 @@
     <!-- <view class='contract-show-middle-info-list3'>简介：<text>{{items.tea_teacher_desc}}</text></view> -->
    
     <view class='contract-show-middle-info-list3'>
-     <text class="contract-show-middle-info-list3-desc: {{ellipsis?'ellipsis':'unellipsis'}}" >简介：{{items.tea_teacher_desc}}</text>
+     <text class="contract-show-middle-info-list3-desc: {{ellipsis2?'ellipsis':'unellipsis'}}" >简介：{{items.tea_teacher_desc}}</text>
       <view class='bg-white-ellipsis' bindtap='ellipsis2'>
         <image class='img-ellipsis' src="{{ellipsis2?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
       </view>

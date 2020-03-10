@@ -44,7 +44,7 @@
 
     <!-- <view class='contract-show-middle-info-list3'>经营范围：<text>{{items.com_business_scope}}</text></view> -->
    <view class='contract-show-middle-info-list3'>
-     <text class="contract-show-middle-info-list3-skill {{ellipsis?'ellipsis':'unellipsis'}}" >经营范围：{{items.com_business_scope}}</text>
+     <text class="contract-show-middle-info-list3-skill {{ellipsis2?'ellipsis':'unellipsis'}}" >经营范围：{{items.com_business_scope}}</text>
       <view class='bg-white-ellipsis' bindtap='ellipsis2'>
         <image class='img-ellipsis' src="{{ellipsis2?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
       </view>

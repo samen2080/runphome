@@ -1,0 +1,27 @@
+<!--pages/mine/apply-position/apply-position.wxml-->
+ <view class='on-list'>   
+      <view class='on-list-list' wx:for="{{jobItems}}" wx:key="{{jobItems}}">
+        <!-- <view class='on-list-number-wrap'>
+          <text class='on-list-number'>工作名称:<text>{{item.sch_name}}</text></text>
+          <text class='on-list-status'> {{item.apj_job_id}}</text>
+        </view> -->
+        <view class='on-list-info'>
+          <image src='{{host}}{{item.sch_img}}' mode='aspectFill'></image>
+          <text class='on-list-name'>申请工作编号：{{item.apj_job_id}}</text>
+          <view class='mine-contract-date-wrap'>
+              <text class='mine-contract-date-title'>申请时间:{{item.apj_add_time}}</text>
+              <text class='mine-contract-date-value'>预留手机：{{item.apj_user_mobile}}</text>
+          </view>
+        </view>
+
+        <view class='on-list-btn-wrap'><button class='on-list-remove-btn' hover-class='none' data-job_id="{{item.apj_job_id}}" catchtap='showjobPage'>查看详情</button></view>
+    </view>
+
+   </view>
+
+<!-- 空白页 -->
+
+<view class='kb-page' wx:if='{{item.length <= 0}}'>
+  <image src='/images/kb.png'></image>
+  <view>暂无记录~</view>
+</view>

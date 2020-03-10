@@ -512,6 +512,21 @@
 					"id": -1,
 					"name": "pages/company/company-show/work-exp/work-exp",
 					"pathName": "pages/company/company-show/work-exp/work-exp",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/apply-position/apply-position",
+					"pathName": "pages/mine/apply-position/apply-position",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/my-resume/my-resume",
+					"pathName": "pages/mine/my-resume/my-resume",
+					"query": "",
 					"scene": null
 				}
 			]
