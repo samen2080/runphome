@@ -1,6 +1,6 @@
 <!--pages/company/company-show/app-job/app-job.wxml-->
 
-<form bindsubmit="submitform" bindsubmit="formSubmit" bindreset="formReset">
+<form bindsubmit="formSubmit" bindreset="formReset">
     <view class='index-resum-top' >
           <view class='wrap-left'>  
               <image src='{{user_headimg}}' mode='aspectFill'></image>
@@ -47,8 +47,8 @@
         <button class='apply-show' formType="submit"  data-jobid="{{job_id}}"  hover-class='none'>创建并投递</button>
         <button class='apply-show' formType="submit"  data-jobid="{{job_id}}"  hover-class='none'>创建并投递</button>
      </view> -->
-     <view class='apply-bottom' wx:if='{{res_id !=""}}' ><button class='apply-show' formType="submit"  data-jobid="{{job_id}}"  hover-class='none'>投递</button></view>
-     <view class='apply-bottom' wx:if='{{res_id ==""}}' ><button class='apply-show' formType="submit"  data-jobid="{{job_id}}"  hover-class='none'>创建并投递</button></view>
+     <view class='apply-bottom' wx:if='{{res_id != null}}' ><button class='apply-show' formType="submit"  data-jobid="{{job_id}}"  hover-class='none'>投递</button></view>
+     <view class='apply-bottom' wx:if='{{res_id == null}}' ><button class='apply-show' formType="submit"  data-jobid="{{job_id}}"  hover-class='none'>创建并投递</button></view>
      
 </form>
     

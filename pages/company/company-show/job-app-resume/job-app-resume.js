@@ -203,7 +203,7 @@ Page({
   getWorkExp: function (res_id) {
     var that = this;
     console.log("20200213 function parameter res_id", res_id);
-    app.func.req('get_workexp', { res_id: that.data.res_id }, 'GET', function (res) {
+    app.func.req('get_work_exp', { res_id: that.data.res_id }, 'GET', function (res) {
       //  app.func.req('get_workexp/' + that.data.res_id, {}, 'GET', function (res) {
       console.log("20200213res", res);
       that.setData({
@@ -214,7 +214,7 @@ Page({
 
   getEduExp: function (res_id) {
       var that = this;
-      app.func.req('get_eduexp', { res_id: that.data.res_id }, 'GET', function (res) {
+      app.func.req('get_edu_exp', { res_id: that.data.res_id }, 'GET', function (res) {
         console.log("20200213res", res);
         that.setData({
           eduItems: res

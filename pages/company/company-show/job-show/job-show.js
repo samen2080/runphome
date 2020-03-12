@@ -18,10 +18,31 @@ Page({
   },
   // 申请职位
   applyJob: function (e) {
-    wx.navigateTo({
-      url: '../app-job/app-job?job_id=' + e.currentTarget.dataset.jobid,
-    })
+    var that = this;
+    var num = e.currentTarget.dataset.jobid;
+
+    that.setData({
+      job_name: that.data.inList.job_name,
+      job_salary: that.data.inList.job_salary,
+      job_county: that.data.inList.job_county,
+      job_address: that.data.inList.job_address,
+      job_id: that.data.inList.job_id
+    });
+
+    that.getResume();
   },
+
+  getResume: function () {
+    var that = this;
+    app.func.req('get_resume', { user_id: that.data.user_id }, 'GET', function (res) {
+      console.log("20200213resumeInfos", that.data.job_id);
+      console.log("20200213res_id", res.res_id);
+      wx.navigateTo({
+        url: '../app-job/app-job?job_id=' + that.data.job_id + '&job_name=' + that.data.job_name + '&job_salary=' + that.data.job_salary + '&job_county=' + that.data.job_county + '&job_address=' + that.data.job_address + '&res_id=' + that.data.res_id,
+      })
+    });
+  },
+
   // 购买
   buyPro: function (e) {
     var that = this;

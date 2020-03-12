@@ -6,7 +6,7 @@
           <text class='on-list-status'> {{item.apj_job_id}}</text>
         </view> -->
         <view class='on-list-info'>
-          <image src='{{host}}{{item.sch_img}}' mode='aspectFill'></image>
+          <image src='/images/apply-job.png'></image>
           <text class='on-list-name'>申请工作编号：{{item.apj_job_id}}</text>
           <view class='mine-contract-date-wrap'>
               <text class='mine-contract-date-title'>申请时间:{{item.apj_add_time}}</text>

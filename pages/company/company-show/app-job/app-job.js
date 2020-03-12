@@ -279,9 +279,12 @@ Page({
   formSubmit: function (e) {
     var that = this;
     // var num = e.currentTarget.dataset.num;
-     console.log("20200215res",  e.detail.value.apj_user_mobile);
-    if (that.data.res_id == "") {
-    app.func.req('add_resume', {
+    console.log("20200215res",  e.detail.value.apj_user_mobile);
+    console.log("20200215111that.data.res_id", that.data.res_id);
+
+      if (that.data.res_id == null){
+      console.log("addresume");
+      app.func.req('add_resume', {
       res_user_name: e.detail.value.res_user_name,
       res_sex: that.data.id,
       res_birth_year: that.data.res_birth_year,
