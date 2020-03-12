@@ -157,7 +157,12 @@ Page({
       url: 'search/search',
     })
   },
-
+  // 查看更多
+  moreInfor: function () {
+    wx.navigateTo({
+      url: '../act-list/act-list',
+    })
+  },
 // 内容精选
   getIn:function(){
     var that = this;

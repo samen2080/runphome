@@ -234,7 +234,8 @@
 <!-- 20200213 start -->
 <view class='index-list-box'>
     <view class='index-list-title'>
-     <text>视频课程</text>
+     <text>视频课•热播</text>
+     <view class='index-more'><navigator url='record-broadcast/record-broadcast' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>
     </view>
 
     <view class='index-course-video-list-box'>
@@ -245,11 +246,11 @@
            </view>
            <view class='wrap-right'>  
               <view class='on-list-course-name'>{{i.lsm_lesson_main_name}}</view>
-              <view class='on-list-teacher-name'>主讲老师：{{i.lsm_teacher_name}}</view>
+              <!-- <view class='on-list-teacher-name'>主讲老师：{{i.lsm_teacher_name}}</view> -->
               <view class='on-list-teacher-title'>
-                 <view class='on-list-teacher-company'>润品控股集团</view>
+                 <!-- <view class='on-list-teacher-company'>润品控股集团</view> -->
                  <!-- <view class='on-list-teacher-company'>{{i.lsm_teacher_company_code}}</view>                  -->
-                 <view class='on-list-teacher-level'>{{i.lsm_teacher_class_level}}</view>
+                 <!-- <view class='on-list-teacher-level'>{{i.lsm_teacher_class_level}}</view> -->
               </view>
               <view class='on-list-course-descript'>课程简介：{{i.lsm_lesson_desc}}</view>
            </view>
@@ -288,7 +289,7 @@
 <!-- 热播课程 -->
 <view class='index-list-course-box'>
   <view class='index-list-course-title'>
-    <text>短期培训班</text>
+    <text>培训课•精选</text>
     <view class='index-more'><navigator url='transaction/transaction' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>
   </view>
 
@@ -302,6 +303,7 @@
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[0].old_name}}</text>
           <view class='mine-collect-time'>开班时间:<view>{{proList[0].old_add_time}}</view></view>
+          <view class='mine-collect-reserve'>【预约】<navigator url='../index/transaction/buy/buy?pro_id={{proList[0].old_id}}' hover-class='none'></navigator></view>
         </view>
         <view class='mine-collect-owner-wrap'>
           <image src='{{proList[0].user_headimg}}' mode='aspectFill' class='mine-collect-owner-tx'></image>
@@ -382,20 +384,22 @@
 
 <view class='index-act-box'>
     <view class='index-act-box-title'>
-     <text>最新活动•咨询</text>
+     <text>活动•资讯</text>
     </view>
 
     <view class='index-act-list-box'>
      <view class='index-act-list' wx:for="{{actMainList}}" wx:key="{{actMainList}}" wx:for-item="i">
         <navigator url='activity-broadcast/activity-broadcast?act_id={{i.act_id}}' hover-class='none'>
            <view class='on-list-act-item'>{{i.act_name}}</view>
-           <view class='on-list-act-item'>{{i.act_publish_date}}</view>
+           <view class='on-list-act-time'>{{i.act_publish_date}}</view>
            <view class='on-list-wrap-img'>  
              <image src='{{host}}{{i.act_img[0]}}' mode='widthFix'></image>
            </view>
           </navigator>
        </view>
      </view>
-
+    <view class='index-act-list-bottom'>
+        <button class='more-btn' bindtap='moreInfor'>查看更多</button>
+    </view>
  </view>
 <!-- 20200213 end -->

@@ -1,0 +1,19 @@
+<!--pages/act-list/act-list.wxml-->
+<view class='index-act-box'>
+    <!-- <view class='index-act-box-title'>
+     <text>活动•资讯</text>
+    </view> -->
+
+    <view class='index-act-list-box'>
+     <view class='index-act-list' wx:for="{{actMainList}}" wx:key="key" wx:for-item="i">
+        <navigator url='../index/activity-broadcast/activity-broadcast?act_id={{i.act_id}}' hover-class='none'>
+           <view class='on-list-act-item'>{{i.act_name}}</view>
+           <view class='on-list-act-time'>{{i.act_publish_date}}</view>
+           <view class='on-list-wrap-img'>  
+             <image src='{{host}}{{i.act_img[0]}}' mode='widthFix'></image>
+           </view>
+          </navigator>
+       </view>
+     </view>
+    
+ </view>

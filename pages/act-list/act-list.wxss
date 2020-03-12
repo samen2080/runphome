@@ -1,0 +1,42 @@
+/* pages/act-list/act-list.wxss */
+.index-act-box{
+  margin-top: 24rpx;
+  overflow: hidden;
+}
+
+.index-act-list-box{
+  width: 100%;
+}
+
+.index-act-list{
+  height: 490rpx;
+  width: 100%;
+  background: #ffffff;
+  padding: 0rpx 50rpx 0rpx 20rpx;     
+  font-size: 32rpx; 
+  position: relative;
+  float: left; 
+  margin-bottom: 10rpx;
+}
+
+.on-list-act-item{
+  margin-top: 10rpx;
+}
+
+.on-list-act-time{
+  margin-top: 10rpx;
+  color: rgb(167, 164, 164);
+}
+
+.on-list-act-date{
+  font-size: 28rpx;
+}
+
+.on-list-wrap-img image{
+  /* height: 300rpx; */
+  width: 720rpx;
+  margin-top: 10rpx;
+  border-radius: 8rpx;
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+

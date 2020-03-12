@@ -26,6 +26,7 @@
     "pages/index/master/master-fans/master-fans",
     "pages/index/master/master-subject/master-subject",
     "pages/community/community",
+    "pages/act-list/act-list",
     "pages/company/company",
     "pages/company/company-show/company-show",
     "pages/company/company-show/job-show/job-show",
@@ -136,7 +137,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "品家科技",
+    "navigationBarTitleText": "智造人才云",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"

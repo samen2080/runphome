@@ -1036,7 +1036,7 @@ page{
   color:  #eed8c1;
 }
 .mine-collect-name-wrap{
-  height: 160rpx;
+  height: 260rpx;
   padding: 0 16rpx 0;
   line-height: 48rpx;
   text-align: justify;
@@ -1044,7 +1044,9 @@ page{
   position: relative;
 }
 
-
+.mine-collect-reserve{
+  margin-left: 200rpx;
+}
 
 .index-act-box{
   margin-top: 24rpx;
@@ -1080,6 +1082,11 @@ page{
   margin-top: 10rpx;
 }
 
+.on-list-act-time{
+  margin-top: 10rpx;
+  color: rgb(167, 164, 164);
+}
+
 .on-list-act-date{
   font-size: 28rpx;
 }
@@ -1090,4 +1097,17 @@ page{
   margin-top: 10rpx;
   border-radius: 8rpx;
   box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.index-act-list-bottom{
+  width: 100%;
+  position: relative;
+}
+
+.more-btn{
+ font-size: 28rpx;
+ width: 750rpx;
+ background: white;
+ /* margin-top: 30rpx; */
+ /* height: 60rpx; */
 }
