@@ -52,12 +52,18 @@ Page({
       code: e.detail.value
     })
   },
+
   //获取短信验证码
   getCode(e) {
     console.log('获取验证码');
     var that = this;
-    zhenzisms.client.init('https://sms_developer.zhenzikj.com', 'appId', 'appSecret');
-    zhenzisms.client.send(function (res) {
+    // zhenzisms.client.init('https://sms_developer.zhenzikj.com', 'appId', 'appSecret');
+    // zhenzisms.client.send(function (res) {
+    //   if (res.data.code == 0) {
+    //     that.timer();
+    //     return;
+    //   }
+    app.func.req('send_sms/' + that.data.phone, {}, 'GET', function (res) {
       if (res.data.code == 0) {
         that.timer();
         return;
@@ -96,7 +102,7 @@ Page({
     })
   },
   //保存
-  save(e) {
+  confirm(e) {
     console.log('姓名: ' + this.data.name);
     console.log('手机号: ' + this.data.phone);
     console.log('验证码: ' + this.data.code);
@@ -106,6 +112,5 @@ Page({
     wx.navigateTo({
       url: '../index/transaction/buy/reserve-success',
     })
-    
   }
 })
