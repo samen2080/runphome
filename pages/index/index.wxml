@@ -303,7 +303,8 @@
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[0].old_name}}</text>
           <view class='mine-collect-time'>开班时间:<view>{{proList[0].old_add_time}}</view></view>
-          <view class='mine-collect-reserve'>【预约】<navigator url='../index/transaction/buy/buy?pro_id={{proList[0].old_id}}' hover-class='none'></navigator></view>
+          <view class='mine-collect-cheap'>早鸟价:￥<text>20000.00</text></view>
+          <button class='mine-collect-reserve' data-proid="{{proList[0].old_id}}" bindtap="reserve">【预约】</button>
         </view>
         <view class='mine-collect-owner-wrap'>
           <image src='{{proList[0].user_headimg}}' mode='aspectFill' class='mine-collect-owner-tx'></image>
@@ -324,6 +325,8 @@
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[1].old_name}}</text>
           <view class='mine-collect-time'>开班时间:<view>{{proList[1].old_add_time}}</view></view>
+         <view class='mine-collect-cheap'>早鸟价:￥<text>20000</text></view>
+          <button class='mine-collect-reserve' data-proid="{{proList[0].old_id}}" bindtap="reserve">【预约】</button>
         </view>
         <view class='mine-collect-owner-wrap'>
           <image src='{{proList[1].user_headimg}}' mode='aspectFill' class='mine-collect-owner-tx'></image>
@@ -345,6 +348,8 @@
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[2].old_name}}</text>
           <view class='mine-collect-time'>开班时间:<view>{{proList[2].old_add_time}}</view></view>
+          <view class='mine-collect-cheap'>早鸟价:￥<text>20000</text></view>
+          <button class='mine-collect-reserve' data-proid="{{proList[0].old_id}}" bindtap="reserve">【预约】</button>
         </view>
 
         <view class='mine-collect-owner-wrap'>
@@ -366,6 +371,8 @@
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[3].old_name}}</text>
           <view class='mine-collect-time'>开班时间:<view>{{proList[3].old_add_time}}</view></view>
+          <view class='mine-collect-cheap'>早鸟价:￥<text>20000</text></view>
+          <button class='mine-collect-reserve' data-proid="{{proList[0].old_id}}" bindtap="reserve">【预约】</button>
         </view>
         <view class='mine-collect-owner-wrap'>
           <image src='{{proList[3].user_headimg}}' mode='aspectFill' class='mine-collect-owner-tx'></image>

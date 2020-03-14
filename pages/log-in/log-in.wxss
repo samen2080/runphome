@@ -1,0 +1,84 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 90%;
+  margin: 50rpx auto;
+}
+ 
+.row{
+  position: relative;
+  height: 80rpx;
+  width: 90%;
+  border-radius: 10rpx;
+  background: #fff;
+  margin-bottom: 5rpx;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  /* border: rgb(0, 0, 0) solid 1px; */
+}
+.left{
+  position: absolute;
+  top:278rpx;
+  left: 4rpx;
+  width: 80rpx;
+  height: 80rpx;
+  /* border: rgb(0, 0, 0) solid 1px; */
+}
+.left image{
+  width: 80rpx;
+  height: 80rpx;
+  position: relative;
+  margin-left: 1rpx;
+}
+
+.row input{
+  width: 100%;
+  height:100%;
+   /* border: rgb(0, 0, 0) solid 1px; */
+}
+
+.codeBtn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #bbb;
+  width: 30%;
+  font-size: 26rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.subBtn{
+  width: 200rpx;
+  height: 80rpx;
+  background: #fff;
+  color: #000;
+  border-radius: 50rpx;
+  line-height: 80rpx;
+}
+
+.next{
+  position: absolute;
+  top:392rpx;
+  left: 12rpx;
+  width: 80rpx;
+  height: 80rpx;
+  /* border: rgb(0, 0, 0) solid 1px; */
+}
+.next image{
+  width: 60rpx;
+  height: 70rpx;
+  position: relative;
+  margin-left: 1rpx;
+}
+
+.save{
+  top:30rpx;
+  width:670rpx;
+  height: 100rpx;
+  border-radius: 30rpx;
+  background: rgb(116, 116, 245);
+}

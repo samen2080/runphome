@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/start/start",
+    "pages/register/register",
+    "pages/log-in/log-in",
     "pages/index/index",
     "pages/index/search/search",
     "pages/index/ad/ad",
@@ -16,6 +18,7 @@
     "pages/index/transaction/owner/owner",
     "pages/index/transaction/buy/buy",
     "pages/index/transaction/buy/success",
+    "pages/index/transaction/buy/reserve-success",
     "pages/index/transaction/publish/publish",
     "pages/index/transaction/publish/category",
     "pages/index/transaction/publish/info",

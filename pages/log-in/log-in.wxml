@@ -1,0 +1,24 @@
+<!--pages/log-in/log-in.wxml-->
+<view class="container">
+  <!-- <view class='row'>
+     <input placeholder='请输入姓名' bindinput='bindNameInput'/> 
+  </view> -->
+    <view class="left">
+        <image  src="/images/phone-1.png"></image>
+     </view>
+  <view class='row'>
+      <input placeholder='请输入手机号' bindinput='bindPhoneInput'/> 
+  </view>
+  <view class="next">
+        <image  src="/images/number-.png"></image>
+     </view>
+  <view class='row'>
+     <input placeholder='请输验证码' bindinput='bindCodeInput' style='width:70%;'/> 
+     <button class='codeBtn' bindtap='getCode' hidden='{{hidden}}' disabled='{{btnDisabled}}'>{{btnValue}}</button>
+  </view>
+  <view>
+     <button class='save' bindtap='save' >确定</button>
+  </view>
+  
+</view>
+

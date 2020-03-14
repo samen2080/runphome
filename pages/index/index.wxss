@@ -907,7 +907,7 @@ page{
 
 .mine-collect-list-1{
   width: 340rpx;
-  height: 484rpx;
+  height: 580rpx;
   background: #ffffff;
   border: 2rpx solid #fffcfc;
   float: left;
@@ -934,6 +934,7 @@ page{
   position: relative;
   height:74rpx;
   background: #3e4468;
+  border: rgb(0, 0, 0) solid 1px;
 }
 .mine-collect-owner-wrap .mine-collect-owner-tx{
   width: 50rpx;
@@ -949,9 +950,9 @@ page{
 }
 .mine-collect-list-3{
   width: 340rpx;
-  height: 680rpx;
+  height: 580rpx;
   background: #ffffff;
-  border: 2rpx solid  #ffffff;
+  border: 2rpx solid  #fbfafc;
   float: left;
   margin-left: 24rpx;
   margin-top: 20rpx;
@@ -960,7 +961,7 @@ page{
 }
 .mine-collect-list-3 .mine-collect-pic-wrap{
   width: 100%;
-  height: 444rpx;
+  height: 248rpx;
   position: relative;
 }
 .mine-collect-list-3 .mine-collect-pic{
@@ -969,18 +970,20 @@ page{
 }
 .mine-collect-list-2{
   width: 340rpx;
-  height: 680rpx;
+  height: 580rpx;
   background: #ffffff;
-  border: 2rpx solid  #ffffff;
+  border: 2rpx solid  #fdfcfc;
   float: right;
   margin-right: 24rpx;
   margin-top: 20rpx;
   border-radius: 4rpx;
   overflow: hidden;
+
+ 
 }
 .mine-collect-list-2 .mine-collect-pic-wrap{
   width: 100%;
-  height: 444rpx;
+  height: 248rpx;
   position: relative;
 }
 .mine-collect-list-2 .mine-collect-pic{
@@ -989,14 +992,15 @@ page{
 }
 .mine-collect-list-4{
   width: 340rpx;
-  height: 484rpx;
+  height: 580rpx;
   background: #ffffff;
-  border: 2rpx solid #ffffff;
+  border: 2rpx solid #fcfdfd;
   float: right;
   margin-right: 24rpx;
   margin-top: 20rpx;
   border-radius: 4rpx;
   overflow: hidden;
+
 }
 .mine-collect-list-4 .mine-collect-pic-wrap{
   width: 100%;
@@ -1036,7 +1040,7 @@ page{
   color:  #eed8c1;
 }
 .mine-collect-name-wrap{
-  height: 260rpx;
+  height: 240rpx;
   padding: 0 16rpx 0;
   line-height: 48rpx;
   text-align: justify;
@@ -1045,7 +1049,10 @@ page{
 }
 
 .mine-collect-reserve{
-  margin-left: 200rpx;
+  margin-top: -55rpx;
+  font-size: 28rpx;
+  margin-left: 210rpx;
+  color: red;
 }
 
 .index-act-box{

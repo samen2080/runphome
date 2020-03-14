@@ -142,7 +142,7 @@ Page({
     });
 
   },
-
+  
 
   // 轮播
   swiperChange: function (e) {
@@ -241,7 +241,7 @@ Page({
       } 
     }    
   },
-
+  
   // 内容精选收藏
   inCollect: function (item,coll_good_id){
     var that = this;
@@ -293,7 +293,7 @@ Page({
       icon: 'none'
     })
   },
-
+ 
   /**
    * 用户点击右上角分享
    */
@@ -302,5 +302,13 @@ Page({
       // 来自页面内转发按钮
       // console.log(res.target);
     }
-  }
+  },
+  //预约
+    reserve: function (e) {
+    var that = this;
+      console.log("20200313", that.data.proList[0].old_id);
+    wx.navigateTo({
+      url: '../log-in/log-in?pro_id =' + that.data.proList[0].old_id,
+    })
+  },
 })
