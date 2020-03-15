@@ -11,23 +11,35 @@ Page({
     name: '',
     phone: '',
     code: '',
-    second: 60
+    second: 60,
+    old_id: 0
   },
+
   onLoad: function (options) {
     var that = this;
     var host = getApp().globalData.host;
     that.setData({
       host: host,
-      // pro_id: options.pro_id
-    })
-
+      old_id: options.old_id,
+      user_id: options.user_id
+    });
+    wx.getStorage({
+      key: 'openid',
+      success: function (res) {
+        that.setData({
+          openid: res.data
+        });
+      }
+    });
   },
+
   //姓名输入
   bindNameInput(e) {
     this.setData({
       name: e.detail.value
     })
   },
+
   //手机号输入
   bindPhoneInput(e) {
     console.log(e.detail.value);
@@ -46,6 +58,7 @@ Page({
       })
     }
   },
+
   //验证码输入
   bindCodeInput(e) {
     this.setData({
@@ -64,7 +77,12 @@ Page({
     //     return;
     //   }
     app.func.req('send_sms/' + that.data.phone, {}, 'GET', function (res) {
-      if (res.data.code == 0) {
+      console.log("20200315", res);
+      if (res != "400") {
+        console.log("20200315A");
+        that.setData({
+          verfity_code: res
+        });
         that.timer();
         return;
       }
@@ -73,9 +91,10 @@ Page({
         icon: 'none',
         duration: 2000
       })
-    }, '15811111111', '验证码为:3322');
+    });
 
   },
+
   timer: function () {
     let promise = new Promise((resolve, reject) => {
       let setTimer = setInterval(
@@ -101,16 +120,46 @@ Page({
       clearInterval(setTimer)
     })
   },
+
   //保存
   confirm(e) {
-    console.log('姓名: ' + this.data.name);
-    console.log('手机号: ' + this.data.phone);
-    console.log('验证码: ' + this.data.code);
-    //省略提交过程
     var that = this;
-    console.log('20200313A' + that.data.pro_id);
-    wx.navigateTo({
-      url: '../index/transaction/buy/reserve-success',
-    })
+    console.log('姓名: ' + that.data.name);
+    console.log('手机号: ' + that.data.phone);
+    console.log('验证码: ' + that.data.code);
+    if (that.data.verfity_code != that.data.code) {
+      wx.showToast({
+        title: "验证码错误",
+        icon: 'none',
+        duration: 2000
+      });
+    } else {
+      // console.log('20200313A' + that.data.old_id);
+      if (that.data.old_id != 0){
+          wx.navigateTo({
+          url: '../index/transaction/buy/reserve-success',
+          });
+      }else{
+        app.func.req('update_user', {
+          user_id: that.data.user_id,
+          user_phone: that.data.phone,
+          user_phone_check: 1,
+          openid: that.data.openid,
+        }, 'POST', function (res) {
+          if (res.code == 200) {
+            wx.setStorage({
+              key: 'user_info',
+              data: {
+                user_phone_check: 1
+              },
+            })
+            wx.navigateBack({
+              delta: 1
+            })
+
+          }
+        })
+      }
+    }
   }
 })

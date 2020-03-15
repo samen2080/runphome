@@ -308,7 +308,7 @@ Page({
     var that = this;
       console.log("20200313", that.data.proList[0].old_id);
     wx.navigateTo({
-      url: '../log-in/log-in?pro_id =' + that.data.proList[0].old_id,
+      url: '../log-in/log-in?old_id=' + that.data.proList[0].old_id
     })
   },
 })

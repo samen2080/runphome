@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    roleArr: ['超级管理员', '管理员', '学校', '招生老师', '上课老师', '班主任', '学生', '企业', '猎头', '游客'],
+    // roleArr: ['超级管理员', '管理员', '学校', '招生老师', '上课老师', '班主任', '学生', '企业', '猎头', '游客'],
+    roleArr: ['学校', '招生老师', '上课老师', '班主任', '学生', '企业', '猎头', '游客'],
   },
 
   /**
@@ -23,10 +24,42 @@ Page({
   roleSelect: function (e) {
     var that = this;
     var index = e.target.dataset.id;
+    var role_type = 0;
+    switch (that.data.roleArr[index]) {
+      case "超级管理员":
+        role_type = "1";
+        break;
+      case "管理员":
+        role_type = "2";
+        break;
+      case "学校":
+        role_type = "3";
+        break;
+      case "招生老师":
+        role_type = "4";
+        break;
+      case "上课老师":
+        role_type = "5";
+        break;
+      case "班主任":
+        role_type = "6";
+        break;
+      case "学生":
+        role_type = "7";
+        break;
+      case "企业":
+        role_type = "8";
+        break; 
+      case "猎头":
+        role_type = "9";
+        break;
+      case 游客:
+        role_type = "10";
+    } ;
     wx.setStorage({
       key: 'login_role',
       data: {
-        role_type: index + 1
+        role_type: role_type
       },
       success: function () {
         console.log("20200213onload check user_id", that.data.user_id);

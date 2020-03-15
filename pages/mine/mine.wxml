@@ -24,12 +24,15 @@
     <!-- 20200213 start -->
     <!-- <text class='mine-info-name'>{{userInfo.user_nickname}}</text> -->
     <text class='mine-info-name'>{{userInfo.user_nickname}}(id: {{userInfo.user_id}}){{userInfo.user_identity==1?"超级管理员":userInfo.user_identity==2?"润品管理员":userInfo.user_identity==3?"学校":userInfo.user_identity==4?"招生老师":userInfo.user_identity==5?"上课老师":userInfo.user_identity==6?"班主任":userInfo.user_identity==7?"学生":userInfo.user_identity==8?"企业":userInfo.user_identity==9?"猎头":"游客"}} </text>
+     <!-- <text class='mine-info-name'>{{userInfo.user_nickname}}(id: {{userInfo.user_identity==1?"学校":userInfo.user_identity==2?"招生老师":userInfo.user_identity==3?"上课老师":userInfo.user_identity==4?"班主任":userInfo.user_identity==5?"学生":userInfo.user_identity==6?"企业":userInfo.user_identity==7?"猎头":"游客"}})</text> -->
     <!-- 20200213 end -->
     <view class='sign-in' catchtap='signIn'>签到</view>
     <!-- <view class='sign-in' wx:if='{{isSign == true}}'>已签到</view> -->
     <!-- <text class='mine-info-signature'>签名：<text id='mine-info-signature'>{{userInfo.user_sign == '' ? "未填写":userInfo.user_sign}}</text></text> -->
-    <text class='mine-info-signature' wx:if='{{userInfo.user_identity == 3}}'>{{items.sch_name}}</text>
-     <text class='mine-info-signature' wx:if='{{userInfo.user_identity == 8}}'>{{companyInfo.com_name}}</text>
+    <!-- <text class='mine-info-signature' wx:if='{{userInfo.user_identity == 3}}'>{{items.sch_name}}</text> -->
+     <!-- <text class='mine-info-signature' wx:if='{{userInfo.user_identity == 8}}'>{{companyInfo.com_name}}</text> -->
+     <text class='mine-info-signature'>手机号:{{userInfo.user_phone_check==0?"未验证":"已验证"}}</text>
+     <view class='mobile-verify' wx:if='{{userInfo.user_phone_check == 0}}' catchtap='verify'>去验证</view>
     <image src='/images/arrow-r.png' class='mine-arrow'></image></navigator>
       <!-- 20200213 add start -->
     <view class='role-switch' catchtap='roleSwitch'>切换</view>

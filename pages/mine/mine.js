@@ -45,7 +45,14 @@ Page({
     })
   },
   // 20200213 add end
-
+  verify: function (e) {
+    var that = this;
+    var user_id = wx.getStorageSync("user_info").user_id;
+    var old_id = 0;
+    wx.navigateTo({
+      url: '../log-in/log-in?user_id=' + user_id + '&old_id=' + old_id,
+    })
+  },
   closeSignIn: function (e) {
     var that = this;
     that.setData({
@@ -187,7 +194,8 @@ Page({
                     key: 'user_info',
                     data: {
                       user_identity: res.user_identity,
-                      user_id: res.user_id
+                      user_id: res.user_id,
+                      user_phone_check: res.user_phone_check,
                     },
                     success: function () {
                        //n.getUser(); 从onshow方法剪贴过来，实现img, nickname 从无到有的变化
