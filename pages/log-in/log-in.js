@@ -122,12 +122,25 @@ Page({
   },
 
   //保存
-  confirm(e) {
+  formSubmit(e) {
     var that = this;
+    var myreg = /^1\d{10}$/;
     console.log('姓名: ' + that.data.name);
     console.log('手机号: ' + that.data.phone);
     console.log('验证码: ' + that.data.code);
-    if (that.data.verfity_code != that.data.code) {
+    if (e.detail.value.user_name.length <= 0) {
+      wx.showToast({
+        title: '姓名不能为空',
+        icon: 'none'
+      })
+    } else if (!myreg.test(e.detail.value.user_phone)) {
+      wx.showToast({
+        title: '请输入正确的手机号',
+        icon: 'none'
+      })
+    } else if 
+    // if
+     (that.data.verfity_code != that.data.code) {
       wx.showToast({
         title: "验证码错误",
         icon: 'none',
@@ -136,12 +149,24 @@ Page({
     } else {
       // console.log('20200313A' + that.data.old_id);
       if (that.data.old_id != 0){
+        app.func.req('update_user', {
+          user_id: that.data.user_id,
+          user_name: that.data.name,
+          user_phone: that.data.phone,
+          user_phone_check: 1,
+          openid: that.data.openid,
+        }, 'POST', function (res) {
+          if (res.code == 200) {
           wx.navigateTo({
           url: '../index/transaction/buy/reserve-success',
           });
+         }
+       })
+        
       }else{
         app.func.req('update_user', {
           user_id: that.data.user_id,
+          user_name: that.data.name,
           user_phone: that.data.phone,
           user_phone_check: 1,
           openid: that.data.openid,
@@ -159,7 +184,7 @@ Page({
 
           }
         })
-      }
+      };
     }
   }
 })

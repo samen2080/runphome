@@ -27,7 +27,16 @@ Page({
         that.setData({
           openid: res.data
         });
+        // 20200316 start
+      app.func.req('get_user', { openid: res.data }, 'GET', function (res) {
+          console.log("2020=====", res);
+          that.setData({
+            userInfo: res,
+            user_headimg: res.user_headimg
+          })
 
+        });
+        // 20200316 end
         that.getIn();
         
         // 课程区
@@ -306,9 +315,24 @@ Page({
   //预约
     reserve: function (e) {
     var that = this;
+
+      console.log("20200313", that.data.userInfo.user_id);
       console.log("20200313", that.data.proList[0].old_id);
-    wx.navigateTo({
-      url: '../log-in/log-in?old_id=' + that.data.proList[0].old_id
-    })
+      
+    if (that.data.userInfo.user_id == null) {
+        wx.navigateTo({
+          url: '../mine/mine?old_id=' + that.data.proList[0].old_id
+        })
+    }else{
+       if (that.data.userInfo.user_phone_check == 0) {
+         wx.navigateTo({
+           url: '../log-in/log-in?old_id=' + that.data.proList[0].old_id + '&user_id=' + user_id
+         })
+       }else{   
+          wx.navigateTo({
+            url: 'transaction/buy/reserve-success?old_id=' + that.data.proList[0].old_id + '&user_id=' + user_id
+            })
+       }
+    }
   },
 })

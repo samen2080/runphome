@@ -12,8 +12,9 @@ Page({
     // 20200213 add start
     roleChooseShow: true,
     loginInShow: false,
-    user_identity: 0
+    user_identity: 0,
     // 20200213 add end
+    onShowCall: 0
     // isSign: false
   },
 
@@ -72,16 +73,22 @@ Page({
     console.log("20200213user_identity", user_identity);
     this.setData({
       user_identity: user_identity
-    })
+    });
+    // 20200316 add start
+    this.setData({
+      old_id: options.old_id
+    });
+    // 20200316 add end
   },
 
    getUser: function () {
     var that = this;
     var user_identity = wx.getStorageSync("user_info").user_identity;
     var user_id = wx.getStorageSync("user_info").user_id;
+     console.log("getUserRoutine");
      console.log("20200213user_id", user_id);
     app.func.req('get_user', { openid: that.data.openid }, 'GET', function (res) {
-      console.log("20200213user_identity",user_identity);
+      console.log("20200213user_identity",that.data.user_identity);
       that.setData({
         userInfo: res,
         user_identity: user_identity
@@ -139,7 +146,6 @@ Page({
          },
        })
      });
-    
   },
   //20200109 系统升级为符合微信登录条件根据微信官方20190901文件 start
   // bindGetUserInfo: function (e) {
@@ -199,7 +205,17 @@ Page({
                     },
                     success: function () {
                        //n.getUser(); 从onshow方法剪贴过来，实现img, nickname 从无到有的变化
+                        console.log("20200316changedata");
                         n.getUser();
+                      //  20200316 add start
+                      console.log("20200213old_id", n.data.old_id);
+                      if (n.data.old_id != null) {
+                          var user_id = wx.getStorageSync("user_info").user_id;
+                          wx.navigateTo({
+                            url: '../log-in/log-in?old_id=' + n.data.old_id + '&user_id=' + user_id
+                          })
+                      };
+                         // 20200316 add end
                     }
                   })
                   //20200213 end
@@ -245,6 +261,11 @@ Page({
    */
   onShow: function () {
     var that = this;
+    // 20200316 add start
+    that.setData({
+      onShowCall: 1
+    }); 
+    //20200316 add end
     wx.getStorage({
       key: 'openid',
       success: function (res) {
