@@ -96,7 +96,7 @@ page{
   color: #fcfdfc;
   font-size: 24rpx;
   position: absolute;
-  right: 284rpx;
+  right: 335rpx;
   top: 95rpx;
   border-radius: 12rpx;
   text-align: center;
