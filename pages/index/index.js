@@ -15,11 +15,16 @@ Page({
     template.tabbar("tabBar", 0, this)//0表示第一个tabbar
     var that = this;
     var host = getApp().globalData.host;
-    var user_id = wx.getStorageSync("user_info").user_id;
+    // 20200317 add start
+    // var user_id = wx.getStorageSync("user_info").user_id;
+    // that.setData({
+    //   host: host,
+    //   user_id: user_id
+    // });
     that.setData({
-      host: host,
-      user_id: user_id
+      host: host
     });
+    // 20200317 add end
 
     wx.getStorage({
       key: 'openid',
