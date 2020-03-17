@@ -299,11 +299,11 @@
         <view class='mine-collect-pic-wrap'>
           <image src='{{host}}{{proList[0].old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
           <view class='mine-collect-price'>￥<text>{{proList[0].old_money}}</text></view>
-        </view>
+        </view></navigator>
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[0].old_name}}</text>
           <view class='mine-collect-time'>开班时间:<view>{{proList[0].old_add_time}}</view></view>
-          <view class='mine-collect-cheap'>早鸟价:￥<text>20000.00</text></view>
+          <view class='mine-collect-cheap'>早鸟价:￥{{proList[0].old_early_money}}</view>
           <button class='mine-collect-reserve' data-proid="{{proList[0].old_id}}" bindtap="reserve">【预约】</button>
         </view>
         <view class='mine-collect-owner-wrap'>
@@ -314,18 +314,18 @@
             <image src='/images/collect.png' wx:if='{{proList[0].collect == 1}}' data-collid='{{proList[0].old_id}}' catchtap='collect'></image>
             <text>{{proList[0].old_collect}}</text>
           </view>
-        </view></navigator>
+        </view>
       </view>
 
       <view class='mine-collect-list-2' wx:if='{{proList.length > 1}}'><navigator url='../mine/product-show/product-show?pro_id={{proList[1].old_id}}' hover-class='none'>
         <view class='mine-collect-pic-wrap'>
           <image src='{{host}}{{proList[1].old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
           <view class='mine-collect-price'>￥<text>{{proList[1].old_money}}</text></view>
-        </view>
+        </view></navigator>
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[1].old_name}}</text>
           <view class='mine-collect-time'>开班时间:<view>{{proList[1].old_add_time}}</view></view>
-         <view class='mine-collect-cheap'>早鸟价:￥<text>20000</text></view>
+         <view class='mine-collect-cheap'>早鸟价:￥{{proList[1].old_early_money}}</view>
           <button class='mine-collect-reserve' data-proid="{{proList[0].old_id}}" bindtap="reserve">【预约】</button>
         </view>
         <view class='mine-collect-owner-wrap'>
@@ -336,19 +336,19 @@
             <image src='/images/collect.png' wx:if='{{proList[1].collect == 1}}' data-collid='{{proList[1].old_id}}' catchtap='collect'></image>
             <text>{{proList[1].old_collect}}</text>
           </view>
-        </view></navigator>
+        </view>
       </view>
 
       <view class='mine-collect-list-3' wx:if='{{proList.length > 2}}'><navigator url='../mine/product-show/product-show?pro_id={{proList[2].old_id}}' hover-class='none'>
         <view class='mine-collect-pic-wrap'>
           <image src='{{host}}{{proList[2].old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
           <view class='mine-collect-price'>￥<text>{{proList[2].old_money}}</text></view>
-        </view>
+        </view></navigator>
 
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[2].old_name}}</text>
           <view class='mine-collect-time'>开班时间:<view>{{proList[2].old_add_time}}</view></view>
-          <view class='mine-collect-cheap'>早鸟价:￥<text>20000</text></view>
+          <view class='mine-collect-cheap'>早鸟价:￥{{proList[2].old_early_money}}</view>
           <button class='mine-collect-reserve' data-proid="{{proList[0].old_id}}" bindtap="reserve">【预约】</button>
         </view>
 
@@ -360,18 +360,18 @@
             <image src='/images/collect.png' wx:if='{{proList[2].collect == 1}}' data-collid='{{proList[2].old_id}}' catchtap='collect'></image>
             <text>{{proList[2].old_collect}}</text>
           </view>
-        </view></navigator>
+        </view>
       </view>
 
       <view class='mine-collect-list-4' wx:if='{{proList.length > 3}}'><navigator url='../mine/product-show/product-show?pro_id={{proList[3].old_id}}' hover-class='none'>
         <view class='mine-collect-pic-wrap'>
           <image src='{{host}}{{proList[3].old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
           <view class='mine-collect-price'>￥<text>{{proList[3].old_money}}</text></view>
-        </view>
+        </view></navigator>
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[3].old_name}}</text>
           <view class='mine-collect-time'>开班时间:<view>{{proList[3].old_add_time}}</view></view>
-          <view class='mine-collect-cheap'>早鸟价:￥<text>20000</text></view>
+          <view class='mine-collect-cheap'>早鸟价:￥{{proList[3].old_early_money}}</view>
           <button class='mine-collect-reserve' data-proid="{{proList[0].old_id}}" bindtap="reserve">【预约】</button>
         </view>
         <view class='mine-collect-owner-wrap'>
@@ -382,7 +382,7 @@
             <image src='/images/collect.png' wx:if='{{proList[3].collect == 1}}' data-collid='{{proList[3].old_id}}' catchtap='collect'></image>
             <text>{{proList[3].old_collect}}</text>
           </view>
-        </view></navigator>
+        </view>
       </view>
    </view> 
 </view>

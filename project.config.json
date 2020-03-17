@@ -547,6 +547,27 @@
 					"id": -1,
 					"name": "pages/log-in/log-in",
 					"pathName": "pages/log-in/log-in",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/transaction/buy/reserve-success",
+					"pathName": "pages/index/transaction/buy/reserve-success",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/transaction/buy/reserve-success",
+					"pathName": "pages/index/transaction/buy/reserve-success",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/buy/reserve-show/reserve-show",
+					"pathName": "pages/mine/buy/reserve-show/reserve-show",
 					"scene": null
 				}
 			]

@@ -68,3 +68,11 @@
   margin-top: 15rpx;
   letter-spacing: 1px;
 }
+
+.mine-collect-reserve{
+  margin-top: -57rpx;
+  font-size: 28rpx;
+  margin-left: 170rpx;
+  color: red;
+  /* border-bottom: 2rpx solid #e9e9e9; */
+}

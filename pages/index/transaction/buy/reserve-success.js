@@ -14,7 +14,7 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      // tra_id: options.tra_id,
+      old_id: options.old_id,
       // tel: options.tel
     })
   },

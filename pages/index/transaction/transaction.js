@@ -56,7 +56,7 @@ Page({
   getGoods:function(){
     var that = this;
     app.func.req('old_goods', { pageSize: 100, page: 1, old_type: that.data.currentTab, openid: that.data.openid }, 'GET', function (res) {
-      // console.log(res);
+       console.log("20200317",res);
       var sheight = 704 * Math.ceil(res.length / 2);
       that.setData({
         proList: res,

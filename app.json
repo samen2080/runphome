@@ -74,6 +74,7 @@
     "pages/mine/product-show/product-show",  
     "pages/mine/buy/buy",
     "pages/mine/buy/product-show/product-show",
+    "pages/mine/buy/reserve-show/reserve-show",
     "pages/mine/send/send",
     "pages/mine/student/student",
     "pages/mine/student/student-show-page1/student-show-page1",

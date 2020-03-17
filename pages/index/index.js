@@ -331,13 +331,23 @@ Page({
     }else{
        if (that.data.userInfo.user_phone_check == 0) {
          wx.navigateTo({
-           url: '../log-in/log-in?old_id=' + that.data.proList[0].old_id + '&user_id=' + user_id
+          //  20200317 start
+          //  url: '../log-in/log-in?old_id=' + that.data.proList[0].old_id + '&user_id=' + user_id
+           url: '../log-in/log-in?old_id=' + that.data.proList[0].old_id + '&user_id=' + that.data.userInfo.user_id
+          //  20200317 end
          })
        }else{   
+         app.func.req('reserve_course', { openid: that.data.openid, bok_name: that.data.userInfo.user_name, bok_mobile: that.data.userInfo.user_phone, bok_user_id: that.data.userInfo.user_id, }, 'POST', function (res) {
+           console.log("20200317A", res.code);
+           if (res.code == 200) {
+             console.log("20200317B");
           wx.navigateTo({
-            url: 'transaction/buy/reserve-success?old_id=' + that.data.proList[0].old_id + '&user_id=' + user_id
+            url: 'transaction/buy/reserve-success?old_id=' + that.data.proList[0].old_id + '&user_id=' + that.data.userInfo.user_id,
             })
+           }
+         });
        }
+       
     }
   },
 })

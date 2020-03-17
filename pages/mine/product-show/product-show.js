@@ -149,6 +149,7 @@ Page({
         pro_id: res.old_id,
         old_describe: res.old_describe,
         old_money: res.old_money,
+        old_early_money: res.old_early_money,
         old_collect: res.collect,
         user_nickname: res.user_nickname,
         user_headimg: res.user_headimg,

@@ -158,7 +158,7 @@ Page({
         }, 'POST', function (res) {
           if (res.code == 200) {
           wx.navigateTo({
-          url: '../index/transaction/buy/reserve-success',
+            url: '../index/transaction/buy/reserve-success?old_id=' + that.data.old_id,
           });
          }
        })
@@ -184,6 +184,21 @@ Page({
 
           }
         })
+        app.func.req('new_reserve_course', { openid: that.data.openid, bok_name: that.data.name, bok_mobile: that.data.phone, bok_user_id: that.data.user_id, }, 'POST', function (res) {
+          if (res.code == 200) {
+            wx.setStorage({
+              key: 'user_info',
+              data: {
+                user_phone_check: 1
+              },
+            })
+            wx.navigateBack({
+              delta: 1
+            })
+
+          }
+        });
+        console.log("20200317B")
       };
     }
   }

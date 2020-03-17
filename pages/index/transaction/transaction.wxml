@@ -32,6 +32,8 @@
       <view class='mine-collect-name-wrap'>
         <text class='mine-collect-name'>{{item.old_name}}</text>
           <view class='mine-collect-time'>{{proList[0].old_add_time}}</view>
+          <view class='mine-collect-cheap'>早鸟价:￥{{proList[0].old_early_money}}</view>
+          <button class='mine-collect-reserve' data-proid="{{proList[0].old_id}}" bindtap="reserve">【预约】</button>
       </view>
 
       <view class='mine-collect-owner-wrap'>
@@ -54,8 +56,8 @@
 </view>
 
 <!-- 发布按钮 -->
-<view class='info-edit-form-btn'>
+<!-- <view class='info-edit-form-btn'>
   <navigator hover-class='none' url='publish/publish'><button class='info-edit-form-sub-btn'>
     <text class='btn-text'>发布</text>
   </button></navigator>
-</view>
+</view> -->
