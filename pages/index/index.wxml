@@ -326,7 +326,7 @@
           <text class='mine-collect-name'>{{proList[1].old_name}}</text>
           <view class='mine-collect-time'>开班时间:<view>{{proList[1].old_add_time}}</view></view>
          <view class='mine-collect-cheap'>早鸟价:￥{{proList[1].old_early_money}}</view>
-          <button class='mine-collect-reserve' data-proid="{{proList[0].old_id}}" bindtap="reserve">【预约】</button>
+          <button class='mine-collect-reserve' data-proid="{{proList[1].old_id}}" bindtap="reserve">【预约】</button>
         </view>
         <view class='mine-collect-owner-wrap'>
           <image src='{{proList[1].user_headimg}}' mode='aspectFill' class='mine-collect-owner-tx'></image>
@@ -349,7 +349,7 @@
           <text class='mine-collect-name'>{{proList[2].old_name}}</text>
           <view class='mine-collect-time'>开班时间:<view>{{proList[2].old_add_time}}</view></view>
           <view class='mine-collect-cheap'>早鸟价:￥{{proList[2].old_early_money}}</view>
-          <button class='mine-collect-reserve' data-proid="{{proList[0].old_id}}" bindtap="reserve">【预约】</button>
+          <button class='mine-collect-reserve' data-proid="{{proList[2].old_id}}" bindtap="reserve">【预约】</button>
         </view>
 
         <view class='mine-collect-owner-wrap'>
@@ -372,7 +372,7 @@
           <text class='mine-collect-name'>{{proList[3].old_name}}</text>
           <view class='mine-collect-time'>开班时间:<view>{{proList[3].old_add_time}}</view></view>
           <view class='mine-collect-cheap'>早鸟价:￥{{proList[3].old_early_money}}</view>
-          <button class='mine-collect-reserve' data-proid="{{proList[0].old_id}}" bindtap="reserve">【预约】</button>
+          <button class='mine-collect-reserve' data-proid="{{proList[3].old_id}}" bindtap="reserve">【预约】</button>
         </view>
         <view class='mine-collect-owner-wrap'>
           <image src='{{proList[3].user_headimg}}' mode='aspectFill' class='mine-collect-owner-tx'></image>

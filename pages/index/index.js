@@ -38,8 +38,23 @@ Page({
           that.setData({
             userInfo: res,
             user_headimg: res.user_headimg
+          });
+      // 20200318 add start
+        if (that.data.userInfo.user_id != null){
+          wx.setStorage({
+            key: 'index_user_info',
+            data: {
+              user_id: that.data.userInfo.user_id,
+              user_name: that.data.userInfo.user_name,
+              user_phone: that.data.userInfo.user_phone,
+              user_phone_check: that.data.userInfo.user_phone_check,
+            },
+            success: function () {
+              console.log("20200318");
+            }
           })
-
+        };
+      // 20200318 add end
         });
         // 20200316 end
         that.getIn();

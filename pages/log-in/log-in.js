@@ -157,9 +157,28 @@ Page({
           openid: that.data.openid,
         }, 'POST', function (res) {
           if (res.code == 200) {
-          wx.navigateTo({
-            url: '../index/transaction/buy/reserve-success?old_id=' + that.data.old_id,
-          });
+            // 20200318 add start
+              app.func.req('new_reserve_course', { openid: that.data.openid, bok_name: that.data.name, bok_mobile: that.data.phone, bok_user_id: that.data.user_id, }, 'POST', function (res) {
+                if (res.code == 200) {
+                  wx.setStorage({
+                    key: 'user_info',
+                    data: {
+                      user_phone_check: 1
+                    },
+                    success: function () {
+                      console.log("20200318old_id", that.data.old_id);
+                      wx.navigateTo({
+                        url: '../index/transaction/buy/reserve-success?old_id=' + that.data.old_id,
+                      });
+                    }
+                  })
+                  // wx.navigateBack({
+                  //   delta: 1
+                  // })
+                }
+              });
+              console.log("20200317B")
+            // 20200318 add end
          }
        })
         
@@ -184,21 +203,9 @@ Page({
 
           }
         })
-        app.func.req('new_reserve_course', { openid: that.data.openid, bok_name: that.data.name, bok_mobile: that.data.phone, bok_user_id: that.data.user_id, }, 'POST', function (res) {
-          if (res.code == 200) {
-            wx.setStorage({
-              key: 'user_info',
-              data: {
-                user_phone_check: 1
-              },
-            })
-            wx.navigateBack({
-              delta: 1
-            })
-
-          }
-        });
-        console.log("20200317B")
+        // 20200318 start add
+        // move new_reserve_course to above
+        //20200318 start end
       };
     }
   }

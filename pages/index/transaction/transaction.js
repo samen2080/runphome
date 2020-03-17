@@ -128,6 +128,36 @@ Page({
       }
     });
   },
+
+  // 20200318 add start
+  reserve: function (e) {
+    var that = this;
+    var user_id = wx.getStorageSync("index_user_info").user_id;
+    var user_name = wx.getStorageSync("index_user_info").user_name;
+    var user_phone = wx.getStorageSync("index_user_info").user_phone;
+    var user_phone_check = wx.getStorageSync("index_user_info").user_phone_check;
+    if (user_id == null) {
+      wx.navigateTo({
+        url: '../../mine/mine?old_id=' + e.currentTarget.dataset.proid
+      })
+    } else {
+      if (user_phone_check == 0) {
+        wx.navigateTo({
+          url: '../../log-in/log-in?old_id=' + e.currentTarget.dataset.proid + '&user_id=' + user_id
+        })
+      } else {
+        app.func.req('reserve_course', { openid: that.data.openid, bok_name: user_name, bok_mobile: user_phone, bok_user_id: user_id, }, 'POST', function (res) {
+          if (res.code == 200) {
+            wx.navigateTo({
+              url: 'buy/reserve-success?old_id=' + e.currentTarget.dataset.proid + '&user_id=' + user_id,
+            })
+          }
+        });
+      }
+
+    }
+  },
+  // 20200318 add end
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
