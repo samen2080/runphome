@@ -1,4 +1,4 @@
-// pages/index/transaction/buy/reserve-success.js
+// pages/index/transaction/buy/reserve-success.js 20200316 new add
 const app = getApp()
 Page({
 
@@ -15,6 +15,7 @@ Page({
   onLoad: function (options) {
     this.setData({
       old_id: options.old_id,
+      bok_id: options.bok_id
       // tel: options.tel
     })
   },

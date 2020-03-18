@@ -164,10 +164,15 @@ Page({
                   data: {
                     user_id: that.data.user_id,
                     user_phone_check: 1
+                  }, 
+                  success: function (res) {
+                    that.setData({
+                      bok_id: res.bok_id
+                    });
+                    wx.navigateTo({
+                      url: '../index/transaction/buy/reserve-success?old_id' + that.data.old_id + '&bok_id=' + that.data.bok_id,
+                    });
                   },
-                });
-                wx.navigateTo({
-                  url: '../index/transaction/buy/reserve-success?old_id=' + that.data.old_id,
                 });
               }
             });

@@ -52,10 +52,10 @@
 <view class = "icon">
     <view class="icon-left">
         <button  catchtap='removePro' data-id="0" wx:if="{{bok_delete_ind == false}}" >取消预约</button>
-        <button  catchtap='backIndex' wx:else >重新预约</button>
+        <button  catchtap='rebook' wx:else >重新预约</button>
     </view> 
     <view class="icon-right">
-        <button  catchtap='directEnroll' data-id="0">直接报名</button>
+        <button  catchtap='directEnroll'>直接报名</button>
     </view>
 </view> 
 

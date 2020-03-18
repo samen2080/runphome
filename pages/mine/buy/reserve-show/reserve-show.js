@@ -102,7 +102,8 @@ Page({
     var host = app.globalData.host;
     that.setData({
       host: host,
-      old_id: options.old_id
+      old_id: options.old_id,
+      bok_id: options.bok_id
     })
     wx.getStorage({
       key: 'openid',
@@ -199,7 +200,7 @@ Page({
     var user_id = wx.getStorageSync("user_info").user_id;
     var that = this;
     // console.log("20200317", res.bok_id)
-    app.func.req('book_detail/' + user_id, {}, 'GET', function (res) {
+    app.func.req('book_detail/' + bok_id, {}, 'GET', function (res) {
       that.setData({
         items: res
       })
@@ -223,11 +224,12 @@ Page({
       url: '../../../mine/product-show/product-show?old_id=' + that.data.old_id,
     })
   },
-  backIndex: function (e) {
+
+  rebook: function () {
     var that = this;
     var user_id = wx.getStorageSync("user_info").user_id;
     wx.navigateTo({
-      url: '../../../index/index',
+      url: '../../../index//transaction/buy/reserve-successs?old_id' + that.data.old_id + '&bok_id=' + that.data.bok_id,
     })
   },
   /**

@@ -27,7 +27,8 @@
       <view class='mine-collect-pic-wrap'>
         <image src='{{host}}{{item.old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
         <view class='mine-collect-price'>￥<text>{{item.old_money}}</text></view>
-      </view>
+      </view></navigator>
+      
 
       <view class='mine-collect-name-wrap'>
         <text class='mine-collect-name'>{{item.old_name}}</text>
@@ -44,7 +45,7 @@
           <image src='/images/collect.png' wx:if='{{item.collect == 1}}' data-collid='{{item.old_id}}' catchtap='collect'></image>
           <text>{{item.old_collect}}</text>
         </view>
-      </view></navigator>
+      </view>
     </view>
   </swiper-item>
 </swiper>

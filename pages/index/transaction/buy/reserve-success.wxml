@@ -1,8 +1,8 @@
-<!--pages/index/transaction/buy/reserve-success.wxml-->
+<!--pages/index/transaction/buy/reserve-success.wxml 20200316 new add-->
 <view class='success-top'>
   <image src='/images/pay-success.png'></image>
   <view class='success-top-title'>预约成功</view>
-  <navigator url='../../../mine/buy/reserve-show/reserve-show?old_id={{old_id}}' hover-class='none'><view class='success-top-btn'>查看预约</view></navigator>
+  <navigator url='../../../mine/buy/reserve-show/reserve-show?old_id={{old_id}}&bok_id={{bok_id}}' hover-class='none'><view class='success-top-btn'>查看预约</view></navigator>
 </view>
 
 <!-- <view class='success-phone'>联系人电话<text>{{tel == null ? "暂无" : tel}}</text></view> -->

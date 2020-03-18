@@ -294,7 +294,7 @@
   </view>
 
   <view class='index-product-list-box'>
-
+   <!--          第一个课程     -->
       <view class='mine-collect-list-1' wx:if='{{proList.length > 0}}'><navigator url='../mine/product-show/product-show?pro_id={{proList[0].old_id}}' hover-class='none'>
         <view class='mine-collect-pic-wrap'>
           <image src='{{host}}{{proList[0].old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
@@ -317,6 +317,7 @@
         </view>
       </view>
 
+ <!--          第二个课程     -->
       <view class='mine-collect-list-2' wx:if='{{proList.length > 1}}'><navigator url='../mine/product-show/product-show?pro_id={{proList[1].old_id}}' hover-class='none'>
         <view class='mine-collect-pic-wrap'>
           <image src='{{host}}{{proList[1].old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
@@ -326,7 +327,7 @@
           <text class='mine-collect-name'>{{proList[1].old_name}}</text>
           <view class='mine-collect-time'>开班时间:<view>{{proList[1].old_add_time}}</view></view>
          <view class='mine-collect-cheap'>早鸟价:￥{{proList[1].old_early_money}}</view>
-          <button class='mine-collect-reserve' data-proid="{{proList[0].old_id}}" bindtap="reserve">【预约】</button>
+          <button class='mine-collect-reserve' data-proid="{{proList[1].old_id}}" bindtap="reserve">【预约】</button>
         </view>
         <view class='mine-collect-owner-wrap'>
           <image src='{{proList[1].user_headimg}}' mode='aspectFill' class='mine-collect-owner-tx'></image>
@@ -339,17 +340,17 @@
         </view>
       </view>
 
+ <!--          第三个课程     -->
       <view class='mine-collect-list-3' wx:if='{{proList.length > 2}}'><navigator url='../mine/product-show/product-show?pro_id={{proList[2].old_id}}' hover-class='none'>
         <view class='mine-collect-pic-wrap'>
           <image src='{{host}}{{proList[2].old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
           <view class='mine-collect-price'>￥<text>{{proList[2].old_money}}</text></view>
         </view></navigator>
-
         <view class='mine-collect-name-wrap'>
           <text class='mine-collect-name'>{{proList[2].old_name}}</text>
           <view class='mine-collect-time'>开班时间:<view>{{proList[2].old_add_time}}</view></view>
           <view class='mine-collect-cheap'>早鸟价:￥{{proList[2].old_early_money}}</view>
-          <button class='mine-collect-reserve' data-proid="{{proList[0].old_id}}" bindtap="reserve">【预约】</button>
+          <button class='mine-collect-reserve' data-proid="{{proList[2].old_id}}" bindtap="reserve">【预约】</button>
         </view>
 
         <view class='mine-collect-owner-wrap'>
@@ -363,6 +364,7 @@
         </view>
       </view>
 
+ <!--          第四个课程     -->
       <view class='mine-collect-list-4' wx:if='{{proList.length > 3}}'><navigator url='../mine/product-show/product-show?pro_id={{proList[3].old_id}}' hover-class='none'>
         <view class='mine-collect-pic-wrap'>
           <image src='{{host}}{{proList[3].old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
@@ -372,7 +374,7 @@
           <text class='mine-collect-name'>{{proList[3].old_name}}</text>
           <view class='mine-collect-time'>开班时间:<view>{{proList[3].old_add_time}}</view></view>
           <view class='mine-collect-cheap'>早鸟价:￥{{proList[3].old_early_money}}</view>
-          <button class='mine-collect-reserve' data-proid="{{proList[0].old_id}}" bindtap="reserve">【预约】</button>
+          <button class='mine-collect-reserve' data-proid="{{proList[3].old_id}}" bindtap="reserve">【预约】</button>
         </view>
         <view class='mine-collect-owner-wrap'>
           <image src='{{proList[3].user_headimg}}' mode='aspectFill' class='mine-collect-owner-tx'></image>
