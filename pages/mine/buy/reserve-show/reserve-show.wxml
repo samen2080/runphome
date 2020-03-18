@@ -10,7 +10,7 @@
   </view> -->
   
   <view class='product-show-top-code'>
-    <text>预约码：{{items.bok_course_id}}</text>
+    <text>预约码：{{items.bok_id}}</text>
     <!-- <button  catchtap='removePro' data-id="0">取消预约</button> -->
     <!-- <button wx:if='{{items.tra_status == 2}}'>确认上课</button> -->
     <!-- <button  catchtap='removePro' data-id="1">删除预约</button> -->
@@ -51,7 +51,7 @@
 <!-- 20191102 end -->
 <view class = "icon">
     <view class="icon-left">
-        <button  catchtap='removePro' data-id="0" wx:if="{{bok_delete_ind == false}}" >取消预约</button>
+        <button  catchtap='removeBok' data-id="0" wx:if="{{bok_delete_ind == false}}" >取消预约</button>
         <button  catchtap='rebook' wx:else >重新预约</button>
     </view> 
     <view class="icon-right">

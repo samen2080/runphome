@@ -100,6 +100,10 @@ Page({
   onLoad: function (options) {
     var that = this;
     var host = app.globalData.host;
+    console.log("20200319reserveShow is called");
+    console.log("20200319option old_id", options.old_id);
+    console.log("20200319option bok_id", options.bok_id);
+
     that.setData({
       host: host,
       old_id: options.old_id,
@@ -117,7 +121,7 @@ Page({
   },
 
   // 取消报名/删除报名
-  removePro: function (e) {
+  removeBok: function (e) {
     var that = this;
     var index = e.currentTarget.dataset.id;
     that.setData({
@@ -148,9 +152,12 @@ Page({
     var that = this;
     var user_id = wx.getStorageSync("user_info").user_id;
     var num = e.currentTarget.dataset.num;
-    console.log("20200317", that.data.items.bok_id)
+    // 20200319 liao add start
+    // console.log("20200317", that.data.items.bok_id)
+    console.log("20200319", that.data.bok_id)
+    // 20200319 liao add end
     if (num == 0) {
-      app.func.req('cancel_reserve', { openid: that.data.openid, bok_id: that.data.items.bok_id }, 'POST', function (res) {
+      app.func.req('cancel_reserve', { openid: that.data.openid, bok_id: that.data.bok_id }, 'POST', function (res) {
         //  console.log(res);
         if (res.code == 200) {
           // that.getDetail();
@@ -163,17 +170,18 @@ Page({
           console.log("20200317A", that.data.bok_delete_ind);
         }
       });
-    } else if (num == 1) {
-      app.func.req('del_trade', { openid: that.data.openid, user_id: user_id }, 'POST', function (res) {
-        // console.log(res);
-        if (res.code == 200) {
-          wx.navigateBack({
-            delta: 1
-          })
-        }
-      });
-    }
-
+    } 
+    // 20200319 liao add start
+    // else if (num == 1) {
+    //   app.func.req('del_trade', { openid: that.data.openid, user_id: user_id }, 'POST', function (res) {
+    //     if (res.code == 200) {
+    //       wx.navigateBack({
+    //         delta: 1
+    //       })
+    //     }
+    //   });
+    // }
+    // 20200319 liao add end
   },
 
   /**
@@ -200,7 +208,10 @@ Page({
     var user_id = wx.getStorageSync("user_info").user_id;
     var that = this;
     // console.log("20200317", res.bok_id)
-    app.func.req('book_detail/' + bok_id, {}, 'GET', function (res) {
+    // 20200319 liao add start
+    // app.func.req('book_detail/' + bok_id, {}, 'GET', function (res) {
+    app.func.req('book_detail/' + that.data.bok_id, {}, 'GET', function (res) {
+      // 20200319 liao add end
       that.setData({
         items: res
       })
@@ -227,11 +238,14 @@ Page({
 
   rebook: function () {
     var that = this;
-    var user_id = wx.getStorageSync("user_info").user_id;
+    // var user_id = wx.getStorageSync("user_info").user_id;
+    console.log("20200319old_id", that.data.old_id);
+    console.log("20200319bok_id", that.data.bok_id);
     wx.navigateTo({
-      url: '../../../index//transaction/buy/reserve-successs?old_id' + that.data.old_id + '&bok_id=' + that.data.bok_id,
+      url: '../../../index/transaction/buy/reserve-success?old_id' + that.data.old_id + '&bok_id=' + that.data.bok_id,
     })
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

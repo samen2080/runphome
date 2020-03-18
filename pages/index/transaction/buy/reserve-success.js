@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+  old_id: 0,
+  bok_id: 0
   },
 
   /**
@@ -18,6 +19,9 @@ Page({
       bok_id: options.bok_id
       // tel: options.tel
     })
+    console.log("20200319reserve old_id", this.data.old_id);
+    console.log("20200319reserve bok_id", this.data.bok_id);
+
   },
 
   /**

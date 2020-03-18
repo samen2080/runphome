@@ -335,31 +335,45 @@ Page({
   //预约
     reserve: function (e) {
     var that = this;
-
       console.log("20200313", that.data.userInfo.user_id);
       console.log("20200313", that.data.proList[0].old_id);
+      console.log("20200319", that.data.userInfo.user_phone_check);
       
     if (that.data.userInfo.user_id == null) {
         wx.navigateTo({
-          url: '../mine/mine?old_id=' + that.data.proList[0].old_id
+          //  20200319 liao and start
+          // url: '../mine/mine?old_id=' + that.data.proList[0].old_id
+          url: '../mine/mine?old_id=' + e.currentTarget.dataset.proid
+         // 20200319 liao and end
         })
     }else{
        if (that.data.userInfo.user_phone_check == 0) {
          wx.navigateTo({
           //  20200317 start
           //  url: '../log-in/log-in?old_id=' + that.data.proList[0].old_id + '&user_id=' + user_id
-           url: '../log-in/log-in?old_id=' + that.data.proList[0].old_id + '&user_id=' + that.data.userInfo.user_id
+           url: '../log-in/log-in?old_id=' + e.currentTarget.dataset.proid + '&user_id=' + that.data.userInfo.user_id
           //  20200317 end
          })
        }else{   
-         app.func.req('reserve_course', { openid: that.data.openid, bok_name: that.data.userInfo.user_name, bok_mobile: that.data.userInfo.user_phone, bok_user_id: that.data.userInfo.user_id, }, 'POST', function (res) {
+         app.func.req('new_reserve_course', { openid: that.data.openid, bok_name: that.data.userInfo.user_name, bok_mobile: that.data.userInfo.user_phone, bok_user_id: that.data.userInfo.user_id, }, 'POST', function (res) {
            console.log("20200317A", res.code);
+           console.log("20200319", res.bok_id);
+        // 20200319 liao add start
+          //  if (res.code == 200) {
+          //    console.log("20200317B");
+          // wx.navigateTo({
+          //   url: 'transaction/buy/reserve-success?old_id=' + e.currentTarget.dataset.proid + '&user_id=' + that.data.bok_id,
+          //   })
+          //  }
            if (res.code == 200) {
-             console.log("20200317B");
-          wx.navigateTo({
-            url: 'transaction/buy/reserve-success?old_id=' + that.data.proList[0].old_id + '&user_id=' + that.data.userInfo.user_id,
-            })
+                 that.setData({
+                   bok_id: res.bok_id
+                 });
+                 wx.navigateTo({
+                     url: 'transaction/buy/reserve-success?old_id=' + e.currentTarget.dataset.proid + '&bok_id=' + that.data.bok_id,
+             });
            }
+          // 20200319 liao add end
          });
        }
        
