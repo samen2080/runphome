@@ -14,7 +14,8 @@ Page({
     loginInShow: false,
     user_identity: 0,
     // 20200213 add end
-    onShowCall: 0
+    onShowCall: 0,
+    user_phone_check: false
     // isSign: false
   },
 
@@ -51,9 +52,28 @@ Page({
     var user_id = wx.getStorageSync("user_info").user_id;
     var old_id = 0;
     wx.navigateTo({
-      url: '../log-in/log-in?user_id=' + user_id + '&old_id=' + old_id,
-    })
+      url: '../log-in/log-in?user_id=' + user_id + '&old_id=' + old_id + '&user_id=' + user_id,
+    });
+    that.setData({
+      user_phone_check: true,
+    }); 
   },
+  // 20200318 start
+  unlock: function (e) {
+    var that = this;
+    var user_id = wx.getStorageSync("user_info").user_id;
+    app.func.req('update_user_phone_check', {
+      user_id: user_id
+    }, 'POST', function (res) {
+      if (res.code == 200) {
+        that.setData({
+          user_phone_check: !that.data.user_phone_check,
+        }) 
+      }
+    });
+    
+  },
+  // 20200318 end
   closeSignIn: function (e) {
     var that = this;
     that.setData({
@@ -179,8 +199,9 @@ Page({
       hydl: !1
     }), this.changeData());
   },
+
   changeData: function () {
-    var n = this;
+    var that = this;
     let openid = wx.getStorageSync('openid');
     // 20200213 add start
     let role_type = wx.getStorageSync('login_role');
@@ -195,24 +216,42 @@ Page({
             // app.func.req('login', { openid: openid, user_headimg: t.userInfo.avatarUrl, user_nickname: t.userInfo.nickName, user_sex: t.userInfo.gender }, 'POST', function (res) {
             // 20200213 add end
                 if (res.code == 200) {
-                  //20200213 start
+                  //20200318 start
+                  //wx.setStorage({
+                   // key: 'user_info',
+                    //   data: {
+                    //   user_identity: res.user_identity,
+                    //   user_id: res.user_id,
+                    //   user_phone_check: res.user_phone_check,
+                    // },
+                  console.log("20200318userPhoneCheck", res.user_phone_check);
+                  if (res.user_phone_check == 0) {
+                    that.setData({
+                      user_phone_check: false
+                    })
+                  } else {
+                    that.setData({
+                      user_phone_check: true
+                    })
+                  };
                   wx.setStorage({
                     key: 'user_info',
-                    data: {
-                      user_identity: res.user_identity,
-                      user_id: res.user_id,
-                      user_phone_check: res.user_phone_check,
-                    },
+                     data: { 
+                       user_identity: res.user_identity,
+                       user_id: res.user_id,
+                      },
+                  // 20200318 start end
+
                     success: function () {
                        //n.getUser(); 从onshow方法剪贴过来，实现img, nickname 从无到有的变化
                         console.log("20200316changedata");
-                        n.getUser();
+                        that.getUser();
                       //  20200316 add start
-                      console.log("20200213old_id", n.data.old_id);
-                      if (n.data.old_id != null) {
+                      console.log("20200213old_id", that.data.old_id);
+                      if (that.data.old_id != null) {
                           var user_id = wx.getStorageSync("user_info").user_id;
                           wx.navigateTo({
-                            url: '../log-in/log-in?old_id=' + n.data.old_id + '&user_id=' + user_id
+                            url: '../log-in/log-in?old_id=' + that.data.old_id + '&user_id=' + user_id
                           })
                       };
                          // 20200316 add end
@@ -222,7 +261,7 @@ Page({
                 }
               });
           }
-        }) : (console.log("未授权过"), n.setData({
+        }) : (console.log("未授权过"), that.setData({
           hydl: !0
         }));
       }
