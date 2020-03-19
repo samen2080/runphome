@@ -138,7 +138,7 @@ Page({
   getData: function () {
     var that = this;
     app.func.req('my_buy_goods/' + that.data.currentTab, { openid: that.data.openid, genre: 1 }, 'GET', function (res) {
-      // console.log(res);
+      console.log("20200319myBuyGoods",res);
       that.setData({
         items: res,
         sheight: 424 * res.length

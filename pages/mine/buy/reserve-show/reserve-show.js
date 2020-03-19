@@ -157,7 +157,7 @@ Page({
     console.log("20200319", that.data.bok_id)
     // 20200319 liao add end
     if (num == 0) {
-      app.func.req('cancel_reserve', { openid: that.data.openid, bok_id: that.data.bok_id }, 'POST', function (res) {
+      app.func.req('update_reserve', { openid: that.data.openid, bok_id: that.data.bok_id, bok_delete_ind: 1 }, 'POST', function (res) {
         //  console.log(res);
         if (res.code == 200) {
           // that.getDetail();
@@ -230,9 +230,9 @@ Page({
   directEnroll: function (e) {
     var that = this;
     var user_id = wx.getStorageSync("user_info").user_id;
-    console.log("20200317A", that.data.old_id)
+    console.log("20200317direct enroll old_id", that.data.old_id)
     wx.navigateTo({
-      url: '../../../mine/product-show/product-show?old_id=' + that.data.old_id,
+      url: '../../../mine/product-show/product-show?pro_id=' + that.data.old_id,
     })
   },
 
@@ -241,9 +241,18 @@ Page({
     // var user_id = wx.getStorageSync("user_info").user_id;
     console.log("20200319old_id", that.data.old_id);
     console.log("20200319bok_id", that.data.bok_id);
-    wx.navigateTo({
-      url: '../../../index/transaction/buy/reserve-success?old_id' + that.data.old_id + '&bok_id=' + that.data.bok_id,
-    })
+    // 20200319 liao add start
+    // wx.navigateTo({
+    //   url: '../../../index/transaction/buy/reserve-success?old_id=' + that.data.old_id + '&bok_id=' + that.data.bok_id,
+    // })
+    app.func.req('update_reserve', { openid: that.data.openid, bok_id: that.data.bok_id, bok_delete_ind: 0 }, 'POST', function (res) {
+      if (res.code == 200) {
+        wx.navigateTo({
+          url: '../../../index/transaction/buy/reserve-success?old_id=' + that.data.old_id + '&bok_id=' + that.data.bok_id,
+        })
+      }
+    });
+    // 20200319 liao add end
   },
 
   /**

@@ -42,11 +42,11 @@
   </view>
 </view>
 <!-- 20191102 start -->
-    <view class="star-title">服务质量</view>
+    <!-- <view class="star-title">服务质量</view>
       <view class="star-pos">
         <image class='stars' bindtap="changeColor" data-index='1' data-no="{{item}}" wx:for="{{stardata}}"src="{{flag[1]>=item? '/images/full-star.png': '/images/no-star.png'}}" name='con_rating_grade' image/>
       <view style='margin-left: 30rpx;'>{{startext[1]}}</view>
-    </view>
+    </view> -->
 <!-- 20191102 end -->
 
 
