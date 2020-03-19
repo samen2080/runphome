@@ -129,7 +129,7 @@ Page({
         // 20200213 start 
        //在线视频
         // app.func.req('get_videos/0/' + that.data.forum_id, { openid: that.data.openid }, 'GET', function (res) {
-        app.func.req('get_videos_main', { user_id: that.data.user_id }, 'GET', function (res) {
+        app.func.req('get_videos_main', { user_id: that.data.user_id, teacher_id: 0 }, 'GET', function (res) {
           console.log("20200288 res", res);
           that.setData({
             videosMainList: res

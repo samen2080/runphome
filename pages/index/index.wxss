@@ -1072,6 +1072,10 @@ page{
 .index-act-box{
   margin-top: 24rpx;
   overflow: hidden;
+
+
+
+  border-bottom: 2rpx solid #070000;
 }
 
 .index-act-box-title{
@@ -1082,10 +1086,17 @@ page{
   font-weight: bold;
   background: #ffffff;
   margin-bottom: 1rpx;
+
+
+  
+  border-bottom: 2rpx solid #b7f311;
+
 }
 
 .index-act-list-box{
   width: 100%;
+  border-bottom: 2rpx solid #e71d1d;
+
 }
 
 .index-act-list{

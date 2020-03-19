@@ -1,4 +1,5 @@
 /* pages/index/record-broadcast/record-broadcast.wxss */
+@import "../broadcast-list/broadcast-list.wxss";
 
 .main-show-top{
   height: 570rpx;
@@ -91,7 +92,9 @@
 
 .main-show-middle{
   margin-top: 5rpx;
-  height: 500rpx;
+  /* 20200319 liao add start */
+  /* height: 500rpx; */
+  /* 20200319 liao add end */
   width: 100%;
   background: #ffffff;
   /* margin-bottom: 10rpx; */
@@ -152,28 +155,34 @@
 
 
 .main-show-intro {
+width: 100%;
+}
+
+.main-show-course {
   line-height: 60rpx;
   color: #353131;
   padding:10rpx;
+  margin-bottom: 20rpx;
   position: relative;
   background: #ffffff;
 }
 
-.main-show-intro image{
+/* .main-show-intro image{
   margin: 48rpx 0;
   vertical-align: middle;
   width: 100%;
   height: 418rpx;
-}
+} */
 
 .main-show-course-title{
-  font-size: 42rpx;
+  font-size: 36rpx;
   color: #070707;
   /* padding: 32rpx 24rpx 20rpx; */
   background: #ffffff;
   font-weight: 800;
   position: relative;
   margin-left: 20rpx;
+  margin-bottom:10rpx;
 }
 
 .main-show-course-descript{
@@ -194,6 +203,7 @@
   width:100%;
   height:200rpx;
   position: relative;
+  margin-top: 10rpx;
   float: left;
   padding: 10rpx;
 }
@@ -276,13 +286,13 @@
   float: left; 
 }
 
-.wrap-left{
+/* .wrap-left{
   background: #ffffff;
   width: 508rpx;
   font-size: 32rpx;
   position: relative; 
   float: left;
-}
+} */
 
 .on-list-name{
   width: 100%;
@@ -338,13 +348,13 @@
   float: left; 
 }
 
-.wrap-right{
+/* .wrap-right{
   width: 195rpx;
   background: #ffffff;
   font-size: 32rpx;
   position: relative; 
   float: left;
-}
+} */
 
 .on-list-time{
   width: 100%;

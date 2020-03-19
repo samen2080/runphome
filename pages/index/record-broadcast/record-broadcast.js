@@ -85,13 +85,29 @@ this.setData({
   getDetail: function () {
     var that = this;
     app.func.req('get_videos_chapter/' + that.data.lsm_id, {}, 'GET', function (res) {
-      console.log("20200213res", res);
-      that.setData({
-        items: res
-      })
+      if (res) {
+        that.setData({
+          items: res,
+          teacher_id: res.lsm_teacher_id
+        });
+        that.getTeacherCourse();
+      }
     });
   },
   // 20200213 end
+
+  // 20203019 liao add start
+  getTeacherCourse: function () {
+    var that = this;
+    console.log("20200213getTeacherCourse", that.data.teacher_id);
+    app.func.req('get_videos_main', { user_id: 0, teacher_id: that.data.teacher_id }, 'GET', function (res) {
+      console.log("20200319videos_main res", res);
+      that.setData({
+        videosMainList: res
+      })
+    });
+  },
+    // 20200319 liao add end
 
   //点击切换
   clickTab: function (e) {

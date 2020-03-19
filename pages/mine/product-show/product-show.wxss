@@ -34,7 +34,7 @@ page{
   margin:30rpx 24rpx 30rpx;
 }
 .product-show-price{
-  color: #ff721c;
+  color: #000000a1;
   margin:0 24rpx;
   font-size: 36rpx;
 }

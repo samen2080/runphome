@@ -12,7 +12,7 @@
 
   <view class='product-show-name'>{{old_name}}</view>
   <view class='product-show-info'>{{old_describe}}</view>
-  <view class='product-show-price'>￥<text>{{old_money}} </text> <text     space="emsp"> 早鸟价￥【{{old_early_money}}】 </text></view>
+  <view class='product-show-price'>￥<text>{{old_money}} </text> <text  style="color:#ff721c"     space="emsp"> 早鸟价￥【{{old_early_money}}】 </text></view>
   <view class='product-show-class-time'> 课程开班时间: <text>{{old_add_time}}</text></view>
   <view class='product-show-end-time'> 报名截止时间: <text>{{old_end_time}}</text></view>
   <view class='product-show-owner-info'>

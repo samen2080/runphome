@@ -3,14 +3,14 @@
 <view class='owner-top'>
   <image src='{{info.user_headimg}}' mode='aspectFill'></image>
   <text class='owner-name'>{{info.user_nickname}}</text>
-  <text class='owner-sum'>累计发布二手商品<text>{{count}}</text>件</text>
+  <text class='owner-sum'>累计发布课程数量<text>{{count}}</text>件</text>
   <view class='owner-attention' catchtap='focus' wx:if="{{focus==0}}">+ 关注</view>
   <view class='owner-attention focus' catchtap='focus' wx:if="{{focus==1}}">已关注</view>
 </view>
 
 <view class='owner-product'>
   <view class='owner-product-title-box'>
-    <text class='owner-product-title'>其他商品</text>
+    <text class='owner-product-title'>其他课程</text>
   </view>
 
   <view class='owner-product-list'>

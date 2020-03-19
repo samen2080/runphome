@@ -249,13 +249,6 @@ Page({
       user_id: user_id
     });
 
-    //在线视频
-    // app.func.req('get_videos_main', { user_id: that.data.user_id }, 'GET', function (res) {
-    //   console.log("20200288 res", res);
-    //   that.setData({
-    //     videosMainList: res
-    //   })
-    // });
     wx.getStorage({
       key: 'openid',
       success: function (res) {

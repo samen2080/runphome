@@ -1,6 +1,9 @@
 <import src="../../template/template.wxml"/>
 <template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
 
+
+
+<!-- 顶部搜索 -->
 <view class='index-search-box'>
   <view class='wrap'>
     <view class='index-search'>
@@ -10,6 +13,9 @@
   </view>
 </view>
 
+
+
+<!-- 轮播图 -->
 <view class='banner'>
   <swiper class='banner-swiper' current='0' indicator-dots='true' indicator-color='rgba(255,255,255,0.6)' indicator-active-color='#19c810' autoplay="true" interval="2500">
     <swiper-item wx:for="{{imgUrls}}" wx:key='item'>
@@ -18,7 +24,10 @@
   </swiper>
 </view>
 
-<view class='index-list-box'>
+
+
+<!-- 帖子 -->
+<!-- <view class='index-list-box'>
   <view class='index-contentChoiceness-list' wx:for='{{handpick_contnet}}' wx:key='{{handpick_contnet}}' data-inid='{{item.in_id}}' catchtap='topicShow'>
     <view class='wrap'>
       <view class='index-contentChoiceness-head-box'>
@@ -40,17 +49,14 @@
 
       <view class='index-contentChoiceness-img-list-1' wx:if='{{item.in_append.length == 1 && item.in_append_type == 1}}'>
         <image src='{{host}}{{i}}' mode='aspectFill' wx:for="{{item.in_append}}" wx:key="{{item.in_append}}" wx:for-item="i" wx:if='{{item.in_append_type == 1}}'></image>
-        <!-- <video src='{{host}}{{i}}' objectFit='cover' wx:for="{{item.in_append}}" wx:key="{{item.in_append}}" wx:for-item="i" wx:if='{{item.in_append_type == 2}}'></video> -->
       </view>
 
       <view class='index-contentChoiceness-img-list' wx:if='{{item.in_append.length != 1 && item.in_append.length != 4 && item.in_append_type == 1}}'>
         <image src='{{host}}{{i}}' mode='aspectFill' wx:for="{{item.in_append}}" wx:key="{{item.in_append}}" wx:for-item="i" wx:if='{{item.in_append_type == 1}}'></image>
-        <!-- <video src='{{host}}{{i}}' objectFit='cover' wx:for="{{item.in_append}}" wx:key="{{item.in_append}}" wx:for-item="i" wx:if='{{item.in_append_type == 2}}'></video> -->
       </view>
 
       <view class='index-contentChoiceness-img-list-4' wx:if='{{item.in_append.length == 4 && item.in_append_type == 1}}'>
         <image src='{{host}}{{i}}' mode='aspectFill' wx:for="{{item.in_append}}" wx:key="{{item.in_append}}" wx:for-item="i" wx:if='{{item.in_append_type == 1}}'></image>
-        <!-- <video src='{{host}}{{i}}' objectFit='cover' wx:for="{{item.in_append}}" wx:key="{{item.in_append}}" wx:for-item="i" wx:if='{{item.in_append_type == 2}}'></video> -->
       </view>
 
       <view class='index-contentChoiceness-info-1' wx:if='{{item.in_append.length == 1 && item.in_append_type == 1}}'>
@@ -74,21 +80,12 @@
       </view>
     </view>
   </view>
-
-</view>
-<!-- END -->
+</view> -->
 
 
-<!-- 热门推荐 -->
-<!-- 20200213 add start -->
+
+<!-- 首页导航按钮 -->
 <view class='index-recommend-list-navs'>
-  <!--<navigator url='transaction/transaction' hover-class='none'>
-     <view class='index-recommend-list-nav-item'>
-       <image class='index-recommend-list-nav-image' src='/images/0-3.png'></image>
-       <text>热播课程</text>
-     </view>
-  </navigator> -->
-  <!-- 20200213 add end -->
   
   <navigator url='../company/company' hover-class='none'>
      <view class='index-recommend-list-nav-item'>
@@ -104,37 +101,13 @@
      </view>
   </navigator>
 
-<!-- 20200213 add start -->
     <navigator url='product/product' hover-class='none'>
      <view class='index-recommend-list-nav-item'>
        <image class='index-recommend-list-nav-image' src='/images/0-3.png'></image>
        <text>品家产品</text>
      </view>
   </navigator>
-<!-- 20200213 add end -->
 
-  <!-- <navigator url='ad/ad' hover-class='none'>
-     <view class='index-recommend-list-nav-item'>
-       <image class='index-recommend-list-nav-image' src='/images/5-.png'></image>
-       <text>品家产品</text>
-     </view>
-  </navigator>
-
-  <navigator url='school/school' hover-class='none'>
-     <view class='index-recommend-list-nav-item'>
-       <image class='index-recommend-list-nav-image' src='/images/4-.png'></image>
-       <text>培训学校</text>
-     </view>
-  </navigator> -->
-
-<!-- 20200213 add start -->
-  <!-- <navigator url='../activity/activity' hover-class='none'>
-     <view class='index-recommend-list-nav-item'>
-        <image class='index-recommend-list-nav-image' src='/images/2-.png'></image>
-        <text>教学交流</text>
-     </view>
-  </navigator>
-</view> -->
   <navigator url='school/school' hover-class='none'>
      <view class='index-recommend-list-nav-item'>
         <image class='index-recommend-list-nav-image' src='/images/2-.png'></image>
@@ -142,96 +115,10 @@
      </view>
   </navigator>
 </view>
-<!-- 20200213 add end -->
-<!-- END -->
-
-
-<!-- 热门推荐 -->
-<!-- <view class='index-list-box'>
-  <view class='index-recommend-list'><navigator url='../community/community' hover-class='none'>
-    <text class='index-recommend-list-title'>品家社区</text>
-    <image src='/images/1-.png'></image></navigator>
-  </view>
-
-  <view class='index-recommend-list'><navigator url='master/master' hover-class='none'>
-    <text class='index-recommend-list-title'>名师推荐</text>
-    <image src='/images/6-.png'></image></navigator>
-  </view>
-
-  <view class='index-recommend-list'><navigator url='ad/ad' hover-class='none'>
-    <text class='index-recommend-list-title'>品家产品</text>
-    <image src='/images/5-.png'></image></navigator>
-  </view>
-
-  <view class='index-recommend-list'><navigator url='school/school' hover-class='none'>
-    <text class='index-recommend-list-title'>培训学校</text>
-    <image src='/images/4-.png'></image></navigator>
-  </view>
-
-  <view class='index-recommend-list'><navigator url='transaction/transaction' hover-class='none'>
-    <text class='index-recommend-list-title'>热播课程</text>
-    <image src='/images/0-3.png'></image></navigator>
-  </view>
-  
-  <view class='index-recommend-list'><navigator url='../activity/activity' hover-class='none'>
-    <text class='index-recommend-list-title'>教学交流</text>
-    <image src='/images/2-.png'></image></navigator>
-  </view>
-</view> -->
-
-<!-- <view class='main-menu-group'>
-  <view class='main-menu'>
-<image src='/images/1-.png'></image>    
-<text>品家社区</text>
-</view>
-
-  <view class='main-menu'>
-<image src='/images/1-.png'></image>    
-<text>品家社区</text>
-</view>
-
-  <view class='main-menu'>
-<image src='/images/1-.png'></image>    
-<text>品家社区</text>
-</view>
-</view> -->
-<!-- END -->
 
 
 
-<!-- 品家产品 -->
-<!-- 20200213 add start -->
-<!-- <view class='index-list-box'>
-  <view class='index-list-title'>
-    <text>品家产品</text>
-    <view class='index-more'><navigator url='ad/ad' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>
-  </view>
-
-  <view class='index-ad-list-box'>
-    <view class='wrap'>
-      <view class='index-ad-list' wx:for='{{adList}}' wx:key='{{adList}}'><navigator hover-class='none' url='ad/ad-show/ad-show?brand_id={{item.brand_id}}'>
-        <view class='index-ad-list-logo-box'><image src='{{host}}{{item.brand_img}}' mode='aspectFit'></image></view>
-        <view class='index-ad-list-name-box'><text>{{item.brand_name}}</text></view></navigator>
-      </view>
-    </view>
-  </view> 
-</view> -->
-<!-- 20200213 add end -->
-<!-- END -->
-
-
-
-<!-- 名师推荐 -->
- <!-- <view class='index-list-box'>
-  <view class='index-list-title'>
-     <image src='/images/index-i3.png'></image> 
-    <text>在线视频</text>
-    <view class='index-more'><navigator url='master/master' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>
-  </view>    
-</view>  -->
-<!-- END -->
-
-<!-- 20200213 start -->
+<!-- 视频课 热播 -->
 <view class='index-list-box'>
     <view class='index-list-title'>
      <text>视频课•热播</text>
@@ -246,16 +133,9 @@
            </view>
            <view class='wrap-right'>  
               <view class='on-list-course-name'>{{i.lsm_lesson_main_name}}</view>
-              <!-- <view class='on-list-teacher-name'>主讲老师：{{i.lsm_teacher_name}}</view> -->
-              <!-- <view class='on-list-teacher-title'>
-                 <view class='on-list-teacher-company'>润品控股集团</view>
-                 <view class='on-list-teacher-company'>{{i.lsm_teacher_company_code}}</view>                 
-                 <view class='on-list-teacher-level'>{{i.lsm_teacher_class_level}}</view>
-              </view> -->
               <view class='on-list-teacher-title'>
                  <view class='on-list-teacher-company'>免费</view>
                  <view class='on-list-teacher-company2'>共1章节 1个课时</view>                 
-                 <!-- <view class='on-list-teacher-level'>{{i.lsm_teacher_class_level}}</view> -->
               </view>
               <view class='on-list-course-descript'>课程简介：{{i.lsm_lesson_desc}}</view>
            </view>
@@ -263,43 +143,24 @@
        </view>
      </view>
  </view>
-<!-- 20200213 end -->
-
-<!-- 20191012 test start -->
-<!--培训学校 -->
-<!-- <view class='index-list-box'>
-  <view class='index-list-title'>
-    <text>培训学校</text>
-    <view class='index-more'><navigator url='school/school' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>
-  </view>
-
-  <view class='index-school-list-box'>
-    <view class='wrap'>
-      <view class='index-school-list' wx:for='{{schoolList}}' wx:key='{{schoolList}}'><navigator url='school/school-show/school-show?dr_id={{item.dr_id}}' hover-class='none'>
-        <image src='{{host}}{{item.dr_img[0]}}' mode='aspectFill' class='index-school-list-pic'></image>
-        <view class='index-school-list-name-box'>{{item.dr_name}}</view>
-        <view class='index-school-list-location-box'>
-          <text class='index-school-list-location'><text>地址：</text><text>{{item.dr_address}}</text></text>
-        </view></navigator>
-      </view> 
-    </view>
-  </view> 
-</view> -->
-<!-- END -->
-<!-- 20191012 test end -->
+               <!-- <view class='on-list-teacher-name'>主讲老师：{{i.lsm_teacher_name}}</view> -->
+              <!-- <view class='on-list-teacher-title'>
+                 <view class='on-list-teacher-company'>润品控股集团</view>
+                 <view class='on-list-teacher-company'>{{i.lsm_teacher_company_code}}</view>                 
+                 <view class='on-list-teacher-level'>{{i.lsm_teacher_class_level}}</view>
+              </view> -->
 
 
 
-<!-- 20191012 test start -->
-<!-- 热播课程 -->
+
+<!-- 培训课 精选 -->
 <view class='index-list-course-box'>
   <view class='index-list-course-title'>
     <text>培训课•精选</text>
     <view class='index-more'><navigator url='transaction/transaction' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>
   </view>
-
   <view class='index-product-list-box'>
-   <!--          第一个课程     -->
+
       <view class='mine-collect-list-1' wx:if='{{proList.length > 0}}'><navigator url='../mine/product-show/product-show?pro_id={{proList[0].old_id}}' hover-class='none'>
         <view class='mine-collect-pic-wrap'>
           <image src='{{host}}{{proList[0].old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
@@ -322,7 +183,6 @@
         </view>
       </view>
 
- <!--          第二个课程     -->
       <view class='mine-collect-list-2' wx:if='{{proList.length > 1}}'><navigator url='../mine/product-show/product-show?pro_id={{proList[1].old_id}}' hover-class='none'>
         <view class='mine-collect-pic-wrap'>
           <image src='{{host}}{{proList[1].old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
@@ -345,7 +205,6 @@
         </view>
       </view>
 
- <!--          第三个课程     -->
       <view class='mine-collect-list-3' wx:if='{{proList.length > 2}}'><navigator url='../mine/product-show/product-show?pro_id={{proList[2].old_id}}' hover-class='none'>
         <view class='mine-collect-pic-wrap'>
           <image src='{{host}}{{proList[2].old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
@@ -357,7 +216,6 @@
           <view class='mine-collect-cheap'>早鸟价:￥{{proList[2].old_early_money}}</view>
           <button class='mine-collect-reserve' data-proid="{{proList[2].old_id}}" bindtap="reserve">【预约】</button>
         </view>
-
         <view class='mine-collect-owner-wrap'>
           <image src='{{proList[2].user_headimg}}' mode='aspectFill' class='mine-collect-owner-tx'></image>
           <text class='mine-collect-owner-name'>{{proList[2].user_nickname}}</text>
@@ -369,7 +227,6 @@
         </view>
       </view>
 
- <!--          第四个课程     -->
       <view class='mine-collect-list-4' wx:if='{{proList.length > 3}}'><navigator url='../mine/product-show/product-show?pro_id={{proList[3].old_id}}' hover-class='none'>
         <view class='mine-collect-pic-wrap'>
           <image src='{{host}}{{proList[3].old_img[0]}}' class='mine-collect-pic' mode='aspectFill'></image>
@@ -393,14 +250,14 @@
       </view>
    </view> 
 </view>
-<!-- END -->
-<!-- 20191012 test end -->
 
+
+
+<!-- 活动 资讯 -->
 <view class='index-act-box'>
     <view class='index-act-box-title'>
      <text>活动•资讯</text>
     </view>
-
     <view class='index-act-list-box'>
      <view class='index-act-list' wx:for="{{actMainList}}" wx:key="{{actMainList}}" wx:for-item="i">
         <navigator url='/activity-broadcast/activity-broadcast?act_id={{i.act_id}}' hover-class='none'>
@@ -416,4 +273,3 @@
         <button class='more-btn' bindtap='moreInfor'>查看更多</button>
     </view>
  </view>
-<!-- 20200213 end -->
