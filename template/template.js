@@ -11,10 +11,10 @@ function tabbarinit() {
    
     {
       "current": 0,
-      "pagePath": "/pages/community/community",
+      "pagePath": "../index/broadcast-list/broadcast-list",
       "iconPath": "/images/community-icon.png",
       "selectedIconPath": "/images/community-icon-n-.png",
-      "text": "社区"
+      "text": "课程"
 
     },
 

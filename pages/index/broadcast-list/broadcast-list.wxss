@@ -1,0 +1,178 @@
+/* pages/index/broadcast-list/broadcast-list.wxss */
+.index-list-box{
+  margin-top: 0rpx;
+  overflow: hidden;
+  /* 20200130 start */
+  width: 96%;
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 8rpx;
+  margin-left: 15rpx;
+  margin-bottom: 20rpx;
+  /* 20200130 end */
+}
+
+.index-list-title{
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 100%;
+  margin-left: 0rpx;
+  /* padding: 0 24rpx; */
+  font-size: 34rpx;
+  font-weight: bold;
+  background: #ffffff;
+  /* color: rgb(255, 196, 0); */
+/* border: rgb(0, 0, 0) solid 1px; */
+
+}
+
+.index-list-title image{
+  width: 42rpx;
+  height: 42rpx;
+  vertical-align: text-bottom;
+  margin-right: 14rpx;
+  float:left;
+  margin-top:24rpx;
+}
+
+.index-list-box:nth-child(7) .index-list-title image{
+  width: 46rpx;
+  height: 34rpx;
+}
+
+.index-list-box:nth-child(7) .index-list-title .index-more image{
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.index-list-box:nth-child(9) .index-list-title image{
+  width: 38rpx;
+  height: 42rpx;
+}
+
+.index-list-box:nth-child(9) .index-list-title .index-more image{
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.index-more{
+  float: right;
+  font-size: 26rpx;
+  color: #999999;
+  font-weight: 500;
+}
+
+.index-more image{
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 10rpx;
+  margin-right: 0;
+  margin-top:32rpx;
+  float: right;
+}
+
+.index-course-video-list-box{
+  width: 100%;
+}
+
+.index-course-video-list{
+  height: 200rpx;
+  width: 100%;
+  background: #ffffff;
+  /* margin-top: 10rpx;    */
+  padding: 0rpx 50rpx 0rpx 20rpx;     
+  font-size: 32rpx; 
+  position: relative;
+  float: left; 
+}
+
+.wrap-left{
+  background: #ffffff;
+  height: 180rpx;
+  width: 200rpx;
+  font-size: 32rpx;
+  position: relative; 
+  float: left;
+}
+
+.wrap-left image{
+  height: 150rpx;
+  width: 195rpx;
+  border-radius: 8rpx;
+}
+
+.wrap-right{
+  height: 180rpx;
+  width: 465rpx;
+  background: #ffffff;
+  font-size: 32rpx;
+  position: relative; 
+  float: left;
+}
+
+.on-list-course-name{
+  width: 100%;
+  height: 30rpx;
+  line-height: 30rpx; 
+  font-weight: 500;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  margin-left: 30rpx;
+  margin-bottom: 15rpx;
+  position: relative; 
+  float: left;
+
+  /* border-width: 1rpx 1rpx 1rpx 1rpx ;
+  border-color: #1f2acc;
+  border-style: solid;  */
+}
+
+.on-list-teacher-title{
+  width: 100%;
+  height: 30rpx;
+  line-height: 30rpx;
+  position: relative;
+  float: left;
+  margin-left: 30rpx;
+  margin-bottom: 15rpx;
+
+  /* border-width: 1rpx 1rpx 1rpx 1rpx ;
+  border-color: #1f2acc;
+  border-style: solid;  */
+}
+
+.on-list-teacher-company{
+  font-size: 26rpx;
+  margin-right: 10rpx;
+  margin-top: 12rpx;
+  position: relative; 
+  float: left;
+  color: red;
+}
+
+.on-list-teacher-company2{
+  font-size: 26rpx;
+  margin-right: 20rpx;
+  margin-top: 12rpx;
+  position: relative; 
+  float: left;
+  margin-left: 20rpx;
+}
+
+.on-list-course-descript{
+  width:100%;
+  color: #999999;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 28rpx;
+  margin-left: 30rpx;
+  margin-top: 28rpx;
+  position: relative; 
+  float: left; 
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+
