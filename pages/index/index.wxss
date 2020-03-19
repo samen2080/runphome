@@ -44,16 +44,18 @@ page{
   text-align: center;
   width: 750rpx;
   position: relative;
-  height: 336rpx;
+  height: 350rpx;
 /*  height: 436rpx;*/
 }
 .banner-img{
-  width: 100%;
-  height: 100%;
+  width: 96%;
+  height: 96%;
+  border-radius: 10rpx;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2); 
 }
 
 /* ***************************************** */
@@ -1071,11 +1073,7 @@ page{
 
 .index-act-box{
   margin-top: 24rpx;
-  overflow: hidden;
-
-
-
-  border-bottom: 2rpx solid #070000;
+  /* overflow: hidden; */
 }
 
 .index-act-box-title{
@@ -1086,21 +1084,14 @@ page{
   font-weight: bold;
   background: #ffffff;
   margin-bottom: 1rpx;
-
-
-  
-  border-bottom: 2rpx solid #b7f311;
-
 }
 
 .index-act-list-box{
   width: 100%;
-  border-bottom: 2rpx solid #e71d1d;
-
 }
 
 .index-act-list{
-  height: 490rpx;
+  /* height: 490rpx; */
   width: 100%;
   background: #ffffff;
   padding: 0rpx 50rpx 0rpx 20rpx;     
@@ -1133,12 +1124,11 @@ page{
 
 .index-act-list-bottom{
   width: 100%;
-  position: relative;
 }
 
 .more-btn{
  font-size: 28rpx;
- width: 750rpx;
+ width: 100%;
  background: white;
  /* margin-top: 30rpx; */
  /* height: 60rpx; */
