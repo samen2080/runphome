@@ -568,6 +568,13 @@
 					"id": -1,
 					"name": "pages/mine/buy/reserve-show/reserve-show",
 					"pathName": "pages/mine/buy/reserve-show/reserve-show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/buy/buy",
+					"pathName": "pages/mine/buy/buy",
 					"scene": null
 				}
 			]
