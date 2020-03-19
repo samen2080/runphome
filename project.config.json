@@ -575,6 +575,13 @@
 					"id": -1,
 					"name": "pages/mine/buy/buy",
 					"pathName": "pages/mine/buy/buy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/record-broadcast/record-broadcast",
+					"pathName": "pages/index/record-broadcast/record-broadcast",
 					"scene": null
 				}
 			]

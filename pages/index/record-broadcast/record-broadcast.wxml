@@ -47,38 +47,25 @@
 
 
     <!-- 视频列表 -->
-    <view class='mine-subject-box' wx:if='{{currentTab==1}}'>
-      <view class='mine-subject-list' wx:for="{{inList}}" wx:key="{{inList}}" wx:for-item="i">
-        <navigator url='job-show/job-show?job_id={{i.job_id}}' hover-class='none'>
-          <view class='wrap-left'>  
-                <view class='on-list-name'>{{i.job_name}}{{i.job_benefit}}</view>
-                <view class = 'on-list-salary-type'>
-                    <view class='on-list-salary'>{{i.job_salary}}元 </view>
-                    <view class='on-list-type'>·{{i.job_type}}</view>
+    <view class='video-list-box' wx:if='{{currentTab==1}}'>
+    <!-- 视频列表 -->
+        <block wx:for-items="{{list}}" wx:key="{{item.id}}">
+            <view class="kind-list-item">
+                <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="kindToggle">
+                    <view class="kind-list-text">{{item.name}}</view>
                 </view>
-                <view class='on-list-address'>{{i.job_county}}-{{i.job_address}} ·{{i.job_experience_ind}}</view>
-                <view class='on-list-edu'>学历要求：{{i.job_education_ind}}</view>
-              <!-- <view class='mine-subject-head-box'>
-                    <view class='on-list-name1'>
-                        <view class='main-show-name'>{{i.job_name}}{{i.job_benefit}}</view>
-                        <view class='on-list-name3'>{{i.job_salary}}元 </view>
-                        <view class='on-list-name4'>·{{i.job_type}}</view>
-                        <view class='on-list-name2'>{{i.job_county}}-{{i.job_address}} ·{{i.job_experience_ind}}</view>
-                        <view class='on-list-name2'>学历要求：{{i.job_education_ind}}</view>
-                    </view>  
-                </view> -->
-           </view>
-           <view class='wrap-right'>  
-              <view class='on-list-time'>{{i.job_add_time}}</view>
-              <button class='on-list-btn' data-jobid="{{i.job_id}}" catchtap='apply'>申请</button>
-              <!-- <view class='mine-subject-head-box'>
-                    <view class='on-list-name1'>  
-                        <view class='on-list-name5'>{{i.job_add_time}}</view>
-                        <button class='on-list-name6'  data-jobid="{{i.job_id}}" catchtap='apply'>申请</button>
-                    </view>  
-                </view> -->
-           </view>
-          </navigator>
-       </view>
+                <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
+                    <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
+                        <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
+                            <navigator url="pages/{{page}}/{{page}}" class="navigator">
+                                <view class="navigator-text">{{page}}</view>
+                                <!-- icon -->
+                                <view class="navigator-arrow"></view>
+                            </navigator>
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </block>
     </view>
 </view>

@@ -4,12 +4,61 @@ var imgPostf = ["jpg", "png", "bmp", 'jpeg'];
 var videoPostf = ['avi', 'rm', 'rmvb', 'mpeg', 'mpg', 'dat', 'mov', 'qt', 'asf', 'wmv', 'mp4'];
 Page({
 
+// 20200319 liao add start
   /**
    * 页面的初始数据
    */
-  data: {
-    currentTab: 0
+  // data: {
+  //   currentTab: 0
+  // },
+    data: {
+      currentTab: 0,
+      list: [{
+        id: 'view',
+        name: '机器人概述',
+        open: false,
+        pages: ['认识机器人', '机器人应用范围', '机器人操作指南']
+    }, {
+      id: 'content',
+      name: '工具坐标系原点',
+      open: false,
+          pages: ['坐标系原点原理', '坐标系原点分析']
+}, {
+    id: 'form',
+    name: '工作机器人坐标',
+    open: false,
+          pages: ['认识坐标系', '坐标系基本原理', '坐标系实习指南']
+  }]
   },
+// 20200319 liao add end
+  /**
+   * 收缩核心代码
+   */
+  kindToggle(e) {
+    const id = e.currentTarget.id
+    const list = this.data.list
+    for(let i = 0, len = list.length; i<len; ++i) {
+  if (list[i].id === id) {
+    list[i].open = !list[i].open
+  } else {
+    list[i].open = false
+  }
+}
+
+/**
+ * key和value名称一样时，可以省略
+ * 
+ * list:list=>list
+ */
+this.setData({
+  list
+})
+  },
+
+
+
+
+
 
   /**
    * 生命周期函数--监听页面加载
@@ -56,7 +105,9 @@ Page({
       if (e.target.dataset.current == 0) {
         that.getDetail();
       } else {
-        that.getIn();
+      // 20200319 liao start
+        // that.getIn();
+      // 20200319 liao end
       }
     }
   },
@@ -91,7 +142,9 @@ Page({
           app.func.req('collect', { coll_type: 1, coll_user_id: that.data.openid, coll_good_id: coll_good_id }, 'POST', function (res) {
             // console.log(res);
             if (res.code == 200) {
-              that.getIn();
+              // 20200319 liao start
+              // that.getIn();
+              // 20200319 liao end
             }
           });
         }
