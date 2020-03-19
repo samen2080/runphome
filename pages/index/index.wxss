@@ -624,6 +624,7 @@ page{
   font-weight: 500;
   font-size: 28rpx;
   margin-left: 30rpx;
+  margin-top: 10rpx;
   margin-bottom: 15rpx;
   position: relative; 
   float: left;
@@ -665,8 +666,19 @@ page{
 .on-list-teacher-company{
   font-size: 26rpx;
   margin-right: 10rpx;
+  margin-top: 12rpx;
   position: relative; 
   float: left;
+  color: red;
+}
+
+.on-list-teacher-company2{
+  font-size: 26rpx;
+  margin-right: 20rpx;
+  margin-top: 12rpx;
+  position: relative; 
+  float: left;
+  margin-left: 20rpx;
 }
 
 .on-list-teacher-level{
@@ -685,6 +697,7 @@ page{
   line-height: 30rpx;
   font-size: 28rpx;
   margin-left: 30rpx;
+  margin-top: 28rpx;
   position: relative; 
   float: left; 
   display: block;

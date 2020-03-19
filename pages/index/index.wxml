@@ -235,7 +235,7 @@
 <view class='index-list-box'>
     <view class='index-list-title'>
      <text>视频课•热播</text>
-     <view class='index-more'><navigator url='record-broadcast/record-broadcast' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>
+     <view class='index-more'><navigator url='broadcast-list/broadcast-list' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>
     </view>
 
     <view class='index-course-video-list-box'>
@@ -247,9 +247,14 @@
            <view class='wrap-right'>  
               <view class='on-list-course-name'>{{i.lsm_lesson_main_name}}</view>
               <!-- <view class='on-list-teacher-name'>主讲老师：{{i.lsm_teacher_name}}</view> -->
+              <!-- <view class='on-list-teacher-title'>
+                 <view class='on-list-teacher-company'>润品控股集团</view>
+                 <view class='on-list-teacher-company'>{{i.lsm_teacher_company_code}}</view>                 
+                 <view class='on-list-teacher-level'>{{i.lsm_teacher_class_level}}</view>
+              </view> -->
               <view class='on-list-teacher-title'>
-                 <!-- <view class='on-list-teacher-company'>润品控股集团</view> -->
-                 <!-- <view class='on-list-teacher-company'>{{i.lsm_teacher_company_code}}</view>                  -->
+                 <view class='on-list-teacher-company'>免费</view>
+                 <view class='on-list-teacher-company2'>共1章节 1个课时</view>                 
                  <!-- <view class='on-list-teacher-level'>{{i.lsm_teacher_class_level}}</view> -->
               </view>
               <view class='on-list-course-descript'>课程简介：{{i.lsm_lesson_desc}}</view>
@@ -398,7 +403,7 @@
 
     <view class='index-act-list-box'>
      <view class='index-act-list' wx:for="{{actMainList}}" wx:key="{{actMainList}}" wx:for-item="i">
-        <navigator url='activity-broadcast/activity-broadcast?act_id={{i.act_id}}' hover-class='none'>
+        <navigator url='/activity-broadcast/activity-broadcast?act_id={{i.act_id}}' hover-class='none'>
            <view class='on-list-act-item'>{{i.act_name}}</view>
            <view class='on-list-act-time'>{{i.act_publish_date}}</view>
            <view class='on-list-wrap-img'>  
