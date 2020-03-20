@@ -112,9 +112,6 @@ page{
   height: 90rpx;
   line-height: 90rpx;
   padding: 0 24rpx;
-  /* border-bottom: 2rpx solid #e9e9e9; */
-  /* border-bottom: 2rpx solid #6d63ff; */
-  /* font-size: 36rpx; */
   font-size: 34rpx;
   font-weight: bold;
   background: #ffffff;
@@ -574,9 +571,6 @@ page{
   background: #ffffff;
   overflow: hidden;
   padding-bottom: 30rpx;
-  /* border-width: 1rpx 10rpx 1rpx 1rpx ;
-  border-color: #f85808;
-  border-style: solid;  */
 }
 
 /* 20200213 start */
@@ -630,10 +624,6 @@ page{
   margin-bottom: 15rpx;
   position: relative; 
   float: left;
-
-  /* border-width: 1rpx 1rpx 1rpx 1rpx ;
-  border-color: #1f2acc;
-  border-style: solid;  */
 }
 
 .on-list-teacher-name{
@@ -645,10 +635,6 @@ page{
   margin-bottom: 15rpx;
   position: relative; 
   float: left;
-
-  /* border-width: 1rpx 1rpx 1rpx 1rpx ;
-  border-color: #1f2acc;
-  border-style: solid;  */
 }
 
 .on-list-teacher-title{
@@ -659,10 +645,6 @@ page{
   float: left;
   margin-left: 30rpx;
   margin-bottom: 15rpx;
-
-  /* border-width: 1rpx 1rpx 1rpx 1rpx ;
-  border-color: #1f2acc;
-  border-style: solid;  */
 }
 
 .on-list-teacher-company{
@@ -922,13 +904,17 @@ page{
 
 .mine-collect-list-1{
   width: 340rpx;
-  height: 580rpx;
+  /* 20200320 liao add start */
+  /* height: 580rpx; */
+  height: 470rpx;
+  /* 20200320 liao add end */
   background: #ffffff;
-  border: 2rpx solid #fffcfc;
+  /* border: 2rpx solid #fffcfc; */
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.1);
   float: left;
   margin-left: 24rpx;
   margin-top: 20rpx;
-  border-radius: 4rpx;
+  border-radius: 8rpx;
   overflow: hidden;
    /* border-width: 2rpx 2rpx 2rpx 2rpx ;
   border-color: rgb(248, 89, 15);
@@ -965,13 +951,14 @@ page{
 }
 .mine-collect-list-3{
   width: 340rpx;
-  height: 580rpx;
+  height: 470rpx;
   background: #ffffff;
-  border: 2rpx solid  #fbfafc;
+  /* border: 2rpx solid #fffcfc; */
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.1);
   float: left;
   margin-left: 24rpx;
   margin-top: 20rpx;
-  border-radius: 4rpx;
+  border-radius: 8rpx;
   overflow: hidden;
 }
 .mine-collect-list-3 .mine-collect-pic-wrap{
@@ -985,13 +972,14 @@ page{
 }
 .mine-collect-list-2{
   width: 340rpx;
-  height: 580rpx;
+  height: 470rpx;
   background: #ffffff;
-  border: 2rpx solid  #fdfcfc;
+  /* border: 2rpx solid #fffcfc; */
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.1);
   float: right;
   margin-right: 24rpx;
   margin-top: 20rpx;
-  border-radius: 4rpx;
+  border-radius: 8rpx;
   overflow: hidden;
 
  
@@ -1007,13 +995,14 @@ page{
 }
 .mine-collect-list-4{
   width: 340rpx;
-  height: 580rpx;
+  height: 470rpx;
   background: #ffffff;
-  border: 2rpx solid #fcfdfd;
+  /* border: 2rpx solid #fffcfc; */
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.1);
   float: right;
   margin-right: 24rpx;
   margin-top: 20rpx;
-  border-radius: 4rpx;
+  border-radius: 8rpx;
   overflow: hidden;
 
 }

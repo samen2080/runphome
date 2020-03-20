@@ -32,7 +32,7 @@
 
       <view class='mine-collect-name-wrap'>
         <text class='mine-collect-name'>{{item.old_name}}</text>
-          <view class='mine-collect-time'>{{proList[0].old_add_time}}</view>
+          <view class='mine-collect-time'>开班时间:<view>{{proList[0].old_add_time}}</view></view>
           <view class='mine-collect-cheap'>早鸟价:￥{{proList[0].old_early_money}}</view>
           <button class='mine-collect-reserve' data-proid="{{proList[0].old_id}}" bindtap="reserve">【预约】</button>
       </view>
