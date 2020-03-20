@@ -596,6 +596,13 @@
 					"id": -1,
 					"name": "pages/mine/my-book/my-book",
 					"pathName": "pages/mine/my-book/my-book",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/my-book/my-book",
+					"pathName": "pages/mine/my-book/my-book",
 					"scene": null
 				}
 			]

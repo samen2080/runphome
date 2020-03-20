@@ -13,8 +13,26 @@
           </view>
           <text class='on-list-name'>电话：{{item.bok_mobile}}</text>
         </view>
+        <!--20200321 liao add start-->
+        <!-- <view class='on-list-btn-wrap'><button class='on-list-remove-btn' hover-class='none' data-oldid="{{item.bok_old_id}}" catchtap='showOldPage'>查看详情</button></view> -->
+        <view class = "icon">
+          <view class="icon-left">
+              <button  catchtap='removeBok' data-id="0" data-bok_id="{{item.bok_id}}" wx:if="{{item.bok_delete_ind == 0}}" >取消预约</button>
+              <button  catchtap='rebook' data-old_id="{{item.bok_old_id}}" data-bok_id="{{item.bok_id}}" wx:else >重新预约</button>
+          </view> 
+          <view class="icon-right">
+              <button  data-old_id="{{item.bok_old_id}}" catchtap='showOldPage'>查看详情</button>
+          </view>
+      </view> 
 
-        <view class='on-list-btn-wrap'><button class='on-list-remove-btn' hover-class='none' data-oldid="{{item.bok_old_id}}" catchtap='showOldPage'>查看详情</button></view>
+      <view class='removeModal' hidden='{{hidden}}'>
+        <view class='removeModal-box'>
+          <view class='removeModal-title'>{{txt}}</view>
+          <view class='removeModal-cancel' bindtap='removeCancel'>再想想</view>
+          <view class='removeModal-sure' bindtap='removeSure' data-num="{{num}}">确定</view>
+        </view>
+      </view>  
+      <!--20200321 liao add end-->
     </view>
 
    </view>

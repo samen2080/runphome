@@ -1,19 +1,7 @@
 <!--pages/mine/buy/reserve-show/reserve-show.wxml-->
 <view class='product-show-top'>
-  <!-- <view class='product-show-top-title'>
-    <image src='/images/shouhuo_icon.png'></image>
-    <text>{{items.tra_status == 1 ? "待上课" : items.tra_status == 2 ? "等待当面上课":items.tra_status == 3 ? "已完成":"报名已取消"}}</text>
-  </view> -->
-  
-  <!-- <view class='product-show-top-content' wx:if='{{items.tra_status == 2}}'>
-    <text>上课时,请将上课码告知对方，安全起见，建议在公众场合出示上课码。</text>
-  </view> -->
-  
   <view class='product-show-top-code'>
     <text>预约码：{{items.bok_id}}</text>
-    <!-- <button  catchtap='removePro' data-id="0">取消预约</button> -->
-    <!-- <button wx:if='{{items.tra_status == 2}}'>确认上课</button> -->
-    <!-- <button  catchtap='removePro' data-id="1">删除预约</button> -->
   </view>
 </view>
 
@@ -26,21 +14,9 @@
 </view>
 
 <view class='product-show-bottom'>
-  <!-- <view class='product-show-bottom-info'>
-    <image src='{{host}}{{items.old_img[0]}}' mode='aspectFill'></image>
-    <text class='product-show-bottom-name'>{{items.old_name}}</text>
-    <text class='product-show-bottom-price'>￥<text>{{items.tra_amount}}</text></text>
-  </view> -->
-
-  <!-- <view class='product-show-bottom-list'>
-    <view>报名编号：<text>{{items.tra_order_no}}</text></view>
-  </view> -->
   <view class='product-show-bottom-list'>
     <view>发起时间：<text>{{items.bok_add_time}}</text></view>
   </view>
-  <!-- <view class='product-show-bottom-list'>
-    <view>上课码：<text>{{items.tra_conversion_no}}</text></view>
-  </view> -->
 </view>
 <!-- 20191102 start -->
     <!-- <view class="star-title">服务质量</view>

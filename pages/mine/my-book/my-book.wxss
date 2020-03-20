@@ -1,6 +1,8 @@
 /* pages/mine/my-book/my-book.wxss */
 @import '../publish/publish.wxss';
-
+/* 20200321 liao add start */
+@import '../buy/reserve-show/reserve-show.wxss';
+/* 20200321 liao add end */
 .on-list-list{
   overflow: hidden;
 }

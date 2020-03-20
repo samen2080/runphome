@@ -184,26 +184,6 @@ Page({
     // 20200319 liao add end
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  // onLoad: function (options) {
-  //   var that = this;
-  //   var host = app.globalData.host;
-  //   that.setData({
-  //     host: host,
-  //     tra_id: options.tra_id
-  //   })
-  //   wx.getStorage({
-  //     key: 'openid',
-  //     success: function (res) {
-  //       that.setData({
-  //         openid: res.data
-  //       })
-  //     },
-  //   })
-  //   that.getDetail();
-  // },
   getDetail: function () {
     var user_id = wx.getStorageSync("user_info").user_id;
     var that = this;
@@ -266,16 +246,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // var that = this;
-    // wx.getStorage({
-    //   key: 'openid',
-    //   success: function (res) {
-    //     that.setData({
-    //       openid: res.data
-    //     })
-    //     that.getDetail();
-    //   },
-    // }) 
+
   },
 
   /**
