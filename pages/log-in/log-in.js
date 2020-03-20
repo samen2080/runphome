@@ -157,7 +157,10 @@ Page({
           openid: that.data.openid,
         }, 'POST', function (res) {
           if (res.code == 200) {
-            app.func.req('new_reserve_course', { openid: that.data.openid, bok_name: that.data.name, bok_mobile: that.data.phone, bok_user_id: that.data.user_id, }, 'POST', function (res) {
+            // 20200320 start
+            // app.func.req('new_reserve_course', { openid: that.data.openid, bok_name: that.data.name, bok_mobile: that.data.phone, bok_user_id: that.data.user_id, }, 'POST', function (res) {
+            app.func.req('new_reserve_course', { openid: that.data.openid, old_id: that.data.old_id, bok_name: that.data.name, bok_mobile: that.data.phone, bok_user_id: that.data.user_id, }, 'POST', function (res) {
+              // 20200320 end
               if (res.code == 200) {
                 wx.setStorage({
                   key: 'user_info',

@@ -146,7 +146,10 @@ Page({
           url: '../../log-in/log-in?old_id=' + e.currentTarget.dataset.proid + '&user_id=' + user_id
         })
       } else {
-        app.func.req('new_reserve_course', { openid: that.data.openid, bok_name: user_name, bok_mobile: user_phone, bok_user_id: user_id, }, 'POST', function (res) {
+        // 20200320 start
+        // app.func.req('new_reserve_course', { openid: that.data.openid, bok_name: user_name, bok_mobile: user_phone, bok_user_id: user_id, }, 'POST', function (res) {
+        app.func.req('new_reserve_course', { openid: that.data.openid, old_id: e.currentTarget.dataset.proid, bok_name: user_name, bok_mobile: user_phone, bok_user_id: user_id, }, 'POST', function (res) {
+          // 20200320 end
           if (res.code == 200) {
             that.setData({
               bok_id: res.bok_id

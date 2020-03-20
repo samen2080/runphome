@@ -355,7 +355,10 @@ Page({
           //  20200317 end
          })
        }else{   
-         app.func.req('new_reserve_course', { openid: that.data.openid, bok_name: that.data.userInfo.user_name, bok_mobile: that.data.userInfo.user_phone, bok_user_id: that.data.userInfo.user_id, }, 'POST', function (res) {
+        //  20200320 start
+        //  app.func.req('new_reserve_course', { openid: that.data.openid, bok_name: that.data.userInfo.user_name, bok_mobile: that.data.userInfo.user_phone, bok_user_id: that.data.userInfo.user_id, }, 'POST', function (res) {
+         app.func.req('new_reserve_course', { openid: that.data.openid, old_id: e.currentTarget.dataset.proid, bok_name: that.data.userInfo.user_name, bok_mobile: that.data.userInfo.user_phone, bok_user_id: that.data.userInfo.user_id, }, 'POST', function (res) {
+          //  20200320 end
            console.log("20200317A", res.code);
            console.log("20200319", res.bok_id);
         // 20200319 liao add start

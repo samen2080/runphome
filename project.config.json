@@ -582,6 +582,20 @@
 					"id": -1,
 					"name": "pages/index/record-broadcast/record-broadcast",
 					"pathName": "pages/index/record-broadcast/record-broadcast",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/product-show/product-show",
+					"pathName": "pages/mine/product-show/product-show",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mine/my-book/my-book",
+					"pathName": "pages/mine/my-book/my-book",
 					"scene": null
 				}
 			]

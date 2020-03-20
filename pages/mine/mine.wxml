@@ -86,10 +86,16 @@
     <image src='/images/a1.png'></image>
     <view>我发布的</view></navigator>
   </view>
-  <view class='mine-have-list-n'><navigator url='send/send' hover-class='none'>
+  <!-- 20200320 start -->
+  <!-- <view class='mine-have-list-n'><navigator url='send/send' hover-class='none'>
     <image src='/images/a2.png'></image>
     <view>我送出的</view></navigator>
+  </view> -->
+  <view class='mine-have-list-n'><navigator url='my-book/my-book' hover-class='none'>
+    <image src='/images/a2.png'></image>
+    <view>我的预约</view></navigator>
   </view>
+  <!-- 20200320 end -->
   <view class='mine-have-list-n'><navigator url='buy/buy' hover-class='none'>
     <image src='/images/a3.png'></image>
     <view>我报名的</view></navigator>

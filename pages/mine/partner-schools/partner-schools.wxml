@@ -22,7 +22,7 @@
 
 <!-- 空白页 -->
 
-<view class='kb-page' wx:if='{{item.length <= 0}}'>
+<view class='kb-page' wx:if='{{items.length <= 0}}'>
   <image src='/images/kb.png'></image>
   <view>暂无记录~</view>
 </view>

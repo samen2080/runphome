@@ -1,0 +1,27 @@
+<!--pages/mine/my-book/my-book.wxml-->
+<view class='on-list'>   
+      <view class='on-list-list' wx:for="{{items}}" wx:key="key">
+        <view class='on-list-number-wrap'>
+          <text class='on-list-number'>预约ID:<text>{{item.bok_id}}</text></text>
+           <!-- <text class='on-list-status'>性别：{{item.stu_sex==1 ? "男":"女"}}</text> -->
+        </view>
+        <view class='on-list-info'>
+          <image src='{{host}}{{item.old_img[0]}}' mode='aspectFill'></image>
+          <view class='mine-contract-date-wrap'>
+              <text class='mine-contract-date-title'>姓名：</text>
+              <text class='mine-contract-date-value'>{{item.bok_name}}</text>
+          </view>
+          <text class='on-list-name'>电话：{{item.bok_mobile}}</text>
+        </view>
+
+        <view class='on-list-btn-wrap'><button class='on-list-remove-btn' hover-class='none' data-oldid="{{item.bok_old_id}}" catchtap='showOldPage'>查看详情</button></view>
+    </view>
+
+   </view>
+
+<!-- 空白页 -->
+
+<view class='kb-page' wx:if='{{items.length <= 0}}'>
+  <image src='/images/kb.png'></image>
+  <view>暂无记录~</view>
+</view>
