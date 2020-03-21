@@ -65,6 +65,41 @@
   right: 24rpx;
   text-align: left;
 }
+
+/* 20200321 start */
+.mine-book-course-title{
+  position: absolute;
+  width: 510rpx;
+  bottom: 84rpx;
+  right: 24rpx;
+  text-align: left;
+}
+
+.on-list-name{
+  width: 510rpx;
+  position: absolute;
+  top: 20rpx;
+  right: 24rpx;
+  text-align: justify;
+  line-height: 48rpx;
+  display: -webkit-box;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:1;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+/* 20200321 end */
+
+/* .mine-book-course-title{
+  position: absolute;
+  width: 510rpx;
+  bottom: 84rpx;
+  right: 24rpx;
+  text-align: left;
+} */
+
 .mine-contract-date-value{
   width: 510rpx;
   position: absolute;

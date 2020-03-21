@@ -603,6 +603,13 @@
 					"id": -1,
 					"name": "pages/mine/my-book/my-book",
 					"pathName": "pages/mine/my-book/my-book",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/company/company-show/app-job/app-job",
+					"pathName": "pages/company/company-show/app-job/app-job",
 					"scene": null
 				}
 			]

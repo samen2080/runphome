@@ -1,7 +1,7 @@
 /* pages/company/company-show/app-job/app-job.wxss */
 .index-resum-top{
   height: 300rpx;
-  width: 747rpx;
+  width: 100%;
   background: #ffffff;
   font-size: 32rpx; 
   position: relative;
@@ -25,12 +25,12 @@
   border-radius: 50%;
   overflow: hidden;
   vertical-align: middle;
-  margin: 70rpx 0 30rpx 80rpx;
+  margin: 50rpx 0 30rpx 80rpx;
 }
 
 .wrap-right{
   height: 297rpx;
-  width: 510rpx;
+  width: 495rpx;
   background: #ffffff;
   font-size: 32rpx;
   position: relative; 
@@ -39,7 +39,7 @@
 }
 
 .input-wrap{
-  font-size: 36rpx;
+  font-size: 32rpx;
   margin-top:50rpx;
   margin-left: 60rpx;
 }
@@ -70,8 +70,8 @@
 
 
 .index-resume-middle{
-  height: 270rpx;
-  width: 747rpx;
+  height: 300rpx;
+  width: 100%;
   background: #ffffff;
   font-size: 32rpx; 
   position: relative;
@@ -82,46 +82,61 @@
 .resume-left{
   background: #ffffff;
   height: 297rpx;
-  width: 225rpx;
+  width: 235rpx;
   font-size: 32rpx;
   position: relative; 
   float: left;
-/* border: rgb(175, 47, 47) solid 1px; */
 }
 
-.year-edit-input text{
+.birth-year-value{
+  text-align: center;
+}
+
+.birth-year-edit-input text{
   margin-top: 10rpx;
-  margin-left:50rpx; 
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .resume-center{
   height: 297rpx;
-  width: 280rpx;
+  width: 245rpx;
   background: #ffffff;
   font-size: 32rpx;
   position: relative; 
   float: left;
-/* border: rgb(47, 29, 207) solid 1px; */
+}
+
+.qualification-value{
+  text-align: center;
 }
 
 .qualification-edit-input text{
   margin-top: 10rpx;
-  margin-left:100rpx; 
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .resume-right{
   height: 297rpx;
-  width: 225rpx;
+  width: 245rpx;
   background: #ffffff;
   font-size: 32rpx;
   position: relative; 
   float: left;
-/* border: rgb(47, 29, 207) solid 1px; */
 }
 
-.date-edit-input text{
+.experience-years-value{
+ text-align: center;
+}
+
+.experience-years-edit-input text{
   margin-top: 10rpx;
-  margin-left: 50rpx; 
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 
@@ -131,7 +146,7 @@
   width: 100%;
   background: #ffffff;
   /* margin-top: 10rpx;    */
-  padding: 0rpx 50rpx 0rpx 20rpx;     
+  padding: 0rpx 0rpx 0rpx 20rpx;     
   font-size: 32rpx; 
   position: relative;
   float: left; 
@@ -143,7 +158,7 @@
   height: 160rpx;
   width: 100%;
   background: #ffffff;
-  padding: 0rpx 50rpx 0rpx 20rpx;     
+  padding: 0rpx 0rpx 0rpx 20rpx;     
   font-size: 32rpx; 
   position: relative;
   float: left; 

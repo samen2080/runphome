@@ -5,14 +5,17 @@
           <text class='on-list-number'>预约ID:<text>{{item.bok_id}}</text></text>
            <!-- <text class='on-list-status'>性别：{{item.stu_sex==1 ? "男":"女"}}</text> -->
         </view>
+        <!-- 20200321 start -->
         <view class='on-list-info'>
           <image src='{{host}}{{item.old_img[0]}}' mode='aspectFill'></image>
           <view class='mine-contract-date-wrap'>
-              <text class='mine-contract-date-title'>姓名：</text>
-              <text class='mine-contract-date-value'>{{item.bok_name}}</text>
+              <text class='on-list-name'>课程名称：{{item.old_name}}</text>  
+              <text class='mine-book-course-title'>姓名：{{item.bok_name}}</text>   
+              <!-- <text class='mine-contract-date-value'>{{item.bok_name}}</text> -->
           </view>
-          <text class='on-list-name'>电话：{{item.bok_mobile}}</text>
+          <text class='mine-contract-date-title'>电话：{{item.bok_mobile}}</text>
         </view>
+        <!-- 20200321 end  -->
         <!--20200321 liao add start-->
         <!-- <view class='on-list-btn-wrap'><button class='on-list-remove-btn' hover-class='none' data-oldid="{{item.bok_old_id}}" catchtap='showOldPage'>查看详情</button></view> -->
         <view class = "icon">

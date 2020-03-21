@@ -93,6 +93,11 @@
   margin-bottom: 20rpx;
   position: relative; 
   float: left;
+  overflow: hidden;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  text-overflow:ellipsis;
+  -webkit-line-clamp:1;
 }
 
 .on-list-edu{

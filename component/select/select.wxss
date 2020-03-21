@@ -14,17 +14,22 @@
     position: relative;
     height: 30px;
     line-height: 30px;
-    margin-left: 20rpx;
-
+     /* 20200321 start */
+     margin-left: 20px;
+    margin-left: 0rpx;
+    /* 20200321 end */
 }
 
 .com-sTxt{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    padding:0 20px 0 6px;
-    font-size: 14px;
-   
+    /* padding:0 20px 0 6px; */
+    padding:0 0px 0 0px;
+    /* 20200321 start */
+    /* font-size: 14px; */
+    font-size: 16px;
+    /* 20200321 end */
    /* border: rgb(26, 58, 201) solid 1px; */
 }
 
@@ -49,10 +54,13 @@
     border-top: none;
     box-sizing: border-box;
     z-index: 3;
-    max-height: 60px;
+    /* 20200321 start */
+    /* max-height: 60px; */
+     max-height: 90px;
+     /* 20200321 end */
     overflow: auto;
-    margin-left: 20rpx;
-
+    /* margin-left: 20rpx; */
+    margin-left: 0rpx;
     
 }
 .com-sItem{
