@@ -162,10 +162,10 @@ Page({
     var that = this;
     app.func.req('update_myresume', {
       res_id:that.data.res_id,
-      res_user_name: e.detail.value.res_user_name,
-      res_work_years: e.detail.value.res_work_years,
-      res_intro: e.detail.value.res_intro,
-      res_skills: e.detail.value.res_skills,
+      res_user_name: e.detail.value.user_name,
+      res_work_years: e.detail.value.work_years,
+      res_intro: e.detail.value.intro,
+      res_skills: e.detail.value.skills,
 
     }, 'POST', function (res) {
       if (res.code == 200) {
@@ -187,7 +187,7 @@ Page({
    
     app.func.req('update_apply_job', {
       apj_id: that.data.apj_id,
-      apj_user_mobile: e.detail.value.apj_user_mobile,
+      apj_user_mobile: e.detail.value.user_mobile,
 
     }, 'POST', function (res) {
 

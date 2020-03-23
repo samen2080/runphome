@@ -6,19 +6,23 @@ Component({
   properties: {
     propArray: {
       type: Array,
-    }
+    },
+    deaultValue: {
+      type: String,
+    },
   },
   /**
    * 组件的初始数据
    */
   data: {
     selectShow: false,//初始option不显示
-    nowText: "请选择",//初始内容
+    nowText: " ",//初始内容
     animationData: {}//右边箭头的动画
   },
   /**
    * 组件的方法列表
    */
+
   methods: {
     //option的显示与否
     selectToggle: function () {

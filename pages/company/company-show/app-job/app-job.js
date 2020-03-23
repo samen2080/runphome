@@ -13,7 +13,6 @@ Page({
     swiperCurrent: 0,
     img_arr: [],
     condition: true,
-    existResume: false,
     selectArray1: [{
       "id": "1",
       "text": "1970"
@@ -202,17 +201,17 @@ Page({
 
   getData1: function (e) {
     this.setData({
-      res_birth_year: e.detail.text
+      birth_year: e.detail.text
     })
   },
   getData2: function (e) {
     this.setData({
-      res_qualification: e.detail.text
+      qualification: e.detail.text
      })
   },
   getData3: function (e) {
     this.setData({
-      res_work_years: e.detail.text
+      work_years: e.detail.text
     })
   },
   genderSelect: function (e) {
@@ -262,14 +261,15 @@ Page({
             });
           };
           app.func.req('my_resume', { user_id: that.data.user_id }, 'GET', function (res) {
-            if (res.data){
             console.log("20200213ifres", res);
+            if (res.res_id){
+              console.log("20200322IF");
             that.setData({
               resumeInfo: res,
-              res_birth_year: res.res_birth_year,
-              res_qualification: res.res_qualification,
-              res_work_years: res.res_work_years,
-              existResume: true
+              res_id: res.res_id,
+              birth_year: res.res_birth_year,
+              qualification: res.res_qualification,
+              work_years: res.res_work_years
             });
             };
           });
@@ -329,14 +329,14 @@ Page({
     var that = this;
     var myreg = /^1\d{10}$/;
     // var num = e.currentTarget.dataset.num;
-    console.log("20200215res", e.detail.value.apj_user_mobile);
+    console.log("20200215res", e.detail.value.user_mobile);
     console.log("20200215111that.data.res_id", that.data.res_id);
-    if (e.detail.value.res_user_name.length <= 0) {
+    if (e.detail.value.user_name.length <= 0) {
       wx.showToast({
         title: '姓名不能为空',
         icon: 'none'
       })
-    } else if (!myreg.test(e.detail.value.apj_user_mobile)) {
+    } else if (!myreg.test(e.detail.value.user_mobile)) {
       wx.showToast({
         title: '请输入正确的手机号',
         icon: 'none'
@@ -352,11 +352,11 @@ Page({
     if (that.data.res_id == null) {
       console.log("addresume");
       app.func.req('add_resume', {
-        res_user_name: e.detail.value.res_user_name,
+        res_user_name: e.detail.value.user_name,
         res_sex: that.data.id,
-        res_birth_year: that.data.res_birth_year,
-        res_qualification: that.data.res_qualification,
-        res_work_years: that.data.res_work_years,
+        res_birth_year: that.data.birth_year,
+        res_qualification: that.data.qualification,
+        res_work_years: that.data.work_years,
         res_position: that.data.job_name,
         res_salary_range: that.data.job_salary,
         res_work_location: that.data.job_address,
@@ -368,7 +368,20 @@ Page({
           console.log("20200213 add resume");
         }
       });
-    }
+    }else{
+      app.func.req('update_myresume', {
+        res_id: that.data.res_id,
+        res_birth_year: that.data.birth_year,
+        res_qualification: that.data.qualification,
+        res_work_years: that.data.work_years,
+
+      }, 'POST', function (res) {
+        if (res.code == 200) {
+          console.log("20200323 update resume");   
+        }
+      });
+    };
+
     app.func.req('apl_job', {
       apj_user_id: that.data.user_id,
       apj_job_id: that.data.job_id,

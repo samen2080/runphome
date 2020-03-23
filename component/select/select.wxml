@@ -1,7 +1,8 @@
 <!--component/select/select.wxml-->
 <view class='com-selectBox'>
     <view class='com-sContent' bindtap='selectToggle'>
-        <view class='com-sTxt'>{{nowText}}</view>
+        <!-- <view class='com-sTxt'>{{nowText}}</view> -->
+        <view class='com-sTxt'>{{ nowText==' ' ? deaultValue : nowText }}</view>
         <!-- 如果需要默认值，{{nowText}}可以修改为{{ nowText==' ' ? propArray[0].text : nowText }} -->
         <image src='/images/icon-jiantou-r.png'  class='com-sImg'  animation="{{animationData}}"></image>
     </view>

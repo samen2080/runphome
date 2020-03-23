@@ -1,4 +1,5 @@
 /* pages/company/company-show/app-job/app-job.wxss */
+/* @import "../../../../component/select/select.wxss"; */
 .index-resum-top{
   height: 300rpx;
   width: 100%;

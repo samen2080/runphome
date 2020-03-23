@@ -15,7 +15,7 @@
     height: 30px;
     line-height: 30px;
      /* 20200321 start */
-     margin-left: 20px;
+     /* margin-left: 20px; */
     margin-left: 0rpx;
     /* 20200321 end */
 }

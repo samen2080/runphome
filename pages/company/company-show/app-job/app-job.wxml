@@ -7,8 +7,8 @@
           </view>
           <view class='wrap-right'>  
               <view class='input-wrap'> 
-                  <input  placeholder='输入姓名' placeholder-class='placeholder' value="{{userInfo.user_name}}" name='res_user_name'></input>
-                  <input placeholder='输入电话' placeholder-class='placeholder' value="{{userInfo.user_phone}}" name='apj_user_mobile'></input>
+                  <input  placeholder='输入姓名' placeholder-class='placeholder' value="{{userInfo.user_name}}" name='user_name'></input>
+                  <input placeholder='输入电话' placeholder-class='placeholder' value="{{userInfo.user_phone}}" name='user_mobile'></input>
               </view>
               <view class='sex-edit-input' catchtap='genderSelect'>
                     <view class='gender-select'><image src='{{id==0?"/images/male.png":"/images/circle.png"}}' data-id='0'></image>男</view>
@@ -17,37 +17,25 @@
           </view>
      </view>
  
-     <view class='index-resume-middle' wx:if="{{!existResume}}">
+      <view class='index-resume-middle' >
         <view class='resume-left'>
             <view class='birth-year-edit-input'><text>出生年份</text>
-                <Select prop-array='{{selectArray1}}' bind:myget='getData1'></Select>
+                <Select propArray='{{selectArray1}}'  deaultValue='{{birth_year}}' bind:myget='getData1'></Select>
             </view>
         </view>
         <view class='resume-center'>
             <view class='qualification-edit-input'><text>最高学历</text>
-               <Select prop-array='{{selectArray2}}' bind:myget='getData2'></Select>
+               <Select propArray='{{selectArray2}}' deaultValue='{{qualification}}' bind:myget='getData2'></Select>
             </view>
         </view>
         <view class='resume-right'>
             <view class='experience-years-edit-input'><text>工作时间</text>
-               <Select prop-array='{{selectArray3}}' bind:myget='getData3'></Select>
+               <Select propArray='{{selectArray3}}' deaultValue='{{work_years}}' bind:myget='getData3'></Select>
             </view>
         </view>
      </view>
-      <view class='index-resume-middle' wx:else>
-          <view class='resume-left'>
-              <view class='birth-year-edit-input'><text>出生年份</text></view>
-              <view class="birth-year-value">{{res_birth_year}}</view>
-          </view>
-          <view class='resume-center'>
-              <view class='qualification-edit-input'><text>最高学历</text></view>
-              <view class="qualification-value">{{res_qualification}}</view>
-          </view>
-          <view class='resume-right'>
-              <view class='experience-years-edit-input'><text>工作年限</text></view>
-              <view class="experience-years-value">{{res_work_years}}</view>
-          </view>
-      </view> 
+    <!-- 20200323 end -->
+
 
 
 
