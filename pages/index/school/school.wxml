@@ -54,7 +54,7 @@
   </view>
 
   <view class='index-school-list-box'>
-      <swiper class='index-school-swiper' current="{{swiperCurrentCollege}}" bindchange="swipertCollegeChange">
+      <swiper class='index-school-swiper' current="{{swiperCurrentCollege}}" autoplay="true" interval="3500" duration="1300" bindchange="swipertCollegeChange">
         <swiper-item wx:for='{{collegeSchoolList}}' wx:key='{{collegeSchoolList}}'>
           <view class='wrap'>
             <view class='index-school-list' wx:for='{{item.list}}' wx:key='{{item.list}}'><navigator url='school-show/school-show?sch_id={{item.sch_id}}' hover-class='none'>
@@ -82,7 +82,7 @@
   </view>
 
   <view class='index-school-list-box'>
-      <swiper class='index-school-swiper' current="{{swiperCurrentBachelor}}" bindchange="swiperBachelorChange">
+      <swiper class='index-school-swiper' current="{{swiperCurrentBachelor}}" autoplay="true" interval="3500" duration="1300" bindchange="swiperBachelorChange">
         <swiper-item wx:for='{{bachelorSchoolList}}' wx:key='{{bachelorSchoolList}}'>
           <view class='wrap'>
             <view class='index-school-list' wx:for='{{item.list}}' wx:key='{{item.list}}'><navigator url='school-show/school-show?sch_id={{item.sch_id}}' hover-class='none'>
@@ -105,7 +105,7 @@
     </view>
 
   <view class='index-school-list-box'>
-      <swiper class='index-school-swiper' current="{{swiperCurrentEnterprise}}" bindchange="swiperEnterpriseChange">
+      <swiper class='index-school-swiper' current="{{swiperCurrentEnterprise}}" autoplay="true" interval="3500" duration="1300" bindchange="swiperEnterpriseChange">
         <swiper-item wx:for='{{companyList}}' wx:key='{{companyList}}'>
           <view class='wrap'>
             <view class='index-school-list' wx:for='{{item.list}}' wx:key='{{item.list}}'><navigator url='../../company/company-show/company-show?com_id={{item.com_id}}' hover-class='none'>

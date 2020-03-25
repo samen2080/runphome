@@ -352,20 +352,32 @@
   width: 700rpx;
   background-color: #ffffff;
 }
-.banner-swiper{
-  text-align: center;
-  width: 700rpx;
-  position: relative;
-  height: 356rpx;
-}
-.banner-img{
+
+/* 20200325 liao add start */
+/* .banner-img{
   width: 690rpx;
   height: 300rpx;
   position: absolute;
-  /* padding: 15rpx; */
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
   border-radius: 8rpx;
   box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.1);
+} */
+
+.banner-img{
+  width: 99%;
+  /* height: 900rpx; */
+  position: relative;
+  border-radius: 8rpx;
+}
+
+/* 20200325 liao add start */
+
+
+.banner-swiper{
+  text-align: center;
+  width: 700rpx;
+  position: relative;
+  height: 356rpx;
 }

@@ -10,7 +10,9 @@ Page({
    */
 
   data: {
-    ellipsis: true,
+    ellipsis1: true,
+    ellipsis2: true,
+    ellipsis3: true,
     currentTab: 0,
     routers: [
       {
@@ -62,26 +64,32 @@ Page({
     userInfo: {},
     cellHeight: '120px',
     pageItems: [] ,
-// 20200308 add start
-    ellipsis: true,
-// 20200308 add end
   },
 
 // 20200308 add start
-  ellipsis: function () {
-    var value = !this.data.ellipsis;
+  ellipsis1: function () {
+    var value = !this.data.ellipsis1;
     this.setData({
-      ellipsis: value
+      ellipsis1: value
     })
   },
 // 20200308 add end
-
-  ellipsis: function () {
-    var value = !this.data.ellipsis;
+// 20200325 liao add start
+  ellipsis2: function () {
+    var value = !this.data.ellipsis2;
     this.setData({
-      ellipsis: value
+      ellipsis2: value
     })
   },
+
+  ellipsis3: function () {
+    var value = !this.data.ellipsis3;
+    this.setData({
+      ellipsis3: value
+    })
+  },
+// 20200325 liao add end
+
   /**
    * 生命周期函数--监听页面加载
    */

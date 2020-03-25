@@ -8,35 +8,75 @@
 </view>
 
 <view class='index-list-box'>
-    <view class='index-sample-display-list-box'>
-     <view class='index-sample-display-list' wx:for="{{productList}}" wx:key="{{productList}}" wx:for-item="i">  
-     <view class='index-list-title'><text>{{i.pdd_title}}</text></view>    
-          <!-- <view class='wrap-left'>   -->
-             <!-- <image src='{{host}}{{i.pdd_img}}' mode='aspectFill'></image> -->
-                <view class='banner'>
-                    <swiper class='banner-swiper' current='0'>
-                      <swiper-item wx:for="{{i.pdd_img}}" wx:key="{{i.pdd_img}}" wx:for-item="j">
+<!-- 20200325 liao add start -->
+    <!-- <view class='index-sample-display-list-box'>
+        <view class='index-sample-display-list' wx:for="{{productList}}" wx:key="{{productList}}" wx:for-item="i">  
+            <view class='index-list-title'><text>{{i.pdd_title}}</text></view>    
+            <view class='banner'>
+                <swiper class='banner-swiper' current='0'>
+                    <swiper-item wx:for="{{i.pdd_img}}" wx:key="{{i.pdd_img}}" wx:for-item="j">
                         <image src='{{host}}{{j}}' mode='aspectFill' class='banner-img' />
-                      </swiper-item>
-                    </swiper>
-                </view>
-           <!-- </view> -->
-          <!-- <view class='wrap-right'>
-             <text class="on-list-course-name" >{{i.pdd_desc}}</text>
-             <view class='bg-white-ellipsis' bindtap='ellipsis'>
-                 <image class='img-ellipsis' src="{{ellipsis?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
-             </view>
-          </view> -->
+                    </swiper-item>
+                </swiper>
+            </view>
 
-          <view class='contract-show-middle-info-list3'>
-              <text class="contract-show-middle-info-list3-skill {{ellipsis?'ellipsis':'unellipsis'}}" >{{i.pdd_desc}}</text>
-              <view class='bg-white-ellipsis' bindtap='ellipsis'>
-                  <image class='img-ellipsis' src="{{ellipsis?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
-              </view>
-          </view>
-       </view>
-     </view>
- </view>
+            <view class='contract-show-middle-info-list3'>
+                <text class="contract-show-middle-info-list3-skill {{ellipsis?'ellipsis':'unellipsis'}}" >{{i.pdd_desc}}</text>
+                <view class='bg-white-ellipsis' bindtap='ellipsis'>
+                    <image class='img-ellipsis' src="{{ellipsis?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
+                </view>
+            </view>
+        </view>
+    </view> -->
+    <view class='index-sample-display-list-box'>
+        <view class='index-sample-display-list'>  
+            <view class='index-list-title'><text>{{productList[0].pdd_title}}</text></view>    
+            <view class='banner'>
+                <image src='{{host}}{{productList[0].pdd_img}}' mode='widthFix' class='banner-img' />
+            </view>
+
+            <view class='contract-show-middle-info-list3'>
+                <text class="contract-show-middle-info-list3-skill {{ellipsis1?'ellipsis':'unellipsis'}}" >{{productList[0].pdd_desc}}</text>
+                <view class='bg-white-ellipsis' bindtap='ellipsis1'>
+                    <image class='img-ellipsis' src="{{ellipsis1?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class='index-sample-display-list-box'>
+        <view class='index-sample-display-list'>  
+            <view class='index-list-title'><text>{{productList[1].pdd_title}}</text></view>    
+            <view class='banner'>
+                <image src='{{host}}{{productList[1].pdd_img}}' mode='widthFix' class='banner-img' />
+            </view>
+
+            <view class='contract-show-middle-info-list3'>
+                <text class="contract-show-middle-info-list3-skill {{ellipsis2?'ellipsis':'unellipsis'}}" >{{productList[1].pdd_desc}}</text>
+                <view class='bg-white-ellipsis' bindtap='ellipsis2'>
+                    <image class='img-ellipsis' src="{{ellipsis2?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class='index-sample-display-list-box'>
+        <view class='index-sample-display-list'>  
+            <view class='index-list-title'><text>{{productList[2].pdd_title}}</text></view>    
+            <view class='banner'>
+                <image src='{{host}}{{productList[2].pdd_img}}' mode='widthFix' class='banner-img' />
+            </view>
+
+            <view class='contract-show-middle-info-list3'>
+                <text class="contract-show-middle-info-list3-skill {{ellipsis3?'ellipsis':'unellipsis'}}" >{{productList[2].pdd_desc}}</text>
+                <view class='bg-white-ellipsis' bindtap='ellipsis3'>
+                    <image class='img-ellipsis' src="{{ellipsis3?'/images/ellipsis.png':'/images/unellipsis.png'}}"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+<!-- 20200325 liao add start -->
+</view>
 
 
 <import src="cell.wxml" /> 
