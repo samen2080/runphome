@@ -15,6 +15,7 @@ Page({
     inputValue: "",
     label: [],
     hidden: true, 
+    dealTapIsCall: false,
     obtnArry: [
       {
         name: "素质高端",
@@ -101,21 +102,32 @@ Page({
       albumName: e.detail.value
     })
   },
+
   // 选择标签并输入到label数组中
   dealTap: function (e) {
+    this.setData({
+      dealTapIsCall: true
+    });
     let string = "obtnArry[" + e.target.dataset.index + "].selected";
     // const checkedicon = "obtnArry[" + e.target.dataset.index + "].selected"; 
     console.log(!this.data.obtnArry[e.target.dataset.index].selected);
+    console.log("20200326 value", e.target.dataset.value);
     this.setData({
       [string]: !this.data.obtnArry[e.target.dataset.index].selected
-    })
-    let detailValue = this.data.obtnArry.filter(it => it.selected).map(it => it.name)
+    });
+    console.log("20200326 string", [string]);
+    let detailValue = this.data.obtnArry.filter(it => it.selected).map(it => it.name);
+    // 20200326 liao add start
+    let detailIndex = this.data.obtnArry.filter(it => it.selected).map(it => it.num);
+    // 20200326 liao add end
+    console.log("20200326 detailValue", detailValue);
+    console.log("20200326 detailIndex", detailIndex);
     this.setData({
        label: detailValue,
-
+       index: detailIndex
     })
-    console.log(this.data.label)
   },
+  
   addinput(e) {
     this.setData({
       show: true,
@@ -132,7 +144,8 @@ Page({
       inputValue: e.detail.value
     })
   },
-  //确定按钮，添加数组达到添加标签的作用
+
+  //确定按钮，添加数组达到添加标签的作用---目前暂时没有调用
   onInputValue() {
     this.setData({
       show: false,
@@ -147,7 +160,8 @@ Page({
     })
     console.log(this.data.inputValue)
   },
-  //取消按钮
+
+  //取消按钮---目前暂时没有调用
   onCancel() {
     this.setData({ show: false });
   },
@@ -178,12 +192,9 @@ Page({
 
      if (that.data.res_id != "") {
        var res_id = that.data.res_id;
+       that.getResume(res_id);
        that.getWorkExp(res_id);
-     }
-
-    if (that.data.res_id != "") {
-      var res_id = that.data.res_id;
-      that.getEduExp(res_id);
+       that.getEduExp(res_id);
      }
 
   },
@@ -197,9 +208,27 @@ Page({
       qxTxt: '确定要删除吗？',
       way: 1
     })
-
   },
-  
+
+//  20200326 liao add start
+  getResume: function (res_id) {
+    var that = this;
+    console.log("20200213 function parameter res_id", res_id);
+    app.func.req('get_resume', { user_id: that.data.user_id }, 'GET', function (res) {
+      console.log("20200326res", res);
+      for (var i = 0; i < res.res_personal_label_index.length; i++) {
+        // that.setData({
+        //     obtnArry[i].selected: true
+        // });     ---给data的属性值对象或数组赋值，这样写会有错误
+        let str = "obtnArry["+i+"].selected";
+        that.setData({
+          [str]: true
+        })
+      };
+    });
+  },
+// 20200326 liao add end
+
   getWorkExp: function (res_id) {
     var that = this;
     console.log("20200213 function parameter res_id", res_id);
@@ -222,13 +251,6 @@ Page({
       });
   },
 
-  // 取消取消交易
-  removeCancel: function (e) {
-    var that = this;
-    that.setData({
-      hidden: true
-    })
-  },
 
   // 删除
   cancelWork: function (e) {
@@ -241,6 +263,7 @@ Page({
       }
     });
   },
+
   cancelEdu: function (e) {
     var that = this;
     console.log("20200213A", e.currentTarget.dataset.eduid);
@@ -251,29 +274,44 @@ Page({
       }
     });
   },
+
   //保存
   formSubmit: function (e) {
     var that = this;
-    var a = this.data.label;
-    var b = a.join(",");
+    console.log("dealTapIsCall");
+    if (that.data.dealTapIsCall) {
+        var a = that.data.label;
+        var b = a.join(",");
+        var c = that.data.index;
+        var d = c.join(",");
+      console.log("20200328b", b);
+      console.log("20200328d", d);
     // var num = e.currentTarget.dataset.num;
     // console.log("20200215res", e.currentTarget.dataset.i['job_name']);
-    app.func.req('update_resume', {
-      res_user_id: that.data.user_id,
-      res_personal_label: b,
-      res_intro: e.detail.value.res_intro,
-      
-      openid: that.data.openid,
-    }, 'POST', function (res) {
-      // console.log("20200126", that.data.mnt_user_province);
-      if (res.code == 200) {
-        wx.navigateBack({
-          delta: 1
+        app.func.req('update_resume', {
+          res_user_id: that.data.user_id,
+          // 20200326 liao add start
+          // res_personal_label: b,
+          res_personal_label: b,
+          res_personal_label_index: d,
+          // 20200326 liao add end
+          res_intro: e.detail.value.res_intro,
+          
+          openid: that.data.openid,
+        }, 'POST', function (res) {
+          // console.log("20200126", that.data.mnt_user_province);
+          if (res.code == 200) {
+            wx.navigateTo({
+              url: '../../../mine/apply-position/apply-position',
+            })
+          }
         })
-        
-      }
-    })
+    };
+    wx.navigateTo({
+      url: '../../../mine/apply-position/apply-position',
+    });
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

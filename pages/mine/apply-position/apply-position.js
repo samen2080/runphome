@@ -29,12 +29,13 @@ Page({
       host: host
     })
 
-    app.func.req('my_resume', { user_id: user_id }, 'GET', function (res) {
-      console.log("20200213res", res);
-      that.setData({
-        items: res
-      })
-    });
+    // app.func.req('my_resume', { user_id: user_id }, 'GET', function (res) {
+    //   console.log("20200213res", res);
+    //   that.setData({
+    //     items: res
+    //   })
+    // });
+
     app.func.req('my_apply_job', { user_id: user_id }, 'GET', function (res) {
       console.log("20200213res", res);
       that.setData({
