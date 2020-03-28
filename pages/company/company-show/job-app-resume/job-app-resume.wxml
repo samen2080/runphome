@@ -54,7 +54,7 @@
 
     <view class='index-resume-label' >
         <view class='my-label'><text>我的标签</text></view>
-        <view class='my-label-gray'><text>（最多选5个）</text></view>
+        <view class='my-label-gray'><text>（可以多选）</text></view>
         <view class='btn_view'>
             <block wx:for="{{obtnArry}}" wx:key="key" >
                 <view class='label_view {{item.selected ? "active" : ""}}' data-value="{{item.name}}" bindtap='dealTap' checked="{{item.selected}}" data-index="{{index}}">
@@ -67,7 +67,7 @@
     <view class='index-resume-intro' >
         <view class='rusume-intro'><text>介绍一下自己吧</text></view>
         <view class='textarea-wrap'>
-            <textarea maxlength='200' placeholder='【例子】本人已从事该行业3年，熟练各种技能，性格好，真诚，上进，谦虚。' placeholder-class='placeholder' name='res_intro'></textarea>
+            <textarea maxlength='200' placeholder='【例子】本人已从事该行业3年，熟练各种技能，性格好，真诚，上进，谦虚。' placeholder-class='placeholder' name='res_intro' value="{{item.res_into}}"></textarea>
         </view>
     </view>
 

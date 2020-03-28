@@ -1,5 +1,5 @@
 <view class='main-show-top'>
-    <video class='main-show-top-video'src='{{host}}{{items.lsm_attribute1}}' objectFit='cover'></video>
+    <video class='main-show-top-video'src='{{items.lsm_attribute1}}' objectFit='cover'></video>
     <view class='main-show-name'><text>{{items.lsm_lesson_main_name}}</text></view>
     <view class='main-show-instru'>
         <view class='main-show-instru1'><text>{{items.lsm_teacher_class_level}}：{{items.lsm_teacher_name}}</text></view>

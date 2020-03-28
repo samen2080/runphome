@@ -216,11 +216,12 @@ Page({
     console.log("20200213 function parameter res_id", res_id);
     app.func.req('get_resume', { user_id: that.data.user_id }, 'GET', function (res) {
       console.log("20200326res", res);
+      console.log("20200326resLabelIndexLength", res.res_personal_label_index.length);
       for (var i = 0; i < res.res_personal_label_index.length; i++) {
         // that.setData({
         //     obtnArry[i].selected: true
         // });     ---给data的属性值对象或数组赋值，这样写会有错误
-        let str = "obtnArry["+i+"].selected";
+        let str = "obtnArry[" + res.res_personal_label_index[i]+"].selected";
         that.setData({
           [str]: true
         })
@@ -289,7 +290,9 @@ Page({
     // var num = e.currentTarget.dataset.num;
     // console.log("20200215res", e.currentTarget.dataset.i['job_name']);
         app.func.req('update_resume', {
-          res_user_id: that.data.user_id,
+          // 20200329 liao add start
+          res_id: that.data.res_id,
+          // 20200329 liao add end
           // 20200326 liao add start
           // res_personal_label: b,
           res_personal_label: b,
