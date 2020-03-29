@@ -11,8 +11,8 @@
                   <input placeholder='输入电话' placeholder-class='placeholder' value="{{user_mobile}}" name='user_mobile'></input>
               </view>
               <view class='sex-edit-input' catchtap='genderSelect'>
-                    <view class='gender-select'><image src='{{id==0?"/images/male.png":"/images/circle.png"}}' data-id='0'></image>男</view>
-                    <view class='gender-select'><image src='{{id==1?"/images/female.png":"/images/circle.png"}}' data-id='1'></image>女</view>
+                    <view class='gender-select'><image src='{{id==1?"/images/male.png":"/images/circle.png"}}' data-id='1'></image>男</view>
+                    <view class='gender-select'><image src='{{id==2?"/images/female.png":"/images/circle.png"}}' data-id='2'></image>女</view>
               </view>
           </view>
      </view>

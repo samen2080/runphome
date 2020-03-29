@@ -22,8 +22,31 @@ Page({
       job_address: e.currentTarget.dataset.i.job_address,
       job_id: e.currentTarget.dataset.job_id
     });
+// 20200329 liao add start
+    console.log("20200329e.currentTarget.job_name", that.data.job_name);
 
-    that.getResume();
+    var user_id = wx.getStorageSync("index_user_info").user_id;
+    var user_name = wx.getStorageSync("index_user_info").user_name;
+    var user_phone = wx.getStorageSync("index_user_info").user_phone;
+    var user_phone_check = wx.getStorageSync("index_user_info").user_phone_check;
+
+    if (user_id == null) {
+      console.log("20200329ts call mine");
+      wx.navigateTo({
+        url: '../../mine/mine?old_id=' + '' + '&job_id=' + that.data.job_id + ' &job_name=' + that.data.job_name + '&job_salary=' + that.data.job_salary + '&job_county=' + that.data.job_county + '&job_address=' + that.data.job_address,
+      })
+    } else {
+      if (user_phone_check == 0) {
+        wx.navigateTo({
+          url: '../../log-in/log-in?old_id=' + '' + '&user_id=' + user_id + '&job_id=' + that.data.job_id + '&job_name=' + that.data.job_name + '&job_salary=' + that.data.job_salary + '&job_county=' + that.data.job_county + '&job_address=' + that.data.job_address,
+        })
+      } else {
+        wx.navigateTo({
+          url: 'app-job/app-job?job_id=' + that.data.job_id + '&job_name=' + that.data.job_name + '&job_salary=' + that.data.job_salary + '&job_county=' + that.data.job_county + '&job_address=' + that.data.job_address,
+        })
+      }
+    } 
+// 20200329 liao add end;
   },
   /**
    * 生命周期函数--监听页面加载
@@ -65,22 +88,23 @@ Page({
     });
   },
 
-  getResume: function () {
-    var that = this;
-    app.func.req('get_resume', { user_id:that.data.user_id }, 'GET', function (res) {
-      console.log("20200213resumeInfos", that.data.jobid);
-      console.log("20200213res_id", res.res_id);
-      wx.navigateTo({
-        url: 'app-job/app-job?job_id=' + that.data.job_id + '&job_name=' + that.data.job_name + '&job_salary=' + that.data.job_salary + '&job_county=' + that.data.job_county + '&job_address=' + that.data.job_address + '&res_id=' + res.res_id,
-      })
-    });
-  },
-  
+// 20200329 liao start
+  // getResume: function () {
+  //   var that = this;
+  //   app.func.req('get_resume', { user_id:that.data.user_id }, 'GET', function (res) {
+  //     console.log("20200213resumeInfos", that.data.jobid);
+  //     console.log("20200213res_id", res.res_id);
+  //     wx.navigateTo({
+  //       url: 'app-job/app-job?job_id=' + that.data.job_id + '&job_name=' + that.data.job_name + '&job_salary=' + that.data.job_salary + '&job_county=' + that.data.job_county + '&job_address=' + that.data.job_address + '&res_id=' + res.res_id,
+  //     })
+  //   });
+  // },
+// 20200329 liao end
 
   getIn: function () {
     var that = this;
     app.func.req('my_company_job/' + that.data.com_id, {}, 'GET', function (res) {
-      console.log("20200214res", res.job_address);
+      console.log("20200214res", res);
       that.setData({
         inList: res,
       })

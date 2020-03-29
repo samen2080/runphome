@@ -67,7 +67,7 @@
     <view class='index-resume-intro' >
         <view class='rusume-intro'><text>介绍一下自己吧</text></view>
         <view class='textarea-wrap'>
-            <textarea maxlength='200' placeholder='【例子】本人已从事该行业3年，熟练各种技能，性格好，真诚，上进，谦虚。' placeholder-class='placeholder' name='res_intro' value="{{item.res_into}}"></textarea>
+            <textarea maxlength='200' placeholder='【例子】本人已从事该行业3年，熟练各种技能，性格好，真诚，上进，谦虚。' placeholder-class='placeholder' name='res_intro' value="{{res_intro}}"></textarea>
         </view>
     </view>
 

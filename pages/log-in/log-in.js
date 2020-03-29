@@ -21,8 +21,18 @@ Page({
     that.setData({
       host: host,
       old_id: options.old_id,
-      user_id: options.user_id
+      user_id: options.user_id,
+      // 20200329 liao add start
+      // 20200329 liao add start
+      job_id: options.job_id,
+      job_name: options.job_name,
+      job_salary: options.job_salary,
+      job_county: options.job_county,
+      job_address: options.job_address
+// 20200329 liao add end
+      // 20200329 liao add end
     });
+    console.log("job_name", that.data.job_name);
     wx.getStorage({
       key: 'openid',
       success: function (res) {
@@ -163,7 +173,7 @@ Page({
               // 20200320 end
               if (res.code == 200) {
                 wx.setStorage({
-                  key: 'user_info',
+                  key: 'index_user_info',
                   data: {
                     user_id: that.data.user_id,
                     user_phone_check: 1
@@ -182,7 +192,36 @@ Page({
          }
        })
         
-      }else 
+      }
+      // 20200329 liao add start 申请职位调用过来的
+      else if (that.data.job_id != 0)
+      {
+        console.log("20200329 app-job");
+        app.func.req('update_user', {
+          user_id: that.data.user_id,
+          user_name: that.data.name,
+          user_phone: that.data.phone,
+          user_phone_check: 1,
+          openid: that.data.openid,
+        }, 'POST', function (res) {
+          if (res.code == 200) {
+            wx.setStorage({
+              key: 'index_user_info',
+              data: {
+                user_id: that.data.user_id,
+                user_phone_check: 1
+              },
+              success: function (res) {
+                wx.navigateTo({
+                  url: '../company/company-show/app-job/app-job?job_id=' + that.data.job_id + '&job_name=' + that.data.job_name + '&job_salary=' + that.data.job_salary + '&job_county=' + that.data.job_county + '&job_address=' + that.data.job_address,
+                });
+              },
+            })
+          }
+        })
+      }
+      // 20200329 liao add end
+      else 
       {
          //点我的未验证点击过来
         app.func.req('update_user', {
@@ -194,7 +233,7 @@ Page({
         }, 'POST', function (res) {
           if (res.code == 200) {
             wx.setStorage({
-              key: 'user_info',
+              key: 'index_user_info',
               data: {
                 user_id: that.data.user_id,
                 user_phone_check: 1

@@ -236,7 +236,9 @@ Page({
       job_county: options.job_county,
       job_address: options.job_address,
       job_id: options.job_id,
-      res_id: options.res_id,
+      // 20200329 liao add start
+      // res_id: options.res_id,
+      // 20200329 liao add end
       user_id: user_id
     });
 
@@ -280,13 +282,13 @@ Page({
               work_years: res.res_work_years
             });
           // 20200329 liao add start
-              if (that.data.user_sex == 0) {
-                that.setData({
-                  id: 0
-                });
-              } else if (that.data.user_sex == 1) {
+              if (that.data.user_sex == 1) {
                 that.setData({
                   id: 1
+                });
+              } else if (that.data.user_sex == 2) {
+                that.setData({
+                  id: 2
                 });
               };
           // 20200329 liao add end
@@ -349,6 +351,7 @@ Page({
     var myreg = /^1\d{10}$/;
     // var num = e.currentTarget.dataset.num;
     console.log("20200215111that.data.res_id", that.data.res_id);
+    console.log("20200329that.data.id", that.data.id);
     if (e.detail.value.user_name.length <= 0) {
       wx.showToast({
         title: '姓名不能为空',
@@ -360,7 +363,7 @@ Page({
         icon: 'none'
       })
     } 
-    else if (that.data.id == '') {
+    else if (undefined == that.data.id) {
       wx.showToast({
         title: '性别不能为空!',
         icon: 'none'
@@ -373,7 +376,7 @@ Page({
       });
     // 2020329 liao add start
     // if (that.data.res_id == null) {
-    if (undefined != that.data.res_id) {
+      if (that.data.res_id == undefined) {
     // 2020329 liao add end
       console.log("addresume");
       app.func.req('add_resume', {

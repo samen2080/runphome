@@ -216,6 +216,9 @@ Page({
     console.log("20200213 function parameter res_id", res_id);
     app.func.req('get_resume', { user_id: that.data.user_id }, 'GET', function (res) {
       console.log("20200326res", res);
+      that.setData({
+        res_intro: res.res_intro
+      });     
       console.log("20200326resLabelIndexLength", res.res_personal_label_index.length);
       for (var i = 0; i < res.res_personal_label_index.length; i++) {
         // that.setData({

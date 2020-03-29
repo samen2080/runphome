@@ -86,6 +86,24 @@ Page({
    */
   onLoad: function (options) {
     template.tabbar("tabBar", 2, this);  
+    // 20200316 add start
+    this.setData({
+      old_id: options.old_id,
+      // 20200329 liao add start
+      job_id: options.job_id,
+      job_name: options.job_name,
+      job_salary: options.job_salary,
+      job_county: options.job_county,
+      job_address: options.job_address
+      // 20200329 liao add end
+    });
+    // console.log("20200329tsold_id", this.data.old_id);
+    console.log("20200329tsjob_id", this.data.job_id);
+    // console.log("20200329tsjob_name", this.data.job_name);
+    // console.log("20200329tsjob_salary", this.data.job_salary);
+    // console.log("20200329tsjob_county", this.data.job_county);
+    // console.log("20200329tsjob_address", this.data.job_address);
+    // 20200316 add end
     // 20200213 add start
     this.changeData();
     // 20200213 add end
@@ -94,11 +112,6 @@ Page({
     this.setData({
       user_identity: user_identity
     });
-    // 20200316 add start
-    this.setData({
-      old_id: options.old_id
-    });
-    // 20200316 add end
   },
 
    getUser: function () {
@@ -246,15 +259,32 @@ Page({
                        //n.getUser(); 从onshow方法剪贴过来，实现img, nickname 从无到有的变化
                         console.log("20200316changedata");
                         that.getUser();
+                      // 20200329 liao add start
                       //  20200316 add start
-                      console.log("20200213old_id", that.data.old_id);
-                      if (that.data.old_id != null) {
-                          var user_id = wx.getStorageSync("user_info").user_id;
-                          wx.navigateTo({
-                            url: '../log-in/log-in?old_id=' + that.data.old_id + '&user_id=' + user_id
-                          })
-                      };
-                         // 20200316 add end
+                      // console.log("20200213old_id", that.data.old_id);
+                      // if (that.data.old_id != null) {
+                      //     var user_id = wx.getStorageSync("user_info").user_id;
+                      //     wx.navigateTo({
+                      //       url: '../log-in/log-in?old_id=' + that.data.old_id + '&user_id=' + user_id
+                      //     })
+                      // }
+                      console.log("20200329old_id", that.data.old_id);
+                      console.log("20200329job_id", that.data.job_id);
+                      console.log("20200329job_name", that.data.job_name);
+                      var user_id = wx.getStorageSync("user_info").user_id;
+                      if (that.data.old_id != null && that.data.old_id != '') {
+                        console.log("20200329old_id_run");
+                        wx.navigateTo({
+                          url: '../log-in/log-in?old_id=' + that.data.old_id + '&user_id=' + user_id
+                        })
+                      } else if (that.data.job_id != null && that.data.job_id != '') {
+                        console.log("20200329job_id_run");
+                        wx.navigateTo({
+                          url: '../log-in/log-in?old_id=' + that.data.old_id + '&user_id=' + user_id + '&job_id=' + that.data.job_id + '&job_name=' + that.data.job_name + '&job_salary=' + that.data.job_salary + '&job_county=' + that.data.job_county + '&job_address=' + that.data.job_address,
+                        })
+                      }
+                       // 20200316 add end
+                      // 20200329 liao add end
                     }
                   })
                   //20200213 end
