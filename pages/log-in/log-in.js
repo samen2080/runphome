@@ -172,6 +172,9 @@ Page({
             app.func.req('new_reserve_course', { openid: that.data.openid, old_id: that.data.old_id, bok_name: that.data.name, bok_mobile: that.data.phone, bok_user_id: that.data.user_id, }, 'POST', function (res) {
               // 20200320 end
               if (res.code == 200) {
+                that.setData({
+                  bok_id: res.bok_id
+                });
                 wx.setStorage({
                   key: 'index_user_info',
                   data: {
@@ -179,11 +182,8 @@ Page({
                     user_phone_check: 1
                   }, 
                   success: function (res) {
-                    that.setData({
-                      bok_id: res.bok_id
-                    });
                     wx.navigateTo({
-                      url: '../index/transaction/buy/reserve-success?old_id' + that.data.old_id + '&bok_id=' + that.data.bok_id,
+                      url: '../index/transaction/buy/reserve-success?old_id=' + that.data.old_id + '&bok_id=' + that.data.bok_id,
                     });
                   },
                 });
