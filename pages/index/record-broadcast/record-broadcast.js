@@ -13,74 +13,126 @@ Page({
   // },
     data: {
       currentTab: 0,
-      list: [{
-        id: 'view',
-        name: '机器人概述',
-        open: false,
-        pages: ['认识机器人', '机器人应用范围', '机器人操作指南']
-    }, {
-      id: 'content',
-      name: '工具坐标系原点',
-      open: false,
-          pages: ['坐标系原点原理', '坐标系原点分析']
-}, {
-    id: 'form',
-    name: '工作机器人坐标',
-    open: false,
-          pages: ['认识坐标系', '坐标系基本原理', '坐标系实习指南']
-  }]
+//       list: [{
+//         id: 'view',
+//         name: '机器人概述',
+//         open: false,
+//         courseIds: ['1', '1', '1'],
+//         courseNames: ['认识机器人', '机器人应用范围', '机器人操作指南'],
+//         pages: ['认识机器人', '机器人应用范围', '机器人操作指南']
+//     }, {
+//       id: 'content',
+//       name: '工具坐标系原点',
+//       open: false,
+//       courseIds: ['1', '1', '1'],
+//       courseNames: ['认识机器人', '机器人应用范围', '机器人操作指南'],
+//       pages: ['坐标系原点原理', '坐标系原点分析']
+// }, {
+//     id: 'form',
+//     name: '工作机器人坐标',
+//     open: false,
+//     courseIds: ['1', '1', '1'],
+//     courseNames: ['认识机器人', '机器人应用范围', '机器人操作指南'],
+//     pages: ['认识坐标系', '坐标系基本原理', '坐标系实习指南']
+//   }],
+  // 20200406 liao add start
+     foldItems: [],
+     videoUrl: '',
+  // 20200406 liao add end
   },
 // 20200319 liao add end
+
   /**
    * 收缩核心代码
    */
   kindToggle(e) {
-    const id = e.currentTarget.id
-    const list = this.data.list
+    const id = e.currentTarget.id;
+    const list = this.data.list;
+    this.setData({
+      courseSeriesIndex:id
+    });
+    console.log("20200406courseSeriesIndex", this.data.courseSeriesIndex);
     for(let i = 0, len = list.length; i<len; ++i) {
-  if (list[i].id === id) {
-    list[i].open = !list[i].open
-  } else {
-    list[i].open = false
-  }
-}
+    // 20200406 liao add start, 读取原来拷贝的data: list ===可以使用，读取数据库的list，===不起作用
+      // if (list[i].id === id) {
+      if (list[i].id == id) {
+    // 20200406 liao add end
+          console.log("20200406equal");
+          list[i].open = !list[i].open
+        } else {
+          list[i].open = false
+        };
+    };
 
-/**
- * key和value名称一样时，可以省略
- * 
- * list:list=>list
- */
-this.setData({
-  list
-})
+    /**
+     * key和value名称一样时，可以省略
+     * 
+     * list:list=>list
+     */
+      this.setData({
+        list
+      });
   },
 
-
-
-
-
-
+// 20200406 liao add start
+  urlToggle(e) {
+    const id = e.currentTarget.id;
+    this.setData({
+      courseVideoIndex: id
+    });
+    console.log("20200406courseVideoIndex", this.data.courseVideoIndex);
+    this.setData({
+      videoUrl: this.data.list[this.data.courseSeriesIndex]['videoUrl'][this.data.courseVideoIndex]
+    });
+  // 20200406 liao add send
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var that = this;
     var host = getApp().globalData.host;
-    that.setData({
-      host: host,
-      lsm_id: options.lsm_id
-    })
+    if (undefined != options.lsm_id) {
+        that.setData({
+          host: host,
+          lsm_id: options.lsm_id,
+        })
+    };
+    if (undefined != options.cate_index) {
+      that.setData({
+        host: host,
+        cate_index: options.cate_index,
+      })
+    };
+    if (undefined != options.cate_value) {
+      that.setData({
+        host: host,
+        cate_value: options.cate_value,
+      })
+    };
     wx.getStorage({
       key: 'openid',
       success: function (res) {
         that.setData({
           openid: res.data
         })
-        that.getDetail();
+        // 20200406 liao add start undefined != that.data.res_id
+        // that.getDetail();
+        console.log("20200406lsm_id", options.lsm_id);
+        console.log("20200406cate_index", options.cate_index);
+        console.log("20200406cate_value", options.cate_value);
+
+        if (undefined == that.data.lsm_id) {
+            console.log("20200406getDetailList");
+            that.getDetailList();       
+        }else{
+            console.log("20200406getDetail");
+            that.getDetail();     
+        }
+        // 20200406 liao add end
       },
     })
   },
-
 
   getDetail: function () {
     var that = this;
@@ -95,6 +147,32 @@ this.setData({
     });
   },
   // 20200213 end
+
+  //20200406 liao add start
+  getDetailList: function () {
+    var that = this;
+    app.func.req('get_videos_chapter_list', { cate_index: that.data.cate_index, cate_value: that.data.cate_value }, 'GET', function (res) {
+      if (res) {
+        that.setData({
+          list: res,
+          videoUrl: res[0]['videoUrl'][0]
+        });
+        // console.log("20200406itemsList", that.data.itemsList);
+        console.log("20200406list", that.data.list);
+        console.log("20200406listitem", that.data.list[0]['videoUrl'][1]);
+
+        // if (res.length > 0){
+        //     for (var i = 0; i < res.length; i++) {
+        //       that.setData({
+        //         [str]: true
+        //       })
+        //     };
+        // }
+        // that.getTeacherCourse();
+      }
+    });
+  },
+  //20200406 liao add end
 
   // 20203019 liao add start
   getTeacherCourse: function () {
@@ -121,62 +199,18 @@ this.setData({
       if (e.target.dataset.current == 0) {
         that.getDetail();
       } else {
-      // 20200319 liao start
-        // that.getIn();
-      // 20200319 liao end
       }
     }
   },
-  masterPost: function (e) {
-    var that = this;
-    that.setData({
-      currentTab: 1
-    })
-  },
-  // 单个操作
-  listenerButton: function (e) {
-    var that = this;
-    var arr = that.data.inList;
-    for (var i = 0; i < arr.length; i++) {
-      if (arr[i].in_id == e.currentTarget.dataset.inid) {
-        if (arr[i].collect == 0) {
-          that.inCollect(["收藏"], e.currentTarget.dataset.inid);
-        } else if (arr[i].collect == 1) {
-          that.inCollect(["取消收藏"], e.currentTarget.dataset.inid);
-        }
-      }
-    }
-  },
-  // 内容精选收藏
-  inCollect: function (item, coll_good_id) {
-    var that = this;
-    wx.showActionSheet({
-      itemList: item,//显示的列表项
-      itemColor: '#000000',
-      success: function (res) {
-        if (res.tapIndex === 0) {
-          app.func.req('collect', { coll_type: 1, coll_user_id: that.data.openid, coll_good_id: coll_good_id }, 'POST', function (res) {
-            // console.log(res);
-            if (res.code == 200) {
-              // 20200319 liao start
-              // that.getIn();
-              // 20200319 liao end
-            }
-          });
-        }
-      },
-      fail: function (res) { },
-      complete: function (res) { }
-    })
-  },
+
+
   // 关注/取消
-  focus: function (e) {
-    var that = this;
-    app.func.req('follow_user', { openid: that.data.openid, fo_followed_id: that.data.user_id }, 'POST', function (res) {
-      // console.log(res);
-      that.getDetail();
-    });
-  },
+  // focus: function (e) {
+  //   var that = this;
+  //   app.func.req('follow_user', { openid: that.data.openid, fo_followed_id: that.data.user_id }, 'POST', function (res) {
+  //     that.getDetail();
+  //   });
+  // },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

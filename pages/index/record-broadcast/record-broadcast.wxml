@@ -1,5 +1,8 @@
 <view class='main-show-top'>
-    <video class='main-show-top-video'src='{{items.lsm_attribute1}}' objectFit='cover'></video>
+<!-- 20200406 liao add start -->
+    <!-- <video class='main-show-top-video' src='{{items.lsm_attribute1}}' objectFit='cover'></video> -->
+    <video class='main-show-top-video' src='{{videoUrl}}' objectFit='cover'></video>
+<!-- 20200406 liao add end -->
     <view class='main-show-name'><text>{{items.lsm_lesson_main_name}}</text></view>
     <view class='main-show-instru'>
         <view class='main-show-instru1'><text>{{items.lsm_teacher_class_level}}：{{items.lsm_teacher_name}}</text></view>
@@ -7,6 +10,8 @@
     </view>
     <view class='main-show-total-hour'><text>课程总课时：{{items.lsm_total_hours}}小时</text></view>
 </view>
+
+
 
 <view class='main-show-middle'>
     <view class="swiper-tab">
@@ -33,6 +38,9 @@
           </view>
           <view class='main-show-teacher-descript'><text>{{items.tea_teacher_desc}}</text></view>
       </view>
+
+
+
       <!-- 20200319 liao add start -->
       <view class='main-show-course-title'>讲师相关视频课程</view>
       <view class='index-list-box'>
@@ -71,11 +79,16 @@
                 <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
                     <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
                         <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
-                            <navigator url="pages/{{page}}/{{page}}" class="navigator">
+                        <!-- 20200406 liao add start -->
+                            <!-- <navigator url="pages/{{page}}/{{page}}" class="navigator">
                                 <view class="navigator-text">{{page}}</view>
-                                <!-- icon -->
                                 <view class="navigator-arrow"></view>
-                            </navigator>
+                            </navigator> -->
+                            <view class="navigator" bindtap="urlToggle" id="{{index}}">
+                                <view class="navigator-text">{{page}}</view>
+                                <view class="navigator-arrow"></view>
+                            </view>
+                        <!-- 20200406 liao add end -->
                         </block>
                     </view>
                 </view>

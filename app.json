@@ -29,6 +29,7 @@
     "pages/index/master/master-fans/master-fans",
     "pages/index/master/master-subject/master-subject",
     "pages/index/broadcast-list/broadcast-list",
+    "pages/index/broadcast-cate/broadcast-cate",
     "pages/community/community",
     "pages/act-list/act-list",
     "pages/company/company",
