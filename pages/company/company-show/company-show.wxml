@@ -41,10 +41,16 @@
           <view class='wrap-left'>  
                 <view class='on-list-name'>{{i.job_name}}{{i.job_benefit}}</view>
                 <view class = 'on-list-salary-type'>
-                    <view class='on-list-salary'>{{i.job_salary}}元 </view>
-                    <view class='on-list-type'>·{{i.job_type}}</view>
+                    <view class='on-list-salary'>{{i.job_salary}} </view>
+                    <!-- 20200407 start -->
+                    <!-- <view class='on-list-type'>·{{i.job_type}}</view> -->
+                    <view class='on-list-type'>{{i.job_type}}</view>
+                    <!-- 20200407 end -->
                 </view>
-                <view class='on-list-address'>{{i.job_county}}-{{i.job_address}} ·{{i.job_experience_ind}}</view>
+                <!-- 20200407 start -->
+                <!-- <view class='on-list-address'>{{i.job_county}}-{{i.job_address}} ·{{i.job_experience_ind}}</view> -->
+                <view class='on-list-address'>{{i.job_county}} <text  space="emsp">{{i.job_experience_ind}}</text></view>
+                <!-- 20200407 end -->
                 <view class='on-list-edu'>学历要求：{{i.job_education_ind}}</view>
               <!-- <view class='mine-subject-head-box'>
                     <view class='on-list-name1'>
