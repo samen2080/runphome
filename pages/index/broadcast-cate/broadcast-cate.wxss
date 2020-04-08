@@ -1,0 +1,146 @@
+/* pages/index/broadcast-cate/broadcast-cate.wxss */
+.main-show-top{
+  height: 308rpx;
+  background: #ffffff;
+  overflow: hidden;
+  margin-bottom: 24rpx;
+}
+
+.main-show-top-info{
+  border-bottom: 2rpx solid #e9e9e9;
+  position: relative;
+}
+
+.main-show-top-info-tx-wrap{
+  width: 100%;
+  height: 328rpx;
+  padding: 10rpx 10rpx 10rpx 10rpx;
+  position:relative;
+}
+
+.main-show-top-info-tx-wrap image{
+  width: 730rpx;
+  height: 308rpx;
+  border-radius: 8rpx;
+  box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.cate-course-series{
+  /* height: 300rpx; */
+  height: var(--width--);
+  width: 100%;
+  background: #ffffff;
+  overflow: hidden;
+  padding: 0rpx 0 0rpx 30rpx;     
+  font-size: 32rpx; 
+  position: relative;
+  float: left;
+  border-top: 2rpx solid #e9e9e9;
+  margin-top: 5rpx;  
+  /* border: rgb(0, 0, 0) solid 1px; */
+}
+
+.wrap-left{
+  width: 210rpx;
+  height: 100%;
+  font-size: 32rpx; 
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  position: relative;
+  float: left;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* border: rgb(0, 0, 0) solid 1px; */
+}
+
+.cate-icon-text{
+  /* border: rgb(228, 112, 112) solid 1px; */
+
+}
+
+.cate-icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20rpx;
+
+  /* border: rgb(0, 0, 0) solid 1px; */
+}
+
+.cate-icon image{
+  width: 64rpx;
+  height: 64rpx;
+  /* border: rgb(0, 0, 0) solid 1px; */
+}
+
+.cate-text{
+  /* border: rgb(0, 0, 0) solid 1px; */
+}
+
+
+
+.wrap-right{
+  width: 500rpx;
+  height: 100%;
+  font-size: 32rpx; 
+  color: rgba(163, 163, 163, 0.952);
+  position: relative;
+  float: left;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: rgb(214, 21, 21) solid 1px; */
+}
+
+.cate-wrap-row-column{
+  /* border: rgb(221, 241, 33) solid 1px; */
+}
+
+.cate-detail-row{
+  width: 100%;
+  height: 100rpx;
+  position: relative;
+  float: left;
+
+  /* border: rgb(214, 21, 21) solid 1px; */
+
+}
+
+.cate-detail-column{
+  width: 30%;
+  height: 100%;
+  position: relative;
+  float: left;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* border: rgb(34, 53, 221) solid 1px; */
+}
+
+.cate-detail-delimiter{
+  width: 3%;
+  height: 100%;
+  position: relative;
+  float: left;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigator{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

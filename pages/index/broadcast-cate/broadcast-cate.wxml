@@ -1,0 +1,149 @@
+<!--pages/index/broadcast-cate/broadcast-cate.wxml-->
+<view class='main-show-top'>
+  <view class='main-show-top-info'>
+    <view class='main-show-top-info-tx'>
+      <view class='main-show-top-info-tx-wrap'><image src='https://www.xqtechinfo.com/runphome/storage/app/public/uploads/banner/ad-banner01.jpg' mode='aspectFill'></image></view>
+    </view>      
+  </view>
+</view>
+
+<view class='cate-course-series' style='--width--:350rpx;'>
+    <view class='wrap-left'>
+          <view class='cate-icon-text'>
+              <view class='cate-icon'><image src='/images/course-series.png' mode='aspectFill'></image></view>
+              <view class='cate-text'>课程系列</view>
+          </view>
+    </view>
+    <view class='wrap-right'>
+        <view class='cate-wrap-row-column'>
+            <view class='cate-detail-row'>
+                <view class='cate-detail-column' style='color:#000000'>
+                    <navigator url='../record-broadcast/record-broadcast?cate_index=1&cate_value=1' class='navigator'>
+                        <view>入门实用</view>
+                    </navigator>
+                </view>
+
+                <view class='cate-detail-delimiter'>|</view>
+
+                <view class='cate-detail-column' style='color:#000000'>
+                    <navigator url='../record-broadcast/record-broadcast?cate_index=1&cate_value=2' class="navigator">
+                        <view>集成应用</view>
+                    </navigator>
+                </view>
+
+                <view class='cate-detail-delimiter'>|</view>
+
+                <view class='cate-detail-column'>
+                    <navigator url='../record-broadcast/record-broadcast?cate_index=1&cate_value=3' class="navigator">
+                        <view>技术应用</view>
+                    </navigator>
+                </view>
+            </view>
+            <view class='cate-detail-row'>
+                <view class='cate-detail-column'>
+                    <navigator url='../record-broadcast/record-broadcast?cate_index=1&cate_value=4' class='navigator'>
+                        <view>编程操作</view>
+                    </navigator>
+                </view>
+                <view class='cate-detail-delimiter'>|</view>
+                <view class='cate-detail-column'>
+                    <navigator url='../record-broadcast/record-broadcast?cate_index=1&cate_value=5' class='navigator'>
+                        <view>实训指导</view>
+                    </navigator>
+                </view>
+                <view class='cate-detail-delimiter'>|</view>
+                <view class='cate-detail-column'>
+                    <navigator url='../record-broadcast/record-broadcast?cate_index=1&cate_value=6' class='navigator'>
+                        <view>高级编程</view>
+                    </navigator>
+                </view>
+            </view>
+            <view class='cate-detail-row'>
+                <view class='cate-detail-column'>
+                    <navigator url='../record-broadcast/record-broadcast?cate_index=1&cate_value=7' class='navigator'>
+                        <view>维修保养</view>
+                    </navigator>
+                </view>
+                <view class='cate-detail-delimiter'>|</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+
+<view class='cate-course-series' style='--width--:200rpx;'>
+    <view class='wrap-left'>
+          <view class='cate-icon-text'>
+              <view class='cate-icon'><image src='/images/robot-brand.png' mode='aspectFill'></image></view>
+              <view class='cate-text'>机器人品牌</view>
+          </view>
+    </view>
+    <view class='wrap-right'>
+          <view class='cate-detail-row'>
+              <view class='cate-detail-column' style='color:#000000'>
+                  <navigator url='../record-broadcast/record-broadcast?cate_index=2&cate_value=1' class='navigator'>
+                      <view>KUKA</view>
+                  </navigator>
+              </view>
+              
+              <view class='cate-detail-delimiter'>|</view>
+              <view class='cate-detail-column' style='color:#000000'>
+                  <navigator url='../record-broadcast/record-broadcast?cate_index=2&cate_value=2' class='navigator'>
+                      <view>ABB</view>
+                  </navigator>
+              </view>
+
+              <view class='cate-detail-delimiter'>|</view>
+              <view class='cate-detail-column' style='color:#000000'>
+                  <navigator url='../record-broadcast/record-broadcast?cate_index=2&cate_value=3' class='navigator'>
+                      <view>钱江</view>
+                  </navigator>
+              </view>
+          </view>
+    </view>
+</view>
+
+
+
+<view class='cate-course-series' style='--width--:300rpx;'>
+    <view class='wrap-left'>
+          <view class='cate-icon-text'>
+              <view class='cate-icon'><image src='/images/applicable-object.png' mode='aspectFill'></image></view>
+              <view class='cate-text'>适用对象</view>
+          </view>
+    </view>
+    <view class='wrap-right'>
+        <view class='cate-wrap-row-column'>
+            <view class='cate-detail-row'>
+                <view class='cate-detail-column' style='color:#000000'>
+                    <navigator url='../record-broadcast/record-broadcast?cate_index=3&cate_value=1' class='navigator'>
+                        <view>初级学员</view>
+                    </navigator>
+                </view>
+                <view class='cate-detail-delimiter'>|</view>
+                <view class='cate-detail-column'>
+                    <navigator url='../record-broadcast/record-broadcast?cate_index=3&cate_value=2' class='navigator'>
+                        <view>中级学员</view>
+                    </navigator>
+                </view>
+                <view class='cate-detail-delimiter'>|</view>
+                <view class='cate-detail-column'>
+                    <navigator url='../record-broadcast/record-broadcast?cate_index=3&cate_value=3' class='navigator'>
+                        <view>高级学员</view>
+                    </navigator>
+                </view>
+            </view>
+            <view class='cate-detail-row'>
+                <view class='cate-detail-column' style='color:#000000'>
+                    <navigator url='../record-broadcast/record-broadcast?cate_index=3&cate_value=4' class='navigator'>
+                        <view>通用</view>
+                    </navigator>
+                </view>
+                <view class='cate-detail-delimiter'>|</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+

@@ -617,6 +617,13 @@
 					"id": -1,
 					"name": "pages/index/product/product",
 					"pathName": "pages/index/product/product",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/broadcast-cate/broadcast-cate",
+					"pathName": "pages/index/broadcast-cate/broadcast-cate",
 					"scene": null
 				}
 			]

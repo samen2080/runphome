@@ -122,7 +122,10 @@
 <view class='index-list-box'>
     <view class='index-list-title'>
      <text>视频课•热播</text>
-     <view class='index-more'><navigator url='broadcast-list/broadcast-list' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>
+     <!-- 20200405 liao add start -->
+     <!-- <view class='index-more'><navigator url='broadcast-list/broadcast-list' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view> -->
+     <view class='index-more'><navigator url='broadcast-cate/broadcast-cate' hover-class='none'>全部 <image src='/images/more.png'></image></navigator></view>   
+    <!-- 20200405 liao add end -->
     </view>
 
     <view class='index-course-video-list-box'>
