@@ -200,7 +200,10 @@
   width: 108rpx;
   height: 38rpx;
   margin-left: 165rpx;
+  /* 20200407 start */
+  /* margin-top:-76rpx; */
   margin-top:-81rpx;
+  /* 20200407 end */
   background: #fa9511;
   border-radius: 5rpx;
 }
