@@ -73,7 +73,7 @@ Page({
   getGoods: function () {
    var that = this;
     app.func.req('my_company', { openid: that.data.openid, pageSize: 1000, page: 1 }, 'GET', function (res) {
-    // console.log(res);
+     console.log("20200405",res);
     var sheight = 704 * Math.ceil(res.length / 2);
     that.setData({
       proList: res,

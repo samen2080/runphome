@@ -7,11 +7,14 @@
   <view class='job-show-type'>{{inList.job_type}}</view>
   <view class='job-show-name'>{{inList.job_name}}</view>
   <view class='job-show-ind'><text>{{inList.job_boss_interview_ind==1?"boss直聘":"不是boss直聘"}}</text></view>
-  <view class='job-show-salary'>{{inList.job_salary}}元/月</view>
+  <!-- 20200407 start -->
+  <!-- <view class='job-show-salary'>{{inList.job_salary}}元/月</view> -->
+  <view class='job-show-salary'>{{inList.job_salary}}</view>
+  <!-- 20200407 end -->
 </view>
 
 <view class='job-show-middle'>
-  <view class='job-show-benefit'><text>{{inList.job_benefit}}</text></view>
+  <view class='job-show-benefit'>{{inList.job_benefit}}</view>
   <view class='job-show-class-time1'> 职位应聘开始时间 <text>{{inList.job_publish_start_date}}</text></view>
   <view class='job-show-class-time2'> 职位应聘结束时间 <text>{{inList.job_publish_end_date}}</text></view>
  
@@ -19,7 +22,7 @@
    <view class='product-home-intro-ask'><text>要求</text></view>
    <view class='product-home-intro-ask-detail'>{{inList.job_experience_ind}}|{{inList.job_education_ind}}</view>
    <view class='product-home-intro-des-detail'><text>{{inList.job_descript}}</text></view>
-   <view class='product-home-intro-addr'>工作地点：<text>{{inList.job_province}}{{inList.job_city}}{{inList.job_county}}{{inList.job_address}}</text></view>
+   <view class='product-home-intro-addr'>工作地点：{{inList.job_province}}{{inList.job_city}}{{inList.job_county}}{{inList.job_address}}</view>
 </view>
 
 <view clss-job-bottom>
