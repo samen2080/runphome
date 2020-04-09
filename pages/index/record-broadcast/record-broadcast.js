@@ -204,7 +204,7 @@ Page({
         //       })
         //     };
         // }
-        // that.getTeacherCourse();
+        that.getTeacherCourse();
       }
     });
   },
