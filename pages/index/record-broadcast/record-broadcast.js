@@ -93,7 +93,9 @@ Page({
       teacher_class_level: this.data.list[this.data.courseSeriesIndex]['teacher_class_level'][this.data.courseVideoIndex],
       total_chapter: this.data.list[this.data.courseSeriesIndex]['total_chapter'][this.data.courseVideoIndex],
       total_hours: this.data.list[this.data.courseSeriesIndex]['total_hours'][this.data.courseVideoIndex],
+      teacher_id: this.data.list[this.data.courseSeriesIndex]['teacher_id'][this.data.courseVideoIndex],
     });
+    this.getTeacherCourse();
   // 20200406 liao add send
   },
   /**
@@ -189,6 +191,7 @@ Page({
           teacher_class_level: res[0]['teacher_class_level'][0],
           total_chapter: res[0]['total_chapter'][0],
           total_hours: res[0]['total_hours'][0],
+          teacher_id: res[0]['teacher_id'][0],
         });
         // console.log("20200406itemsList", that.data.itemsList);
         console.log("20200406list", that.data.list);
@@ -230,7 +233,8 @@ Page({
         currentTab: e.target.dataset.current
       })
       if (e.target.dataset.current == 0) {
-        that.getDetail();
+        // that.getDetail();
+        console.log("clickTab");
       } else {
       }
     }

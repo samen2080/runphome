@@ -1,0 +1,31 @@
+<!--pages/index/record-broadcast-related/record-broadcast-related.wxml-->
+<view class='main-show-top'>
+    <video class='main-show-top-video' src='{{videoUrl}}' objectFit='cover'></video>
+    <view class='main-show-name'><text>{{lesson_main_name}}</text></view>
+    <view class='main-show-instru'>
+        <view class='main-show-instru1'><text>{{teacher_class_level}}：{{teacher_name}}</text></view>
+        <view class='main-show-instru2'><text>共{{total_chapter}}章节</text></view>
+    </view>
+    <view class='main-show-total-hour'><text>课程总课时：{{total_hours}}</text></view>
+</view>
+
+
+
+<view class='main-show-middle'>
+    <view class="swiper-tab">
+      <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">简介<view class='border-bottom' style='display:{{currentTab==0?"block":"none"}}'></view></view>
+      <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">评论<view class='border-bottom' style='display:{{currentTab==1?"block":"none"}}'></view></view>
+    </view>
+
+    <!-- 简介 -->
+    <view class='main-show-intro' wx:if='{{currentTab==0}}'>
+      <view class='main-show-course'>
+          <view class='main-show-course-title'>课程介绍</view>
+          <view class='main-show-course-descript'>{{lesson_desc}}</view>
+      </view>
+    </view>
+</view>
+
+
+
+

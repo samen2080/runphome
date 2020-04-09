@@ -1,0 +1,17 @@
+/* pages/index/record-broadcast-related/record-broadcast-related.wxss */
+@import "../record-broadcast/record-broadcast.wxss";
+
+.swiper-tab-item{
+  width: 50%; 
+  font-size: 32rpx;
+  font-weight: bold;
+  position: relative;
+}
+
+.swiper-tab-item:first-child{  
+  margin-left: 100rpx;
+}
+
+.swiper-tab-item:nth-child(2){
+  margin-right: 100rpx;
+}
