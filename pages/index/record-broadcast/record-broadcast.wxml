@@ -3,12 +3,12 @@
     <!-- <video class='main-show-top-video' src='{{items.lsm_attribute1}}' objectFit='cover'></video> -->
     <video class='main-show-top-video' src='{{videoUrl}}' objectFit='cover'></video>
 <!-- 20200406 liao add end -->
-    <view class='main-show-name'><text>{{items.lsm_lesson_main_name}}</text></view>
+    <view class='main-show-name'><text>{{lesson_main_name}}</text></view>
     <view class='main-show-instru'>
-        <view class='main-show-instru1'><text>{{items.lsm_teacher_class_level}}：{{items.lsm_teacher_name}}</text></view>
-        <view class='main-show-instru2'><text>共{{items.lsm_total_chapter}}章节</text></view>
+        <view class='main-show-instru1'><text>{{teacher_class_level}}：{{teacher_name}}</text></view>
+        <view class='main-show-instru2'><text>共{{total_chapter}}章节</text></view>
     </view>
-    <view class='main-show-total-hour'><text>课程总课时：{{items.lsm_total_hours}}小时</text></view>
+    <view class='main-show-total-hour'><text>课程总课时：{{total_hours}}</text></view>
 </view>
 
 
@@ -24,19 +24,18 @@
     <view class='main-show-intro' wx:if='{{currentTab==0}}'>
       <view class='main-show-course'>
           <view class='main-show-course-title'>课程介绍</view>
-          <view class='main-show-course-descript'>{{items.lsm_lesson_desc}}</view>
+          <view class='main-show-course-descript'>{{lesson_desc}}</view>
           <view class='main-show-teacher-title'>讲师介绍</view>
           <view class='main-show-teacher-course'>
               <view class='main-show-teacher-photo'>
-                  <image src='{{host}}{{items.tea_teacher_photo}}' mode='aspectFill' class='banner-img' />
+                  <image src='{{host}}{{teacher_photo}}' mode='aspectFill' class='banner-img' />
               </view>
               <view class='main-show-teacher-name-course'>
-                  <view class='main-show-teacher-name'>{{items.tea_teacher_name}}</view>
-                  <view class='main-show-teacher-total-courses'>共{{items.tea_total_courses}}节课程</view>
+                  <view class='main-show-teacher-name'>{{teacher_name}}</view>
+                  <view class='main-show-teacher-total-courses'>共{{total_courses}}节课程</view>
               </view>
-              <!-- <button class='main-show-teacher-courses-view' data-tea_id="{{items.tea_id}}" catchtap='viewlesson'>查看全部</button> -->
           </view>
-          <view class='main-show-teacher-descript'><text>{{items.tea_teacher_desc}}</text></view>
+          <view class='main-show-teacher-descript'><text>{{teacher_desc}}</text></view>
       </view>
 
 
