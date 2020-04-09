@@ -11,7 +11,7 @@ function tabbarinit() {
    
     {
       "current": 0,
-      "pagePath": "../index/broadcast-list/broadcast-list",
+      "pagePath": "../index/broadcast-cate/broadcast-cate",
       "iconPath": "/images/community-icon.png",
       "selectedIconPath": "/images/community-icon-n-.png",
       "text": "课程"

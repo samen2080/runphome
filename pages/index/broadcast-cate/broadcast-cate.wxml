@@ -1,4 +1,7 @@
 <!--pages/index/broadcast-cate/broadcast-cate.wxml-->
+<import src="../../../template/template.wxml"/>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>
+
 <view class='main-show-top'>
   <view class='main-show-top-info'>
     <view class='main-show-top-info-tx'>
