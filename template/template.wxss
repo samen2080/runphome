@@ -13,7 +13,10 @@
 }
 .tabBar-item{
   float:left;
-  width:20%;
+/* 20200411 start */
+  /* width:20%; */
+  width:19%;
+/* 20200411 end */
   text-align: center;
   overflow: hidden;
 }
@@ -30,8 +33,12 @@
   height: 48rpx;
 }
 .tabBar-item:nth-child(4) .icon{
-  width:53rpx;
-  height: 53rpx;
+/* 20200411 start */
+  /* width:53rpx;
+  height: 53rpx; */
+  width:48rpx;
+  height: 48rpx;
+/* 20200411 end */
 }
 .tabBar-item:nth-child(5) .icon{
   width:48rpx;

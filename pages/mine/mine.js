@@ -85,18 +85,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    template.tabbar("tabBar", 2, this);  
+    template.tabbar("tabBar", 4, this);  
     // 20200316 add start
-    this.setData({
-      old_id: options.old_id,
-      // 20200329 liao add start
-      job_id: options.job_id,
-      job_name: options.job_name,
-      job_salary: options.job_salary,
-      job_county: options.job_county,
-      job_address: options.job_address
-      // 20200329 liao add end
-    });
+    if (undefined != options.old_id){
+      this.setData({
+        old_id: options.old_id,
+        // 20200329 liao add start
+        job_id: options.job_id,
+        job_name: options.job_name,
+        job_salary: options.job_salary,
+        job_county: options.job_county,
+        job_address: options.job_address
+        // 20200329 liao add end
+      });
+    };
+
     // console.log("20200329tsold_id", this.data.old_id);
     console.log("20200329tsjob_id", this.data.job_id);
     // console.log("20200329tsjob_name", this.data.job_name);

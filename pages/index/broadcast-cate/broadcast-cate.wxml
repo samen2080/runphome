@@ -75,7 +75,7 @@
 
 
 
-<view class='cate-course-series' style='--width--:200rpx;'>
+<view class='cate-course-series' style='--width--:150rpx;'>
     <view class='wrap-left'>
           <view class='cate-icon-text'>
               <view class='cate-icon'><image src='/images/robot-brand.png' mode='aspectFill'></image></view>
@@ -139,7 +139,7 @@
             </view>
             <view class='cate-detail-row'>
                 <view class='cate-detail-column' style='color:#000000'>
-                    <navigator url='../record-broadcast/record-broadcast?cate_index=3&cate_value=4' class='navigator'>
+                    <navigator url='../record-broadcast/record-broadcast?cate_index=3&cate_value=1' class='navigator'>
                         <view>通用</view>
                     </navigator>
                 </view>

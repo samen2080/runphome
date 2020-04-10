@@ -15,7 +15,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    template.tabbar("tabBar", 2, this)//0表示第一个tabbar  
+    template.tabbar("tabBar", 3, this)//0表示第一个tabbar  
 
     var that = this;
     var host = app.globalData.host;

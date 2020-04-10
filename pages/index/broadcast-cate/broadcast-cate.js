@@ -1,5 +1,6 @@
 // pages/index/broadcast-cate/broadcast-cate.js
 const app = getApp()
+var template = require('../../../template/template.js');
 Page({
 
   /**
@@ -14,6 +15,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    template.tabbar("tabBar", 1, this);
     var that = this;
     var host = getApp().globalData.host;
     that.setData({
